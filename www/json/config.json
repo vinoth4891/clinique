@@ -1,0 +1,166 @@
+{
+     "apiAddress":{
+       "host":"http://172.16.17.42/clinique/admin",
+        "service":"http://172.16.17.42/clinique/admin/v2/clinique_webservice/services.php",  
+        "restservice":"http://172.16.17.42/clinique/admin/webservice/rest/server.php",
+        "port":"8034",
+		"privacyPolicyWeb":"Clinique_Education_Privacy_Policy_WEBSITE",
+		"termsConditionWeb":"Clinique_Education_Terms_And_Conditions_WEBSITE",
+		"privacyPolicyDevice":"Clinique_Education_Privacy_Policy_DEVICE",
+		"termsConditionDevice":"Clinique_Education_Terms_And_Conditions_DEVICE"
+    },
+
+    "navigation" : {
+        "transitionType" : 10,
+        "isNative" : false
+    },
+    "application": {
+        "offLine":true
+    },
+    "environments": [
+    {
+        "name": "Production",
+        "components" : {
+            "login":{
+                "moduleName":"login",
+                "host":"http://localhost",
+                "port":"8034",
+                "path" : "../components/login/js"
+            },
+            "home":{
+                "moduleName":"home",
+                "host":"http://localhost",
+                "port":"8034",
+                "path" : "../components/home/js"
+            },
+             "changePwd":{
+                "moduleName":"changePwd",
+                "host":"http://localhost",
+                "port":"8034",
+                "path" : "../components/changePwd/js"
+            },
+            "course":{
+                "moduleName":"course",
+                "host":"http://localhost",
+                "port":"8034",
+                "path" : "../components/course/js"
+            },
+            "courseItem":{
+                "moduleName":"courseItem",
+                "host":"http://localhost",
+                "port":"8034",
+                "path" : "../components/courseItem/js"
+            },           
+            "me":{
+                "moduleName":"me",
+                "host":"http://localhost",
+                "port":"8034",
+                "path" : "../components/me/js"
+            },
+            "news":{
+                "moduleName":"news",
+                "host":"http://localhost",
+                "port":"8034",
+                "path" : "../components/news/js"
+            },
+            "players":{
+                "moduleName":"players",
+                "host":"http://localhost",
+                "port":"8034",
+                "path" : "../components/players/js"
+            },
+            "badges":{
+                "moduleName":"badges",
+                "host":"http://localhost",
+                "port":"8034",
+                "path" : "../components/badges/js"
+            },
+            "progress":{
+                "moduleName":"progress",
+                "host":"http://localhost",
+                "port":"8034",
+                "path" : "../components/progress/js"
+            },
+            "resource":{
+                "moduleName":"resource",
+                "host":"http://localhost",
+                "port":"8034",
+                "path" : "../components/resource/js"
+            },
+            "favorites":{
+                "moduleName":"favorites",
+                "host":"http://localhost",
+                "port":"8034",
+                "path" : "../components/favorites/js"
+            },
+            "reports":{
+                "moduleName":"reports",
+                "host":"http://localhost",
+                "port":"8034",
+                "path" : "../components/reports/js"
+            },
+            "help":{
+                "moduleName":"help",
+                "host":"http://localhost",
+                "port":"8034",
+                "path" : "../components/help/js"
+            },
+            "match":{
+                "moduleName":"match",
+                "host":"http://localhost",
+                "port":"8034",
+                "path" : "../components/match/js"
+            },
+			"sequence":{
+                "moduleName":"sequence",
+                "host":"http://localhost",
+                "port":"8034",
+                "path" : "../components/sequence/js"
+            },
+            "uncover":{
+                "moduleName":"uncover",
+                "host":"http://localhost",
+                "port":"8034",
+                "path" : "../components/uncover/js"
+            },
+    	    "bycourse":{
+                    "moduleName":"bycourse",
+                    "host":"http://localhost",
+                    "port":"8034",
+                    "path" : "../components/bycourse/js"
+                },
+            "register":{
+                "moduleName":"register",
+                "host":"http://localhost",
+                "port":"8034",
+                "path" : "../components/register/js"
+            },
+            "header":{
+                "moduleName":"header",
+                "host":"http://localhost",
+                "port":"8034",
+                "path" : "../components/header/js"
+            },
+            "footer":{
+                "moduleName":"footer",
+                "host":"http://localhost",
+                "port":"8034",
+                "path" : "../components/footer/js"
+            }
+        },
+        "loadjs":{
+            "bootstrap":[
+            "framework/Class",
+            "framework/NavigationController",
+            "framework/Widget", 
+            "lib/signals",
+            "login/Login"
+            ],
+            "login":[
+            "framework/WidgetWithTemplate"
+            ]
+        
+        }
+                     
+    }]
+}

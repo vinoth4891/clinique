@@ -1,0 +1,11 @@
+<div class="row pro_container">
+    {{checkForBreadcrum}}
+     <div class="span12 rept_btnbx">
+        <ul id="reportsul">
+                <li id="bycourse"><a href="javascript:void(0)"><span class="repticon"><img src="../images/rep_tile_icon1.png"></span> <span class="repttxt" data-msg="by_course"></span></a></li>
+                <li id="byuser"><a href="javascript:void(0)"><span class="repticon"><img src="../images/rep_tile_icon2.png"></span> <span class="repttxt" data-msg="by_user"></span></a></li>
+        </ul>
+    </div>
+    <input id="report-page" type="hidden" />
+</div>  
+<div class="row lifter2"></div>	

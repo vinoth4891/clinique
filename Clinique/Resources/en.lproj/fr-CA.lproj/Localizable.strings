@@ -1,0 +1,49 @@
+/*
+ Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements.  See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License.  You may obtain a copy of the License at
+ 
+ http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied.  See the License for the
+ specific language governing permissions and limitations
+ under the License.
+ */
+
+// accessibility label for recording button
+"toggle audio recording" = "toggle audio recording";
+// notification spoken by VoiceOver when timed recording finishes
+"timed recording complete" = "timed recording complete";
+// accessibility hint for display of recorded elapsed time
+"recorded time in minutes and seconds" = "recorded time in minutes and seconds";
+
+
+"Please check your internet connection." = "S'il vous plaît vérifier votre connexion Internet.";
+"Network problem" = "Problème de réseau";
+"Enter page number" = "Entrez le numéro de la page";
+"Enter Page" = "accéder à la page";
+
+"Go To Page" = "Aller à la page";
+"Ok" = "Ok";
+"Cancel" = "Annuler";
+"Done" = "Terminé";
+"Close" = "Fermer";
+"Delete" = "Effacer";
+"Save" = "Enregistrer";
+"All notes will be saved under Favourites" = "Toutes les notes seront sauvegardées sous Favoris ";
+"of" = "de";
+"Search key not found" = "Recherche clé introuvable";
+
+"Enter Page No" = "Enter Page Non";
+"Page no" = "page no";
+"Search Key Word Not Found" = "Recherche mot clé ne se trouve pas";
+
+"We recommend to install \"iBook\" or \"Acrobat reader\" for opening file." = "Nous recommandons d'installer \"iBook\" ou \"Acrobat reader\" pour l'ouverture du fichier.";
+"We recommend to install \"iSpreadsheet\" or \"Microsoft Excel\" for opening file."= "Nous recommandons d'installer \"iSpreadsheet\" ou \"Microsoft Excel\" pour l'ouverture du fichier.";
