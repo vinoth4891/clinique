@@ -1,4 +1,0 @@
-<div class="rotate-to-landscape" id="bycourse-image">
-    <img src="../images/rotate-to.png">
-</div>
-{{checkForSpecificDiv}}
