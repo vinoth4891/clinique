@@ -1,0 +1,49 @@
+/*
+ Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements.  See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License.  You may obtain a copy of the License at
+ 
+ http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied.  See the License for the
+ specific language governing permissions and limitations
+ under the License.
+ */
+
+// accessibility label for recording button
+"toggle audio recording" = "toggle audio recording";
+// notification spoken by VoiceOver when timed recording finishes
+"timed recording complete" = "timed recording complete";
+// accessibility hint for display of recorded elapsed time
+"recorded time in minutes and seconds" = "recorded time in minutes and seconds";
+
+
+"Please check your internet connection." = "Controleer uw internetverbinding.";
+"Network problem" = "netwerk probleem";
+"Enter page number" = "Voer paginanummer";
+"Enter Page" = "Voer pagina";
+
+"Go To Page" = "Ga naar pagina";
+"Ok" = "Ok";
+"Cancel" = "Annuleren";
+"Done" = "Done";
+"Close" = "Sluiten ";
+"Delete" = "Delete";
+"Save" = "Opslaan";
+"All notes will be saved under Favourites" = "Alle noten zullen onder Favorieten opgeslagen worden ";
+"of" = "van";
+"Search key not found" = "Zoeksleutel niet gevonden";
+
+"Enter Page No" = "Enter Page Geen ";
+"Page no" = "pagina geen ";
+"Search Key Word Not Found" = "Zoek sleutelwoord niet gevonden";
+
+"We recommend to install \"iBook\" or \"Acrobat reader\" for opening file." = "We raden aan om \"iBook\" of \"Acrobat reader\" te installeren voor het openen van het bestand. ";
+"We recommend to install \"iSpreadsheet\" or \"Microsoft Excel\" for opening file."= "We raden aan om  \"iSpreadsheet\" of \"Microsoft Excel\" te installeren voor het openen van het bestand. ";
