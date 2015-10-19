@@ -1,0 +1,722 @@
+/* Carousel  
+.roundabout-in-focus { width:auto !important; height:auto !important;}
+.roundabout-holder li + li + li + li + li + li + li {}
+.roundabout-holder li + li + li + li + li + li + li + li {}
+.roundabout-moveable-item {width:279px\0 !important; height:auto\0 !important;}
+  Ends*/
+
+#loginform #pwd, #loginform #name { padding:5px;}
+a:focus, *:focus {outline:none;}
+body .acc_tilebx UL LI A SPAN.coursetxt, body .crswidg_drgbtn ul li a{filter:none;}
+body .crswidg_drgbtn UL LI A { color:#989693;}
+BODY .crswidg_drgbtn UL LI.match-item A { color:#fff;}
+body .crswidg_lblbx {background-color:#7F7F7F;}
+.border-radius {height: 100px; width: 100px; background-color: #2ecc71; -webkit-border-radius: 50px; -moz-border-radius: 50px; border-radius: 50px;}
+.globalmenu2 UL LI.header_players {border-right:#c2c2c3 solid 1px;}
+body .hme_hdrbx {margin-bottom:20px;}
+.coruseThumbList .span10 { clear:both;}
+.login-bx {box-shadow:none;}
+ .logincorebx { float:left; width:100%;}
+ body .disabld_selectbx SELECT { width:97%;}
+ body #content-webview { text-align:center; height:552px;}
+ .ui-block-a {width: 49%;}
+ .ui-block-b {width: 50%;}
+ .rounded {height: 100px; width: 100px; background-color: #2ecc71; -webkit-border-radius: 50px; -moz-border-radius: 50px; border-radius: 50px;}
+ 
+ /*.disabld_selectbx, .signin_btn a, .formbx, .login-bx, .signin_btn a:hover, .forgotbx, .popup, .enterbtn a, .OKbtn a, .enterbtn a:hover, .OKbtn a:hover,  .profilhdr, .profile_grnbtn, .acc_tilebx UL LI A SPAN.courseicon, .loading_icon, .reg_grybtn a, .formbx2, .rounded, .acc_holder {	behavior: url(../images/PIE.htc);} */
+ 
+ 
+ /* Input $ select BG Starts*/
+  body .fldbg { background:url(../images/inp-bg-rgt.png) repeat-x right top; border:0px; height:38px; position:relative;}
+  body .fldbg .fldinner {background:url(../images/inp-bg-lft.png) no-repeat left top; float:left; width:100%; height:35px; position:relative;}
+  body .fldbg .fldinner  .placeholder {left:0px !important; top:0px !important;}
+  /* Input $ select BG Ends*/
+  
+  /* Input & Button Starts*/
+    body .btngrn a{background:url(../images/btngrn-rgt.png) no-repeat right top; border:0px; padding:0px;} 
+	body .btngrn a .btninner { display:block; background:url(../images/btngrn-left.png) no-repeat left top; padding:19px 0px;}
+	html body #loginPop #popupSignIn a , html  body  #loginPop #popupSignIn a .reg-btgrn-lt, html  body #loginPop  #popupSignIn a :hover, html  body  #loginPop  #popupSignIn a:hover .reg-btgrn-lt{ background:none !important; }
+	html body #loginPop #popupSignIn a { border:1px solid #6ebd9e;}
+	
+ 
+  body .btngrn a:hover {background:url(../images/btngrn-right-hvr.png) no-repeat right top; border:0px;}
+  body .btngrn a:hover .btninner{background:url(../images/btngrn-left-hvr.png) no-repeat left top;}
+  /* Input & Button Ends*/
+ 
+ /* Login Section Starts*/ 
+ body .logbgtop  { width:100%; height:8px;  background:url(../images/login-top.png) no-repeat left top; }
+ body .logbgbot {width:100%; height:8px; clear:both;  background:url(../images/login-bot.png) no-repeat left top;}
+ body .login-bx {padding:0; border:0px; box-shadow:none;}
+ body .logincorebx {background:#fff url(../images/shade-right.jpg) repeat-y right 1px; height:auto; padding-right:3px; padding-top:0;}
+ body .login-bx .inner { float:left; width:91%; border-left:1px solid #ded9d9; padding:4% 2% 0 4.5%; background-color:#fff;}
+ body #loginform .formbx INPUT {width:87.5%;}
+ body .disabld_selectbx select { background:none; box-shadow:none;}  
+ body .signin_btn A { border:0px; margin-top:0px; padding:0px;}
+ body #signin  { margin-top:7px;}
+  body .login-page .signin_btn  .btninner { padding:12px 0;}
+ body .fldinner #passwordSpan{top:0;left:47px !important; white-space:nowrap; line-height:31px !imporant;}
+ body .fldinner #passwordSpan1{top:0;left:8px !important; white-space:nowrap;}
+ body .logo_login A:focus,body .logo_login A:active{outline:none;border:0px;border:none\9;}
+ /* Login Section Ends*/
+ 
+/* Header Nav Starts */
+.globalmenu2 UL LI { position:relative;}
+#header-menu li.first-child .navcrv { width:6px; height:50px; background:url(../images/top-nav-left-act.png) no-repeat; display:block; position:absolute; top:-1px; left:0px;}
+#header-menu li.first-child.selected .navcrv {background:url(../images/top-nav-left.png) no-repeat;}
+
+#header-menu li.last-child .navcrv { width:6px; height:50px; background:url(../images/top-nav-rgt-act.png) no-repeat; display:block; position:absolute; top:-1px; right:0px;}
+#header-menu li.last-child.selected .navcrv {background:url(../images/top-nav-rgt.png) no-repeat;}
+
+body .globalmenu2 UL LI.first-child { border-left:0px;}
+body .globalmenu2 UL LI.header_players { border-right:0px;}
+/* Header Nav Ends */ 
+
+/* Course Page Starts */
+.course-accordion  .accordion-group{ position:relative; width:100%;}
+body .accordion .accordion-group:first-child  .top-lft-crv{ position:absolute; left:0px; top:1px; background:url(../images/accd-top-left.png) left top; width:13px; height:57px;}
+body .accordion .accordion-group:first-child  .top-rgt-crv{ position:absolute; right:0px; top:1px; background:url(../images/accd-top-rgt.png) left top; width:13px; height:57px;}
+
+body .accordion .accordion-group:nth-last-child  .bot-lft-crv{ position:absolute; left:0px; bottom:0px; background:url(../images/accd-bot-left.png) left top; width:13px; height:57px;}
+body .accordion .accordion-group:nth-last-child  .top-rgt-crv{ position:absolute; right:0px; bottom:0px; background:url(../images/accd-bot-rgt.png) left top; width:13px; height:57px;}
+/* Course Page Ends */
+
+body .loading_icon {background:url(../images/loading-bg.png) no-repeat left top; width:110px; height:62px; box-shadow:none;}
+
+body LI.roundabout-in-focus{ background:none;}
+/*body .container { background:url(../images/cursol.png) no-repeat left top;}*/
+
+body LABEL.splash-label {background:url(../images/splash_logo_ie.png) no-repeat left top; width:234px; height:62px;}
+body LABEL.splash-label img { display:none !important;}
+
+#carousel  li:nth(odd) {border:1px solid #ff0000;}
+#carousel li:nth(even) {background:1px solid #0000ff;}
+
+body .errormsg { height:auto; width:96%; padding:5px 0;}
+body .errormsg .long-txt-err { font-size:14px; line-height:16px;}
+
+body DIV.footerbx  {margin-top:0;}
+body .loginerror { margin-top:0; font-size:15px; line-height:14px; }
+body .accordion-group { background-color:#D2D2D4;}
+body .course-accordion .accordion-body { background-color:#fff;}
+body .globalmenu2 UL LI { width:24.5%;}
+
+body #changepsd_page  .formbx { margin-top:6px;}
+BODY #changepsd_page  .btngrn A .btninner { padding:19px 0;}
+BODY #changepsd_page #loginform .formbx INPUT { width:98.5%;}
+
+
+ /* Players page */
+  .plyrstble LI { position:relative;}
+ body .prg-left{ background:url(../images/prgs-lft.png) no-repeat 0px 18px; position:absolute; float:left; height:65px; width:20px; left:12.2%; z-index:4; top:-2px;}
+ body .plyrstble LI SPAN.progrssbr, body  .progress_stble LI SPAN.progrssbr { background:url(../images/prgs-bg.png) repeat-x center center; border:0; width:100%;}
+ body .prg_grn{ z-index:0; height:44px !important;}
+  body .prg-right{ background:url(../images/prgs-rgt.png) no-repeat right 0px; position:absolute; float:left; height:65px; width:20px; right:46.8%;  z-index:4; top:16px;}
+  body #progrss_hldr{width:40%;}
+  body .plyrstble li div.pointsWrap{ float:right !important; position:relative; right:8%;}
+  div.plyr_dta_hdg SPAN {width:107px !important;}
+  body .plyr_dta_hdg { position:relative; right:8%; *top:7%;*right:6%;}
+  body .plyr_span{ padding-bottom:40px;}
+  /* Players page */
+     /* Progress bar */
+	 body  .progress_stble .prg-left{ background:url(../images/prgs-lft.png) no-repeat left 0px; position:absolute; float:left; height:48px; width:28px; left:0; z-index:4; top:-2px;}
+	 body  .progress_stble .prg-right{ background:url(../images/prgs-rgt.png) no-repeat right -1px; position:absolute; float:left; height:48px; width:28px; right:0;  z-index:4; top:-1px;}
+	 body .progrssbr {border-bottom:1px solid #bbbbbb; height:45px !important;}
+   /* Progress bar */
+   /* Resource page*/
+    body .restilebx UL LI A SPAN.resourcetxt, body .restilebx UL LI A SPAN.favtxt { filter:none;}
+	body .restilebx UL LI A SPAN.resourcetxt{cursor:pointer;}
+	/* Resource page*/
+    /* Course Item border */
+ 
+ body .courseItem-left{ background:url(../images/course_bord_left.png) no-repeat left top; float:left; position:absolute; width:8px; height:131px; top:-2px; left:-1px; display:block; }
+ body .courseItem-right{ background:url(../images/course_bord_right.png) no-repeat right top; float:left; position:absolute; width:8px; height:131px; top:-2px; right:0; display:block;}
+ body .acc_tilebx UL LI A SPAN.courseicon { display:block !important; }
+ BODY .acc_tilebx UL LI A SPAN.courseicon table, BODY .acc_tilebx UL LI A SPAN.courseicon table td { width:100%; height:100%; border:0px; text-align:center;}
+  /* Course Item border */
+  body .tableNote .fav-hdg {background:url(../images/fav_notes_bg.png) repeat-x left top;}
+  /* Forgot password IE7*/
+body .formbx2 INPUT[placeholder] { *width:96% !important;}
+
+  /* Forgot password and sign in*/
+ body  .forg-popup-left {background: url(../images/forgot_popup-top.png) no-repeat left top; float:left; position:absolute;  top:4px; left:6px; display:block; height:14px; width:100%;} 
+body  .forg-popup-right {background: url(../images/forgot_popup-btm.png) no-repeat right top; float:left; position:absolute;  bottom:0px; left:-3.99px; display:block; height:14px; width:100%;}
+body  .forgotbx {   border:0px !important; padding: 10px 15px 29px 15px; margin-top:1px; *padding-bottom:19px; border-left:1px solid #fff; *border:0;height:auto; }
+body .forgotbx_holder{ position:relative; padding-bottom:12%; }
+body .forgotbx_holder .formbx2 { border:0; background: url(../images/inp-bg-rgt.png) no-repeat right top; float:left; position:absolute;  top:24px; right:-2px; display:block; height:185px; width:100%; }
+body .forgotbx_holder .formbx2 INPUT[placeholder]{ border:0; background: url(../images/inp-bg-lft.png) no-repeat left top; float:left; position:absolute;  top:0px; left:0px; display:block; height:34px; outline:0px; }
+body .enterbtn { position:relative; padding-bottom:21%; *padding-bottom:24%; }
+body .enterbtn a {border:0; background: url(../images/reg_btgrn-right.png) no-repeat right top; filter:none;float:left; position:absolute;  top:24px; right:-2px; display:block; height:50px; width:100%; }
+body  #popupRegister a{top:10px;}
+body .enterbtn  a:hover{ background: url(../images/reg_btgrn-rt-hover.png) no-repeat right top;  }
+body .enterbtn  a .reg-btgrn-lt{border:0; background: url(../images/reg_btgrn-left.png) no-repeat left top; float:left; position:absolute;  top:0px; left:0px; display:block; height:34px; width:100%; text-align:center; padding:13px 0px;}
+body .enterbtn  a:hover .reg-btgrn-lt{ background: url(../images/reg_btgrn-lt-hover.png) no-repeat left top;}
+body  INPUT[placeholder], body  INPUT[text] , body #register_holder FIELDSET INPUT, select { outline: 0px; box-shadow:none;}
+body  #loginform .formbx INPUT{ *padding:6px; outline: 0px;}
+body  .enterbtn-alg a  { top:9px;}
+body .enterbtn-alg{padding-bottom:4% !important;}
+
+/*Register page*/
+.registerbx fieldset{ position:relative; width:100% !IMPORTANT; padding-bottom:0px;}
+.registerbx fieldset .reg-text-lt{  background: url(../images/reg-text-lt.png) no-repeat left top; float:left; top:0px; display:block; height:40px; outline:0px; width:15px !important; padding:0 !important; max-width:530px;}
+.registerbx fieldset .reg-text-rt{  background: url(../images/reg-text-rt.png) no-repeat right top; float:left; top:0px; display:block; height:40px !important; outline:0px; width:44% !IMPORTANT; max-width:600px;}
+.registerbx fieldset .reg-text-rt input{ border:0 !IMPORTANT;  float:left; display:inline; width:99% !IMPORTANT; background:none; padding:11px 0 !important; height:auto !important;}
+.registerbx fieldset .reg-text-rt select{ border:0 !IMPORTANT;  float:left; display:inline; width:99% !important; background:none; padding:0 !important; *height:auto !important; *margin-top:8px !important; height:auto !important; box-shadow:none; margin-left:-4px !important; margin-top:12px !important; box-shadow:none !important;}
+#register_holder FIELDSET INPUT.error_red{border:0 !imporant; margin:0;}
+.reg_grybtn{ background: url(../images/reg-cancel-rt.png) no-repeat right 5px !important; float:left; top:0px; right:0; display:block; height:42px; outline:0px; border:0px !important; background-color:transparent !important; }
+.reg_grybtn a{ background: url(../images/reg-cancel-lt.png) no-repeat 1px 1px !important; float:left; top:0px; left:0; display:block; height:40px !IMPORTANT; outline:0px; padding:10px 0px !IMPORTANT; background-color:transparent !important; filter:none !IMPORTANT; border:0px !important; }
+.reg_grnbtn{ background: url(../images/reg-return-grt.png) no-repeat right 5px !important; float:left;  top:0px; right:0; display:block; height:42px; outline:0px; background-color:transparent !important; border:0px !important; }
+.reg_grnbtn a{ background: url(../images/reg-return-glt.png) no-repeat 1px 1px !important; float:left; top:0px; left:0; display:block; height:40px !IMPORTANT; outline:0px; padding:5px 0px !IMPORTANT; background-color:transparent !important; filter:none !IMPORTANT; border:0px !important; }
+.reg_grybtn a:hover{ background: url(../images/reg-cancel-hvr.png) no-repeat 1px 0px !important;}
+.reg_grnbtn a:hover{ background: url(../images/reg-return-hvr.png) no-repeat 1px 0px !important;}
+ 
+
+/*Sign in */
+body .sign-popup-top{ background: url(../images/sign_popup-top.png) no-repeat left top; float:left; position:absolute; top:-9px; left:-4px; width:100%; height:30px;}
+body .sign-popup-btm{ background: url(../images/sign_popup-btm.png) no-repeat right top; float:left; position:absolute; bottom:-25px; left:-1px; width:377px; height:30px; }
+
+/*Sign in */
+/*Carousel
+.carousel2{ margin-top:8% !important;}
+.roundabout-moveable-item{ top: 24px\0 !important; height:180px\0 !important; width:202px\0 !important; }
+.roundabout-holder .Previous{height:270px\0 !important; width:314px\0 !important; top:-16px\0 !important;}
+.roundabout-in-focus{height:305px\0 !important; width:348px\0 !important; top:-31px\0 !important;}
+.roundabout-holder .Next{height:270px\0 !important; width:314px\0 !important; top:-16px\0 !important;}
+Carousel*/ 
+/*.dsbl {
+filter:alpha(opacity=50);
+opacity:0.5;
+cursor:default !important;
+}*/
+/*.dsbl img*/.dsbl span {filter:alpha(opacity=50);
+opacity:0.5;}
+.topic_sel{ filter:none !important;}
+/*Favourites */
+body .tpbreadcrumbs li {
+    background: url(../images/ie_backslash.png) no-repeat right 0px 0px;
+}
+
+body .newscontainer ul li {width:33.14%;}
+
+/*.crswidg_img_small UL LI .coverimg {left:6px; top:2px;}*/
+
+
+body .crswidg_drgbxtble_container .crswidg_drgbxtble_container_inner .crswidg_drgbxtble_small { width:100% !important;}
+
+body .crswidg_drgbtn UL LI { background-color:#D1D2D4 !important; position:relative; border:0px !important;}
+body .ui-draggable-dragging { background-color:#D1D2D4 !important;}
+span, p, b, i, {text-shadow:none !important;}
+
+/* ---------------- Corners Starts--------------------*/ 
+.crnr-top-lft, .crnr-top-rgt, .crnr-bot-lft, .crnr-bot-rgt {position:absolute; background:url(../images/grey-curnor.png) no-repeat;}
+.drgbtnsel .crnr-top-lft, .drgbtnsel .crnr-top-rgt, .drgbtnsel .crnr-bot-lft, .drgbtnsel .crnr-bot-rgt  {background:url(../images/grey-curnor-light.png) no-repeat;}
+.crnr-top-lft  { top:0px; left:0px;}
+.crnr-top-rgt { top:0px; right:0px;}
+.crnr-bot-lft  {bottom:0px; left:0px;}
+.crnr-bot-rgt  {bottom:0px; right:0px;}
+body .crswidg_drgbtn ul li.drgbtnsel {filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6e6e6', endColorstr='#e6e6e6',GradientType=0 ) !important;}
+html body .crswidg_drgbtn ul li.drgbtnsel a {background-color:#e6e6e6 !important;}
+/* ---------------- Corners Ends--------------------*/
+
+BODY .crswidg_drgbtn UL LI .crnr-top-lft, BODY .crswidg_drgbtn UL LI .crnr-top-rgt, BODY .crswidg_drgbtn UL LI .crnr-bot-lft, BODY .crswidg_drgbtn UL LI  .crnr-bot-rgt { display:block; width:10px; height:10px;}
+BODY .crswidg_drgbtn UL LI .crnr-top-lft {background-position:left top;}
+BODY .crswidg_drgbtn UL LI .crnr-top-rgt {background-position:right top;}
+BODY .crswidg_drgbtn UL LI .crnr-bot-lft {background-position:left bottom;}
+BODY .crswidg_drgbtn UL LI .crnr-bot-rgt {background-position:right bottom;}
+
+/*------------ Venkat-----------------------------*/
+
+body li.match-item.ui-draggable a, body li.match-item.ui-draggable {
+    background-color: #D2D2D4\9;
+    line-height: 30px\9;
+}
+body #popupSignIn a{height:50px!important\9;}
+body .registerbx fieldset .reg-text-rt input{height:32px !important\9;margin-top:2px !important\9;}
+body .registerbx fieldset .reg-text-rt select{margin-left:-8px !important\9;width:100% !important\9;}
+body .fav_btnstrip ul li a span{filter:none;}
+.ie7-css .crswidg_drgoptns .li.ui-draggable.ui-draggable-dragging{padding-top:35px !important;}
+/*body .fldbg .fldinner {border:1px solid #88DCBC\9;border-radius:5px\9;}*/
+/*------------ Venkat End -----------------------------*/
+
+.crswidg_qustns UL LI.nodisp {filter:none;}
+
+.crswidg_qustns { background-size:100% 100%;}
+
+/* Hiddden Image Fix */
+.hidden-img-wrapper { height:431px; margin-bottom:20px !important;}
+.hidden-img-wrapper .hidden-img { width:100%; height:100%; position:absolute; top:0px; left:0px; overflow:hidden;}
+.hidden-img-wrapper  UL { position:absolute; z-index:99;}
+/* Hiddden Image Fix */
+
+/* Change Password Starts*/
+#changepsd_page .formbx input { padding:5px;}
+#changepsd_page .formbx  .placeholder { line-height:normal !important;}
+/* Change Password Ends*/
+span.placeholder { line-height:34px !important;}
+
+.coruseThumbList .courses UL LI {overflow:hidden;}
+
+body .forgotbx_holder #forgot_pass { height:34px;}
+body .enterbtn a#frg_psw_sub .reg-btgrn-lt { height:50px;}
+body .enterbtn a#frg_psw_sub  { height:52px;}
+
+.acc_tilebx ul li a span.courseicon {
+    background-color: #E6E6E6;
+}
+body .fav_btnstrip ul li {text-shadow:none !important;}
+
+#changepsd_page #loginform  #chgpwd_error_msg { margin-top:6px;}
+#changepsd_page #loginform  .signin_btn A{margin-top:4px !important;}
+body .audioicon img,body .audioicon1 img,body .audioicon2 img{height:125%;margin-top:-25px;}
+body .restilebx UL LI A SPAN.resourceicon{border-top:1px solid ##a9aca7;border-bottom:1px solid ##a9aca7;z-index:100;}
+body .ifram_cls_btn{margin-right:0px;}
+/* 
+    Created on : Feb 28, 2015, 12:45:09 PM
+    Author     : seshu_v Starts
+*/
+.ie7-css a:hover,.ie7-css a:focus,.ie7-css a:active,.ie7-css a:after{outline:none;}
+.ie7-css .fav_chkbx label, .ie7-css .chkbx label {
+    height: 33px;
+    z-index: 9999;
+}
+.ie7-css .fav_chkbx label {
+    background: url("../images/check_box.png") no-repeat -2px -36px;
+}
+.ie7-css .fav_chkbx .inputChecked {
+    background-position: -2px 0;
+}
+.ie7-css .fav_chkbx label:before, .ie7-css .fav_chkbx label:after {
+    display: none;
+}
+.ie7-css .chkbx label {
+    background: url("../images/form_elements.png") no-repeat 6px -36px;
+}
+.ie7-css .chkbx .inputCheckedReport {
+    background-position: 7px 0;
+}
+.ie7-css .chkbx label:before, .ie7-css .chkbx label:after {
+    display: none;
+}
+.ie7-css  .rep_hdg {
+    background-color: #9ABC58;
+}
+.ie7-css body {
+    position: relative;
+    min-height: 750px;
+}
+.ie7-css .ie7-footer-specific {
+    position: absolute;
+    bottom: 0;
+    margin-top: 10px;
+    left: 0;
+    bottom: -70px;
+}
+.ie7-css #load_wrapper {
+    left: -3%;
+}
+.ie7-css .crswidg_img ul li {
+    float: left;
+}
+.ie7-css .crswidg_lblbx {
+    left: 0;
+}
+.ie7-css .accordion-inner {
+    overflow: hidden;
+    position: relative;
+}
+.ie7-css .row.pro_container, .ie7-css .newscontainer {
+    overflow: hidden;
+}
+.ie7-css .crswidg_drgbtn ul li {
+    background-color: #D2D2D4;
+   overflow: hidden;
+   color: #FFF;
+   padding: 5px;
+}
+.ie7-css .crswidg_drgbtn ul li a {
+    color: #FFF;
+}
+.crswidg_drgbtn ul li a:active {
+    background-color: #D2D2D4;
+}
+.ie7-css .bkself.coruseThumbList, .ie7-css .profilebx,
+.ie7-css .pro_container, .ie7-css .row.pro_container,
+.ie7-css .newscontainer, .ie7-css .rept_bx {
+    margin-bottom: 12px;
+}
+.ie7-css .profilhdr_txt {
+    float: left;
+}
+.ie7-css .profilhdr {
+    overflow: hidden;
+    border-bottom: 1px #ccc solid;
+}
+.ie7-css .profilhdr_btnbx {
+    text-align: right;
+    display: inline-block;
+    overflow: hidden;
+}
+.ie7-css .profile_grnbtn {
+    text-align: center;
+    display: inline-block;
+}
+.ie7-css .profile_grnbtn:hover {
+    background-color: #EF8856;
+}
+.ie7-css .profile_grnbtn a {
+    /*width: 100%;*/
+}
+.ie7-css .crswidg_drgbtn ul {
+    padding-bottom: 10px;
+}
+.ie7-css .info.no_border.ui-bar-d, .ie7-css .ui-bar-d, .ie7-css .que .info {
+    background: #EEE !important;
+}
+body .ui-bar-d{background:#EEE !important;}
+.ie7-css .reportsfooter {
+    bottom: -45px;
+}
+.ie7-css .rept_dropbx span.dropdwn select {
+   width: 150px;
+}
+.ie7-css .tpbreadcrumbs li {
+    background: url(../images/ie_backslash.png) no-repeat right 5px;
+}
+body .tpbreadcrumbs li.noSlashBread {
+    background: none transparent;
+}
+.ie7-css .tpbreadcrumbs li:last-child {
+    background: none;
+}
+.ie7-css .tpbreadcrumbs li.breadcrumbLastChld, .tpbreadcrumbs li.NOPINK {
+    background: none transparent;
+}
+
+.ie7-css .bord-hidden select{
+    width:101% !important; margin-left:-10px !important;
+}
+
+.ie7-css .login-popup {
+    left:50% !important;
+	top:50% !important;
+}
+.ie7-css .cls_btn_legal, .ie7-css .cls_btn, .ie7-css .close{
+    filter:none !important;
+}
+.ie7-css .course_ifram_cls_btn{*top:0px;}
+.ie7-css .dsbl{
+    filter:alpha(opacity=40) !important;
+}
+.ie7-css .acc_tilebx ul li a span.courseicon {
+    background-color: #E6E6E6;
+}
+.ie7-css .courseicon img {
+    vertical-align: middle;
+}
+.ie7-css li.match-item.ui-draggable a, .ie7-css li.match-item.ui-draggable {
+    background-color: #D2D2D4;
+    line-height: 30px;
+}
+ 
+.ie7-css a.accordion-toggle.acc_topic.topic_sel {
+    display: block;
+    cursor: pointer;
+}
+
+.ie7-css a.accordion-toggle.acc_topic.topic_sel:active,
+.ie7-css a.accordion-toggle.acc_topic.topic_sel:focus,
+.ie7-css a.accordion-toggle.acc_topic.topic_sel:hover,
+.ie7-css a.accordion-toggle.acc_topic.topic_sel:visited {
+    outline: none;
+}
+.ie7-css .crswidg_drgbxtble_box, .ie7-css .crswidg_img_small ul li,
+.ie7-css .crswidg_qustns ul li, .ie7-css .crswidg_drgoptns ul li a {
+    *display: inline;
+    zoom: 1;
+}
+.ie7-css .coverimg {
+    background: url("../images/widget_logo.png") no-repeat  center/100% #E8EEEC;
+}
+ 
+.ie7-css .crswidg_drgbxtble_box {
+    line-height: 20px;
+}
+.ie7-css .crswidg_img_small {
+    margin-bottom: 15px;
+}
+.ie7-css .crswidg_qustns ul li {
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    background-color:#D2D2D4;
+}
+.ie7-css .crswidg_qustns ul li.nodisp {
+    background: none transparent;
+    width: 299px;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+	border:0 !important;
+}
+.ie7-css .crswidg_qustns ul li a {
+    display: block;
+    height: 86px;
+    padding-top: 60px;
+    width: 100%;
+}
+
+.ie7-css .crswidg_qustns {
+    width: 904px;
+}
+.ie7-css .crswidg_drgoptns ul li a {
+    background-color:#D2D2D4 !important;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    background: #D2D2D4 !important;
+    height: 66px;
+    padding: 35px 0 5px 5px;
+    width: 100%;
+    cursor: pointer;
+	display:block;
+}
+.ie7-css .crswidg_drgoptns ul li {
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    cursor: pointer;
+    background-color:#D2D2D4 !important;
+    background: #D2D2D4 !important;
+    zoom: 1;
+}
+.ie7-css .crswidg_drgoptns ul li a:active, .ie7-css .crswidg_drgoptns ul li:active,
+.ie7-css .crswidg_drgoptns ul li:focus, .ie7-css .crswidg_drgoptns ul li a:active {
+    background-color: #D2D2D4 !important;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    background: #D2D2D4 !important;
+}
+#email_error_msg {
+    position: relative;
+    top: 0;
+    float: left;
+}
+.ie7-css .fldinner {
+	//position: relative
+}
+.ie7-css  .fldinner .pswdiocn + .placeholder {
+	top: 3px;
+}
+.test.placeholder {
+    pointer-events: none;
+}
+.ie7-css .fav_btnstrip ul li {
+    padding: 8px 1% 8px 1%;
+    min-height: 20px;
+    width: 98%;
+}
+.ie7-css .fav_btnstrip ul li a span {
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+	text-shadow:none !important;
+}
+.ie7-css .fav_btnstrip ul {
+    margin-bottom: 40px;
+}
+.ie7-css .crswidg_drgbtn ul li.drgbtnsel {
+    background-color: #D2D2D4;
+    filter: alpha(opacity=50);
+    color: #EDEBEB;
+}
+.ie7-css #reports_search {
+    /*background-color: #98B955 !important;*/
+	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#80A23E', endColorstr='#96B854',GradientType=0 ) ;
+	border:0px !important;
+}
+.ie7-css #reports_search.ieBtnDsbl {
+    background-color: #98B955;
+    filter: alpha(opacity=50);
+    pointer-events: none;
+}
+.ie7-css .random_report_search {
+    width: 160px !important;
+}
+.ie7-css .reprt_srch_txt .dropdown-menu {
+    width: 175px !important;
+}
+.ie7-css .disabld_selectbx select {
+    width: 338px !important;
+	margin-top:5px;
+}
+.ie7-css #language-dropdown {
+    width: 338px !important; 
+}
+.ie7-css .text-dir-rt {
+    direction: rtl;
+    float: right;
+}
+.ie7-css .text-dir-rt .test.placeholder {
+    right: 10px !important;
+}
+.ie7-css .bord-hidden select{border:none!important;*border:none!important;}
+.ie7-css #displayContentFav p, .ie7-css #displayContentFav a{padding-left:6%;}
+
+.ie7-css .hmelogo A IMG{*margin-left:30px;}
+.ie7-css #playersdiv .tpbreadcrumbs{*padding-left:36px;}
+.ie7-css #playersdiv .plyr_span{*margin-left:46px;}
+.ie7-css #playersdiv .plyrstble{*padding-left:40px;}
+.ie7-css .globalmenu2{*width:98.2%;}
+
+/*.has-myblocks .content-primary{width:55%;margin-left:22%;*width:55%;*margin-left:22%;}
+#page-mod-quiz-viewPAGE .ui-title{padding:5px 0px;background:#eee;*padding:5px 0px;*background:#eee;}*/
+.ie7-css .ie7-header-specific{*margin-bottom:20px !important;margin-bottom:20px !important;}
+.ie8-spec .logintext + #loginform #passwordSpan, .ie9-spec .logintext + #loginform  #passwordSpan{
+    top: 2px !important;
+}
+/*.ie9-spec #register_holder fieldset select {
+width: 100%;
+margin-left:-1%;
+outline:none;
+}*/
+.ie9-spec #register_holder fieldset select {
+width: 44.5%;
+margin-left:-1%;
+height: 34px !important;
+position: relative;
+outline:none;
+top: 4px;
+}
+
+.ie9-spec #register_holder fieldset input {
+	margin: 1px 0 0 1px;
+}
+.ie9-spec .fldbg { background:url(../images/inp-bg-rgt.png) repeat-x right top; border:1px solid #ccc; height:35px;}
+.ie9-spec .forgotbx_holder .formbx2,.ie9-spec .enterbtn a{height:45px;}
+.ie9-spec .forgotbx_holder .formbx2 input[placeholder]{height:34px;}
+.ie9-spec .enterbtn  a #frg_psw_sub{height:45px;border:1px solid #ccc;border-radius:10px;top:1px;left:-1px;}
+.ie9-spec #changepsd_page .btngrn a .btninner{padding:12px 0;outline:none;border-radius:7px;border:1px solid #6ebd9e;}
+.ie9-spec .loading_icon{width:100px;height:33px;}
+.ie9-spec #load_wrapper{top:64%;}
+
+.ie9-spec .courseicon img {
+    vertical-align: middle;
+	//padding-top:20px;
+}
+
+.ie9-spec  .fav_btnstrip ul li{margin-top:-5px;padding:26px 12px 0px 5px;}
+.ie9-spec #displayContentFav p, .ie9-spec #displayContentFav a{padding-left:6%;}
+.ie9-spec .registerbx fieldset .reg-text-rt select{width:100% !important;margin-top:0px!important;margin-left:-8px!important;}
+.ie9-spec  body .fldbg .fldinner {background-position:-1px -1px !important;}
+.ie7-css .prog_tp_cntnr h1 {
+    line-height: 51px;
+}
+.checkDsblNone {
+    pointer-events: none;
+    opacity: 0.6;
+    zoom: 1;
+	filter: alpha(opacity=70);
+}
+ 
+.ie7-css .bdgecorebx .bdgebx_hldr .ui-draggable{
+    width: 90px !important;
+}
+
+.ie7-css div.ui-block-b.favButtons{
+    width: 50%;
+	float:right;
+	margin-bottom:5%;
+	}
+.ie7-css .reptablr_bx .rep_hdg th {
+    text-align: left;
+}
+
+BODY #loginform .formbx INPUT { width:287px !important;}
+BODY #changepsd_page #loginform  .formbx INPUT { width:95.5% !important;}
+
+body .crswidg_img_small ul li .coverimg {background-color:#e8eeec !important; left:6px !important; top:2px !important;}
+body .crswidg_drgbxtble_container .crswidg_drgbxtble_container_inner .crswidg_drgbxtble_small { background-color:#F6F6F6; padding:0 !important; width:100% !improtant;}
+body .profile_grnbtn {background:url(../images/me-btn.png) no-repeat right top; border:0px; padding:0px;display:block;top:0px;right:0px;} 
+
+/*---------Me Page ----------*/
+body .profilebx .me-edit-parent{width:100%;}
+body .profilebx .me-text-rt{float:left;}
+body .profilebx #profile_inputholder FIELDSET INPUT{border:0px;background:none;width:94%; height:27px; margin-top:5px; box-shadow:none;}
+body .profilebx #profile_inputholder FIELDSET SELECT{border:0px;background:none;width:97.5%; box-shadow:none;}
+.ie7-css .profilebx #profile_inputholder FIELDSET SELECT{margin-top:5px; height:26px;padding-top:0px!important;}
+body .profilebx #profile_inputholder FIELDSET INPUT.greytxtbx{margin-top:6px;}
+body .profilebx fieldset{ position:relative; width:100% !IMPORTANT; padding-bottom:0px; float:left;}
+body .profilebx fieldset .me-text-lt{  background:#fff url(../images/me-txt-left.png) no-repeat left top; float:left; display:block; height:34px; outline:0px; width:6px !important; padding:0 !important; left:0;}
+body .profilebx fieldset .me-text-rt{  background: url(../images/me-text-rt.png) no-repeat right top; float:left; display:block;  outline:0px; width:390px !IMPORTANT;}
+
+/*---------Me Page ----------*/
+
+/* 
+    Created on : Feb 28, 2015, 12:45:09 PM
+    Author     : seshu_v Ends
+*/
+
+#profile_inputholder fieldset select { box-shadow:none !important;}
+
+.loginholder  .login-bx SPAN.placeholder { line-height:normal !important; padding-top:5px; background-color:none !important;}
+.profile_grnbtn a {min-width:117px;}
+
+#displayContent object {width:100% !important; height:500px !important;}
+body .formbx INPUT {height:auto !improtant;}
+.formbx  .placeholder { line-height:21px !important;}
+.fldinner span.placeholder{ background-color:#f1f1f1;}
+
+html body #chgpwd_error_msg {margin-top:8px; padding-bottom:8px; }
+
+body .res_btnstrip ul li a span {filter:none !important;}
+
+.ie9-spec body .text-dir-rt #passwordSpan { direction: rtl;  float: right; left:auto !important; right:5px;} 
+.ie9-spec body .fldbg .fldinner, .ie9-spec body .fldbg {background:none !important;}
+.ie9-spec BODY #loginform .formbx INPUT {width:300px !important;}
+.ie9-spec #loginPop .enterbtn a, #forget_popup .enterbtn a { width:100%;color:#0e4d34 !important;background:url(../images/reg_btgrn-right.png) no-repeat right top !important;}
+ body #loginPop .enterbtn a, #forget_popup .enterbtn a { width:100%;color:#0e4d34 !important;background:url(../images/reg_btgrn-right.png) no-repeat right top !important;}
+.ie7-css #loginPop .enterbtn a, #forget_popup .enterbtn a { width:100% !important;color:#0e4d34 !important;background:url(../images/reg_btgrn-right.png) no-repeat right top !important;}
+.progrssbr {position:relative;}
+.progrssbr .prg_violet { height:44px !important;}
+.progrssbr .prg-3d2 {z-index:2;}
+body .hidden-img-wrapper .course_ifram_cls_btn {z-index:100;margin-top:0px;}
+body .crswidg_qustns UL LI{width:299px; height:144px;}
+.ie9-spec .crswidg_qustns UL LI{width:303px !important; height:144px;}
+.ie9-spec body .crswidg_qustns ul li a, .ie9-spec body .crswidg_qustns ul li a:hover { padding-top:61px; height:61px; width:100%;}
+/*body .forgot_psswd_outer {width:373px;}*/
+BODY #changepsd_page  .login-bx .inner { padding-bottom:2%;}
+.badgeholder .ui-draggable-dragging { background:none !important;} 
+.ie9-spec #displayContentFav video{background:#fff;}
+body #displayContentFav video,.ie7-css #displayContentFav video{background:#fff;}
+
+.report_second_option  .btn{filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0); }
+
+.crswidg_qustns UL LI { position:relative; width:500px;}
+.crswidg_qustns UL LI a { position:absolute; left:0; top:0; height:144px;  height:84px; display:block;}
+.crswidg_qustns UL LI a:hover { background-color:#D2D2D4; z-index:999; border:1px solid #A7A6A6;  position:relative;}
+.ie7-css .crswidg_overlyhldr{border:none !important; background:none; margin:0px; width:97%;}
+.ie7-css .crswidg_msg{width:100%; border:1px solid #d7d5e9;margin:10px !important;}
+ .crswidg_msg span.failedtxt { background:#f7f6fa;}
+  .crswidg_msg span.failedtxt,  .crswidg_msg span.sucesssymbl { background:#f7f6fa;}
+  body .crswidg_msg span.sucesssymbl LI { display:inline;}
+  
+  body .crswidg_drgoptns ul li a { filter:none;}
+  
+  .ie7-css .registerbx FIELDSET .reg-text-rt { width:495px !important;}
+  .ie7-css .registerbx FIELDSET .reg-text-rt select {width:490px !important;}
+  .ie8-spec body .registerbx FIELDSET .reg-text-rt { width:44% !important;}
+  .ie8-spec body .registerbx FIELDSET .reg-text-rt select {width:99% !important;}
+  
+
+  body #forget_popup .formbx2 { position:relative; top:0; margin-bottom:0;}
+  body #forget_popup .forgotbx_holder { padding-bottom:0;}
+  body #forget_popup .forgotbx { padding-bottom:17px;}
+  body #forget_popup .enterbtn a { top:10px;}
+   body #forget_popup .invalidbtn { margin-top:0;}
+   
+   .ie7-css  .course_ifram_cls_btn { position:relative !important;}
+   .ie7-css .course-quiz-main-container .iframewrap_crs,  .ie7-css .fav-quiz-main-container .iframewrap_crs,  .ie7-css .res-quiz-main-container .iframewrap_crs {  top:0;}
+   .ie7-css  .iframewrap_crs {top:0;}
+   
+ 
+   
+   .ie7-css .course-quiz-main-container .course_ifram_cls_btn,  .ie7-css .fav-quiz-main-container .course_ifram_cls_btn,  .ie7-css .res-quiz-main-container .course_ifram_cls_btn { left:-10px;}
+   
+    body .popup .enterbtn a { background:none; border:1px solid #6ebd9e; height:25px; } 
+    #forget_popup  .enterbtn a{background:none !important; border:1px solid #6ebd9e; height:26px !important;}
+   body #forget_popup  .enterbtn a span { background:none; height:auto;}
+
+    html.ie8-spec body .popup .enterbtn a { height:49px;}
+	html.ie8-spec body #regPop .enterbtn a{ height:29px;}
+   html.ie8-spec #forget_popup .enterbtn a { height:49px !important;}
+   html.ie9-spec body .enterbtn a#frg_psw_sub { height:52px !important;}
+   html.ie9-spec body .popup .enterbtn a { height:54px;}
+   html.ie9-spec body #regPop .enterbtn a{ height:29px;}

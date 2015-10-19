@@ -1,0 +1,60 @@
+<div class="row"> <div id="backbtn" class="BObackbtn" style="display:none;"><a href="javascipr:void(0);"><img src="../images/BlueOcean.png"></a></div></div>
+
+<section id="login">
+    <div class="nonetconnection"><p data-msg="network_fail"></p></div>
+    <div class="corelogin">
+        <header>
+            <div class="logo_login"><a href="#"><img src="../images/login_nwlogo.png"></a></div>
+			<div class="clear"></div>
+            <div class="logo_login2"><a href="#"><img src="../images/login_nwlogo2.png"></a></div>
+        </header>
+        <section class="loginholder login-page">
+            <div class="login-bx">
+                <div class="logbgtop"></div>
+                <div class="logincorebx">
+                    <div class="inner"><div class="logintext"><span data-msg="login"></span></div>
+                    <form id="loginform">
+                        <div class="formbx fldbg"><div class="fldinner"><span class="loginicon"></span><input id="name" data-placeholder="username" class="test" placeholder="User Name" tabindex="1" /></div></div>
+                        <div class="formbx fldbg"><div class="fldinner"><span class="pswdicon"></span><input id="pwd" data-placeholder="password" class="test" placeholder="password" type="password" tabindex="2" /></div></div> 
+                        <div class="forgetpass">
+                            <a id="register_a" style="" data-msg="reg-register"></a>
+                            <a id="forgotpwd_a" href="#forget_popup" role="button" data-toggle="modal"  data-msg="forgotpassword"></a>
+                        </div>                
+                        <div class="disabld_selectbx fldbg"><div class="fldinner"> <select id="language-dropdown" tabindex="3"><option value="">Select Language</option></select></div></div>             			
+                    </form>
+
+                    <div id="signin" class="signin_btn btngrn"><a href="javascript:void(0)" tabindex="4"><span class="btninner"><img src="../images/lgn_arw4.png"></span></a></div> 
+                    <div id="login_error_msg" class="errormsg loginerror"></div>
+				</div>
+				<div class="logbgbot"></div>
+                </div>
+							
+            </div>
+            <!-- Footer Content for login Page -->
+            <div class="footerbx">
+                <a class="privacyPolicy" target="_blank" href="#" data-msg="privacy_policy">PRIVACY POLICY</a> | 
+                <a class="termsConditions" target="_blank" href="#" data-msg="terms_conditions">TERMS &amp; CONDITIONS</a>
+            </div>
+        </section> 
+    </div>
+    <div id="forget_popup" class="login-popup">
+        <div class="cls_btn close"><a href="#"><img src="../images/closebtn.png"></a></div>
+		<span class="forg-popup-left"></span>
+        <div class="forgotbx box-sizing-cl">
+            <div class="forgotbx_holder">
+                <h1 id="myModalLabel" class="hideclass" data-msg="fpheading"></h1>
+                <form class="formbx2 hideclass" id="forgot_pass">
+                    <input id="email" data-placeholder="email" placeholder="Email ID" type="text" class="test" value="Email ID"/>
+                </form>
+            </div>
+            <div class="enterbtn"><a href="#" id="frg_psw_sub"><span data-msg="enter" class="reg-btgrn-lt signinIE9"></span></a></div>
+            <div class="success_msg" style="display:none"></div>
+            <div class="OKbtn" style="display:none"><a href="#" data-msg="OK"></a></div>
+            <div class="loaderbx hideclass" style="display:none">
+                <span class="loaderimg"><img src="../images/loader2.gif"></span>
+            </div>
+            <div id="email_error_msg"></div>
+        </div>
+		<span class="forg-popup-right"></span>
+    </div>
+</section>
