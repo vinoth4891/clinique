@@ -258,8 +258,35 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function (tem
             }
             badgeWidth = $("div.bdgebx_hldr:last li").outerWidth();
             totBadges = $("div.bdgebx_hldr:last li").length;
-            $("div.bdgebx_hldr:last > ul").width(badgeWidth * totBadges);
+			$("div.bdgebx_hldr:last > ul").width(badgeWidth * totBadges);
+            self.arrowClick = 0;
+			
+			// media query event handler
+			if (matchMedia) {
+				var mq = window.matchMedia("handheld, only screen and (max-width: 1024px)");
+				mq.addListener(WidthChange);
+				WidthChange(mq);
+			}
+
+			// media query change
+			function WidthChange(mq) {
+
+				if (mq.matches) {
+					badgeWidth = $("div.bdgebx_hldr:last li").outerWidth();
+					totBadges = $("div.bdgebx_hldr:last li").length;
+					$("div.bdgebx_hldr:last > ul").width(badgeWidth * totBadges);
+                    self.arrowClick = 0;
+				}
+				else {
+					badgeWidth = $("div.bdgebx_hldr:last li").outerWidth();
+					totBadges = $("div.bdgebx_hldr:last li").length;
+					$("div.bdgebx_hldr:last > ul").width(badgeWidth * totBadges);
+                    self.arrowClick = 0;
+				}
+
+			}
         },
+        arrowClick: 0,
         bindUI: function () {
             if(jQuery('.ie7-footer-specific').hasClass('reportsfooter')) {
                jQuery('.ie7-footer-specific').removeClass('reportsfooter');
@@ -270,7 +297,7 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function (tem
             }else{
                 jQuery("div.bdge_bx > div.bdgebx_hldr").removeClass('bdgebx_hldr-mob-landscape');
             }
-            var language, ajaxCall = '', iTouch = 'click';            
+            var language, ajaxCall = '', iTouch = 'click';
             if (!($.browser.msie && parseInt($.browser.version, 10) === 7)) {
                 language = window.localStorage.getItem("language");
             } else {
@@ -316,6 +343,7 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function (tem
             if(isiOS()){
                 iTouch = 'touchstart';
             }
+			
             $("div.bdge_arw_lft, div.bdge_arw_rgt").on(iTouch, function () {
                 var clickedArrow1 = $(this);
                 var allowAnimation = false;
@@ -328,17 +356,20 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function (tem
                 var leftElem = $("div.bdge_arw_lft");
                 var rightElem = $("div.bdge_arw_rgt");
                 var leftSign = '-';
-                if ($(this).hasClass('bdge_arw_lft')) {
+				var hideListCount = Math.round((badgeUlWidth - bdgebxHldrWidth) / badgeLiWidth);
+				if ($(this).hasClass('bdge_arw_lft')) {
                     var leftSign = '+';
 				}
                 if (((badgeUlLeft < 0) || (preAdjustVal >= 0)) && (leftSign == '+')) {
                     allowAnimation = true;
+					self.arrowClick--;
                 }
                 if (leftSign == '-') {
                     allowAnimation = false;
                     bdgebxHldrWidth = (bdgebxHldrWidth < 250)?bdgebxHldrWidth*1.5:bdgebxHldrWidth;                    
-                    if((badgeUlLeft) > (bdgebxHldrWidth - badgeUlWidth)){
+                    if((badgeUlLeft) > (bdgebxHldrWidth - badgeUlWidth) && (hideListCount != self.arrowClick)){
                         allowAnimation = true;
+						self.arrowClick++;
                     }
                 }
                 if (allowAnimation) {
@@ -491,6 +522,10 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function (tem
                     jQuery("div.bdge_arw_lft, div.bag_drg_lftbx").addClass('dsbl');
                     jQuery("div.bdge_arw_rgt > a, div.bag_drg_rgtbx > a").removeClass('dsblRht');
                     jQuery("div.bdge_arw_rgt, div.bag_drg_rgtbx").removeClass('dsbl');
+					badgeWidth = $("div.bdgebx_hldr:last li").outerWidth();
+					totBadges = $("div.bdgebx_hldr:last li").length;
+					$("div.bdgebx_hldr:last > ul").width((badgeWidth * totBadges)+10);
+					self.arrowClick = 0;
                 });
                 /* Alignment fix */
                 if((screen.width == 1280) && (window.orientation !== undefined)){
