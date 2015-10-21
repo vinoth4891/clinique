@@ -310,7 +310,8 @@ position:relative;
 
  .usrdetails p{margin:6px 0 0 50px;}
  
- .bdgebx_hldr ul li {padding-right: /*2.5%*/0.8%;}
+ .bdgebx_hldr ul { float:left;}
+ .bdgebx_hldr ul li {padding-right: /*2.5%*/0.5%;}
  
 .bdgebx_hldr ul li span.lock {right: 25px}
  .bag_drg_bx {width: 100%} 
@@ -426,3 +427,5 @@ position:relative;
 
 
 #playersdiv .plyr_dta_hdg , .plyrstble .pointsWrap { margin-right:5%;}
+
+#player-course-drpdwn {font-family: Helvetica, "Arial Narrow", Arial;}

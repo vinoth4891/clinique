@@ -167,3 +167,15 @@
           opacity: .5;
         }
     }
+
+
+@media screen and (max-width:676px) {
+#commentModal  .commentmodal-dialog {
+    margin: 50% auto;
+    top: -120px;
+  }
+}
+
+#commentModal  .commentmodal-dialog {
+margin: 50% auto;
+top: -60px; }

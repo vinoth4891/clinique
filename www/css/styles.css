@@ -1423,6 +1423,10 @@ and (orientation : portrait) {
         margin:45% auto 0 auto;
       }
 	  body .coruseThumbList .offmaradj { margin-left:0;}
+      /* body .carouselbx { float:left; border:1px solid red; width:100%; height:500px;}
+     .homeSwiper-wrapper li {position:static; z-index:999 !important;  -webkit-transform: translate3d(0, 0, 0);}*/
+      body ul.homeSwiper-wrapper { position:relative; height:400px !important; z-index:9999;}
+     
 }
   
   /* Inputs */
@@ -2699,3 +2703,13 @@ html body .resource_wrap { padding-bottom:8% !important;}
 .onlineApp .course_ifram_cls_btn { position:relative; left:-10px;}
 .onlineApp .quiz-main-container #container #content-webview { padding-top:0;}
  /* Mobile Online App End*/
+
+@media only screen and (max-width : 667px) {
+    body.s0 .s1 { padding:20px !important; width:100% !important;}
+    
+}
+
+ .homeSwiper-wrapper * {-webkit-transform: translate3d(0, 0, 0);}
+
+.report-details-show #load_wrapper {position: fixed  !important; top:45% !important;}
+.report-details-show .overlaycontainer { width:100%; position:fixed;}

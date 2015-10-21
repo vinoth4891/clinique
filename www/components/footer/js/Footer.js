@@ -88,7 +88,7 @@ define(["framework/WidgetWithTemplate","home/Home","course/Course","me/Me"] , fu
                                        },
                                        function(){},"OfflineServicePlugin","getTermsAndConditions",["privacyPolicy",activeLang]);
                             
-                }else if(  isDevice() && isPhoneGap() && self.globalConfig.application.offLine){
+                }else if(  isDevice() && isPhoneGap() && !self.globalConfig.application.offLine){
                   privacyPolicy = 'Clinique_Education_Privacy_Policy_DEVICE';
                   var getFilePath, downloadFilePath, policyItemsData;
                   getFilePath = privacyPolicy+'_'+ activeLang +'.docx';

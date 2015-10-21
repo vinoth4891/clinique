@@ -75,6 +75,7 @@ define(["framework/WidgetWithTemplate","home/Home"] , function(template) {
                 jQuery("#header-menu .header_home").addClass('selected');
                 jQuery("#footer-menu li").removeClass('selected');
                 jQuery("#footer-menu li.footer_home").addClass('selected');
+                jQuery('body').removeClass('report-details-show');
                
                 var hash = window.location.hash;
                 if(hash !== '#home'){
@@ -190,6 +191,7 @@ define(["framework/WidgetWithTemplate","home/Home"] , function(template) {
 				}
                 jQuery("#header-menu li").removeClass('selected');
                 jQuery(this).addClass('selected');
+                jQuery('body').removeClass('report-details-show');
                 var hash = window.location.hash;
                 if(hash !== '#home'){
                     if(!jQuery("#carousel").length && !jQuery(".homeSwiper-container").length ){
@@ -206,6 +208,7 @@ define(["framework/WidgetWithTemplate","home/Home"] , function(template) {
 				if($('html').hasClass('ie8')){
 					jQuery(".widget-maincontent-div").empty();
 				}
+                jQuery('body').removeClass('report-details-show');
                 var hash = window.location.hash;
                 jQuery("#header-menu li").removeClass('selected');
                 jQuery(this).addClass('selected');
@@ -224,6 +227,7 @@ define(["framework/WidgetWithTemplate","home/Home"] , function(template) {
 				if($('html').hasClass('ie8')){
 					jQuery(".widget-maincontent-div").empty();
 				}
+                jQuery('body').removeClass('report-details-show');
                 var hash = window.location.hash;
                 jQuery("#header-menu li").removeClass('selected');
                 jQuery(this).addClass('selected');
@@ -252,6 +256,7 @@ define(["framework/WidgetWithTemplate","home/Home"] , function(template) {
 				if($('html').hasClass('ie8')){
 					jQuery(".widget-maincontent-div").empty();
 				}
+                jQuery('body').removeClass('report-details-show');
                 var hash = window.location.hash;
                 jQuery("#header-menu li").removeClass('selected');
                 jQuery(this).addClass('selected');

@@ -1870,7 +1870,7 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
                             for (i = 0; i < entries.length; i++) {  /*get existing file in the clinique folder*/
                                 if (entries[i].name === fileName) { /*check if already exist.*/
                                     courseItemData.fileURL = entries[i].fullPath;
-                                    self.loadFileinWeb(courseItemData); /*if yes load into device.*/
+                                    self.loadFileinWeb(self, courseItemData); /*if yes load into device.*/
                                     isExists = true;
                                     break;
                                 }
@@ -1908,7 +1908,7 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
 						};
                         fileTransfer.download(downloadFileURL, filePath, function(fileDir) {
                             courseItemData.fileURL = fileDir.fullPath;
-                            self.loadFileinWeb(courseItemData); /*load downloaded file into iframe/ video*/
+                            self.loadFileinWeb(self, courseItemData); /*load downloaded file into iframe/ video*/
                         }, function(error) {
                             //console.log("**********download error source " + error.source);
                             //console.log("********download error target " + error.target);
@@ -2659,7 +2659,7 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
             }
         },
         loadquizinWeb: function(srcURL, quizTitle, Filetype) {
-            var quizCCBreadcrumb = jQuery.trim(quizTitle.substr(0,3));
+            var quizCCBreadcrumb = jQuery.trim(quizTitle.substr(0,3)), self = this;
             jQuery('#resrcbred li:nth-child(3)').removeClass('Document video audio CC quiz noSlashBread').addClass('reshdnk '+(quizCCBreadcrumb == "CC:" ? "CC" : "quiz")).html('<a href="javascript:void(0);" data-msg='+(quizCCBreadcrumb == "CC:" ? "CC" : "quiz")+'></a>');
             jQuery('#resrcbred li:nth-child(4)').show();
             var breadFourTitle = (quizCCBreadcrumb != 'CC:' ? quizTitle:quizTitle.substr(3));
@@ -2756,6 +2756,9 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
 									clearInterval(quizreviewlength);
 									 jQuery("#load_wrapper, .overlaycontainer").hide();
 									jQuery(window).scrollTop(0);
+                                    if(!$('html').hasClass('ie8') && !$('html').hasClass('ie9')){
+                                        document.getElementById("resourceContent-iframe").contentDocument.location.reload(true);
+                                    }
 								}
 								 },800); 
 								

@@ -6,7 +6,7 @@ html,body{margin:0; padding:0;}
 .tpbreadcrumbs ul li.regishdlnk a{color:#85a095}
 #register_holder{ width:100%; font-family:Helvetica,arial; font-size:16px; color:#85a095; padding-bottom:5px;}
 #register_holder fieldset{ width:100%; display:inline-block; margin-bottom:15px;}
-#register_holder fieldset label{min-width:267px;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box; /*padding-right:15px; */display:block; float:left; line-height:25px; cursor:default;color: #85A095;padding-top:3px; font-size:16px}
+#register_holder fieldset label{min-width:267px;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box; /*padding-right:15px; */display:block; float:left; line-height:25px; cursor:default;color: #85A095;padding-top:3px; font-size:16px; text-transform: capitalize;}
 #register_holder fieldset label span.mandatory{color:#fe0000}
 #register_holder > fieldset > span{color:red; float:left; width:330px; font-size:12px; padding-left:166px;}
 #register_holder fieldset input{width:45%; float:left; height: 32px; border:1px #acc0b8 solid; -webkit-border-radius: 5px; border-radius: 5px;	-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
@@ -89,14 +89,14 @@ html,body{margin:0; padding:0;}
 .mar_adj_reg{margin-right:10px}
 .regmsg_msg span.regtxt{color: #000; display: block; font-family: HelveticaNeue,arial; font-size: 16px; padding: 15px 0}
 .regmsg_msg span.sucessbtn2 a {
-    background: #70BB9E; /* Old browsers */
-    background: -moz-linear-gradient(top, #A3EDD1 0%, #9BE5C9 21%, #7BC5A8 75%, #70BB9E 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#A3EDD1), color-stop(21%,#9BE5C9), color-stop(75%,#7BC5A8), color-stop(100%,#70BB9E)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #A3EDD1 0%,#9BE5C9 50%,#7BC5A8 75%,#70BB9E 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #A3EDD1 0%,#9BE5C9 21%,#7BC5A8 75%,#70BB9E 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #A3EDD1 0%,#9BE5C9 21%,#7BC5A8 75%,#70BB9E 100%); /* IE10+ */
-    background: linear-gradient(to bottom, #A3EDD1 0%,#9BE5C9 21%,#7BC5A8 75%,#70BB9E 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#A3EDD1', endColorstr='#70BB9E',GradientType=0 ); /* IE6-8 */
+  /*  background: #70BB9E;  Old browsers */
+  /*   background: -moz-linear-gradient(top, #A3EDD1 0%, #9BE5C9 21%, #7BC5A8 75%, #70BB9E 100%); FF3.6+ */
+   /*  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#A3EDD1), color-stop(21%,#9BE5C9), color-stop(75%,#7BC5A8), color-stop(100%,#70BB9E)); Chrome,Safari4+ */
+   /*  background: -webkit-linear-gradient(top, #A3EDD1 0%,#9BE5C9 50%,#7BC5A8 75%,#70BB9E 100%); Chrome10+,Safari5.1+ */
+   /*  background: -o-linear-gradient(top, #A3EDD1 0%,#9BE5C9 21%,#7BC5A8 75%,#70BB9E 100%); Opera 11.10+ */
+   /*  background: -ms-linear-gradient(top, #A3EDD1 0%,#9BE5C9 21%,#7BC5A8 75%,#70BB9E 100%);  IE10+ */
+   /*  background: linear-gradient(to bottom, #A3EDD1 0%,#9BE5C9 21%,#7BC5A8 75%,#70BB9E 100%);  W3C */
+   /*  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#A3EDD1', endColorstr='#70BB9E',GradientType=0 ); IE6-8 */
     border: 1px solid #6EBD9E;
     border-radius: 5px 5px 5px 5px;
     box-shadow: 0 0 1px 1px #CCF1E3 inset;
@@ -192,4 +192,10 @@ html,body{margin:0; padding:0;}
     .regmsg_popup {left: 11%}
 	select {-webkit-appearance: listbox; padding: 0px 5px !important}
 #regmsg_modal{margin-top: 30% !important}
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) 
+and (orientation : portrait) {
+#register_holder span.reg-text-lt { width:auto;}
+#register_holder fieldset label { margin-right:20px;}
 }

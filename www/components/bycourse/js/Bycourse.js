@@ -38,6 +38,7 @@ define(["framework/WidgetWithTemplate"], function (template) {
         },
 
         bindUI: function () {
+                                                                    $('body').addClass('report-details-show');
             if(!(jQuery('.ie7-footer-specific').hasClass('reportsfooter'))) {
                jQuery('.ie7-footer-specific').addClass('reportsfooter');
             }
@@ -745,6 +746,7 @@ define(["framework/WidgetWithTemplate"], function (template) {
                     'position':'relative',
                     'top':jQuery(document).height()/2
                 });
+                                            jQuery("#load_wrapper, .overlaycontainer").show();
                 var page = jQuery(this).parent().attr('data-page');
                 var pagelength = jQuery('.bootpag li').length - 2;
                 var store, retailer, region, country, sortby;
@@ -891,6 +893,7 @@ define(["framework/WidgetWithTemplate"], function (template) {
                 jQuery(".footer_home").addClass('selected');
                 jQuery("#header-menu li").removeClass('selected');
                 jQuery(".header_home").addClass('selected');
+                jQuery('body').removeClass('report-details-show');
                 var hash = window.location.hash;
                 if (hash !== '#home') {
                     if (!jQuery("#carousel").length && !jQuery(".homeSwiper-container").length) {
@@ -1091,7 +1094,7 @@ define(["framework/WidgetWithTemplate"], function (template) {
                         break;
                     default:
 						jQuery("div#bycourse-image").show();
-						jQuery("#load_wrapper").hide();
+						jQuery("#load_wrapper, .overlaycontainer").hide();
                         jQuery("div.bycourse-temp, footer.footerbx").hide();
                 }
             }
@@ -1494,6 +1497,7 @@ define(["framework/WidgetWithTemplate"], function (template) {
                 'position':'relative',
                 'top':jQuery(document).height()/2
             });
+                                                                    jQuery("#load_wrapper, .overlaycontainer").show();
             var self = this,
             serviceUrl = self.globalConfig.apiAddress.service,
             reportSearchArr = [],
@@ -1569,6 +1573,7 @@ define(["framework/WidgetWithTemplate"], function (template) {
                         'top':'45%',
                         'display':'none'
                     });
+                        jQuery("#load_wrapper, .overlaycontainer").hide();
                     loadAllLanguages();
                 }
             });
@@ -1670,6 +1675,7 @@ define(["framework/WidgetWithTemplate"], function (template) {
                         'top':'45%',
                         'display':'none'
                     });
+                        jQuery("#load_wrapper, .overlaycontainer").hide();
                     loadAllLanguages();
                 }
             });
@@ -1886,6 +1892,7 @@ define(["framework/WidgetWithTemplate"], function (template) {
                         'top':'45%',
                         'display':'none'
                     });
+                        jQuery("#load_wrapper, .overlaycontainer").hide();
                     loadAllLanguages();
                 }
             });

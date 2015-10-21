@@ -2320,14 +2320,14 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
 							jQuery("#resourceContentFav-iframe").find('.content-primary').css('width','100% ').css('margin-right','0');
 							jQuery("#resourceContentFav-iframe").find('#scorm_object').css('width','100%').css('margin-right','0');
 							jQuery("#resourceContentFav-iframe").find('#scorm_layout').css('width','100%').css('margin-right','0');
-							$(window).trigger('resize');
 							jQuery("#resourceContentFav-iframe").css('width','100%').css('margin-right','0px').css('margin-left','0px');
+                            $(window).trigger('resize');
 						   }else{
 							jQuery("#resourceContentFav-iframe").contents().find('.content-primary').css('width','100% ').css('margin-right','0');
 							jQuery("#resourceContentFav-iframe").contents().find('#scorm_object').css('width','100%').css('margin-right','0');
 							jQuery("#resourceContentFav-iframe").contents().find('#scorm_layout').css('width','100%').css('margin-right','0');
-							$(window).trigger('resize');
 							jQuery("#resourceContentFav-iframe").css('width','100%').css('margin-right','0px').css('margin-left','0px');
+                            $(window).trigger('resize');
 							
 						   }	
 							
@@ -2833,7 +2833,7 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
           }
         },
         loadquizinWeb: function(srcURL, quizTitle, Filetype) {
-			var breadFourTitle;
+			var breadFourTitle, self = this;
 		    var CCbreadCrumb = jQuery.trim(quizTitle.substr(0,3));
 			if((CCbreadCrumb == "CC:"))
 			{
@@ -3040,17 +3040,17 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
 								}
 							}
 						if($('html').hasClass('ie8') || $('html').hasClass('ie9')){
-							jQuery("#resourceContentFav-iframe").find('.content-primary').css('width','100% ').css('margin-right','0');
+							jQuery("#resourceContentFav-iframe").find('.content-primary').css('width','100%').css('margin-right','0');
 							jQuery("#resourceContentFav-iframe").find('#scorm_object').css('width','100%').css('margin-right','0');
 							jQuery("#resourceContentFav-iframe").find('#scorm_layout').css('width','100%').css('margin-right','0');
-							$(window).trigger('resize');
 							jQuery("#resourceContentFav-iframe").css('width','90%').css('margin-right','0px').css('margin-left','0px');
+                            $(window).trigger('resize');
 						   }else{
-							jQuery("#resourceContentFav-iframe").contents().find('.content-primary').css('width','100% ').css('margin-right','0');
+							jQuery("#resourceContentFav-iframe").contents().find('.content-primary').css('width','100%').css('margin-right','0');
 							jQuery("#resourceContentFav-iframe").contents().find('#scorm_object').css('width','100%').css('margin-right','0');
 							jQuery("#resourceContentFav-iframe").contents().find('#scorm_layout').css('width','100%').css('margin-right','0');
-							$(window).trigger('resize');
 							jQuery("#resourceContentFav-iframe").css('width','90%').css('margin-right','0px').css('margin-left','0px');
+                            $(window).trigger('resize');
 						   }	
 						   jQuery("#load_wrapper, .overlaycontainer").show();	
 						setTimeout(function(){ 

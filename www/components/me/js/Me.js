@@ -383,7 +383,7 @@ define(["framework/WidgetWithTemplate","home/Home","changePwd/ChangePwd"] , func
                     jQuery("#reg_str").html('<option value="sel_one">Select One</option>').attr('disabled','disabled');
                 }
                 if(jQuery("#me_retailer").val() == "Other"){
-                    jQuery("#reg_str").append('<option>Other</option>');
+                    jQuery("#reg_str").append('<option value="Other">Other</option>');
                 }
             });
             /*jQuery("#reg_str").on('change',function(){On store change*/
@@ -493,7 +493,7 @@ define(["framework/WidgetWithTemplate","home/Home","changePwd/ChangePwd"] , func
                             jQuery("#me_retailer").append('<option value="'+val.retailer+'">'+val.retailer+'</option>');
                         }
                     });
-                    jQuery("#me_retailer").append('<option value="">Other</option>');
+                    jQuery("#me_retailer").append('<option value="Other">Other</option>');
                     if(value == 'service'){
                         jQuery('#me_retailer option').filter(function() {
                             return $.trim( $(this).text().toLowerCase() ) == $.trim(userDetails.profile.retailer.toLowerCase());
@@ -503,7 +503,7 @@ define(["framework/WidgetWithTemplate","home/Home","changePwd/ChangePwd"] , func
                     self.getStoreData('service');
                 }
 				if(res.error == true && res.response == "empty"){
-                	 jQuery("#me_retailer").append('<option value="">Other</option>');
+                	 jQuery("#me_retailer").append('<option value="Other">Other</option>');
                 }
             });
         },
@@ -529,7 +529,7 @@ define(["framework/WidgetWithTemplate","home/Home","changePwd/ChangePwd"] , func
                 var retailerval = jQuery.trim(jQuery("#me_retailer > option:selected").text());
                 if(retailerval == "Other"){
                     jQuery("#reg_str").empty();
-                    jQuery("#reg_str").append('<option>Other</option>');
+                    jQuery("#reg_str").append('<option value="Other">Other</option>');
                 }
                 if(retailerval == "sel_one") {
                     jQuery("#reg_str").append('<option value="sel_one">Select One</option>');
@@ -540,7 +540,7 @@ define(["framework/WidgetWithTemplate","home/Home","changePwd/ChangePwd"] , func
                             jQuery("#reg_str").append('<option value="'+val.store+'">'+val.store+'</option>');
                         }
                     });
-                    jQuery("#reg_str").append('<option value="">Other</option>');
+                    jQuery("#reg_str").append('<option value="Other">Other</option>');
                     if(value == 'service'){
                         jQuery('#reg_str option').filter(function() {
                             return $.trim( $(this).text().toLowerCase() ) == $.trim(userDetails.profile.store.toLowerCase());
