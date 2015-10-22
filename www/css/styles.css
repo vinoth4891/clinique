@@ -1219,7 +1219,7 @@ body .quiz-container .btncommon { width:88% !important;}
     z-index: 1000;
     opacity: 0.8;
 }
-.overlay-video-quiz #load_wrapper, .overlay-video-quiz .overlaycontainer { display:block !important;}
+
 .parentreflection0 {
 	margin-top: 12px;
 	}
@@ -2714,3 +2714,7 @@ html body .resource_wrap { padding-bottom:8% !important;}
 
 .report-details-show #load_wrapper {position: fixed  !important; top:45% !important;}
 .report-details-show .overlaycontainer { width:100%; position:fixed;}
+
+.overlay-video-quiz #load_wrapper, .overlay-video-quiz .overlaycontainer { display:block !important;}
+.overlay-video-quiz .overlaycontainer { position:fixed !important; width:100%; z-index:999;}
+

@@ -554,7 +554,7 @@ body > li.ui-draggable.sequence-item img{ width:100px; height:100px;}
 @media handheld, only screen and (max-width:568px){
 
 .crswidg_qustns ul li {width: 174px}
-.crswidg_img ul li{margin-right:0.6%; width:128px; height:217px}
+.crswidg_img ul li{margin-right:0.6%; width:128px; height:auto;}
 .crswidg_drgbtn {width: 95%; margin-bottom: 30%;}
 .crswidg_drgbtn ul li a{font-size:17px}
 .crswidg_qustns ul li a {height: 97px}
@@ -770,6 +770,7 @@ and (orientation : portrait) {
 }
 
 .overlay-video-quiz #load_wrapper, .overlay-video-quiz .overlaycontainer { display:block !important;}
+.overlay-video-quiz .overlaycontainer { position:fixed !important; width:100%; z-index:999;}
 
 @media only screen
 and (min-device-width : 768px)

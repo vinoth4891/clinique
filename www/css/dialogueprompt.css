@@ -171,11 +171,14 @@
 
 @media screen and (max-width:676px) {
 #commentModal  .commentmodal-dialog {
-    margin: 50% auto;
-    top: -120px;
+    margin: 33% auto;
+    top:0px;
   }
 }
 
-#commentModal  .commentmodal-dialog {
-margin: 50% auto;
-top: -60px; }
+@media only screen and (min-width : 375px) and (max-width : 667px) and (orientation : landscape){
+    body #commentModal  .commentmodal-dialog {
+        margin: 33% auto;
+        top:-60px;
+    }
+}
