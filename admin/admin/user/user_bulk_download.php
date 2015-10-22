@@ -47,7 +47,7 @@ if ($format) {
     switch ($format) {
         case 'csv' : user_download_csv($fields);
         case 'ods' : user_download_ods($fields);
-        case 'xls' : user_download_xls($fields);
+        case 'xls' : user_download_xls($fields,$extrafields);
 
     }
     die;
@@ -106,7 +106,7 @@ function user_download_ods($fields) {
     die;
 }
 
-function user_download_xls($fields) {
+function user_download_xls($fields,$extrafields=array()) {
     global $CFG, $SESSION, $DB;
 
     require_once("$CFG->libdir/excellib.class.php");
@@ -126,12 +126,9 @@ function user_download_xls($fields) {
         $col++;
     }
 
-    
 	$extrafield_sql = '';
-	if ($extrafields = $DB->get_records('user_info_field')) {
-	  foreach ($extrafields as $n=>$v){
-	    $extrafield_sql .= " MAX(IF(muif.shortname = '".$v->shortname."', muid.data, NULL)) profile_field_".$v->shortname.",";
-	  }
+    foreach ($extrafields as $n=>$v){
+	  $extrafield_sql .= " MAX(IF(muif.shortname = '".$v->shortname."', muid.data, NULL)) profile_field_".$v->shortname.",";
     }
    $extrafield_sql = rtrim($extrafield_sql, ",");
    $idstoload = $SESSION->bulk_users;
