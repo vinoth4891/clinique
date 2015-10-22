@@ -8,7 +8,8 @@ html,body{margin:0; padding:0;}
 #register_holder fieldset{ width:100%; display:inline-block; margin-bottom:15px;}
 #register_holder fieldset label{min-width:267px;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box; /*padding-right:15px; */display:block; float:left; line-height:25px; cursor:default;color: #85A095;padding-top:3px; font-size:16px; text-transform: capitalize;}
 #register_holder fieldset label span.mandatory{color:#fe0000}
-#register_holder > fieldset > span{color:red; float:left; width:330px; font-size:12px; padding-left:166px;}
+/*#register_holder > fieldset > span{color:red; float:left; width:330px; font-size:12px; padding-left:166px;}*/
+#register_holder > fieldset > span{color:red; float:left;font-size:12px; /* width:330px; padding-left:166px;*/}
 #register_holder fieldset input{width:45%; float:left; height: 32px; border:1px #acc0b8 solid; -webkit-border-radius: 5px; border-radius: 5px;	-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
                                 -webkit-box-shadow: inset 1px 1px 10px 1px rgba(0, 0, 0, .1); box-shadow: inset 1px 1px 10px 1px rgba(0, 0, 0, .1); padding:0 0 0 10px; margin:0; color:#95999a;}
 
