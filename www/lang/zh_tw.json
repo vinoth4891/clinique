@@ -116,9 +116,9 @@
     "ERR10005": "無法辨識你的登入資料. 請重試一次. 請注意，密碼有區分大小寫",
     "ERR10006": "歡迎來到倩碧全新的線上學習系統. 這個應用程式能讓你下載線上學習課程. 並在離線狀態進行和完成線上課程的學習. 首先,你必須進行以下幾個簡單的步驟: <p>1.連線網路</p> <p>2.登入倩碧線上學習系統</p> <p>3.依據電腦提示完成倩碧線上學習課程資料下載 每當新課程上線， 你都能隨時連結並完成下載</p>",
     "ERR10007": "請檢查你的網路是否已成功連線並重新下載檔案.",
-	"ERR10008": "請檢查你的網路連線.需連線網路以完成指定動作.",
+    "ERR10008": "請檢查你的網路連線狀態.需連線網路以完成指定動作.",
 	"ERR10009": "There is not enough space on your device at this moment to download all the available content. Please make sure there is an additional {0} of space on the device to complete the sync process",
-    "ERR10011": "請檢查你的網路連線.需連線網路以完成指定動作.",
+    "ERR10011": "請檢查你的網路連線狀態.需連線網路以完成指定動作.",
     "quizOffline" : "謝謝你完成線上測驗! 請注意，若你現在是離線狀態，你的線上測驗成績將無法立即更新.",
 	"allinone": "無限制",
 	"answersaved": "答案已儲存",
@@ -154,5 +154,7 @@
 	"summaryofattempts": "你的先前作答記錄摘要",
 	"xoutofmax": "得分/配分 ",
 	"yourfinalgradeis": "這個測驗您的最後得分是",
-	"state": "狀態"
+	"state": "狀態",
+	"reg-user-note"       : "使用者姓名需使用英文字母和數字 (不能含有任何符號或標點) 使用者姓名必須全部使用小寫字母並且不能有空格.",
+	"reg-region-note"     : "請與櫃長或教育訓練部門聯絡以 取得登入代號."
 }

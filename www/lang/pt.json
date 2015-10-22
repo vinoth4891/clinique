@@ -154,5 +154,7 @@
 	"summaryofattempts": "Síntese das tentativas anteriores",
 	"xoutofmax": " em ",
 	"yourfinalgradeis": "A sua nota final do teste é .",
-	"state": "Estado"
+	"state": "Estado",
+	"reg-user-note"       : "O nome de utilizador pode apenas conter carateres alfanuméricos ( não pode usar símbolos ou acentos). O nome de utilizador deve ser escrito em letra minúscula e não deve conter espaços.",
+	"reg-region-note"     : "Por favor contacte o seu Counter Manager ou Education Executive para obter a sua senha de Login."
 }

@@ -155,5 +155,7 @@
 	"summaryofattempts": "Riepilogo dei tuoi tentativi precedenti ",
 	"xoutofmax": " su ",
 	"yourfinalgradeis": "Il tuo voto finale per questo quiz è ",
-	"state": "Stato"
+	"state": "Stato",
+	"reg-user-note"       : "Lo Username deve contenere solo lettere minuscole (no simboli o accenti) e non deve includere spazi.",
+	"reg-region-note"     : "Per favore contatta il tuo responsabile o il referente Education per ottenere il codice Login."
 }

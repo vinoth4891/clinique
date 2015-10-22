@@ -154,5 +154,7 @@
 	"summaryofattempts": "Oppsummering av dine tidligere forsøk",
 	"xoutofmax": " av ",
 	"yourfinalgradeis": "Sluttkarakter på denne quizen ble .",
-	"state": "Status"
+	"state": "Status",
+	"reg-user-note"       : "Brukernavn skal kun inneholde bokstaver men ikke æ, ø eller å. Heller ikke  symboler. Brukernavnet skal være med små bokstaver og uten mellomrom.",
+	"reg-region-note"     : "Kontakt din Counter Manager, SEE eller utdannelsesansvarlig for å få adgang til påloggingskode."
 }

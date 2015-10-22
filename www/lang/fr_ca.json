@@ -65,7 +65,7 @@
     "course_result":"Résultats de formation",
     "scores":"Scores",
     "reg-register":"S’enregistrer",
-    "reg-login-code":"Code d’accès",
+    "reg-login-code":"Code D’accès",
     "cancel-but":"Annuler",
     "OK":"Ok",
     "reg_success":"Félicitations ! Vous êtes maintenant enregistrés ! Cliquez sur ok et vous serez redirigé vers la page d’accueil.",
@@ -154,5 +154,7 @@
 	"summaryofattempts": "Résumé de vos tentatives précédentes",
 	"xoutofmax": " sur ",
 	"yourfinalgradeis": "Votre note finale pour ce test est .",
-	"state": "État"
+	"state": "État",
+	"reg-user-note"       : "Le nom d'utilisateur peut contenir uniquement des caractères alphanumériques (pas de symboles ni d'accents). Le nom d'utilisateur doit être en minuscules et sans espace.",
+	"reg-region-note"     : "Veuillez communiquer avec votre chef comptoir ou votre responsable principale de la formation pour obtenir le code d'ouverture de session."	
 }

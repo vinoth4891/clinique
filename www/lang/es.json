@@ -72,7 +72,7 @@
     "username_error":"Por favor, introduzca su nombre de usuario",
     "password_error":"Por favor, introduzca su contraseña",
     "loginauth_error":"<span class='long-txt-err'>No reconocemos su contraseña. Por favor inténtelo de nuevo. Tenga en cuenta que el campo de la contraseña distingue entre mayúsculas y minúsculas.</span>",
-    "fp_no_record":"Identificador de e-mail inválido, por favor entra de nuevo",
+    "fp_no_record":"Dirección de correo electrónico inválida. Por favor intenta de nuevo.",
     "fp_email_faliure":"El correo electrónico no ha sido enviado",
     "Home":"Inicio",
     "enter_old_pass":"Introduzca su contraseña antigua",
@@ -154,5 +154,7 @@
 	"summaryofattempts": "Resumen de sus intentos previos",
 	"xoutofmax": " sobre ",
 	"yourfinalgradeis": "Su calificación final en este cuestionario es ",
-	"state": "Estado"
+	"state": "Estado",
+	"reg-user-note"       : "El usuario solo puede contener caracteres alfanuméricos (no símbolos o acentos.) El usuario debe estar todo en minúsculas y no puede incluir espacios.",
+	"reg-region-note"     : "Por favor contacta a tu Ejecutivo de Cuenta o Gerente de Educación para obtener el Código de Inicio."
 }

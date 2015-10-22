@@ -154,5 +154,7 @@
 	"summaryofattempts": "Sammanfattning av dina tidigare försök",
 	"xoutofmax": " av ",
 	"yourfinalgradeis": "Ditt slutgiltiga betyg för detta test är .",
-	"state": "Status"
+	"state": "Status",
+	"reg-user-note"       : "Användarnamnet kan bara innehålla bokstäver och inte bokstäverna å, ä eller ö. Heller inga symboler eller accenter. Användarnamnet måste med små bokstäver och kan inte innehålla mellanslag.",
+	"reg-region-note"     : "Vänligen kontakta din Counter Manager, Säljrepresentant eller Utbildningsansvarige för att få tillgång till loginkoden"
 }
