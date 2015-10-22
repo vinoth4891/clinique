@@ -106,6 +106,28 @@ define(["framework/Base", "framework/AnimationProvider"], function() {
 					});
 				}
 			},
+			popseq : function(goBack) {
+				if(goBack == null) {
+					goBack = true;
+				}
+				var self = this;
+				var page = this.stack.pop();
+				var animationProviderMain = new Clazz.AnimationProvider( {
+					isNative: self.isNative,
+					container: page.element
+				});
+				if(!self.isNative){
+					animationProviderMain.animate(this.popAnimationTypeForGoingOut, function(container) {
+						container.remove();
+						page = null;
+						delete page;
+					});
+				} else {
+					page.element.remove();
+					page = null;
+					delete page;
+				}
+			},
 			push : function(view) {
 				var self = this;
 				// create top element for pushing

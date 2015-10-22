@@ -327,7 +327,7 @@ define(["framework/WidgetWithTemplate","courseItem/CourseItem","course/Course","
         },
 		reloadCurrPage: function () {
 		    //console.log("reloadCurrPage>>>>>>>>>>>>>>>");
-			Clazz.navigationController.pop(this);
+			Clazz.navigationController.popseq(this);
 			this.loadPage();
 		},
 		validateAnswers : function (crtAnsArr) {
