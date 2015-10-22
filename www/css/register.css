@@ -173,7 +173,7 @@ html,body{margin:0; padding:0;}
     .regmsg_popup {left: 23%; top: 66px}
     .regmsg_hldrbx {width: 100%}
     #register_holder > fieldset > span{
-        width:290px;
+         width:100% !important;
     }
 }
 
@@ -198,4 +198,11 @@ html,body{margin:0; padding:0;}
 and (orientation : portrait) {
 #register_holder span.reg-text-lt { width:auto;}
 #register_holder fieldset label { margin-right:20px;}
+}
+
+.guideNotes{
+    clear: both;
+    padding-left: 267px;
+    font-size: 11px!important;
+    color: #85a095!important;	
 }
