@@ -202,8 +202,9 @@ and (orientation : portrait) {
 }
 
 .guideNotes{
-    clear: both;
-    padding-left: 267px;
+    float:left;
+    padding-left:0px;
     font-size: 11px!important;
-    color: #85a095!important;	
+    color: #85a095!important;
+    display:block;	
 }
