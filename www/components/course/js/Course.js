@@ -38,6 +38,13 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage","courseItem/Cou
         preRender: function(whereToRender, renderFunction) {
             //renderFunction(this.data, whereToRender);
             var domElement = '',BreadcrumElement='';
+			Handlebars.registerHelper('footerContent', function () {
+              var footerElement = '<li class="footer_home"><a href="#"><span class="hmemenuicon"></span><span class="hmemenutxt" data-msg="Home"></span></a></li>';
+				  footerElement += '<li class="selected footer_course"><a href="#"><span class="courseicon"></span><span class="hmemenutxt" data-msg="Courses"></span></a></li>';
+				  footerElement += '<li class="footer_me"><a href="#"><span class="meicon"></span><span class="hmemenutxt" data-msg="Me" ></span></a></li>';
+				  footerElement += '<li class="footer_players"><a href="#"><span class="playersicon"></span><span class="hmemenutxt" data-msg="Players"></span></a></li>';
+              return new Handlebars.SafeString(footerElement);
+            });
             Handlebars.registerHelper('checkForBreadcrum', function () {
                if( navigator.platform != "iPhone Simulator" && navigator.platform != "iPhone" && !isAndroid()){
                   BreadcrumElement = '<div class="tpbreadcrumbs"><ul>  \r\n' +
@@ -63,12 +70,6 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage","courseItem/Cou
                 }                 
               return new Handlebars.SafeString(domElement);
             });
-             jQuery("#footer-menu").find('li').remove();
-              var footerElement = '<li class="footer_home"><a href="#"><span class="hmemenuicon"></span><span class="hmemenutxt" data-msg="Home"></span></a></li>';
-                  footerElement += '<li class="selected footer_course"><a href="#"><span class="courseicon"></span><span class="hmemenutxt" data-msg="Courses"></span></a></li>';
-                  footerElement += '<li class="footer_me"><a href="#"><span class="meicon"></span><span class="hmemenutxt" data-msg="Me" ></span></a></li>';
-                  footerElement += '<li class="footer_players"><a href="#"><span class="playersicon"></span><span class="hmemenutxt" data-msg="Players"></span></a></li>';
-            jQuery(footerElement).appendTo(jQuery("#footer-menu"));
             renderFunction(this.data, whereToRender);
         },
         loadData :function(data){
