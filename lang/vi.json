@@ -154,5 +154,7 @@
 	"summaryofattempts": "Tóm tắt các nỗ lực trước đó của bạn",
 	"xoutofmax": " out of ",
 	"yourfinalgradeis": "Điểm số cuối cùng cho đề thi này của bạn là ",
-	"state": "trạng thái"
+	"state": "trạng thái",
+	"reg-user-note"       : "Tên người sử dụng chỉ có thể chứa chữ và số (không chứa ký hiệu hay dấu). Tên người sử dụng phải được viết thường và không có khoảng cách.",
+	"reg-region-note"     : "Vui lòng liên hệ Trưởng Quầy hoặc Quản Lý Đào Tạo để có Mã Đăng Nhập."
 }

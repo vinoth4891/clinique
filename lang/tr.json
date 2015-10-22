@@ -154,5 +154,7 @@
 	"summaryofattempts": "Önceki uygulamalarınızın özeti",
 	"xoutofmax": " out of ",
 	"yourfinalgradeis": "Bu sınav için final notunuz ",
-	"state": "Durum"
+	"state": "Durum",
+	"reg-user-note"       : "Kullanıcı adı yalnızca küçük harflerden oluşmalı; herhangi bir sembol, türkçe karakter veya boşluk kullanılmamalıdır.",
+	"reg-region-note"     : "Şifrenizi almak için bağlı bulunduğunuz Satış ve Eğitim Yöneticisi ile iletişime geçin."
 }

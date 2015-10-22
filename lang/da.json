@@ -65,7 +65,7 @@
     "course_result":"Kursusresultat",
     "scores":" Score",
     "reg-register":"Registrer",
-    "reg-login-code":"Login kode",
+    "reg-login-code":"Login Kode",
     "cancel-but":"Slet",
     "OK":"Ok",
     "reg_success":"Tillykke! Du er nu registeret! Klik Ok og du vil komme til login siden.",
@@ -154,5 +154,7 @@
 	"summaryofattempts": "Opsummering af dine tidligere forsøg",
 	"xoutofmax": " ud af ",
 	"yourfinalgradeis": "Den endelige vurdering af denne quiz er ",
-	"state": "Status"
+	"state": "Status",
+	"reg-user-note"       : "Brugenavn skal kun indholde bogstaver men ikke æ, ø eller å. Heller ikke  symboler eller accenter. Brugernavenet skal være med små bogskaver og uden mellemrum.",
+	"reg-region-note"     : "Kontakt venligst din Counter Manager, SEE eller uddannelsesansvarlig for at få adgang til loginkoden."	
 }

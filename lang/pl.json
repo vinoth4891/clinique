@@ -154,5 +154,7 @@
 	"summaryofattempts": "Podsumowanie twoich poprzednich podejść",
 	"xoutofmax": " z ",
 	"yourfinalgradeis": "Twoja końcowa ocena za ten quiz wynosi ",
-	"state": "Stan"
+	"state": "Stan",
+	"reg-user-note"       : "Nazwa użytkownika powinna składać się tylko z małych liter, nie zawierać przerw i musi składać się tylko z znaków alfanumerycznych (prosimy nie używać polskich znakó)",
+	"reg-region-note"     : "Proszę skontaktuj się ze swoim Education Executive w celu otrzymania kodu login."	
 }

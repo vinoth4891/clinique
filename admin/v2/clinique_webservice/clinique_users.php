@@ -128,6 +128,9 @@ class CliniqueUser {
 
 			$cohortDetails->timeadded = time();
 
+			if($userDetails->lang == COUNTER_MANAGER_ISO) {
+						cohort_add_member(US_ENGLISH, $lastinsertid);
+			}
 
 			 cohort_add_member( $cohortid[0]->id, $lastinsertid);
             //$DB->insert_record('cohort_members',$cohortDetails);

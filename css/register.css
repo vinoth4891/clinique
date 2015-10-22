@@ -138,12 +138,28 @@ html,body{margin:0; padding:0;}
 @media handheld, only screen and (max-width: 786px) {
 
     .registerbx {margin-left: 12.1%; height: 892px}
+	
+   
+}
 
+@media handheld, only screen and (min-width: 769px) {
+ 
+	#register_holder > fieldset > span{
+        width:43%!important;
+    }
+}
+
+@media handheld, only screen and (max-width: 769px) {
+ 
+	#register_holder > fieldset > span{
+        width:43%!important;
+    }
 }
 
 @media handheld, only screen and (max-width: 720px) {
 
     .registerbx {height: 100%}	
+	
 }
 
 @media handheld, only screen and (max-width: 640px) {
@@ -167,13 +183,14 @@ html,body{margin:0; padding:0;}
     #register_holder fieldset#reg_entstore_field input,
     #register_holder fieldset#reg_entretailer_field input{margin-top:10px !important}
 	.reg_grybtn a, .reg_grnbtn a{width: 136px;}
+	
 }
 
 @media handheld, only screen and (max-width: 480px) {
     .regmsg_popup {left: 23%; top: 66px}
     .regmsg_hldrbx {width: 100%}
     #register_holder > fieldset > span{
-        width:290px;
+        width:100%!important;
     }
 }
 
@@ -192,4 +209,10 @@ html,body{margin:0; padding:0;}
     .regmsg_popup {left: 11%}
 	select {-webkit-appearance: listbox; padding: 0px 5px !important}
 #regmsg_modal{margin-top: 30% !important}
+}
+.guideNotes{
+    clear: both;
+    padding-left: 267px;
+    font-size: 11px!important;
+    color: #85a095!important;	
 }

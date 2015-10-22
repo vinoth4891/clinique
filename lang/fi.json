@@ -65,7 +65,7 @@
     "course_result":" Kurssin tulokset",
     "scores":" Pisteet",
     "reg-register":"Rekisteröidy",
-    "reg-login-code":"Salasana",
+    "reg-login-code":"Sisäänkirjautumiskoodi",
     "cancel-but":"Peruuta",
     "OK":"OK",
     "reg_success":"Onneksi olkoon! Olet nyt rekisteröitynyt! Paina OK ja sinut ohjataan takaisin sisäänkirjautumisnäkymään.",
@@ -154,5 +154,7 @@
 	"summaryofattempts": "Yhteenveto aiemmista suorituskerroistasi",
 	"xoutofmax": " maksimista ",
 	"yourfinalgradeis": "Lopullinen arvosanasi tästä tentistä on ",
-	"state": "Tila"
+	"state": "Tila",
+	"reg-user-note"       : "Käyttäjätunnus saa sisältää vain kirjaimia( ei numeroita eikä symboleja). Käyttäjätunnus täytyy olla pienillä kirjaimilla eikä saa sisältää välilyöntejä.",
+	"reg-region-note"     : "Olethan yhteydessä Clinique kouluttajaan sisäänkirjautumiskoodin putteissa."
 }

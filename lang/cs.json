@@ -155,5 +155,7 @@
 	"summaryofattempts": "Souhrn vašich předchozích pokusů",
 	"xoutofmax": " / ",
 	"yourfinalgradeis": "Vaše konečná známka za tento test je ",
-	"state": "Stav"
+	"state": "Stav",
+	"reg-user-note"       : "Uživatelské jméno může obsahovat pouze písmena nebo čísla (žádné symboly nebo apostrofy). Uživatelské jméno musí obsahovat pouze malá písmena a být bez mezer.",
+	"reg-region-note"     : "Pro získání přihlašovacího kódu kontaktujte prosím školitele Clinique."
 }

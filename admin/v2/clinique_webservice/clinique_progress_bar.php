@@ -40,7 +40,9 @@ class ProgressPercent
 			);
 			//$courseDetails = array_values($DB->get_records_sql('SELECT c.id, c.fullname FROM {course} c, {enrol} e, {user_enrolments} ue WHERE c.id = e.courseid AND e.id = ue.enrolid AND ue.userid=? AND c.category=? ORDER BY c.sortorder', $params));
 			
-			$courseDetails = array_values($DB->get_records_sql("SELECT c.id, ue.userid, c.fullname, q.name FROM {course} c JOIN {enrol} e ON c.id = e.courseid JOIN {user_enrolments} ue ON e.id = ue.enrolid JOIN {quiz} q ON c.id=q.course AND q.name NOT LIKE 'aa:%' AND q.name NOT LIKE 'bb:%' WHERE ue.userid=? AND c.category=? ORDER BY c.sortorder", $params));
+			/*$courseDetails = array_values($DB->get_records_sql("SELECT c.id, ue.userid, c.fullname, q.name FROM {course} c JOIN {enrol} e ON c.id = e.courseid JOIN {user_enrolments} ue ON e.id = ue.enrolid JOIN {quiz} q ON c.id=q.course AND q.name NOT LIKE 'aa:%' AND q.name NOT LIKE 'bb:%' WHERE ue.userid=? AND c.category=? ORDER BY c.sortorder", $params));*/
+			
+			$courseDetails = array_values($DB->get_records_sql("SELECT c.id, ue.userid, c.fullname, q.name FROM {course} c JOIN {enrol} e ON c.id = e.courseid JOIN {user_enrolments} ue ON e.id = ue.enrolid JOIN {quiz} q ON c.id=q.course AND q.name NOT LIKE 'aa:%' AND q.name NOT LIKE 'bb:%' WHERE ue.userid=? AND c.category=? AND c.visible = 1 ORDER BY c.sortorder", $params));
 			
 			
 			$Coursecnt = count($courseDetails);
@@ -94,7 +96,9 @@ class ProgressPercent
 					);
 					//$courseDetails = array_values($DB->get_records_sql('SELECT c.id, c.fullname FROM {course} c, {enrol} e, {user_enrolments} ue WHERE c.id = e.courseid AND e.id = ue.enrolid AND ue.userid=? AND c.category=? ORDER BY c.sortorder', $params));
 					
-					$courseDetails = array_values($DB->get_records_sql("SELECT c.id, ue.userid, c.fullname, q.name FROM {course} c JOIN {enrol} e ON c.id = e.courseid JOIN {user_enrolments} ue ON e.id = ue.enrolid JOIN {quiz} q ON c.id=q.course AND q.name NOT LIKE 'aa:%' AND q.name NOT LIKE 'bb:%' WHERE ue.userid=? AND c.category=? ORDER BY c.sortorder", $params));
+					/**$courseDetails = array_values($DB->get_records_sql("SELECT c.id, ue.userid, c.fullname, q.name FROM {course} c JOIN {enrol} e ON c.id = e.courseid JOIN {user_enrolments} ue ON e.id = ue.enrolid JOIN {quiz} q ON c.id=q.course AND q.name NOT LIKE 'aa:%' AND q.name NOT LIKE 'bb:%' WHERE ue.userid=? AND c.category=? ORDER BY c.sortorder", $params));*/
+									
+					$courseDetails = array_values($DB->get_records_sql("SELECT c.id, ue.userid, c.fullname, q.name FROM {course} c JOIN {enrol} e ON c.id = e.courseid JOIN {user_enrolments} ue ON e.id = ue.enrolid JOIN {quiz} q ON c.id=q.course  AND q.name NOT LIKE 'aa:%' AND q.name NOT LIKE 'bb:%' WHERE ue.userid=? AND c.category=? AND c.visible = 1 ORDER BY c.sortorder", $params));
 					
 					
 					$Coursecnt = count($courseDetails);
