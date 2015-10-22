@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <title>::Clinique::</title>
+ <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
+ <link href="assets/css/fancydropdown.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/fonts.css" rel="stylesheet" type="text/css">
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="assets/js/bubbles.js"></script> 
+<script>
+window.onresize = function(event) {handleOrientation();}
+window.addEventListener('orientationchange', handleOrientation, false);
+function handleOrientation() {
+	draw();		
+}
+</script>
+ <!-- IE8 HTML5 COMPATIBILITY -->
+ <!--[if lt IE 9]>
+   <script>
+      document.createElement('header');
+      document.createElement('nav');
+      document.createElement('section');
+      document.createElement('article');
+      document.createElement('aside');
+      document.createElement('footer');
+   </script>
+<![endif]-->
+
+ <!--<link href="assets/css/reset.css" rel="stylesheet" type="text/css">-->
+
+ </head>
+
+ <body onload="initialize();">
+
+ <section class="splash">
+ <div class="splashlogo"><a href="#"><img src="assets/images/logo_splsh_ipad2.png"></a></div>
+   <canvas id="canvas1"></canvas>   
+ </section>
+</body>
+</html>

@@ -1,0 +1,4 @@
+UPDATE `mdl_user_info_field` SET `param1`='Asia Pacific\nEurope/Middle East/Africa\nLatin America\nNorth America\nTravel Retail Europe/Middle East/Africa\nTravel Retail Asia Pacific\nTravel Retail Central And South America\nTravel Retail Mexico And Caribbean\nTravel Retail North America\nUnited Kingdom' WHERE `id`='2';
+UPDATE `mdl_region` SET `region`='TRAVEL RETAIL EUROPE/MIDDLE EAST/AFRICA' WHERE `id`='5';
+UPDATE mdl_user_info_data SET DATA = 'TRAVEL RETAIL EUROPE/MIDDLE EAST/AFRICA' WHERE DATA = 'TRAVEL RETAIL - EUROPE/MIDDLE EAST/AFRICA' AND fieldid = 2;
+UPDATE mdl_cascade_region SET region = 'TRAVEL RETAIL EUROPE/MIDDLE EAST/AFRICA' WHERE region = 'TRAVEL RETAIL - EUROPE/MIDDLE EAST/AFRICA';

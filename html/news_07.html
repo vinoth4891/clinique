@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>::Clinique::</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="assets/css/fonts.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="assets/css/styles.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="assets/css/home.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="assets/css/profile.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="assets/css/course.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="assets/css/news.css" rel="stylesheet" type="text/css" media="screen" />
+
+<script type="text/javascript" src="assets/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap.js"></script>
+
+</head>
+
+<body>
+    <div class="container nopad">
+        
+        <!--Header Portion Starts-->
+         
+        <div class="row hme_hdrbx">
+          <div class="span3">
+            <div class="hmelogo logo_maradj"><a href="#"><img src="assets/images/logo_home_ipad.png"></a></div>
+            <div class="hmelogo2"><a href="#"><img src="assets/images/logo_home_mb.png"></a></div>
+          </div>
+          
+          <div class="span6 offset4 padtp">
+            <div class="hme-srchbx offset2">
+              <input placeholder="Search"></input>
+              <span class="srchicon"><a href="#">arrow</a></span>
+           </div>
+           
+           <div class="logout"><a href="#">Logout</a></div>            
+		            
+          </div>
+       	</div>
+		
+        <!--Header Portion Ends-->
+        
+        <!-------------------------------------------------Shelf Portion Starts--------------------------------------------------->        
+     
+	  
+		<div class="row pro_container">
+		<div class="web_nav_adj"></div>
+		
+		<!---------------------------------------Breadcrum menu Starts---------------------------------------->        
+        
+        	<section class="tpbreadcrumbs">
+              <ul>
+                <li class="newslnk"><a href="#">Home</a></li>
+                <li>News</li>
+				
+              </ul>
+              <div class="clear"></div>
+            </section>
+			
+			
+			
+            
+        <!---------------------------------------Breadcrum menu Ends---------------------------------------->            
+              
+            <section class="row">
+				<div class="newscontainer">
+					
+					<ul>
+					  <li><a href="#"><img src="assets/images/newsimg.png"></a></li>
+					  <li><a href="#"><img src="assets/images/newsimg.png"></a></li>
+					  <li><a href="#"><img src="assets/images/newsimg.png"></a></li>					
+					  <li><a href="#"><img src="assets/images/newsimg.png"></a></li>
+					  <li><a href="#"><img src="assets/images/newsimg.png"></a></li>
+					  <li><a href="#"><img src="assets/images/newsimg.png"></a></li>
+					</ul>					
+				
+				</div>
+			  			
+			  
+			  			
+			  
+			  		
+			
+			
+			</section> 
+  
+
+        
+        
+
+		<div class="row lifter2"></div>	
+        
+        <!-------------------------------------------------Profile Portion Ends----------------------------------------------------->                
+	          
+                  <!--Navigation Portion Starts-->
+        
+         <div class="row menu">		   
+           <div class="globalmenu webmenu">
+             <ul>
+				 <li><a href="#"><span class="hmemenuicon"></span><span class="hmemenutxt">Home</span></a></li>
+				 <li><a href="#"><span class="courseicon"></span><span class="hmemenutxt">Courses</span></a></li>
+				 <li><a href="#"><span class="meicon"></span><span class="hmemenutxt">Me</span></a></li>
+				 <li><a href="#"><span class="playersicon"></span><span class="hmemenutxt">Players</span></a></li>
+             </ul>
+           </div>     
+		   
+		              <div class="globalmenu navbar-fixed-bottom">
+             <ul>
+				 <li class="selected"><a href="#"><span class="hmemenuicon"></span><span class="hmemenutxt">Home</span></a></li>
+				 <li><a href="#"><span class="courseicon"></span><span class="hmemenutxt">Courses</span></a></li>
+				 <li><a href="#"><span class="meicon"></span><span class="hmemenutxt">Me</span></a></li>
+				 <li><a href="#"><span class="playersicon"></span><span class="hmemenutxt">Players</span></a></li>
+             </ul>
+           </div>     
+         </div>
+         
+        <!--Navigation Portion Ends-->
+
+
+	<!--Footer Copyrights --->
+	<footer class="copy">All copyrights reserved 2013</footer>                 
+        
+    </div>
+	</div>
+    
+	<script type="text/javascript">
+
+	        var $descriptions = jQuery('#carousel-descriptions').children('li'),
+            $controls = jQuery('#carousel-controls').find('span'),
+            $carousel = jQuery('#carousel')
+            .roundabout({
+                childSelector:"li", 
+                minOpacity:1,
+                minScale:0.1,
+                maxScale:0.8,
+                easing: "easeOutQuad",
+                dropEasing: 'easeOutBounce',
+                enableDrag: true, 
+                
+                autoplayDuration:5000, 
+                
+                responsive:true
+            })
+            .on('focus', 'li', function() {
+                var slideNum = $carousel.roundabout("getChildInFocus");
+			
+                $descriptions.add($controls).removeClass('current');
+                jQuery($descriptions.get(slideNum)).addClass('current');
+                jQuery($controls.get(slideNum)).addClass('current');
+            });
+
+            $controls.on('click dblclick', function() {
+                var slideNum = -1,
+                i = 0, len = $controls.length;
+                for (i=0 ; i<len; i++) {
+                    if (this === $controls.get(i)) {
+                        slideNum = i;
+                        break;
+                    }
+                }
+	
+                if (slideNum >= 0) {
+                    $controls.removeClass('current');
+                    jQuery(this).addClass('current');
+                    $carousel.roundabout('animateToChild', slideNum);
+                }
+            });
+</script>    
+    
+</body>
+</html>

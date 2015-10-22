@@ -1,0 +1,26 @@
+<div class="row pro_container">
+    <!---------------------------------------Breadcrum menu Starts---------------------------------------->        
+    {{checkForBreadcrum}}
+    <!---------------------------------------Breadcrum menu Ends---------------------------------------->            
+    <!-- <section class="row"> -->
+        <div id="newscontainer" class="newscontainer">
+            <div id="nonewscontent"><img src="../images/coming-soon.jpg"></div>
+            <ul id="newsblog"></ul>
+        </div>
+        <div class="iframewrap_crs_news">
+            <div id="newsIframe" style="display:none"></div>
+            
+            <div class="ui-grid-a commentNotes favCommentNotes" style="display:none;">
+                <div class="ui-block-a" style="width:15%;"> <div class="commentICON favCommentICON"><img src="../images/comment_icon.png"></div></div>
+                <div class="ui-block-b textAREA"> <textarea cols="50" rows="5" name="note" id="note" class="textNote favTextNote"></textarea></div>
+                <div class="ui-block-a"><span class="commentNotifi" data-msg="notes_msg">* All notes will be saved under Favorites</span></div>
+                <div class="ui-block-b Buttons favButtons">
+                    <a id="save-notes-btn" data-msg="save-label">Save</a>
+                    <a id="cancel-notes-btn" data-msg="cancel-but"  style="margin-left: 1%;">Cancel</a>
+                </div>
+            </div>
+            
+        </div>
+   <!-- </section> -->
+    <div id="news-page" class="res_hid_data"></div>
+    <div class="row lifter2"></div>	

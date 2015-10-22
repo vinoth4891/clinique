@@ -1,0 +1,89 @@
+@charset "utf-8";
+/* CSS Document */
+img {border: medium none}
+.nopad {padding: 0}
+.container {background: none repeat scroll 0 0 #FFFFFF; box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.1); margin: auto; width: 972px}
+.hme_hdrbx {border-bottom: medium none; margin: auto; background: none}
+.pro_container {margin: auto; width: 100%}
+.dwn_nav_adj {display: block; height: 150px}
+.copy {border-top: 1px solid #D5D5D5; height: 48px; line-height: 35px; margin-top: 64px; text-align: center}
+.copy a{color: #ADADAD; font-family: arial; font-size: 11px; }
+
+.dwnld_lgobx{text-align:center; margin:2% auto;}
+.dwnld_hdrbx{border-bottom:none}
+/*.dwnld_icnbx{width:94%; margin:15% auto}
+
+.dwnld_icnbx {height: 150px; margin: auto; padding: 150px 0; width: 94%}
+.dwnld_icnbx ul{padding:0; margin:0}
+.dwnld_icnbx ul li{display:inline-block; width:267px; margin-right:4.7%; float:left}
+.dwnld_icnbx ul li a{float:left}
+
+.dwnld_icnbx ul li a.dwnlodtxt{background: linear-gradient(to bottom, #97EBCB 0%, #7ED2B2 99%) repeat scroll 0 0 transparent; border: 1px solid #6EBD9E; border-radius: 5px 5px 5px 5px; box-shadow: 0 0 0 0 #CBF5E5 inset; color: #0E4D34; cursor: pointer; float: left; font-family: Helvetica,Arial; font-size: 110%; margin: 14% 0 0 13%; padding: 11px 0; text-align: center; text-decoration: none; text-shadow: 0 1px 0 #FFFFFF; text-transform: uppercase; width:75%}
+
+	
+.dwnld_icnbx ul li a span{margin:0; padding:0}
+.dwnld_icnbx ul li a span.dwnld_arw{width:30px; display:inline-block}	
+.dwnld_icnbx ul li a span.dwnld_txt{display:inline-block}	*/
+.appbtn{float:right; width:266px; display:block; margin-top:20%;margin-bottom:18%;}
+.dwn_mrgtp{margin-top:0%;margin-bottom:23%;}
+.bg-lotion-img{background:url("../images/login_bg_final.png") no-repeat fixed left bottom;}
+.dwnapp_rgtpanel{float:right;width:266px;padding-top:90px;}
+.dwnld_icnbx{margin:auto;/* width:765px;*/ height:400px;padding-right:7%;}
+.dwnlgnbx{float:right; width:266px; display:block;}
+/*.dwnlgnbx a{background: linear-gradient(to bottom, #97EBCB 0%, #7ED2B2 99%) repeat scroll 0 0 transparent; border: 1px solid #6EBD9E; border-radius: 5px 5px 5px 5px; box-shadow: 0 0 0 0 #CBF5E5 inset; color: #0E4D34; cursor: pointer; float: left; font-family: Helvetica,Arial; font-size: 110%; margin: 20% 0 0 0; padding: 11px 0; text-align: center; text-decoration: none; text-shadow: 0 1px 0 #FFFFFF; text-transform: uppercase; width:209px}*/
+
+.ios1{background:url("../images/ios_dwnld_img.png") no-repeat 27px 0 }
+.blkbry{background:url("../images/blkbry_dwnld_img.png") no-repeat 38px 0}
+.andrd{background:url("../images/andrd_dwnld_img.png") no-repeat 49px 0}
+.dwnld_icnbx ul li:last-child{margin-right:0}
+.dwnld_lgobx_720{display:none}
+.lifter2{height:80px; float:left; display:block;}
+
+@media handheld, only screen and (max-width:1024px){
+
+.dwn_nav_adj {height: 60px}
+
+}
+
+@media handheld, only screen and (max-width:800px){
+
+.bg-lotion-img{background:url("../images/login_bg_final.png") no-repeat fixed left bottom;}
+
+}
+
+
+@media handheld, only screen and (max-width:768px){
+
+.dwnlgnbx {width: 268px}
+/*.dwnld_icnbx {width: 640px}*/
+/*.dwnld_icnbx {width: 640px; height:580px}*/
+/*.dwn_nav_adj {height: 150px}*/
+.dwnld_icnbx{padding-right:3.5%;}
+.bg-lotion-img{background:url("../images/login_bg_786.png") no-repeat fixed left bottom;}
+
+}
+
+@media handheld, only screen and (max-width:720px){
+.bg-lotion-img{background:url("../images/login_bg_720.png") no-repeat fixed left bottom;}
+.dwnld_lgobx_720{display:block; margin: 2% auto; text-align: center;}
+.dwnld_lgobx{display:none}
+.dwnapp_rgtpanel{padding-top:20px;}
+.appbtn{margin-top:10%;margin-bottom:0;}
+}
+
+@media handheld, only screen and (max-width:568px){
+.bg-lotion-img{background:url("../images/login_bg_640.png") no-repeat fixed left bottom;}
+.dwnlgnbx,.appbtn{width: 200px;}
+}
+
+@media handheld, only screen and (max-width:385px){
+.dwnapp_rgtpanel{padding-top:60px;}
+.dwnlgnbx,.appbtn{width: 160px}
+.bg-lotion-img{background:url("../images/login_bg_385.png") no-repeat fixed left bottom;}
+}
+
+@media handheld, only screen and (max-width:320px){
+.bg-lotion-img{background:url("../images/login_bg_385.png") no-repeat fixed left bottom;}
+.dwnld_icnbx{height:auto}
+
+}

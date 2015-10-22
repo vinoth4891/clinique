@@ -1,0 +1,186 @@
+@charset "utf-8";
+/* CSS Document */
+
+	.dropouter {
+	float:left;
+	width:60px;
+	position:relative;
+}
+.drop {
+	float:left;
+	width:327px;
+	height:21px;
+	cursor:pointer;
+	background:url(../images/drop_top.png) no-repeat;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:##878787;
+	padding:4px 0px 0px 8px;
+}
+.dropdrop {
+	width:327px;
+	border:solid 1px #bebebe;
+	background-color:#f9f9f9;
+	position:absolute;
+	top:23px;
+	left:0px;
+	display:none;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	color:#000;
+	padding:5px 0px 0px 5px;
+	z-index:999999;
+}
+.drop_create {
+	float:left;
+	width:327px;
+	height:32px;
+	cursor:pointer;
+	background:#f8f8f8 url(../images/dropdown_list.png) no-repeat right;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:120%;
+	color:#95999a;
+	/*padding:4px 0px 0px 8px;*/
+    margin-top: 11px;
+	border:1px solid #cdcdcd;
+	-webkit-border-radius: 5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	-webkit-box-shadow: 1px 1px 2px 1px rgba(255, 255, 255, 0.5);
+	box-shadow: 1px 1px 2px 1px rgba(255, 255, 255, 0.5);
+	padding-left:10px;
+}
+.dropdrop_create {
+	width:303px;
+	border:solid 1px #bebebe;
+	background-color:#f9f9f9;
+	position:absolute;
+	top:40px;
+	left:0px;
+	display:none;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#878787;
+	padding:0;
+	z-index:999999;
+}
+.dropdrop_create ul li {
+	padding:4px 0px 4px 8px;
+	float:left;
+	cursor:pointer;
+	width:275px;
+}
+.dropdrop_create ul li:hover {
+	background:#dfdede;
+}
+.drop_create-disable {
+	float:left;
+	width:327px;
+	height:32px;
+	background:#e8eaea url(../images/dropdown_disable_list.png) no-repeat right;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:120%;
+	color:#cacccc;
+	/*padding:4px 0px 0px 8px;*/
+    margin-top: 11px;
+	border:1px solid #c7c9c9;
+	-webkit-border-radius: 5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	-webkit-box-shadow: 1px 1px 2px 1px rgba(255, 255, 255, 0.5);
+	box-shadow: 1px 1px 2px 1px rgba(255, 255, 255, 0.5);
+	padding-left:10px;
+}
+.drop_big {
+	float:left;
+	width:190px;
+	height:30px;
+	cursor:pointer;
+	background:url(../images/drop_big.png) no-repeat;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#878787;
+	padding:8px 0px 0px 8px;
+}
+.dropdrop_big {
+	width:190px;
+	border:solid 1px #bebebe;
+	background-color:#f9f9f9;
+	position:absolute;
+	top:29px;
+	left:0px;
+	display:none;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:##878787;
+	padding:5px 0px 0px 5px;
+	z-index:999999;
+}
+ @media handheld, only screen and (max-width: 320px) {
+.drop_create {
+	float:left;
+	width:252px;
+	height:25px;
+	cursor:pointer;
+	background:#f8f8f8 url(../images/dropdown_list.png) no-repeat right;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#000;
+	padding:4px 0px 0px 8px;
+	font-size:120%;
+	color:#95999a;
+}
+.drop_create-disable {
+	float:left;
+	width:252px;
+	height:32px;
+	background:#e8eaea url(../images/dropdown_disable_list.png) no-repeat right;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:120%;
+	color:#cacccc;
+	/*padding:4px 0px 0px 8px;*/
+    margin-top: 11px;
+	border:1px solid #c7c9c9;
+	-webkit-border-radius: 5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	-webkit-box-shadow: 1px 1px 2px 1px rgba(255, 255, 255, 0.5);
+	box-shadow: 1px 1px 2px 1px rgba(255, 255, 255, 0.5);
+	padding-left:10px;
+	line-height:28px;
+}
+.dropdrop_create {
+	width:260px;
+	border:solid 1px #bebebe;
+	background-color:#f9f9f9;
+	position:absolute;
+	top:38px;
+	left:0px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:##878787;
+	padding:0;
+	z-index:999999;
+}
+.dropdrop_create ul li {
+	padding:4px 0px 4px 8px;
+	float:left;
+	cursor:pointer;
+	width:232px;
+}
+.dropdrop_create ul li:hover {
+	background:#dfdede;
+}
+.dropdrop {
+	width:252px;
+	border:solid 1px #bebebe;
+	background-color:#f9f9f9;
+	position:absolute;
+	top:23px;
+	left:0px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	color:#000;
+	padding:5px 0px 0px 5px;
+	z-index:999999;
+}
+}

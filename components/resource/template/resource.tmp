@@ -1,0 +1,58 @@
+<div class="row pro_container resource_wrap">
+    {{checkForBreadcrum}}
+    <div class="restilebx" id="landingPage">
+        <ul>
+            <li class="readingmaterial" id="rdMtrlRsrc">
+                <a href="javascript:void(0)">
+                  <span class="courseItem-left"></span><span class="resourceicon"><img src="../images/res_icon_book.png"></span>
+                  <span class="courseItem-right"></span>
+                    <span class="resourcetxt" data-msg="reference"></span>
+                </a>
+            </li>
+            <li class="videoicon" id="vidRsrc">
+                <a href="javascript:void(0)">
+                  <span class="courseItem-left"></span> <span class="resourceicon"><img src="../images/res_icon_clapboard.png"></span>
+                  <span class="courseItem-right"></span>
+                    <span class="resourcetxt" data-msg="video"></span>
+                </a>
+            </li>
+            <li class="quizicon" id="quizRsrc">
+                <a href="javascript:void(0)">
+                  <span class="courseItem-left"></span> <span class="resourceicon"><img src="../images/res_icon_quiz.png"></span>
+                  <span class="courseItem-right"></span>
+                    <span class="resourcetxt" data-msg="quiz"></span>
+                </a>
+            </li>
+            <li class="audioicon" id="audRsrc" style="display:none;">
+                <a href="javascript:void(0)">
+                  <span class="courseItem-left"></span>  <span class="resourceicon"><img src="../images/kelly_resource_icon.png"></span>
+                  <span class="courseItem-right"></span>
+                    <span class="resourcetxt" data-msg="CC"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div id="showlist" style="display:none" class="showcontent padtop6">
+        <article  class="res_btnstrip rsrcicon">
+            <ul class="resourceicon listitems" style="display:none;" id="readingmaterial"></ul>
+            <ul class="videoicon listitems" style="display:none;" id="videolist"></ul>
+            <ul class="audioicon listitems" style="display:none;" id="audiolist"></ul>
+            <ul class="quizicon listitems" style="display:none;" id="quizlist"></ul>
+        </article>			
+    </div>
+	<div class="iframewrap_crs_res">
+		<div id="displayContent" style="display:none;"></div>
+		<div class="spacer20"></div>
+		<div class="ui-grid-a commentNotes" style="display:none;">
+			<div class="ui-block-a editicon" style="width:15%;"> <div class="commentICON"><img src="../images/comment_icon.png"></div></div>
+			<div class="ui-block-b textAREA"> <textarea cols="50" rows="5" name="note" id="note" class="textNote"></textarea></div>
+			<div class="ui-block-a notelabel"><span class="commentNotifi" data-msg="notes_msg"></span></div>
+			<div class="ui-block-b Buttons">
+				<a id="save-notes-btn" data-msg="save-label"></a>
+				<a id="cancel-notes-btn" data-msg="cancel-but"  style="margin-left: 1%;"></a>
+			</div>
+		</div>
+	</div>
+    <div id="resrc-page" class="res_hid_data"></div>
+</div>
+<div class="givemespace"></div>

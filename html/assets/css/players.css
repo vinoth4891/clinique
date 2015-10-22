@@ -1,0 +1,282 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*-------------------------- Players Progress Bar Starts ----------------------------------- */
+
+.plyr_span{margin:15px 0 30px 10px	}
+.plyrshdnk a{color:#27cebe;}
+.plyrs_pg_title{float:left; color:#27cebe; font-size:24px; font-family:HelveticaNeueLTStd-Lt, arial; padding-top:5px}
+.plyr_selectbx{padding-left:42px; float:left;}
+.plyr_selectbx select{width:396px; height:32px; border:1px solid #27cebe; font-size:16px;}
+
+.plyrstble{width:100%}
+.plyrstble li{float:left; width:100%; display:inline-block; padding-bottom:17px;}
+.plyrstble li:first-child{border-bottom:1px solid #d5d5d5; margin-bottom:29px; padding-bottom:14px;}
+.plyrstble li span{margin:0; padding:0}
+
+.plyr_dta_hdg{float:right; width:36%; margin-top:30px;}
+.plyr_dta_hdg li{float:left; padding:30px 0 30px 27px; color:#000; font-size:24px; display:inline}    /*------------ Modified --------------*/
+
+.usrdetails{width:12.2%; background:url("../images/plyrs_usricon.png") no-repeat; height:53px; float:left}
+.otherusr{background:url("../images/plyrs_usricon_othrs.png") no-repeat;}
+.usrdetails p{font-size:18px; font-family:HelveticaNeueLTStd-Lt, arial; color:#000; margin:6px 0 0 40px; padding-top:5px}
+
+#progrss_hldr{width:55%; float:left;}
+.progrssbr{width:100%; border-radius:25px; -webkit-border-radius:25px; background:#e5e5e5; height:47px; -webkit-box-shadow: inset 0px 10px 12px 5px rgba(155, 155, 155, .3); box-shadow: inset 0px 10px 12px 5px rgba(155, 155, 155, .3);}
+
+.prg_grn{
+background: rgb(132,233,223); /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzg0ZTlkZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMmQzYzQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top, rgba(132,233,223,1) 0%, rgba(50,211,196,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(132,233,223,1)), color-stop(100%,rgba(50,211,196,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(132,233,223,1) 0%,rgba(50,211,196,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(132,233,223,1) 0%,rgba(50,211,196,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(132,233,223,1) 0%,rgba(50,211,196,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(132,233,223,1) 0%,rgba(50,211,196,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#84e9df', endColorstr='#32d3c4',GradientType=0 ); /* IE6-8 */; width:85%;
+-webkit-border-radius: 25px; border-radius: 25px; float:left; height:47px;
+-webkit-box-shadow: inset 0px 10px 12px 5px rgba(155, 155, 155, .3); box-shadow: inset 0px 10px 12px 5px rgba(155, 155, 155, .3);
+position:relative;
+}
+
+.prg_grn2{
+background: rgb(132,233,223); /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzg0ZTlkZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMmQzYzQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top, rgba(132,233,223,1) 0%, rgba(50,211,196,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(132,233,223,1)), color-stop(100%,rgba(50,211,196,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(132,233,223,1) 0%,rgba(50,211,196,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(132,233,223,1) 0%,rgba(50,211,196,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(132,233,223,1) 0%,rgba(50,211,196,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(132,233,223,1) 0%,rgba(50,211,196,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#84e9df', endColorstr='#32d3c4',GradientType=0 ); /* IE6-8 */; width:94%;
+-webkit-border-radius: 25px; border-radius: 25px; float:left; height:47px;
+-webkit-box-shadow: inset 0px 10px 12px 5px rgba(155, 155, 155, .3); box-shadow: inset 0px 10px 12px 5px rgba(155, 155, 155, .3);
+position:relative;
+}
+
+.prg_grn3{
+background: rgb(132,233,223); /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzg0ZTlkZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMmQzYzQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top, rgba(132,233,223,1) 0%, rgba(50,211,196,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(132,233,223,1)), color-stop(100%,rgba(50,211,196,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(132,233,223,1) 0%,rgba(50,211,196,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(132,233,223,1) 0%,rgba(50,211,196,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(132,233,223,1) 0%,rgba(50,211,196,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(132,233,223,1) 0%,rgba(50,211,196,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#84e9df', endColorstr='#32d3c4',GradientType=0 ); /* IE6-8 */; width:76%;
+-webkit-border-radius: 25px; border-radius: 25px; float:left; height:47px;
+-webkit-box-shadow: inset 0px 10px 12px 5px rgba(155, 155, 155, .3); box-shadow: inset 0px 10px 12px 5px rgba(155, 155, 155, .3);
+position:relative;
+}
+
+.prg_grn4{
+background: rgb(132,233,223); /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzg0ZTlkZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMmQzYzQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top, rgba(132,233,223,1) 0%, rgba(50,211,196,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(132,233,223,1)), color-stop(100%,rgba(50,211,196,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(132,233,223,1) 0%,rgba(50,211,196,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(132,233,223,1) 0%,rgba(50,211,196,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(132,233,223,1) 0%,rgba(50,211,196,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(132,233,223,1) 0%,rgba(50,211,196,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#84e9df', endColorstr='#32d3c4',GradientType=0 ); /* IE6-8 */; width:67%;
+-webkit-border-radius: 25px; border-radius: 25px; float:left; height:47px;
+-webkit-box-shadow: inset 0px 10px 12px 5px rgba(155, 155, 155, .3); box-shadow: inset 0px 10px 12px 5px rgba(155, 155, 155, .3);
+position:relative;
+}
+
+.prg_grn5{
+background: rgb(132,233,223); /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzg0ZTlkZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMmQzYzQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top, rgba(132,233,223,1) 0%, rgba(50,211,196,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(132,233,223,1)), color-stop(100%,rgba(50,211,196,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(132,233,223,1) 0%,rgba(50,211,196,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(132,233,223,1) 0%,rgba(50,211,196,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(132,233,223,1) 0%,rgba(50,211,196,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(132,233,223,1) 0%,rgba(50,211,196,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#84e9df', endColorstr='#32d3c4',GradientType=0 ); /* IE6-8 */; width:65%;
+-webkit-border-radius: 25px; border-radius: 25px; float:left; height:47px;
+-webkit-box-shadow: inset 0px 10px 12px 5px rgba(155, 155, 155, .3); box-shadow: inset 0px 10px 12px 5px rgba(155, 155, 155, .3);
+position:relative;
+}
+
+.prg-3d{position:absolute; width:7px; height:47px; right:0; top:0; background:url("../images/plyrs_3dbar.png")no-repeat;display:none;}
+.prg-3d2{position:absolute; width:128px; height:25px; left:5px; top:5px; background:url("../images/plyrs_3d2.png") no-repeat;}
+
+.scores{width:8%; text-align:center; color:#1dadf0; float:left; }
+.scores p{margin-top:6px; margin-left:7px; font-size:18px; padding-top:5px}
+
+.totlpts{width:14%; text-align:center; color:#000; float:left }
+.totlpts p{margin-top:6px; font-size:20px; padding-top:5px}
+.badges{width:59px; height:59px; display:block}
+.gold{background:url("../images/plyrs_gold_bdge.png") no-repeat}
+.bronze{background:url("../images/plyrs_brnz_bdge.png") no-repeat}
+#badge_hldr{width:59px; float:right; padding-right:10px;}
+.scorehdg{display:none}
+
+/*-------------------------- Players Progress Bar Ends ----------------------------------- */
+
+/*------------------------------------------------ Players Badge Starts --------------------------------------------------- */
+
+.badgeholder{padding:0; margin:0; width:100%; postion:relative; padding-top:36px}
+.bdgebx_hldr{margin:auto; width:90%; background:#fff; float:left}
+.bdgebx_hldr ul{margin:0; padding:0}
+.bdgebx_hldr ul li{float:left; display:inline-block; list-style:none; width:90px; padding-right:6.2%; position:relative}
+.bdgebx_hldr ul li:last-child{padding-right:0}
+.bdgebx_hldr ul li a {width:90px}
+.bdgebx_hldr ul li a span{display:block}
+.bdgebx_hldr ul li a span.bdge_icon{height:90px; display:block}
+.bdgebx_hldr ul li a span.bdge_txt{font-size:18px; color:#000; text-align:center}
+.bdgebx_hldr ul li a span.shdw{background:url(../images/plyrs_bdge_shdw.png) no-repeat; display:block; width:90px; height:16px;}
+
+/* ----------------- for locked badges ---------------------------------------------*/
+.bdgebx_hldr ul li span{display:block}
+.bdgebx_hldr ul li span.bdge_icon{height:90px; display:block}
+.bdgebx_hldr ul li span.bdge_txt{font-size:18px; color:#000; text-align:center}
+.bdgebx_hldr ul li span.shdw{background:url(../images/plyrs_bdge_shdw.png) no-repeat; display:block; width:90px; height:16px;}
+.bdgebx_hldr ul li span.lock{background:url(../images/plyrs_lock.png) no-repeat; width:17px; height:18px; position:absolute; bottom:39px; right:55px}
+
+/* ----------------- for locked badges ends ---------------------------------------------*/
+
+.bdge_bx{margin:auto; width:100%; height:130px}
+.bdge_arw_lft{float:left; width:35px; padding:41px 0 0 10px;}
+.bdge_arw_lft a{display:block; height:29px; background:url("../images/plyrs_bdge_arwlft.png") no-repeat; text-indent:-9999px;}
+.bdge_arw_rgt{float:right; width:19px; padding:41px 10px 0 0}
+.bdge_arw_rgt a{display:block; height:29px; background:url("../images/plyrs_bdge_arwrgt.png") no-repeat; text-indent:-9999px;}
+
+
+.bag_tble{margin:42px auto 0 auto; width:91.1%; height:450px; position:relative}
+.bag_tble h1{font-size:18px; font-family:HelveticaNeueLTStd-Lt, arial; padding-left:5%}
+.drgtxt_bx{height:auto; width:56.6%; height:37px; margin:28% auto 0 auto; background:rgb(255,255,255); background:rgba(255,255,255,.5); text-align:center; font-size:14.5px; font-family:HelveticaNeueLTStd-Lt, arial; line-height:35px;}
+
+.bag_drg_bx{margin:auto; width:100%; height:324px}
+.bag_drg_lftbx{float:left; width:19px; padding-top:145px}
+.bag_drg_lftbx a{background:url("../images/plyrs_bdge_arwlft.png") no-repeat; display:block; height:29px;}
+
+.bag_drg_rgtbx{float:right; width:19px; padding-top:145px}
+.bag_drg_rgtbx a{background:url("../images/plyrs_bdge_arwrgt.png") no-repeat; display:block; height:29px;}
+
+/*.bag_drg_icons{float:left; width:436px; height:307px; padding:8% 0 0 27%;}*/
+.bag_drg_icons {float: left; height: 307px; padding: 0 0 0 18%; width: 436px}
+.bag_drg_icons ul {background: url("../images/plyrs_bg.png") no-repeat scroll center 32px transparent; height: 390px; margin: 0; padding: 26% 0 0 15%;
+    width: 494px}
+.bag_drg_icons ul li{width:90px; height:90px; list-style:none; display:inline;}
+.bag_drg_icons ul li a{text-decoration:none; float:left;  margin:0 19px 10px 0}
+
+
+/*------------------------------------------------ Players Badge Ends --------------------------------------------------- */
+
+
+
+ @media handheld, only screen and (max-width: 1024px) {
+ 
+ .plyr_dta_hdg{width:34%} 
+ .plyr_dta_hdg li{padding:30px 0 30px 17px}
+ .plyr_span{margin:15px 0 30px 0; width:522px;}
+ .totlpts{width:14%}
+ .plyr_dta_hdg li{padding:30px 0 30px 19px}
+ 
+ #badge_hldr{padding-right:15px;}
+ .bdgebx_hldr ul li{padding-right:4.5%}
+ .drgtxt_bx{height:auto; margin:33.1% auto 0 auto}
+ 
+
+ }
+ 
+ @media handheld, only screen and (max-width: 800px) {
+.scores {width: 11%}																
+#progrss_hldr {width: 50%}														
+.plyr_dta_hdg {width: 39%}														
+.plyr_dta_hdg li {padding: 30px 0 30px 12px}										
+ }
+ 
+ @media handheld, only screen and (max-width: 768px) {
+ 
+ .totlpts{width:12%}
+ .plyr_dta_hdg li{padding:30px 0 30px 5px; font-size:16px; font-weight:bold}
+ .scorehdg{display:block; font-size:18px; color:#000; padding:10px 2px}
+ #badge_hldr{float:right}
+ .badges{padding-top:0px;}
+ .plyr_dta_hdg{display:none}
+ .plyrstble li {padding-bottom:0}
+ .usrdetails{width:100%; display:block}
+ #progrss_hldr{width:100%; display:block}
+ .scores{width:30%; text-align:left; color:#1dadf0; float:left; }
+ .totlpts{width:40%; text-align:center; color:#000; float:left }
+ .usrdetails p{margin:6px 0 0 50px;}
+ 
+ .bdge_arw_lft {width: 3.9%}
+ .bdgebx_hldr ul li {padding-right: 0.4%} 
+ .drgtxt_bx{height:auto; width:73.6%; margin:46% auto 0 auto}
+ .bag_drg_icons {padding: 0 0 0 7%}								/*---------------modified-------------------------*/						
+
+ }
+ 
+ @media handheld, only screen and (max-width: 720px){ 
+.drgtxt_bx {height: auto; line-height: 25px; margin: 29% auto 0; width: 53.6%}
+}
+ 
+ @media handheld, only screen and (max-width: 640px){
+
+.bag_drg_icons {padding: 0;}										/*---------------modified-------------------------*/
+}
+ 
+ @media handheld, only screen and (max-width: 600px){ 
+ 
+ .bag_tble{margin:42px auto 0 auto; width:91.1%; height:241px;}
+ .bag_drg_icons{width:280px; height:307px; padding:0% 0 0 13%;}     /*---------------modified-------------------------*/ 
+ .bag_drg_icons ul {background: url("../images/plyrs_bg_mob.png") no-repeat scroll center 42px transparent; height: 192px; margin: 0; padding: 31% 0 0 15%; width: 281px}                								/*---------------modified-------------------------*/	
+ .bag_drg_icons ul li a {margin: 0 -11% 1% 0;}
+ .bag_drg_icons ul li a img{width:60%}
+ 
+ .bag_drg_lftbx {padding-top: 112px} 							/*---------------modified-------------------------*/	
+ .bag_drg_rgtbx {float: right; padding-right: 5%;  padding-top: 112px}      /*---------------modified-------------------------*/
+ 
+ }
+ 
+@media handheld, only screen and (max-width: 550px){
+ 
+ 
+ }
+ 
+ @media handheld, only screen and (max-width: 480px){
+ 
+ .plyr_span{margin:0; width:auto;}
+ .plyr_selectbx select{width:200px}
+ .plyr_selectbx{padding-left:20px}
+ 
+ .drgtxt_bx {height: auto; line-height: 25px; margin: 29% auto 0; width: 57.6%}
+ }
+ 
+
+  @media handheld, only screen and (max-width: 385px){
+ .bag_drg_bx {height: 324px; margin: auto; width: 104%}
+ .bag_drg_lftbx {padding-top: 112px; width: 20px; margin-left:0;}
+ .bag_drg_icons {height: 307px; width: 260px; padding-left:5%}
+ .bag_drg_icons ul {background: url("../images/plyrs_bg_mob.png") no-repeat scroll center 37px transparent; height: 192px; margin: 0; padding: 29% 0 0 7%; width: 266px}
+ }
+
+
+  @media handheld, only screen and (max-width: 360px){
+ .bag_drg_bx {height: 324px; margin: auto; width: 104%}
+ .bag_drg_lftbx {padding-top: 112px; width: 20px; margin-left:-16px;}
+ .bag_drg_icons {height: 307px; width: 260px; padding-left:7%}
+ .bag_drg_icons ul {background: url("../images/plyrs_bg_mob.png") no-repeat scroll center 37px transparent; height: 192px; margin: 0; padding: 29% 0 0 7%; width: 250px}
+ .bag_drg_icons ul li a {margin: 0 -13% 1% 0}  	
+ .bag_drg_rgtbx { padding-right: 0}
+  }
+ 
+  @media handheld, only screen and (max-width: 320px){
+ 
+ .plyr_selectbx select{width:180px}
+ .bag_drg_icons {padding:0}  
+ 
+ }
+
+
+
+
