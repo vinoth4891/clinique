@@ -2920,8 +2920,10 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
 						     // QUIZ full screen for Browser
 						if( !$('html').hasClass('ie8') && !$('html').hasClass('ie9')) {
 							 jQuery("#resourceContentFav-iframe").contents().find(".ui-btn-hidden").off().on('click', function(){
-                                
-								 if($('html').hasClass('ie8') || $('html').hasClass('ie9')){
+                                jQuery("#load_wrapper, .overlaycontainer").show();
+                                jQuery("body").addClass("overlay-video-quiz");
+								 
+                                if($('html').hasClass('ie8') || $('html').hasClass('ie9')){
 									var height = jQuery("#resourceContentFav-iframe").find('body').height();
 								}else{
 									var height = jQuery("#resourceContentFav-iframe").contents().find('body').height();
@@ -2934,6 +2936,7 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
 							 jQuery("#resourceContentFav-iframe").contents().find(".ui-link").off().on('click', function(){
 								 $(window).trigger('resize');
 								 jQuery("#load_wrapper, .overlaycontainer").show();
+                                jQuery("body").addClass("overlay-video-quiz");
                                  var quizreviewlength=setInterval(function(){
 								
 								if($('html').hasClass('ie8') || $('html').hasClass('ie9')){
@@ -2963,6 +2966,9 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
 									clearInterval(quizreviewlength);
 									jQuery("#load_wrapper, .overlaycontainer").hide();
 									jQuery(window).scrollTop(0);
+                                    if(!$('html').hasClass('ie8') && !$('html').hasClass('ie9')){
+                                        document.getElementById("resourceContentFav-iframe").contentDocument.location.reload(true);
+                                    }
 								}
 								 },800); 
                             });
@@ -2998,8 +3004,12 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
 										jQuery("#load_wrapper, .overlaycontainer").hide();
 									}
 									else{
-									   jQuery('.quiz-main-container #displayContentFav').css('height',$(window).height());
-									   clearInterval(quizlength);
+									    if( $('html').hasClass('ie8') || $('html').hasClass('ie9') ) {
+                                            jQuery("#resourceContentFav-iframe").css('height',jQuery("#resourceContentFav-iframe").height()+100);
+                                            jQuery('.quiz-main-container #displayContentFav').css('height',$(window).height());
+                                            clearInterval(quizlength);
+                                            jQuery("#load_wrapper, .overlaycontainer").hide();
+                                        }
 									}
                             },800); 
 							
@@ -3055,6 +3065,7 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
 						   jQuery("#load_wrapper, .overlaycontainer").show();	
 						setTimeout(function(){ 
 							  jQuery("#resourceContentFav-iframe").css('width','94%').css('margin-right','0px').css('margin-left','0px');
+                                   jQuery("body").removeClass("overlay-video-quiz");
 								$(window).trigger('resize');
 								jQuery("#load_wrapper, .overlaycontainer").hide();
 							},1000); 

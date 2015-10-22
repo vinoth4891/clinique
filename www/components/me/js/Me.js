@@ -400,7 +400,7 @@ define(["framework/WidgetWithTemplate","home/Home","changePwd/ChangePwd"] , func
             });
             jQuery('input,select').on('focus',function(){
                if( !isAndroid() & isiOS()){	
-                jQuery(".hme_hdrbx,div.row.menu").hide();
+                jQuery("div.row.menu").hide();
                }
             });
             jQuery('input,select').on('blur',function(){

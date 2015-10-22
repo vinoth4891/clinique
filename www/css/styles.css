@@ -1219,6 +1219,7 @@ body .quiz-container .btncommon { width:88% !important;}
     z-index: 1000;
     opacity: 0.8;
 }
+.overlay-video-quiz #load_wrapper, .overlay-video-quiz .overlaycontainer { display:block !important;}
 .parentreflection0 {
 	margin-top: 12px;
 	}
