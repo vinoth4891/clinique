@@ -25,16 +25,17 @@ class CompleteUserData {
 		global $DB;
 		$serverTime = time();
 		$courses = core_enrol_external::get_users_courses_subcat_offline($userid, self::COURSE_CATEGORY_ID);
+             
 		$course_enrols = "SELECT courseid, timemodified FROM (
 			SELECT ue.id, userid, courseid, ue.timemodified FROM mdl_enrol e 
 			JOIN mdl_user_enrolments ue ON e.id = ue.enrolid
 			WHERE ue.userid = ? ORDER BY timemodified DESC) tmp
 			GROUP BY userid, courseid";
 		$user_cohort_course = ($DB->get_records_sql($course_enrols, array($userid)));
-		$userData = array();
+                $userData = array();
 		$topics = array();
 		$modules = array();
-        $quizDelta = array();
+                $quizDelta = array();
 		$players = array();
 		$course_module_dependencies = array();
         $activeCourses = array();
@@ -47,8 +48,7 @@ class CompleteUserData {
 			if(( ! empty($from) && $timemodified < $from)) {
 				unset($courses[$i]);
 			}
-
-			$fromtimestamp = ( ! empty($isnewenrol)) ? null : $from;
+              	$fromtimestamp = ( ! empty($isnewenrol)) ? null : $from;
 
 			try {
 				$topicsWithModules = core_course_external::get_course_contents($course['id'], array(), $fromtimestamp);
@@ -62,7 +62,7 @@ class CompleteUserData {
 				}
                 $cID = $course['id'];
                 $activecourse_mod = $moduleIds;
-               $activeCourses[] = array("id" => $cID, "modules" => $activecourse_mod);
+                $activeCourses[] = array("id" => $cID, "modules" => $activecourse_mod);
                
 				$player = PlayersPercent::__analysePercentage($course['id'], $userid, true);
 				$player = array_merge(array('courseid' => $course['id']), $player);
@@ -94,14 +94,8 @@ class CompleteUserData {
 		$userData->favorites = Favorite::fetchAll($userid, true);
 		$userData->badges = BadgeDisplay::__DisplayBadges($userid, 'getBadges', null, true);
 		$userData->news = self::_NewsData($userid, $from);
-		$resources = self::_ResourcesData($userid, $from);        
-        if( ! empty($resources['quizsync'])) {
-            $userData->quizsync = array_merge($quizDelta, $resources['quizsync']);
-            unset($resources['quizsync']);            
-        } else {
-            $userData->quizsync = $quizDelta;
-        }
-		$userData->resources = $resources;    
+		$userData->resources = self::_ResourcesData($userid, $from);
+        $userData->quizsync = $quizDelta;
 		$userData->server_time = $serverTime;
         $userData->contentsize = self::getContentSize($from, $courses, $modules);
 		$response = new CliniqueServiceResponce();
@@ -109,27 +103,45 @@ class CompleteUserData {
 	}
 
 	private static function fetchCourses($userId, $categoryId, $categoryType, $from) {
+                global $DB;
 		$courses = core_enrol_external::get_users_courses_subcat_offline($userId, $categoryId, $categoryType);       
+                
+                
+                $course_enrols = "SELECT courseid, timemodified FROM (
+			SELECT ue.id, userid, courseid, ue.timemodified FROM mdl_enrol e 
+			JOIN mdl_user_enrolments ue ON e.id = ue.enrolid
+			WHERE ue.userid = ? ORDER BY timemodified DESC) tmp
+			GROUP BY userid, courseid";
+		$user_cohort_course = ($DB->get_records_sql($course_enrols, array($userId)));
+                
+                
+                
 		$userData = array();
 		$topics = array();
 		$modules = array();
 		$players = array();
-        $quizDelta = array();
 		foreach ($courses as $i => $course) {
 			//@TODO performance - courses could have skipped when fetching from db itself rather than skipping it when iterating.
-			if (!empty($from) && $course['timemodified'] < $from) {
+//			if (!empty($from) && $course['timemodified'] < $from) {
+//				unset($courses[$i]);
+//			}
+                        
+                        $timemodified = $course['timemodified'] > $user_cohort_course[$course['id']]->timemodified 
+					?  $course['timemodified'] : $user_cohort_course[$course['id']]->timemodified;
+			$isnewenrol = ! empty($from) && $user_cohort_course[$course['id']]->timemodified > $from;
+			if(( ! empty($from) && $timemodified < $from)) {
 				unset($courses[$i]);
 			}
 
+			$fromtimestamp = ( ! empty($isnewenrol)) ? null : $from;
+
 			try {
-				$topicsWithModules = core_course_external::get_course_contents($course['id'], array(), $from);
-				$topics = array_merge($topics, self::extractTopics($course['id'], $topicsWithModules, $from));
+				$topicsWithModules = core_course_external::get_course_contents($course['id'], array(), $fromtimestamp);
+				$topics = array_merge($topics, self::extractTopics($course['id'], $topicsWithModules, $fromtimestamp));
 
 				foreach ($topicsWithModules as $topicWithModule) {
 					if (isset($topicWithModule['modules']) && is_array($topicWithModule['modules'])) {
-						$modules = array_merge($modules, self::extractModules($course['id'], $topicWithModule['id'], $topicWithModule['modules'], $userId, $from)); 
-                        $quizDelta = array_merge($quizDelta, self::extractQuizDeltaSync($course['id'], $topicWithModule['id'], $topicWithModule['modules'], $userId));                        
-
+						$modules = array_merge($modules, self::extractModules($course['id'], $topicWithModule['id'], $topicWithModule['modules'], $userId, $fromtimestamp));                       
 					}
 				}               
                
@@ -142,7 +154,6 @@ class CompleteUserData {
 			'courses' => array_values($courses),
 			'topics' => $topics,
 			'modules' => $modules,
-            'quizsync' => $quizDelta,
 		);
 	}
     

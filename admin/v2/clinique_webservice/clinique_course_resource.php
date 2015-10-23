@@ -198,7 +198,11 @@ class CourseResource {
 				$commentsdata['Course Name']  = $comment->course_name;
 				//$commentsdata['File Name']  = $comment->resource_name;
 				$resource_name = explode(": ",$comment->resource_name);
-				$commentsdata['File Name']  =  $resource_name[1];
+				if($resource_name[1] !=""):
+					$commentsdata['File Name']  =  $resource_name[1];
+				else:
+					$commentsdata['File Name']  =  $resource_name[0];
+				endif; 
 				$commentsdata['Comments']  = $comment->comment;
 				$csvexport->add_data($commentsdata);
 			}
