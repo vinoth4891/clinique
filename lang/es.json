@@ -155,6 +155,6 @@
 	"xoutofmax": " sobre ",
 	"yourfinalgradeis": "Su calificación final en este cuestionario es ",
 	"state": "Estado",
-	"reg-user-note"       : "El usuario solo puede contener caracteres alfanuméricos (no símbolos o acentos.) El usuario debe estar todo en minúsculas y no puede incluir espacios.",
-	"reg-region-note"     : "Por favor contacta a tu Ejecutivo de Cuenta o Gerente de Educación para obtener el Código de Inicio."
+	"reg-user-note"       : "Nombre de usuario puede solo contener caracteres alfanuméricos ( no símbolos o acentos). Debe ser todo en letra minúscula y no puede incluir espacios.",
+	"reg-region-note"     : "Por favor contacta con el equipo de Formación para obtener el código de acceso."
 }
