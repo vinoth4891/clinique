@@ -3952,16 +3952,29 @@ define(["framework/WidgetWithTemplate", "match/Match", "uncover/Uncover","abstra
                             
 						    // QUIZ full screen for Browser
 							jQuery("#courseContent-iframe").contents().find(".ui-btn-hidden").off().on('click', function(){
-                                jQuery("#load_wrapper, .overlaycontainer").show();
-                                                                                                       jQuery("body").addClass("overlay-video-quiz");
+                                jQuery("body").addClass("overlay-video-quiz");
+                                var height, closeOverlayIcon;
+
 								 if($('html').hasClass('ie8') || $('html').hasClass('ie9')){
-									var height = jQuery("#courseContent-iframe").find('body').height();
+									height = jQuery("#courseContent-iframe").find('body').height();
 								}else{
-									var height = jQuery("#courseContent-iframe").contents().find('body').height();
+									height = jQuery("#courseContent-iframe").contents().find('body').height();
 								}
 								if(height){
 									jQuery("#courseContent-iframe").css('height',height);
 								}
+                                
+                                setTimeout(function(){
+                                    if($('html').hasClass('ie8') || $('html').hasClass('ie9')){
+                                        closeOverlayIcon = jQuery("#courseContent-iframe").find('body').hasClass("masked");
+                                    } else {
+                                        closeOverlayIcon = jQuery("#courseContent-iframe").contents().find('body').hasClass("masked");
+                                    }
+                                    if (closeOverlayIcon) {
+                                        jQuery("body").removeClass("overlay-video-quiz");
+                                    }
+                                },800);
+
 								jQuery(window).scrollTop(0);
                             });
 							 jQuery("#courseContent-iframe").contents().find(".ui-link").off().on('click', function(){

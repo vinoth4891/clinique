@@ -2920,17 +2920,29 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
 						     // QUIZ full screen for Browser
 						if( !$('html').hasClass('ie8') && !$('html').hasClass('ie9')) {
 							 jQuery("#resourceContentFav-iframe").contents().find(".ui-btn-hidden").off().on('click', function(){
-                                jQuery("#load_wrapper, .overlaycontainer").show();
                                 jQuery("body").addClass("overlay-video-quiz");
-								 
+                                var height, closeOverlayIcon;
+
                                 if($('html').hasClass('ie8') || $('html').hasClass('ie9')){
-									var height = jQuery("#resourceContentFav-iframe").find('body').height();
+									height = jQuery("#resourceContentFav-iframe").find('body').height();
 								}else{
-									var height = jQuery("#resourceContentFav-iframe").contents().find('body').height();
+									height = jQuery("#resourceContentFav-iframe").contents().find('body').height();
 								}
 								if(height){
 									jQuery("#resourceContentFav-iframe").css('height',height);
 								}
+
+                                setTimeout(function(){
+                                    if($('html').hasClass('ie8') || $('html').hasClass('ie9')){
+                                        closeOverlayIcon = jQuery("#resourceContentFav-iframe").find('body').hasClass("masked");
+                                    } else {
+                                        closeOverlayIcon = jQuery("#resourceContentFav-iframe").contents().find('body').hasClass("masked");
+                                    }
+                                    if (closeOverlayIcon) {
+                                        jQuery("body").removeClass("overlay-video-quiz");
+                                    }
+                                },800);
+
 								jQuery(window).scrollTop(0);
                             });
 							 jQuery("#resourceContentFav-iframe").contents().find(".ui-link").off().on('click', function(){
