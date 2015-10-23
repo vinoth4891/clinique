@@ -2234,9 +2234,33 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
 					} else {
 						videoContrl.pause();
 					}
-					
+                                                                    videoContrl.onpause = function(event) {
+                                                                    onVideoBeginsFullScreen(event);
+                                                                    };
+                                                                    videoContrl.onplay = function(event) {
+                                                                    onVideoBeginsFullScreen(event);
+                                                                    };
+                                                                    $('#activityVideo, #activityVideo div, #activityVideo button').click(function (event) {
+                                                                                                                                                  onVideoBeginsFullScreen(event);
+                                                                                                                                                  });
+                                                                    function onVideoBeginsFullScreen () {
+                                                                    document.activeElement.blur();
+                                                                    $('textarea').trigger('blur');
+                                                                    }
+                                                                    videoContrl.addEventListener('webkitbeginfullscreen', onVideoBeginsFullScreen, false);
+                                                                    videoContrl.addEventListener('webkitEnterFullScreen', onVideoBeginsFullScreen, false);
+                                                                    
                     if((navigator.userAgent.indexOf("Safari") > -1)) {
                         jQuery('#activityVideo')[0].play();
+                                                                    var videoContrlSafari = jQuery('#activityVideo')[0];
+                                                                    videoContrlSafari.addEventListener('webkitbeginfullscreen', onVideoBeginsFullScreen, false);
+                                                                    videoContrlSafari.addEventListener('webkitEnterFullScreen', onVideoBeginsFullScreen, false);
+                                                                    videoContrlSafari.onpause = function(event) {
+                                                                    onVideoBeginsFullScreen(event);
+                                                                    };
+                                                                    videoContrlSafari.onplay = function(event) {
+                                                                    onVideoBeginsFullScreen(event);
+                                                                    };
                     }
 				}else{
 					if (pluginlist.indexOf("Windows Media Player")!=-1){
@@ -2756,9 +2780,11 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
 									clearInterval(quizreviewlength);
 									 jQuery("#load_wrapper, .overlaycontainer").hide();
 									jQuery(window).scrollTop(0);
-                                    if(!$('html').hasClass('ie8') && !$('html').hasClass('ie9')){
-                                        document.getElementById("resourceContent-iframe").contentDocument.location.reload(true);
-                                    }
+                                                              setTimeout(function(){
+                                                                         if(!$('html').hasClass('ie8') && !$('html').hasClass('ie9')){
+                                                                         $('#resourceContent-iframe')[0].contentWindow.location.reload(true);
+                                                                         }
+                                                                         }, 1000);
 								}
 								 },800); 
 								
@@ -2798,6 +2824,10 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
 											clearInterval(quizlength);
 											jQuery("#load_wrapper, .overlaycontainer").hide();
 										}
+                                                       if (height == 0) {
+                                                       clearInterval(quizlength);
+                                                       jQuery("#load_wrapper, .overlaycontainer").hide();
+                                                       }
 									}
 								
                             },800); 

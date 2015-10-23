@@ -38,7 +38,7 @@ define(["framework/WidgetWithTemplate"], function (template) {
         },
 
         bindUI: function () {
-                                                                    $('body').addClass('report-details-show');
+
             if(!(jQuery('.ie7-footer-specific').hasClass('reportsfooter'))) {
                jQuery('.ie7-footer-specific').addClass('reportsfooter');
             }
@@ -746,7 +746,9 @@ define(["framework/WidgetWithTemplate"], function (template) {
                     'position':'relative',
                     'top':jQuery(document).height()/2
                 });
-                                            jQuery("#load_wrapper, .overlaycontainer").show();
+                jQuery("#load_wrapper, .overlaycontainer").show();
+                $('body').addClass('report-details-show');
+
                 var page = jQuery(this).parent().attr('data-page');
                 var pagelength = jQuery('.bootpag li').length - 2;
                 var store, retailer, region, country, sortby;
@@ -1095,6 +1097,7 @@ define(["framework/WidgetWithTemplate"], function (template) {
                     default:
 						jQuery("div#bycourse-image").show();
 						jQuery("#load_wrapper, .overlaycontainer").hide();
+                        $('body').removeClass('report-details-show');
                         jQuery("div.bycourse-temp, footer.footerbx").hide();
                 }
             }
@@ -1497,7 +1500,9 @@ define(["framework/WidgetWithTemplate"], function (template) {
                 'position':'relative',
                 'top':jQuery(document).height()/2
             });
-                                                                    jQuery("#load_wrapper, .overlaycontainer").show();
+            jQuery("#load_wrapper, .overlaycontainer").show();
+            $('body').addClass('report-details-show');
+
             var self = this,
             serviceUrl = self.globalConfig.apiAddress.service,
             reportSearchArr = [],
@@ -1573,7 +1578,8 @@ define(["framework/WidgetWithTemplate"], function (template) {
                         'top':'45%',
                         'display':'none'
                     });
-                        jQuery("#load_wrapper, .overlaycontainer").hide();
+                    jQuery("#load_wrapper, .overlaycontainer").hide();
+                    $('body').removeClass('report-details-show');
                     loadAllLanguages();
                 }
             });
@@ -1584,6 +1590,8 @@ define(["framework/WidgetWithTemplate"], function (template) {
             reportSearchArr = [],
             reportSearchOpt = '',
             pagination = '';
+            $('body').addClass('report-details-show');
+                                                                    
             jQuery.ajax({
                 url: serviceUrl,
                 data: data,
@@ -1675,7 +1683,8 @@ define(["framework/WidgetWithTemplate"], function (template) {
                         'top':'45%',
                         'display':'none'
                     });
-                        jQuery("#load_wrapper, .overlaycontainer").hide();
+                    jQuery("#load_wrapper, .overlaycontainer").hide();
+                    $('body').removeClass('report-details-show');
                     loadAllLanguages();
                 }
             });
@@ -1816,6 +1825,7 @@ define(["framework/WidgetWithTemplate"], function (template) {
                     loadAllLanguages();
                 }
             });
+            $('body').addClass('report-details-show');
 
             jQuery.ajax({
                 url: serviceUrl,
@@ -1893,6 +1903,7 @@ define(["framework/WidgetWithTemplate"], function (template) {
                         'display':'none'
                     });
                         jQuery("#load_wrapper, .overlaycontainer").hide();
+                        $('body').removeClass('report-details-show');
                     loadAllLanguages();
                 }
             });

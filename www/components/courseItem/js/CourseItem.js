@@ -3752,12 +3752,34 @@ define(["framework/WidgetWithTemplate", "match/Match", "uncover/Uncover","abstra
 					} else {
 						videoContrl.pause();
 					}
-                    if (videoContrl.requestFullscreen || videoContrl.mozRequestFullScreen || videoContrl.webkitRequestFullscreen) {
-                       $('input').blur();
-                    }
-
+                                                                        videoContrl.onpause = function() {
+                                                                        onVideoBeginsFullScreen();
+                                                                        };
+                                                                        videoContrl.onplay = function() {
+                                                                        onVideoBeginsFullScreen();
+                                                                        };
+                                                                        $('#activityVideo, #activityVideo div, #activityVideo button').click(function (event) {
+                                                                            onVideoBeginsFullScreen();
+                                                                        });
+                                                                        
+                                                                        function onVideoBeginsFullScreen () {
+                                                                        document.activeElement.blur();
+                                                                        $('textarea').trigger('blur');
+                                                                        }
+                                                                        videoContrl.addEventListener('webkitbeginfullscreen', onVideoBeginsFullScreen, false);
+                                                                        videoContrl.addEventListener('webkitEnterFullScreen', onVideoBeginsFullScreen, false);
+                                                                        
 					if((navigator.userAgent.indexOf("Safari") > -1)) {
                         jQuery('#activityVideo')[0].play();
+                                                                        var videoContrlSafari = jQuery('#activityVideo')[0];
+                                                                        videoContrlSafari.addEventListener('webkitbeginfullscreen', onVideoBeginsFullScreen, false);
+                                                                        videoContrlSafari.addEventListener('webkitEnterFullScreen', onVideoBeginsFullScreen, false);
+                                                                        videoContrlSafari.onpause = function(event) {
+                                                                        onVideoBeginsFullScreen(event);
+                                                                        };
+                                                                        videoContrlSafari.onplay = function(event) {
+                                                                        onVideoBeginsFullScreen(event);
+                                                                        };
                     }
 				}else{
 					if (pluginlist.indexOf("Windows Media Player")!=-1){
@@ -4015,9 +4037,11 @@ define(["framework/WidgetWithTemplate", "match/Match", "uncover/Uncover","abstra
 									jQuery(window).scrollTop(0);
 									jQuery("#load_wrapper, .overlaycontainer").hide();
 									clearInterval(quizreviewlength);
-                                                                  if(!$('html').hasClass('ie8') && !$('html').hasClass('ie9')){
-                                    document.getElementById("courseContent-iframe").contentDocument.location.reload(true);
-                                                                  }
+                                                                  setTimeout(function(){
+                                                                    if(!$('html').hasClass('ie8') && !$('html').hasClass('ie9')){
+                                                                             $('#courseContent-iframe')[0].contentWindow.location.reload(true);
+                                                                    }
+                                                                  }, 1000);
 								}
 								 },800); 
                             });
@@ -4060,6 +4084,10 @@ define(["framework/WidgetWithTemplate", "match/Match", "uncover/Uncover","abstra
 											clearInterval(quizlength);
 											jQuery("#load_wrapper, .overlaycontainer").hide();
 										}
+                                                       if (height == 0) {
+                                                       clearInterval(quizlength);
+                                                       jQuery("#load_wrapper, .overlaycontainer").hide();
+                                                       }
 									}
 								
                             },500);
