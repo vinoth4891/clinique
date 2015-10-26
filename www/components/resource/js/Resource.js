@@ -2234,33 +2234,35 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
 					} else {
 						videoContrl.pause();
 					}
-                                                                    videoContrl.onpause = function(event) {
-                                                                    onVideoBeginsFullScreen(event);
-                                                                    };
-                                                                    videoContrl.onplay = function(event) {
-                                                                    onVideoBeginsFullScreen(event);
-                                                                    };
-                                                                    $('#activityVideo, #activityVideo div, #activityVideo button').click(function (event) {
-                                                                                                                                                  onVideoBeginsFullScreen(event);
-                                                                                                                                                  });
-                                                                    function onVideoBeginsFullScreen () {
-                                                                    document.activeElement.blur();
-                                                                    $('textarea').trigger('blur');
-                                                                    }
-                                                                    videoContrl.addEventListener('webkitbeginfullscreen', onVideoBeginsFullScreen, false);
-                                                                    videoContrl.addEventListener('webkitEnterFullScreen', onVideoBeginsFullScreen, false);
+                                                                    
+					// To hide ios keyboard while clicking play, pause and fullscreen icon.
+					videoContrl.onpause = function(event) {
+						onVideoBeginsFullScreen(event);
+					};
+					videoContrl.onplay = function(event) {
+						onVideoBeginsFullScreen(event);
+					};
+					$('#activityVideo, #activityVideo div, #activityVideo button').click(function (event) {
+						onVideoBeginsFullScreen(event);
+					});
+					function onVideoBeginsFullScreen () {
+						document.querySelector('textarea#note').blur();
+						$('textarea#note').blur();
+					}
+					videoContrl.addEventListener('webkitbeginfullscreen', onVideoBeginsFullScreen, false);
+					videoContrl.addEventListener('webkitEnterFullScreen', onVideoBeginsFullScreen, false);
                                                                     
                     if((navigator.userAgent.indexOf("Safari") > -1)) {
                         jQuery('#activityVideo')[0].play();
-                                                                    var videoContrlSafari = jQuery('#activityVideo')[0];
-                                                                    videoContrlSafari.addEventListener('webkitbeginfullscreen', onVideoBeginsFullScreen, false);
-                                                                    videoContrlSafari.addEventListener('webkitEnterFullScreen', onVideoBeginsFullScreen, false);
-                                                                    videoContrlSafari.onpause = function(event) {
-                                                                    onVideoBeginsFullScreen(event);
-                                                                    };
-                                                                    videoContrlSafari.onplay = function(event) {
-                                                                    onVideoBeginsFullScreen(event);
-                                                                    };
+						var videoContrlSafari = jQuery('#activityVideo')[0];
+						videoContrlSafari.addEventListener('webkitbeginfullscreen', onVideoBeginsFullScreen, false);
+						videoContrlSafari.addEventListener('webkitEnterFullScreen', onVideoBeginsFullScreen, false);
+						videoContrlSafari.onpause = function(event) {
+							onVideoBeginsFullScreen(event);
+						};
+						videoContrlSafari.onplay = function(event) {
+							onVideoBeginsFullScreen(event);
+						};
                     }
 				}else{
 					if (pluginlist.indexOf("Windows Media Player")!=-1){

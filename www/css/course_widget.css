@@ -242,7 +242,7 @@ background-color: linear-gradient(to bottom, rgba(163,237,209,1) 0%,rgba(155,229
 
 position:absolute; 
 transform-style: preserve-3d;
-/*transition: all 5.5s linear;*/ background-image:url("../images/widget_logo.png"); background-repeat:no-repeat; vertical-align:middle; text-align:center; background-position:center; background-size:61% auto;}
+transition: all 5.5s linear; background-image:url("../images/widget_logo.png"); background-repeat:no-repeat; vertical-align:middle; text-align:center; background-position:center; background-size:61% auto;}
 .crswidg_img_small ul li div { width: 100%; height:140px; text-align:center; vertical-align:middle;}
 .crswidg_img_small ul li div img, .crswidg_img_small ul li img { text-align:center; vertical-align:middle; alignment-adjust:middle; width:100%; height:100%;}
 .crswidg_img_small ul li div a { margin:10%; display:block; vertical-align:middle; color:#989693;}
