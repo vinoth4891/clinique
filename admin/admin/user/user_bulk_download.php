@@ -45,8 +45,8 @@ if ($format) {
     }
 
     switch ($format) {
-        case 'csv' : user_download_csv($fields);
-        case 'ods' : user_download_ods($fields);
+        case 'csv' : user_download_csv($fields,$extrafields);
+        case 'ods' : user_download_ods($fields,$extrafields);
         case 'xls' : user_download_xls($fields,$extrafields);
 
     }
@@ -68,7 +68,7 @@ echo $OUTPUT->continue_button($return);
 
 echo $OUTPUT->footer();
 
-function user_download_ods($fields) {
+function user_download_ods($fields,$extrafields=array()) {
     global $CFG, $SESSION, $DB;
 
     require_once("$CFG->libdir/odslib.class.php");
@@ -87,19 +87,37 @@ function user_download_ods($fields) {
         $worksheet[0]->write(0, $col, $fieldname);
         $col++;
     }
-
-    $row = 1;
-    foreach ($SESSION->bulk_users as $userid) {
-        if (!$user = $DB->get_record('user', array('id'=>$userid))) {
-            continue;
-        }
-        $col = 0;
-        profile_load_data($user);
-        foreach ($fields as $field=>$unused) {
+	$extrafield_sql = '';
+    foreach ($extrafields as $n=>$v){
+	  $extrafield_sql .= " MAX(IF(muif.shortname = '".$v->shortname."', muid.data, NULL)) profile_field_".$v->shortname.",";
+    }
+   $extrafield_sql = rtrim($extrafield_sql, ",");
+   $idstoload = $SESSION->bulk_users;
+   
+   $users = array();
+   foreach (array_chunk($idstoload, 10000,true) as $user_id) {
+   $userids = implode(",", $user_id);
+   $users[] = $DB->get_records_sql("SELECT mu.*,
+                                $extrafield_sql
+                                FROM mdl_user AS mu
+                                INNER JOIN mdl_user_info_data AS muid ON mu.id = muid.userid
+                                INNER JOIN mdl_user_info_field AS muif ON muif.id = muid.fieldid
+                                WHERE mu.id IN ($userids) GROUP BY mu.id");
+   }
+	$row = 1;
+    foreach ($users as $userdetails) {
+	  foreach($userdetails as $user){
+          #if (!$user = $DB->get_record('user', array('id'=>$userid))) {
+            #continue;
+          #}
+          $col = 0;
+          #profile_load_data($user,$userfields);
+          foreach ($fields as $field=>$unused) {
             $worksheet[0]->write($row, $col, $user->$field);
             $col++;
-        }
-        $row++;
+          }
+		  $row++;
+		}
     }
 
     $workbook->close();
@@ -134,7 +152,7 @@ function user_download_xls($fields,$extrafields=array()) {
    $idstoload = $SESSION->bulk_users;
    
    $users = array();
-   foreach (array_chunk($idstoload, 3000,true) as $user_id) {
+   foreach (array_chunk($idstoload, 10000,true) as $user_id) {
    $userids = implode(",", $user_id);
    $users[] = $DB->get_records_sql("SELECT mu.*,
                                 $extrafield_sql
@@ -163,7 +181,7 @@ function user_download_xls($fields,$extrafields=array()) {
     die;
 }
 
-function user_download_csv($fields) {
+function user_download_csv($fields,$extrafields=array()) {
     global $CFG, $SESSION, $DB;
 
     require_once($CFG->dirroot.'/user/profile/lib.php');
@@ -174,13 +192,32 @@ function user_download_csv($fields) {
     $csvexport = new csv_export_writer();
     $csvexport->set_filename($filename);
     $csvexport->add_data($fields);
+	
+	$extrafield_sql = '';
+    foreach ($extrafields as $n=>$v){
+	  $extrafield_sql .= " MAX(IF(muif.shortname = '".$v->shortname."', muid.data, NULL)) profile_field_".$v->shortname.",";
+    }
+   $extrafield_sql = rtrim($extrafield_sql, ",");
+   $idstoload = $SESSION->bulk_users;
+   
+   $users = array();
+   foreach (array_chunk($idstoload, 10000,true) as $user_id) {
+   $userids = implode(",", $user_id);
+   $users[] = $DB->get_records_sql("SELECT mu.*,
+                                $extrafield_sql
+                                FROM mdl_user AS mu
+                                INNER JOIN mdl_user_info_data AS muid ON mu.id = muid.userid
+                                INNER JOIN mdl_user_info_field AS muif ON muif.id = muid.fieldid
+                                WHERE mu.id IN ($userids) GROUP BY mu.id");
+   }
 
-    foreach ($SESSION->bulk_users as $userid) {
+    foreach ($users as $userdetails) {
+	  foreach($userdetails as $user){
         $row = array();
-        if (!$user = $DB->get_record('user', array('id'=>$userid))) {
-            continue;
-        }
-        profile_load_data($user);
+        #if (!$user = $DB->get_record('user', array('id'=>$userid))) {
+            #continue;
+        #}
+        #profile_load_data($user);
         $userprofiledata = array();
         foreach ($fields as $field=>$unused) {
             // Custom user profile textarea fields come in an array
@@ -193,7 +230,8 @@ function user_download_csv($fields) {
             }
         }
         $csvexport->add_data($userprofiledata);
-    }
+      }
+	}
     $csvexport->download_file();
     die;
 }
