@@ -410,15 +410,19 @@
     if (has_capability('moodle/user:create', $sitecontext)) {
         echo $OUTPUT->heading('<a href="'.$securewwwroot.'/user/editadvanced.php?id=-1">'.get_string('addnewuser').'</a>');
     }
+   // if((count($_SESSION['SESSION']->user_filtering) == 1) AND (count($_SESSION['SESSION']->user_filtering['country']) > 0 )){
+	$formTable = "<form  action='".$CFG->wwwroot.'/'.$CFG->admin.'/user/user_bulk_download_list.php'."' method='post' id='mform3' class='mform'>
+					<input type='hidden' value='user' name='pagecrawl' />
+					<input name='doaction' value='".get_string('download')."' type='submit' id='id_doaction'>
+                </form>";
+			  
+	//}
     if (!empty($table)) {
         echo html_writer::table($table);
         echo $OUTPUT->paging_bar($usercount, $page, $perpage, $baseurl);
+	    echo $OUTPUT->heading($formTable);
         if (has_capability('moodle/user:create', $sitecontext)) {
             echo $OUTPUT->heading('<a href="'.$securewwwroot.'/user/editadvanced.php?id=-1">'.get_string('addnewuser').'</a>');
         }
     }
-
-    echo $OUTPUT->footer();
-
-
-
+ echo $OUTPUT->footer();
