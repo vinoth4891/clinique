@@ -243,10 +243,9 @@ if ($usernew = $userform->get_data()) {
 		//var_dump($cohortDetails->id);exit;
 		cohort_add_member($cohortDetails->id, $usernew->id);
 	//}
-      if($usernew->lang == COUNTER_MANAGER_ISO) {
-			   // $userDetails->lang = 'en_us';  
-				cohort_add_member(US_ENGLISH, $usernew->id);
-		}
+      // if($usernew->lang == COUNTER_MANAGER_ISO) {
+			   		// cohort_add_member(US_ENGLISH, $usernew->id);
+		// }
 		
     // trigger events
     if ($usercreated) {

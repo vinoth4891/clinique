@@ -27,9 +27,9 @@ defined('MOODLE_INTERNAL') || die();
 require_once($CFG->dirroot . '/cohort/lib.php');
 require_once($CFG->dirroot . '/user/selector/lib.php');
 
-define("COUNTER_MANAGER_COHORT",33);
-define("US_ENGLISH",2);
-define("COUNTER_MANAGER_ISO",'cm_c');
+// define("COUNTER_MANAGER_COHORT",33);
+// define("US_ENGLISH",2);
+// define("COUNTER_MANAGER_ISO",'cm_c');
 
 /**
  * Cohort assignment candidates
