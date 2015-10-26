@@ -231,3 +231,7 @@ body #register_holder fieldset input, body #register_holder fieldset select { wi
 body #register_holder fieldset input, body #register_holder fieldset select { width:100%;}
   /* For landscape layouts only */
 }
+
+@media handheld, only screen and (min-width: 1025px) {
+body #register_holder .reg-text-rt {float: left;width: 70%;}
+}
