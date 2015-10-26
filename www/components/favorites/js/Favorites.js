@@ -2257,33 +2257,22 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
 					videoContrl.play();
 					
 					// To hide ios keyboard while clicking play, pause and fullscreen icon.
-					videoContrl.onpause = function(event) {
-						onVideoBeginsFullScreen(event);
-					};
-					videoContrl.onplay = function(event) {
-						onVideoBeginsFullScreen(event);
+					function onVideoBeginsFullScreen () {
+						document.querySelector('textarea#note').blur();
+						$('textarea#note').blur();
+					}
+					videoContrl.ontouchstart = function () {
+						onVideoBeginsFullScreen();
 					};
 					$('#activityVideoFav, #activityVideoFav div, #activityVideoFav button').click(function (event) {
 						onVideoBeginsFullScreen(event);
 					});
 
-					function onVideoBeginsFullScreen () {
-						document.querySelector('textarea#note').blur();
-						$('textarea#note').blur();
-					}
-					document.addEventListener('webkitfullscreenchange', onVideoBeginsFullScreen, false);
-					document.addEventListener('mozfullscreenchange', onVideoBeginsFullScreen, false);
-					document.addEventListener('fullscreenchange', onVideoBeginsFullScreen, false);
-					document.addEventListener('MSFullscreenChange', onVideoBeginsFullScreen, false);
-
 					if((navigator.userAgent.indexOf("Safari") > -1)) {
 						jQuery('#activityVideoFav')[0].play();
 						var videoContrlSafari = jQuery('#activityVideoFav')[0];
-						videoContrlSafari.onpause = function(event) {
-							onVideoBeginsFullScreen(event);
-						};
-						videoContrlSafari.onplay = function(event) {
-							onVideoBeginsFullScreen(event);
+						videoContrlSafari.ontouchstart = function () {
+							onVideoBeginsFullScreen();
 						};
 					}
 				}

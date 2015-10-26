@@ -3754,36 +3754,24 @@ define(["framework/WidgetWithTemplate", "match/Match", "uncover/Uncover","abstra
 					}
 					
 					// To hide ios keyboard while clicking play, pause and fullscreen icon.
-					videoContrl.onpause = function() {
-						onVideoBeginsFullScreen();
-					};
-					videoContrl.onplay = function() {
+					function onVideoBeginsFullScreen () {
+						document.querySelector('textarea#note').blur();
+						$('textarea#note').blur();
+					}
+					videoContrl.ontouchstart = function () {
 						onVideoBeginsFullScreen();
 					};
 					$('#activityVideo, #activityVideo div, #activityVideo button').click(function (event) {
 						onVideoBeginsFullScreen();
 					});
-					
-					function onVideoBeginsFullScreen () {
-						document.querySelector('textarea#note').blur();
-						$('textarea#note').blur();
-					}
-					document.addEventListener('webkitfullscreenchange', onVideoBeginsFullScreen, false);
-					document.addEventListener('mozfullscreenchange', onVideoBeginsFullScreen, false);
-					document.addEventListener('fullscreenchange', onVideoBeginsFullScreen, false);
-					document.addEventListener('MSFullscreenChange', onVideoBeginsFullScreen, false);
 
-                                                                        
 					if((navigator.userAgent.indexOf("Safari") > -1)) {
-                        jQuery('#activityVideo')[0].play();
+						jQuery('#activityVideo')[0].play();
 						var videoContrlSafari = jQuery('#activityVideo')[0];
-						videoContrlSafari.onpause = function(event) {
-							onVideoBeginsFullScreen(event);
+						videoContrlSafari.ontouchstart = function () {
+							onVideoBeginsFullScreen();
 						};
-						videoContrlSafari.onplay = function(event) {
-							onVideoBeginsFullScreen(event);
-						};
-                    }
+					}
 				}else{
 					if (pluginlist.indexOf("Windows Media Player")!=-1){
 							//jQuery('<embed src='+filePath+' id="activityVideo" width="500" height="500"/>').appendTo(jQuery("#content-webview"));
