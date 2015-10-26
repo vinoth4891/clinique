@@ -653,7 +653,7 @@ color:#7f7f7f; border:1px solid #aaaba9; border-radius:5px; -webkit-border-radiu
 	padding: 0;
 }
 
-#report_page .report-bg, #report_page .report_second_option { width:100%; float:left;}
+#report_page .report-bg, #report_page .report_second_option { width:99.8%; float:left;}
 #report_page .report_second_option { padding:0; margin-bottom:20px;}
 #report_page .rept_dropbx, #report_page .rept_dropbx span.dropdwn select { width:99.5%;}
 #report_page .rept_dropbx {margin-right:20px;}
