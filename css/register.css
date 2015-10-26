@@ -220,3 +220,14 @@ line-height:normal;
 }
 .clearboth { clear:both; font-size:0; width:100%;}
 #register_holder .reg-text-rt { float:left; width:80%;}
+
+@media handheld, only screen and (max-width: 767px) {
+body #register_holder fieldset input, body #register_holder fieldset select { width:100%;}
+ }
+ 
+ @media only screen and (min-device-width: 768px) and (max-device-width: 1024px){
+ body #register_holder .reg-text-rt {float: left;
+    width: 50%;}
+body #register_holder fieldset input, body #register_holder fieldset select { width:100%;}
+  /* For landscape layouts only */
+}
