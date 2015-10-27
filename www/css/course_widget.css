@@ -636,6 +636,7 @@ body > li.ui-draggable.sequence-item img{ width:80px; height:85px;}
 .crswidj_txt h1, .crswidj_txt h1#quesname_activity3{ font-size: 17px;}
  div.favCommentNotes{ display:none !important;}
  body .commentNotes{ display:none !important;}
+ html body .crswidg_drgbxtble_container .crswidg_drgbxtble_container_inner .crswidg_drgbxtble_small td { padding:0 5px; font-size:12px;}
 }
 
 @media handheld, only screen and (max-width:385px){
@@ -655,8 +656,8 @@ body > li.ui-draggable.sequence-item img{ width:80px; height:85px;}
 .crswidg_qustns ul li.nodisp{ width:112px; }
 .crswidg_qustns{width:336px}
 
-.crswidg_img_small ul li{ width:80px; height:85px; margin-right:0.9%; font-size:11px;  line-height: 12px;}
-.crswidg_img_small ul li div { width:80px; height:85px; text-align:center; vertical-align:middle;}
+.crswidg_img_small ul li{ width:62px; height:85px; margin-right:0.9%; font-size:11px;  line-height: 12px;}
+.crswidg_img_small ul li div { width:100%; height:85px; text-align:center; vertical-align:middle;}
 
 .crswidg_drgbxtble_box {width:22%;height:90px;}
 .crswidg_drgbxtble_small {width:22%;height:90px; }
@@ -779,3 +780,4 @@ input:focus, textarea:focus {
     #globalmenuNavigation { display:none !important;}
 }
 }
+ 
