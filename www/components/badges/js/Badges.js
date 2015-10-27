@@ -373,7 +373,6 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function (tem
                     }
                 }
                 if (allowAnimation) {
-                    clickedArrow1.css('visibility','hidden');
                     var  timeoutValOne = 0;
                     if ($.browser.msie && (parseInt($.browser.version, 10) === 7 || parseInt($.browser.version, 10) === 8 || parseInt($.browser.version, 10) === 9 || parseInt($.browser.version, 10) === 10 || parseInt($.browser.version, 10) === 11)) {
                         jQuery("div.bdgebx_hldr > ul").animate({
@@ -389,7 +388,6 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function (tem
                     
                     setTimeout(function () {
                         // Animation complete.
-                        clickedArrow1.css('visibility','visible');
                         var leftMove = $("div.bdgebx_hldr > ul").css('left').replace('px','');
                         var leftMovePosi = (leftMove < 0)?(leftMove*-1):leftMove;
                         if(leftMove >= 0){
