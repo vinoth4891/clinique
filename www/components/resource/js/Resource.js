@@ -2295,9 +2295,25 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
 					} else {
 						videoContrl.pause();
 					}
-					
+                                                                    
+					// To hide ios keyboard while clicking play, pause and fullscreen icon.
+					function onVideoBeginsFullScreen () {
+						document.querySelector('textarea#note').blur();
+						$('textarea#note').blur();
+					}
+					videoContrl.ontouchstart = function () {
+						onVideoBeginsFullScreen();
+					};
+					$('#activityVideo, #activityVideo div, #activityVideo button').click(function (event) {
+						onVideoBeginsFullScreen(event);
+					});
+
                     if((navigator.userAgent.indexOf("Safari") > -1)) {
                         jQuery('#activityVideo')[0].play();
+						var videoContrlSafari = jQuery('#activityVideo')[0];
+						videoContrlSafari.ontouchstart = function () {
+							onVideoBeginsFullScreen();
+						};
                     }
 				}else{
 					if (pluginlist.indexOf("Windows Media Player")!=-1){
@@ -2813,6 +2829,11 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
 									clearInterval(quizreviewlength);
 									 jQuery("#load_wrapper, .overlaycontainer").hide();
 									jQuery(window).scrollTop(0);
+                                                              setTimeout(function(){
+                                                                         if(!$('html').hasClass('ie8') && !$('html').hasClass('ie9')){
+                                                                         $('#resourceContent-iframe')[0].contentWindow.location.reload(true);
+                                                                         }
+                                                                         }, 1000);
 								}
 								 },800); 
 								
@@ -2859,6 +2880,10 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
 										clearInterval(quizlength);
 										jQuery("#load_wrapper, .overlaycontainer").hide();
 									}
+                                                       if (height == 0) {
+                                                       clearInterval(quizlength);
+                                                       jQuery("#load_wrapper, .overlaycontainer").hide();
+                                                       }
 								}
 								
                             },800); 
