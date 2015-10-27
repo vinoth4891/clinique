@@ -3990,6 +3990,9 @@ define(["framework/WidgetWithTemplate", "match/Match", "uncover/Uncover","abstra
 
 								jQuery(window).scrollTop(0);
                             });
+							$("#courseContent-iframe").contents().find("#okbutton, #cancelbutton, #finishattemptbutton").on('click', function() {
+								jQuery("body").removeClass("overlay-video-quiz");
+							});
 							 jQuery("#courseContent-iframe").contents().find(".ui-link").off().on('click', function(){
 								 $(window).trigger('resize');
 								 jQuery("#load_wrapper, .overlaycontainer").show();
@@ -4136,15 +4139,16 @@ define(["framework/WidgetWithTemplate", "match/Match", "uncover/Uncover","abstra
 										jQuery(".hme_hdrbx,div.row.menu").show();
 									}
 								});
-                                jQuery("#courseContent-iframe").contents().find(".ui-btn-hidden").off().on('click', function(){
-                                    //setTimeout(function(){ jQuery("#load_wrapper, .overlaycontainer").hide(); },3000);
-                                    var loaderDisplay=setInterval(function (){
-                                                          if( jQuery("#load_wrapper").css('display') == "block" ){
-                                                                  jQuery("#load_wrapper, .overlaycontainer").hide();
-                                                                  clearInterval(loaderDisplay);
-                                                          }
-                                                        },1000);
-                                });
+								jQuery("#courseContent-iframe").contents().find(".ui-btn-hidden").off().on('click', function(){
+									//setTimeout(function(){ jQuery("#load_wrapper, .overlaycontainer").hide(); },3000);
+									var loaderDisplay=setInterval(function (){
+										if( jQuery("#load_wrapper").css('display') == "block" ){
+											jQuery("#load_wrapper, .overlaycontainer").hide();
+											jQuery("body").removeClass("overlay-video-quiz");
+											clearInterval(loaderDisplay);
+										}
+									},1000);
+								});
 							}
 						}
 					  });
