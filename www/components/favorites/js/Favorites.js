@@ -428,6 +428,12 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
                         jQuery(this).addClass('inputChecked');
                     }
                 }
+				// To check select All course check box is whether checked or not.
+				if (jQuery('.chkcase:checked').length === jQuery('.chkcase').length) {
+					jQuery('.selectAllcourse:last').attr('checked', true);
+				} else {
+					jQuery('.selectAllcourse:last').attr('checked', false);
+				}
             });
             jQuery('.ifram_cls_btn').die().live('click',function(){
 
