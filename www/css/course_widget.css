@@ -588,6 +588,7 @@ body > li.ui-draggable.sequence-item img{ width:95px; height:90px;}
  .crswidg_bg {padding:100px 0;}
  div.favCommentNotes{ display:none !important;}
  body .commentNotes{ display:none !important;}
+ html body .crswidg_drgbxtble_container .crswidg_drgbxtble_container_inner .crswidg_drgbxtble_small td { padding:0 5px; font-size:12px;}
 }
 
 
