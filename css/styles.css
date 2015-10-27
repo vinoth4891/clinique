@@ -2707,3 +2707,9 @@ html body .resource_wrap { padding-bottom:8% !important;}
  
   .ie8 .resource_wrap #displayContent { padding-top:74px;}
   div#displayContent.quiz-container { padding-top:45px;}
+
+.report-details-show #load_wrapper {position: fixed  !important; top:45% !important; display:block !important;}
+.report-details-show .overlaycontainer { width:100%; position:fixed; display:block !important;}
+
+.overlay-video-quiz #load_wrapper, .overlay-video-quiz .overlaycontainer { display:block !important;}
+.overlay-video-quiz .overlaycontainer { width:100%; position:fixed !important; z-index:999 !important;}

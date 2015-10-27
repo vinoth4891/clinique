@@ -355,3 +355,9 @@ div#edit_profile.profile_grnbtn.rgt.disable,div#chngpaswd.profile_grnbtn.rgt.dis
 
 .profilebx .profilhdr { position:relative;}
 html body .profilebx .profilhdr .profilhdr_btnbx {top:185px !important;}
+
+.overlay-video-quiz #load_wrapper, .overlay-video-quiz .overlaycontainer {
+    display: block !important;
+}
+.overlay-video-quiz .overlaycontainer { width:100%; position:fixed !important; z-index:999 !important;}
+
