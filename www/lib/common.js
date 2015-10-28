@@ -1,8 +1,8 @@
 var languages = {
     "en"    : "English - United Kingdom",//English United Kingdom
     "en_us" : "English - United States",//English United States
-	"cm_c"  : "English – Counter Manager",	// US - Counter Manager Cohort
-	"en_as" : "English - Asian",//English - Asian
+	"en_cm"  : "English – Counter Manager",	// US - Counter Manager Cohort
+	"en_ap" : "English - Asia Pacific",//English - Asia Pacific
     "ar"    : "العربية - الشرق األوسط",//Arabic
     "zh_ct" : "廣東 - 香港", //Cantonese - Hong Kong // Language pack isn't available in moodle
     "cs"    : "Čeština",//Czech
