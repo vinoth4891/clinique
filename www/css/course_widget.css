@@ -666,6 +666,7 @@ body > li.ui-draggable.sequence-item a { font-size:11px; line-height: 12px;}
 body > li.ui-draggable.sequence-item img{ width:80px; height:85px;}
  div.favCommentNotes{ display:none !important;}
  body .commentNotes{ display:none !important;}
+  body .hidden-img-wrapper .course_ifram_cls_btn {top: -57px; right: -20px;}
 }
 
 /*  iPhone and AndroidS3 Portrait mode */
@@ -749,3 +750,11 @@ body > li.ui-draggable.sequence-item img{ width:80px; height:80px;}
 .hidden-img-wrapper .course_ifram_cls_btn {position: absolute; top: -52px;}
 .overlay-video-quiz #load_wrapper, .overlay-video-quiz .overlaycontainer { display:block !important;}
 .overlay-video-quiz .overlaycontainer { width:100%; position:fixed !important; z-index:999 !important;}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+.pro_container .crswidg_img_small { text-align:left;}
+ body .crswidg_img_small ul { width:auto;}
+}

@@ -969,3 +969,19 @@ div.row.menu{ top: 70% !important;
 
  .globalmenu ul li a span.commenticon{ background: url(../images/note_gray.png) no-repeat; width: 44px; height: 44px; display: inline-block; background-size: 80% 80%; }
 
+
+ /* Iphone 5s Portrait */
+ @media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : portrait) {
+.widget-maincontent-div .homeRow-fluid { height: 450px;}
+}
+
+ /* Iphone 5s Portrait */
+ @media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : landscape) {
+.widget-maincontent-div .homeRow-fluid { height: 520px;}
+}
