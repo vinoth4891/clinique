@@ -1220,14 +1220,14 @@ define(["framework/WidgetWithTemplate"], function (template) {
 						jQuery("#country-sel").attr('disabled', false);	
 				}
                 jQuery("#country-sel,#phonecountry-sel").empty();
-                jQuery("#country-sel").append('<option data-msg="all_default" class="seloption" value="sel_all">All</option>');
+                jQuery("#country-sel").append('<option data-msg="all_default" class="seloption-no" value="sel_all">All</option>');
                 jQuery("#phonecountry-sel").append('<li data-value="sel_all"><a>All</a><span></span></li>');
                 
                 if(resp.length > 0 && res.error === false && res.response.country!= undefined ){
                     //console.log("country***"+JSON.stringify(res.response.country)+"\n");
                     jQuery.each(res.response.country, function(i,val){
                         if(val.countery != '' || val.countery != ' ' || val.countery != null){
-                            jQuery("#country-sel").append('<option class="seloption" title="'+self.toTitleCase(val.countery.toLowerCase())+'" data-country="'+val.code+'" value="'+val.code+'">'+self.toTitleCase(val.countery.toLowerCase())+'</option>');
+                            jQuery("#country-sel").append('<option class="seloption-no" title="'+self.toTitleCase(val.countery.toLowerCase())+'" data-country="'+val.code+'" value="'+val.code+'">'+self.toTitleCase(val.countery.toLowerCase())+'</option>');
                             jQuery("#phonecountry-sel").append('<li  title="'+self.toTitleCase(val.countery.toLowerCase())+'" data-country="'+val.code+'" data-value="'+val.code+'"><a>'+self.toTitleCase(val.countery.toLowerCase())+'</a><span></span></li>');
                         }
                     });
@@ -2086,13 +2086,13 @@ define(["framework/WidgetWithTemplate"], function (template) {
             '<div class="span12 rept_bx">  \r\n' +
             '<input type="hidden" id="sortoption">  \r\n' +
             '<div class="rept_dropbx dropaddmar">  \r\n' +
-            '<span class="droptxt" data-msg="sel_region" style="font-size: 13px;font-weight: 700;"></span><span class="dropdwn"><select size="" name="" id="region-sel" multiple="multiple" class="muldropdwn"><option value="" class="seloption" data-msg="all_default"></option></select></span></div>  \r\n' +
+            '<span class="droptxt" data-msg="sel_region" style="font-size: 13px;font-weight: 700;"></span><span class="dropdwn"><select size="" name="" id="region-sel" multiple="multiple" class="muldropdwn"><option value="" class="seloption-no" data-msg="all_default"></option></select></span></div>  \r\n' +
             '<div class="rept_dropbx dropaddmar">  \r\n' +
             '<span class="droptxt" data-msg="sel_country" style="font-size: 13px;font-weight: 700;"></span><span class="dropdwn">  \r\n' +
             '<select size="" name="" id="country-sel" class="muldropdwn" multiple="multiple">  \r\n' +
-            '<option value="" class="seloption" data-msg="all_default"></option>  \r\n' +
+            '<option value="" class="seloption-no" data-msg="all_default"></option>  \r\n' +
             '</select></span></div>  \r\n' +
-            '<div class="rept_dropbx dropaddmar"><span class="droptxt" data-msg="sel_retailer" style="font-size: 13px;font-weight: 700;"></span><span class="dropdwn"><select size="" name="" id="retailer-sel" multiple="multiple" class="muldropdwn"><option value="" class="seloption" data-msg="all_default"></option></select></span></div><div class="rept_dropbx"><span class="droptxt" data-msg="sel_store" style="font-size: 13px;font-weight: 700;"></span><span class="dropdwn"><select size="" name="" id="store-sel" multiple="multiple" class="muldropdwn"><option value="" class="seloption" data-msg="all_default"></option></select></span></div><div class="rept_dropbx"><span class="droptxt" data-msg="sel_course" style="font-size: 13px;font-weight: 700;">Select Course</span><span class="dropdwn"><select size="" name="" id="course-sel" multiple="multiple" class="muldropdwn"><option value="" class="seloption" data-msg="all_default"></option></select></span></div></div><div class="repbtn nopadadj2 shwpadadj" style="padding: 1% 4% 1% 1%;padding-top: 0px;padding-bottom: 7px;font-weight: bold;"><a href="javascript:void(0)" id="show-reports" style="text-shadow: none;font-size:11px;padding: 1px;width: 90px;color: #fff;">Show Report</a></div></div></div> <!-- Final div -->  \r\n' +
+            '<div class="rept_dropbx dropaddmar"><span class="droptxt" data-msg="sel_retailer" style="font-size: 13px;font-weight: 700;"></span><span class="dropdwn"><select size="" name="" id="retailer-sel" multiple="multiple" class="muldropdwn"><option value="" class="seloption-no" data-msg="all_default"></option></select></span></div><div class="rept_dropbx"><span class="droptxt" data-msg="sel_store" style="font-size: 13px;font-weight: 700;"></span><span class="dropdwn"><select size="" name="" id="store-sel" multiple="multiple" class="muldropdwn"><option value="" class="seloption-no" data-msg="all_default"></option></select></span></div><div class="rept_dropbx"><span class="droptxt" data-msg="sel_course" style="font-size: 13px;font-weight: 700;">Select Course</span><span class="dropdwn"><select size="" name="" id="course-sel" multiple="multiple" class="muldropdwn"><option value="" class="seloption-no" data-msg="all_default"></option></select></span></div></div><div class="repbtn nopadadj2 shwpadadj" style="padding: 1% 4% 1% 1%;padding-top: 0px;padding-bottom: 7px;font-weight: bold;"><a href="javascript:void(0)" id="show-reports" style="text-shadow: none;font-size:11px;padding: 1px;width: 90px;color: #fff;">Show Report</a></div></div></div> <!-- Final div -->  \r\n' +
             '<div class="span12 report_second_option" ><div class="reprt_srch_txt"><select multiple="multiple" placeholder="Search By" id="SelectBoxBoost">'+
 			'<option value="country">Country</option>'+
 			'<option value="fullname">Course Name</option>  \r\n' +
