@@ -21,7 +21,7 @@ class CascadeDropdown {
 						$region_name = explode('/', strtolower($region_name));
 						$region->region = implode('/', array_map('ucwords',$region_name));
                     }else{
-                        $region->region =  ucwords(strtolower($region_name));
+                        $region->region = $region_name; //ucwords(strtolower($region_name));
                     }
 					return $region;
 				}, $regions); 
