@@ -349,19 +349,29 @@ define(["framework/WidgetWithTemplate", "match/Match", "uncover/Uncover","abstra
              .on('swipeup', function(){ })
              .on('swipedown', function(){ });
 
-			jQuery('#save-notes-btn').die().live('click',function(event) {
+			jQuery('#save-notes-btn').die().live(iTouch, function(event) {
 				event.preventDefault();
+				// To add the active class while touch event started for devices.
+				if (iTouch == "touchstart") {
+					jQuery(this).addClass('active');
+				}
 				currentCtrl.saveNotes("#note");
-
 			});
-            jQuery('#cancel-notes-btn').off().on('click', function(event){
+            jQuery('#cancel-notes-btn').off().on(iTouch, function(event){
                 event.preventDefault();
+				if (iTouch == "touchstart") {
+					jQuery(this).addClass('active');
+				}
                 if( currentCtrl.serverComments != undefined ){
                  jQuery('#note').val(''+currentCtrl.serverComments+'');
                 }else{
                     jQuery('#note').val('');
                 }
             });
+			// To remove the active class while touch event ended for devices.
+			jQuery("#save-notes-btn, #cancel-notes-btn").on("touchend", function() {
+				jQuery(this).removeClass('active');
+			});
 
             jQuery("#note").on("focus", function(){
                 jQuery("div.row.menu").hide();
@@ -2096,13 +2106,16 @@ define(["framework/WidgetWithTemplate", "match/Match", "uncover/Uncover","abstra
                 }
             });
             jQuery('a.courseItem').die().live('click', function() {
+				if(isiOS()){
+					jQuery(".widget-maincontent-div > .courseicon + .pro_container").removeAttr("style");
+				}
                 var dataName = $(this).data('name');
                 var dName = $(this).data('name');
 		  		var dataModId = $(this).data('modid');
                 var prefix = dName.substring(0, 3);
 
                   jQuery("#content-webview").removeClass('quiz-container');
-                  self.courseID = jQuery(this).attr('data-courseid');
+				  self.courseID = jQuery(this).attr('data-courseid');
                   self.modID = jQuery(this).attr('data-modid');
                   self.userID = jQuery(this).attr('data-userid');
                   self.timecreated =  jQuery(this).attr('data-timecreated');
