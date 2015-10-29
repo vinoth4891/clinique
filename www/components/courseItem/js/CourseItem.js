@@ -165,6 +165,24 @@ define(["framework/WidgetWithTemplate", "match/Match", "uncover/Uncover","abstra
 
             self.loadData(data,userDetails,self.enrollUsers);
 
+			if(isiOS()){
+				function accordionHeight() {
+					var headingLength = $('div.accordion-heading').length;
+					var headingHeight = $('div.accordion-heading:first').outerHeight();
+					var minHeight = headingLength*headingHeight;
+					var collapseId = $('div.accordion-heading:first a').attr("href");
+					if($(collapseId + '.in').length){
+						setTimeout(function(){
+						   var inHeight = $(collapseId + '.in').outerHeight();
+						   minHeight += inHeight;
+						   jQuery(".widget-maincontent-div > .courseicon + .pro_container").css("min-height",minHeight);
+						},1000);
+					} else {
+						jQuery(".widget-maincontent-div > .courseicon + .pro_container").css("min-height",minHeight);
+					}
+				}
+				accordionHeight();
+			}
             jQuery('.homepagenav').on('click', function() {
                 jQuery("#footer-menu li").removeClass('selected');
                 jQuery(".footer_home").addClass('selected');
@@ -3024,6 +3042,11 @@ define(["framework/WidgetWithTemplate", "match/Match", "uncover/Uncover","abstra
                     $(this).removeClass('no-border-radius');
                 }
             });
+			if(isiOS()){
+				$('div.accordion-heading a').on("click", function (){
+					jQuery(".widget-maincontent-div > .courseicon + .pro_container").removeAttr("style");
+				});
+			}
             loadAllLanguages();
 			 $('.rounded').each(function() {
 			    //console.log("Rounded");
