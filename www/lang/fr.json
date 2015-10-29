@@ -154,5 +154,7 @@
 	"summaryofattempts": "Resumé de vos tentatives précédentes",
 	"xoutofmax": " sur ",
 	"yourfinalgradeis": "Votre note finale pour ce test est .",
-	"state": "État"
+	"state": "État",
+	"reg-user-note"       : "Le nom d'utilisateur doit contenir uniquement des chiffres ou des lettres (aucun symbole ni accent). Le nom d'utilisateur doit être en minuscule et ne contenir aucun espace.",
+	"reg-region-note"     : "Merci de contacter le Service Formation Clinique pour obtenir le Code d'Accès."	
 }

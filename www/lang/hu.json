@@ -154,5 +154,7 @@
 	"summaryofattempts": "Korábbi próbálkozásainak összegzése",
 	"xoutofmax": " közül ",
 	"yourfinalgradeis": "Végső pontja erre a tesztre ",
-	"state": "Állapot"
+	"state": "Állapot",
+	"reg-user-note"       : "A felhasználónév csak betűket tartalmazhat, írásjeleket és egyéb karaktereket nem. A felhasználónév összes betűje szóköz nélküli kisbetű.",
+	"reg-region-note"     : "Belépési kódot (login Code) az üzletvezető vagy a  Clinique képviselő ad."	
 }

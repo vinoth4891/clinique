@@ -154,5 +154,7 @@
 	"summaryofattempts": "Resumen de sus intentos previos",
 	"xoutofmax": " sobre ",
 	"yourfinalgradeis": "Su calificación final en este cuestionario es ",
-	"state": "Estado"
+	"state": "Estado",
+	"reg-user-note"       : "Nombre de usuario puede solo contener caracteres alfanuméricos ( no símbolos o acentos). Debe ser todo en letra minúscula y no puede incluir espacios.",
+	"reg-region-note"     : "Por favor contacta con el equipo de Formación para obtener el código de acceso."
 }

@@ -154,5 +154,7 @@
 	"summaryofattempts": "Samenvatting van al je pogingen",
 	"xoutofmax": " op ",
 	"yourfinalgradeis": "Je eindcijfer voor deze test is ",
-	"state": "Status"
+	"state": "Status",
+	"reg-user-note"       : "De gebruikersnaam mag enkel alfanumerieke karakters bevatten (geen symbolen of accenten). De gebruikersnaam mag geen hoofdletters en spaties bevatten.",
+	"reg-region-note"     : "Contacteer je Clinique verantwoordelijke om een login code te verkrijgen."	
 }
