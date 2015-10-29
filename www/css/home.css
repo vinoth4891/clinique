@@ -444,7 +444,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#D2D2D4', end
 .footerbx_web{ display: none;}
 }
 
- @media handheld, only screen and (max-width: 720px) {
+ @media handheld, only screen and (max-width: 767px) {
 	
 	.padtp{width:390px;}		
 	.hmelogo {margin-left: 10px}
@@ -474,7 +474,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#D2D2D4', end
 	
  }
 
-@media handheld, only screen and (max-width: 667px) {
+@media handheld, only screen and (max-width: 767px) {
 	.logout {margin-right: 29px}
     .padtp{width:100px;	}
 	.container{width:630px;}
@@ -503,10 +503,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#D2D2D4', end
 
 .carouselbx{display:none;}
 .carousel_listing{display:none;}
-.carouselbx_mob{display:block; padding:11px 0 20px 0; width:612px; margin:auto}
+.carouselbx_mob{display:block; padding:11px 0 20px 0; width:95%; margin:31px auto;}
 .carouselbx_mob ul{padding:0; margin:0}
 .carouselbx_mob ul li{float:left; width:100%; height:/*49px*/47px; list-style:none; margin-bottom:10px;}
-.carouselbx_mob ul li a{display:block; width:100%; height:48px; background:581px 16px url(../images/carousel_mb_menu_arw.png) no-repeat}
+.carouselbx_mob ul li a{display:block; width:100%; height:48px; background:96% 16px url(../images/carousel_mb_menu_arw.png) no-repeat}
 .carouselbx_mob ul li a:hover{background:#FFFFFF 581px 16px url(../images/carousel_mb_menu_arw.png) no-repeat}
 .carouselbx_mob ul li a span{margin:0; padding:0}
 .carouselbx_mob ul li a span.carouselmb_img{padding:11px 0 0 15px; float:left; width:43px;}
@@ -723,8 +723,8 @@ display: block; height: 42px; left:12px; position: absolute; top: 57px; width: 6
 
 	.carouselbx{display:none;}
 	.carousel_listing{display:none;}
-	.carouselbx_mob{padding-bottom:20px; padding-left:0; margin-left:12px; width:456px;}	
-	.carouselbx_mob ul li a{background:430px 16px url(../images/carousel_mb_menu_arw.png) no-repeat}
+	.carouselbx_mob{padding-bottom:20px; padding-left:0; margin-left:12px; width:95%;}	
+	.carouselbx_mob ul li a{background:96% 16px url(../images/carousel_mb_menu_arw.png) no-repeat}
 	.carouselbx_mob ul li a:hover{background:#ebf2df 430px 14px url(../images/carousel_mb_menu_arw.png) no-repeat}
 	.carouselbx_mob ul li a span{margin:0; padding:0}	
 	.carouselbx_mob ul li a span.carouselmb_txt{line-height:51px; font-size:16px; text-decoration:none; font-family:Helvetica, "Arial Narrow", Arial; display:inline-block;}
@@ -985,3 +985,5 @@ and (max-device-width : 568px)
 and (orientation : landscape) {
 .widget-maincontent-div .homeRow-fluid { height: 520px;}
 }
+
+@media handheld, only screen and (max-width: 736px) { }

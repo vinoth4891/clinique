@@ -588,6 +588,7 @@ body > li.ui-draggable.sequence-item img{ width:95px; height:90px;}
  .crswidg_bg {padding:100px 0;}
  div.favCommentNotes{ display:none !important;}
  body .commentNotes{ display:none !important;}
+  html body .crswidg_drgbxtble_container .crswidg_drgbxtble_container_inner .crswidg_drgbxtble_small td { padding:0 5px; font-size:12px;}
 }
 
 
@@ -666,7 +667,8 @@ body > li.ui-draggable.sequence-item a { font-size:11px; line-height: 12px;}
 body > li.ui-draggable.sequence-item img{ width:80px; height:85px;}
  div.favCommentNotes{ display:none !important;}
  body .commentNotes{ display:none !important;}
-  body .hidden-img-wrapper .course_ifram_cls_btn {top: -57px; right: -20px;}
+  body .hidden-img-wrapper .course_ifram_cls_btn, #sequence-page .course_ifram_cls_btn {top: -57px; right: -20px;}
+  #sequence-page .crswidj_txt h1, #sequence-page .crswidj_txt h1#quesname_activity3 { padding-left:15px;}
 }
 
 /*  iPhone and AndroidS3 Portrait mode */

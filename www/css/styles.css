@@ -1350,7 +1350,7 @@ body .quiz-container .btncommon { width:88% !important;}
     .register_Footer{margin-top:35%;}
 }
 
- @media handheld, only screen and (max-width: 720px) { 
+ @media handheld, only screen and (max-width: 767px) { 
  
  .body {background:#FFF url(../images/login_bg_720.png) no-repeat left bottom fixed}
  .loginholder {padding: 30px 0 40px} 
@@ -2200,7 +2200,7 @@ progress::-webkit-progress-value { background: grey; }
         z-index: 99999;
         position: fixed;
         margin-top:-50px;
-        margin-left:-154px;
+        margin-left:-150px;
 		left:50%;
 		top:50%;
 	}
