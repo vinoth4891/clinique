@@ -49,6 +49,7 @@
 #page-mod-quiz-viewPAGE table.quizattemptsummary  td.lastcol img { width: 80px; height: 107px;}
 #page-mod-quiz-viewPAGE table.quizattemptsummary  td, #page-mod-quiz-viewPAGE table.quizattemptsummary  th { font-size:10px;}
 #page-mod-quiz-viewPAGE { margin-top:30px;}
+.ui-radio .ui-btn-inner .ui-btn-text img {width: 100% !important; height: auto !important;} 
 }
 @media all and (max-width: 650px){
     .forumpost div.commands a {
