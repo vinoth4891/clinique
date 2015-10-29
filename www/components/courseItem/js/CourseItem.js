@@ -2106,14 +2106,16 @@ define(["framework/WidgetWithTemplate", "match/Match", "uncover/Uncover","abstra
                 }
             });
             jQuery('a.courseItem').die().live('click', function() {
+				if(isiOS()){
+					jQuery(".widget-maincontent-div > .courseicon + .pro_container").removeAttr("style");
+				}
                 var dataName = $(this).data('name');
                 var dName = $(this).data('name');
 		  		var dataModId = $(this).data('modid');
                 var prefix = dName.substring(0, 3);
 
                   jQuery("#content-webview").removeClass('quiz-container');
-				  jQuery(".widget-maincontent-div > .courseicon + .pro_container").removeAttr("style");
-                  self.courseID = jQuery(this).attr('data-courseid');
+				  self.courseID = jQuery(this).attr('data-courseid');
                   self.modID = jQuery(this).attr('data-modid');
                   self.userID = jQuery(this).attr('data-userid');
                   self.timecreated =  jQuery(this).attr('data-timecreated');
