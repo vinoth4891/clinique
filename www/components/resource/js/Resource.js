@@ -146,18 +146,30 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
                 wstoken:userDetails.token
             };
             self.loadData(data);
-			jQuery('#save-notes-btn').die().live('click',function(event) {
+			jQuery('#save-notes-btn').die().live(iTouch, function(event) {
 				event.preventDefault();
+				// To add the active class while touch event started for devices.
+				if (iTouch == "touchstart") {
+					jQuery(this).addClass('active');
+				}
 				self.saveNotes("#note");
 			});
-            jQuery('#cancel-notes-btn').die().live('click', function(event){
+            jQuery('#cancel-notes-btn').die().live(iTouch, function(event){
                 event.preventDefault();
+				if (iTouch == "touchstart") {
+					jQuery(this).addClass('active');
+				}
                 if( self.serverComments != undefined ){
                  jQuery('#note').val(''+self.serverComments+'');
                 }else{
                     jQuery('#note').val('');
                 }
             });
+			// To remove the active class while touch event ended for devices.
+			jQuery("#save-notes-btn, #cancel-notes-btn").on("touchend", function() {
+				jQuery(this).removeClass('active');
+			});
+			
             jQuery(".readingmaterial").click(function(){
                 if(!jQuery(this).hasClass('dsbl')){
                     jQuery("ul.listitems").hide();
