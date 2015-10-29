@@ -2375,7 +2375,7 @@ body .quiz-container .headlabel h2, body .prog_dta_hdg { padding-top:10px;}
 body .qustn-head { width:95%;}
 #showlistFav  .fav_btnstrip ul { margin:0 0 87px 0;}
     body .ifram_cls_btn, body .ifram_news_cls_btn, body .course_ifram_cls_btn {margin-top:0px;}
-	
+	.crswidg_drgans .ifram_news_cls_btn  {right: 0px; top: 10px;}
 }
 @media only screen 
 and (min-width : 300px) 
@@ -2448,6 +2448,7 @@ body .quiz-container .quizdtlgrid{ margin-top:20px;}
  body .prog_dta_hdg { padding-top:10px;}
 body .qustn-head { width:95%;}
 body .ifram_cls_btn, body .ifram_news_cls_btn, body .course_ifram_cls_btn {margin-top:0px;}
+.crswidg_drgans .ifram_news_cls_btn  {right: 0px; top: 10px;}
  } 
 
 .animate-wrap { vertical-align:middle;}
@@ -2720,3 +2721,4 @@ html body .pro_container .ui-draggable-dragging {
         width: 195px !important;
     }
 }
+
