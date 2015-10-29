@@ -2112,6 +2112,7 @@ define(["framework/WidgetWithTemplate", "match/Match", "uncover/Uncover","abstra
                 var prefix = dName.substring(0, 3);
 
                   jQuery("#content-webview").removeClass('quiz-container');
+				  jQuery(".widget-maincontent-div > .courseicon + .pro_container").removeAttr("style");
                   self.courseID = jQuery(this).attr('data-courseid');
                   self.modID = jQuery(this).attr('data-modid');
                   self.userID = jQuery(this).attr('data-userid');
