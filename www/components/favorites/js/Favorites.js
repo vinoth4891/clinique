@@ -752,18 +752,30 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
             jQuery(".commentCancelbtn").off().on('click', function(){
                 jQuery(".commentmodal,.commentmodal-backdrop").hide();
             });
-            jQuery('#save-notes-btn').die().live('click',function(event) {
+            jQuery('#save-notes-btn').die().live(iTouch, function(event) {
 				event.preventDefault();
+				// To add the active class while touch event started for devices.
+				if (iTouch == "touchstart") {
+					jQuery(this).addClass('active');
+				}
 				self.saveNotes("#note");
 			});
-            jQuery('#cancel-notes-btn').die().live('click', function(event){
+            jQuery('#cancel-notes-btn').die().live(iTouch, function(event){
                 event.preventDefault();
+				if (iTouch == "touchstart") {
+					jQuery(this).addClass('active');
+				}
                 if( self.serverComments != undefined ){
                  jQuery('#note').val(''+self.serverComments+'');
                 }else{
                     jQuery('#note').val('');
                 }
             });
+			// To remove the active class while touch event ended for devices.
+			jQuery("#save-notes-btn, #cancel-notes-btn").on("touchend", function() {
+				jQuery(this).removeClass('active');
+			});
+			
             jQuery(".AndroidVideo").die().live('click', function() {
                 cordova.exec(
                              function (args) {},
