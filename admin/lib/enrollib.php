@@ -167,6 +167,21 @@ function enrol_get_instances($courseid, $enabled) {
 }
 
 /**
+ * Returns enrolment instances in given course.
+ * @param int $courseid
+ * @param int $cohortid
+ * @param bool $enabled
+ * @return array of enrol instances
+ */
+function enrol_cohort_get_instances($courseid, $cohortid) {
+    global $DB, $CFG;
+
+    $result = $DB->get_records('enrol', array('courseid'=>$courseid,'customint1'=>$cohortid,'enrol'=>'cohort'), 'sortorder,id');
+
+    return $result;
+}
+
+/**
  * Checks if a given plugin is in the list of enabled enrolment plugins.
  *
  * @param string $enrol Enrolment plugin name

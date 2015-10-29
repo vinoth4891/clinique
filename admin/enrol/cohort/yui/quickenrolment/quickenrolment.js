@@ -296,6 +296,14 @@ YUI.add('moodle-enrol_cohort-quickenrolment', function(Y) {
                                 }
                                 var enrolled = Y.Node.create('<div class="'+CSS.COHORTBUTTON+' alreadyenrolled">'+M.str.enrol.synced+'</div>');
                                 node.one('.'+CSS.COHORT+' #cohortid_'+cohort.get(COHORTID)).replace(enrolled);
+								var cohortid =  cohort.get(COHORTID);
+                                
+                                if (cohortid==2) {
+                                  if (Y.Node.one('#cohortid_35')) {
+                                   var enrolled_cm = Y.Node.create('<div class="'+CSS.COHORTBUTTON+' alreadyenrolled">'+M.str.enrol.synced+'</div>');
+                                   Y.Node.one('#cohortid_35').replace(enrolled_cm);
+                                  }
+                                }
                                 this.set(REQUIREREFRESH, true);
                             }
                         } catch (e) {
