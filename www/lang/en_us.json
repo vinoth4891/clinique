@@ -1,6 +1,6 @@
 {
     "login"                 : "Login",
-    "username"              : "User Name",
+    "username"              : "Username",
     "password"              : "Password",
     "forgotpassword"        : "Forgot Password",
     "signin"                : "sign in",
@@ -25,9 +25,10 @@
     "Favorites"             : "Favorites",
     "search"                : "Search",
     "Edit"                  : "Edit",
-    "userName-label"        : "User Name",
+    "userName-label"        : "Username",
     "firstName-label"       : "First Name",
     "lastName-label"        : "Last Name",
+    "emailID-label"         : "Email ID",
     "emailID-label"         : "Email ID",
     "region-label"          : "Region",
     "country-label"         : "Country",
@@ -68,7 +69,7 @@
     "my_total_points"       : "My Total Points",
     "course_result"         : "Course Results",
     "reg-register"          : "Register",
-    "reg-login-code"        : "Login code",
+    "reg-login-code"        : "Login Code",
     "cancel-but"            : "Cancel", 
     "OK"                    : "OK",    
     "Home"                  : "Home",
@@ -157,5 +158,7 @@
 	"summaryofattempts": "Summary of your previous attempts",
 	"xoutofmax": " out of ",
 	"yourfinalgradeis": "Your final grade for this quiz is .",
-	"state": "State"
+	"state": "State",
+	"reg-user-note"       : "Username can only contain alphanumeric characters (no symbols or accents). Username must be all lower case and cannot include spaces.",
+	"reg-region-note"     : "Please contact your Counter Manager or Education Executive to obtain the Login Code."	
 }

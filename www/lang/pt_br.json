@@ -154,5 +154,7 @@
 	"summaryofattempts": "Resumo das suas tentativas anteriores",
 	"xoutofmax": " de ",
 	"yourfinalgradeis": "A sua nota final neste questionário é .",
-	"state": "Estado"
+	"state": "Estado",
+	"reg-user-note"       : "O nome do usuário deve conter apenas caracteres alfanuméricos (sem símbolos ou acentos). O Usuário deve ser em letra minúscula e sem espaços.",
+	"reg-region-note"     : "Por favor, entre em contato com a Gerente de Educação para obter o seu código para Login."	
 }
