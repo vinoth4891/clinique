@@ -2377,6 +2377,7 @@ body .commentNotes .commentICON  img{ max-height:100px;}
 body .quiz-container .quizdtlgrid{ margin-top:20px;} 
 body .quiz-container .headlabel h2, body .prog_dta_hdg { padding-top:10px;}
 body .qustn-head { width:95%;}
+.crswidg_drgans .ifram_news_cls_btn  {right: 0px; top: 10px;}
 }
 @media only screen 
 and (min-width : 300px) 
@@ -2448,6 +2449,7 @@ body.course-quiz-main-container { overflow:hidden; position:fixed;}
 body .quiz-container .quizdtlgrid{ margin-top:20px;} 
  body .prog_dta_hdg { padding-top:10px;}
 body .qustn-head { width:95%;}
+.crswidg_drgans .ifram_news_cls_btn  {right: 0px; top: 10px;}
  } 
 
 .animate-wrap { vertical-align:middle;}
