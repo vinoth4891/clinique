@@ -2295,9 +2295,25 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
 					} else {
 						videoContrl.pause();
 					}
-					
+                                                                    
+					// To hide ios keyboard while clicking play, pause and fullscreen icon.
+					function onVideoBeginsFullScreen () {
+						document.querySelector('textarea#note').blur();
+						$('textarea#note').blur();
+					}
+					videoContrl.ontouchstart = function () {
+						onVideoBeginsFullScreen();
+					};
+					$('#activityVideo, #activityVideo div, #activityVideo button').click(function (event) {
+						onVideoBeginsFullScreen(event);
+					});
+
                     if((navigator.userAgent.indexOf("Safari") > -1)) {
                         jQuery('#activityVideo')[0].play();
+						var videoContrlSafari = jQuery('#activityVideo')[0];
+						videoContrlSafari.ontouchstart = function () {
+							onVideoBeginsFullScreen();
+						};
                     }
 				}else{
 					if (pluginlist.indexOf("Windows Media Player")!=-1){
@@ -2781,6 +2797,9 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
 								}
 								jQuery(window).scrollTop(0);
                             });
+							$("#resourceContent-iframe").contents().find("#okbutton, #cancelbutton, #finishattemptbutton").on('click', function() {
+								jQuery("body").removeClass("overlay-video-quiz");
+							});
 							 jQuery("#resourceContent-iframe").contents().find(".ui-link").off().on('click', function(){
 								 $(window).trigger('resize');
 								  jQuery("#load_wrapper, .overlaycontainer").show();
@@ -2813,6 +2832,11 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
 									clearInterval(quizreviewlength);
 									 jQuery("#load_wrapper, .overlaycontainer").hide();
 									jQuery(window).scrollTop(0);
+                                                              setTimeout(function(){
+                                                                         if(!$('html').hasClass('ie8') && !$('html').hasClass('ie9')){
+                                                                         $('#resourceContent-iframe')[0].contentWindow.location.reload(true);
+                                                                         }
+                                                                         }, 1000);
 								}
 								 },800); 
 								
@@ -2859,6 +2883,10 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
 										clearInterval(quizlength);
 										jQuery("#load_wrapper, .overlaycontainer").hide();
 									}
+                                                       if (height == 0) {
+                                                       clearInterval(quizlength);
+                                                       jQuery("#load_wrapper, .overlaycontainer").hide();
+                                                       }
 								}
 								
                             },800); 
@@ -2950,14 +2978,15 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
 								jQuery(".hme_hdrbx,div.row.menu").show();
 							}
 						});
-                        jQuery("#courseContent-iframe").contents().find(".ui-btn-hidden").off().on('click', function(){
-                           var loaderDisplay=setInterval(function (){
-                                                         if( jQuery("#load_wrapper").css('display') == "block" ){
-                                                             jQuery("#load_wrapper, .overlaycontainer").hide();
-                                                             clearInterval(loaderDisplay);
-                                                         }
-                                             },1000);
-                        });
+						jQuery("#resourceContent-iframe").contents().find(".ui-btn-hidden").off().on('click', function(){
+							var loaderDisplay=setInterval(function (){
+								if( jQuery("#load_wrapper").css('display') == "block" ){
+									jQuery("#load_wrapper, .overlaycontainer").hide();
+									jQuery("body").removeClass("overlay-video-quiz");
+									clearInterval(loaderDisplay);
+								}
+							},1000);
+						});
 					}
 				}
             });

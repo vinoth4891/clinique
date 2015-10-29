@@ -100,8 +100,8 @@ function user_download_ods($fields,$extrafields=array()) {
    $users[] = $DB->get_records_sql("SELECT mu.*,
                                 $extrafield_sql
                                 FROM mdl_user AS mu
-                                INNER JOIN mdl_user_info_data AS muid ON mu.id = muid.userid
-                                INNER JOIN mdl_user_info_field AS muif ON muif.id = muid.fieldid
+                                LEFT JOIN mdl_user_info_data AS muid ON mu.id = muid.userid
+                                LEFT JOIN mdl_user_info_field AS muif ON muif.id = muid.fieldid
                                 WHERE mu.id IN ($userids) GROUP BY mu.id");
    }
 	$row = 1;
@@ -157,8 +157,8 @@ function user_download_xls($fields,$extrafields=array()) {
    $users[] = $DB->get_records_sql("SELECT mu.*,
                                 $extrafield_sql
                                 FROM mdl_user AS mu
-                                INNER JOIN mdl_user_info_data AS muid ON mu.id = muid.userid
-                                INNER JOIN mdl_user_info_field AS muif ON muif.id = muid.fieldid
+                                LEFT JOIN mdl_user_info_data AS muid ON mu.id = muid.userid
+                                LEFT JOIN mdl_user_info_field AS muif ON muif.id = muid.fieldid
                                 WHERE mu.id IN ($userids) GROUP BY mu.id");
    }
 	$row = 1;
@@ -206,8 +206,8 @@ function user_download_csv($fields,$extrafields=array()) {
    $users[] = $DB->get_records_sql("SELECT mu.*,
                                 $extrafield_sql
                                 FROM mdl_user AS mu
-                                INNER JOIN mdl_user_info_data AS muid ON mu.id = muid.userid
-                                INNER JOIN mdl_user_info_field AS muif ON muif.id = muid.fieldid
+                                LEFT JOIN mdl_user_info_data AS muid ON mu.id = muid.userid
+                                LEFT JOIN mdl_user_info_field AS muif ON muif.id = muid.fieldid
                                 WHERE mu.id IN ($userids) GROUP BY mu.id");
    }
 

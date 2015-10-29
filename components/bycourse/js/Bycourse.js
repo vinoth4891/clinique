@@ -38,7 +38,7 @@ define(["framework/WidgetWithTemplate"], function (template) {
         },
 
         bindUI: function () {
-			$('body').addClass('report-details-show');
+
             if(!(jQuery('.ie7-footer-specific').hasClass('reportsfooter'))) {
                jQuery('.ie7-footer-specific').addClass('reportsfooter');
             }
@@ -781,7 +781,9 @@ define(["framework/WidgetWithTemplate"], function (template) {
                     'position':'relative',
                     'top':jQuery(document).height()/2
                 });
-				jQuery("#load_wrapper, .overlaycontainer").show();
+                jQuery("#load_wrapper, .overlaycontainer").show();
+                $('body').addClass('report-details-show');
+
                 var page = jQuery(this).parent().attr('data-page');
                 var pagelength = jQuery('.bootpag li').length - 2;
                 var store, retailer, region, country, sortby;
@@ -933,7 +935,7 @@ define(["framework/WidgetWithTemplate"], function (template) {
                 jQuery(".footer_home").addClass('selected');
                 jQuery("#header-menu li").removeClass('selected');
                 jQuery(".header_home").addClass('selected');
-				jQuery('body').removeClass('report-details-show');
+                jQuery('body').removeClass('report-details-show');
                 var hash = window.location.hash;
                 if (hash !== '#home') {
                     if (!jQuery("#carousel").length && !jQuery(".homeSwiper-container").length) {
@@ -1135,6 +1137,7 @@ define(["framework/WidgetWithTemplate"], function (template) {
                     default:
 						jQuery("div#bycourse-image").show();
 						jQuery("#load_wrapper, .overlaycontainer").hide();
+                        $('body').removeClass('report-details-show');
                         jQuery("div.bycourse-temp, footer.footerbx").hide();
                 }
             }
@@ -1223,14 +1226,14 @@ define(["framework/WidgetWithTemplate"], function (template) {
 						jQuery("#country-sel").attr('disabled', false);	
 				}
                 jQuery("#country-sel,#phonecountry-sel").empty();
-                jQuery("#country-sel").append('<option data-msg="all_default" class="seloption" value="sel_all">All</option>');
+                jQuery("#country-sel").append('<option data-msg="all_default" class="seloption-no" value="sel_all">All</option>');
                 jQuery("#phonecountry-sel").append('<li data-value="sel_all"><a>All</a><span></span></li>');
                 
                 if(resp.length > 0 && res.error === false && res.response.country!= undefined ){
                     //console.log("country***"+JSON.stringify(res.response.country)+"\n");
                     jQuery.each(res.response.country, function(i,val){
                         if(val.countery != '' || val.countery != ' ' || val.countery != null){
-                            jQuery("#country-sel").append('<option class="seloption" title="'+self.toTitleCase(val.countery.toLowerCase())+'" data-country="'+val.code+'" value="'+val.code+'">'+self.toTitleCase(val.countery.toLowerCase())+'</option>');
+                            jQuery("#country-sel").append('<option class="seloption-no" title="'+self.toTitleCase(val.countery.toLowerCase())+'" data-country="'+val.code+'" value="'+val.code+'">'+self.toTitleCase(val.countery.toLowerCase())+'</option>');
                             jQuery("#phonecountry-sel").append('<li  title="'+self.toTitleCase(val.countery.toLowerCase())+'" data-country="'+val.code+'" data-value="'+val.code+'"><a>'+self.toTitleCase(val.countery.toLowerCase())+'</a><span></span></li>');
                         }
                     });
@@ -1537,7 +1540,9 @@ define(["framework/WidgetWithTemplate"], function (template) {
                 'position':'relative',
                 'top':jQuery(document).height()/2
             });
-			jQuery("#load_wrapper, .overlaycontainer").show();
+            jQuery("#load_wrapper, .overlaycontainer").show();
+            $('body').addClass('report-details-show');
+
             var self = this,
             serviceUrl = self.globalConfig.apiAddress.service,
             reportSearchArr = [],
@@ -1613,7 +1618,8 @@ define(["framework/WidgetWithTemplate"], function (template) {
                         'top':'45%',
                         'display':'none'
                     });
-					jQuery("#load_wrapper, .overlaycontainer").hide();
+                    jQuery("#load_wrapper, .overlaycontainer").hide();
+                    $('body').removeClass('report-details-show');
                     loadAllLanguages();
                 }
             });
@@ -1624,6 +1630,8 @@ define(["framework/WidgetWithTemplate"], function (template) {
             reportSearchArr = [],
             reportSearchOpt = '',
             pagination = '';
+            $('body').addClass('report-details-show');
+                                                                    
             jQuery.ajax({
                 url: serviceUrl,
                 data: data,
@@ -1715,6 +1723,8 @@ define(["framework/WidgetWithTemplate"], function (template) {
                         'top':'45%',
                         'display':'none'
                     });
+                    jQuery("#load_wrapper, .overlaycontainer").hide();
+                    $('body').removeClass('report-details-show');
                     loadAllLanguages();
                 }
             });
@@ -1855,6 +1865,7 @@ define(["framework/WidgetWithTemplate"], function (template) {
                     loadAllLanguages();
                 }
             });
+            $('body').addClass('report-details-show');
 
             jQuery.ajax({
                 url: serviceUrl,
@@ -1931,7 +1942,8 @@ define(["framework/WidgetWithTemplate"], function (template) {
                         'top':'45%',
                         'display':'none'
                     });
-					jQuery("#load_wrapper, .overlaycontainer").hide();
+                        jQuery("#load_wrapper, .overlaycontainer").hide();
+                        $('body').removeClass('report-details-show');
                     loadAllLanguages();
                 }
             });
@@ -2108,13 +2120,13 @@ define(["framework/WidgetWithTemplate"], function (template) {
             '<div class="span12 rept_bx">  \r\n' +
             '<input type="hidden" id="sortoption">  \r\n' +
             '<div class="rept_dropbx dropaddmar">  \r\n' +
-            '<span class="droptxt" data-msg="sel_region" style="font-size: 13px;font-weight: 700;"></span><span class="dropdwn"><select size="" name="" id="region-sel" multiple="multiple" class="muldropdwn"><option value="" class="seloption" data-msg="all_default"></option></select></span></div>  \r\n' +
+            '<span class="droptxt" data-msg="sel_region" style="font-size: 13px;font-weight: 700;"></span><span class="dropdwn"><select size="" name="" id="region-sel" multiple="multiple" class="muldropdwn"><option value="" class="seloption-no" data-msg="all_default"></option></select></span></div>  \r\n' +
             '<div class="rept_dropbx dropaddmar">  \r\n' +
             '<span class="droptxt" data-msg="sel_country" style="font-size: 13px;font-weight: 700;"></span><span class="dropdwn">  \r\n' +
             '<select size="" name="" id="country-sel" class="muldropdwn" multiple="multiple">  \r\n' +
-            '<option value="" class="seloption" data-msg="all_default"></option>  \r\n' +
+            '<option value="" class="seloption-no" data-msg="all_default"></option>  \r\n' +
             '</select></span></div>  \r\n' +
-            '<div class="rept_dropbx dropaddmar"><span class="droptxt" data-msg="sel_retailer" style="font-size: 13px;font-weight: 700;"></span><span class="dropdwn"><select size="" name="" id="retailer-sel" multiple="multiple" class="muldropdwn"><option value="" class="seloption" data-msg="all_default"></option></select></span></div><div class="rept_dropbx"><span class="droptxt" data-msg="sel_store" style="font-size: 13px;font-weight: 700;"></span><span class="dropdwn"><select size="" name="" id="store-sel" multiple="multiple" class="muldropdwn"><option value="" class="seloption" data-msg="all_default"></option></select></span></div><div class="rept_dropbx"><span class="droptxt" data-msg="sel_course" style="font-size: 13px;font-weight: 700;">Select Course</span><span class="dropdwn"><select size="" name="" id="course-sel" multiple="multiple" class="muldropdwn"><option value="" class="seloption" data-msg="all_default"></option></select></span></div><div class="repbtn nopadadj2 shwpadadj" style="padding:0; margin-top: 19px; margin-right:10px; float:left; padding-top: 0px;padding-bottom: 7px;font-weight: bold; clear:none;"><a href="javascript:void(0)" id="show-reports" style="float:left; text-shadow: none;font-size:11px;padding: 1px;width: 90px;color: #fff;">Show Report</a></div> <div class="repbtn" id="exportdiv" style="padding:0; margin-top: 19px; margin-left:10px; float:left; padding-top: 0px;padding-bottom: 7px;font-weight: bold; clear:none;"><a href="'+((isDevice() && isPhoneGap())?'javascript:void(0)':'#')+'" data-msg="export"  style="float:left; text-shadow: none;font-size:11px;padding: 1px;width: 90px;color: #fff;"></a></div>  </div></div></div> <!-- Final div -->  \r\n' +
+            '<div class="rept_dropbx dropaddmar"><span class="droptxt" data-msg="sel_retailer" style="font-size: 13px;font-weight: 700;"></span><span class="dropdwn"><select size="" name="" id="retailer-sel" multiple="multiple" class="muldropdwn"><option value="" class="seloption-no" data-msg="all_default"></option></select></span></div><div class="rept_dropbx"><span class="droptxt" data-msg="sel_store" style="font-size: 13px;font-weight: 700;"></span><span class="dropdwn"><select size="" name="" id="store-sel" multiple="multiple" class="muldropdwn"><option value="" class="seloption-no" data-msg="all_default"></option></select></span></div><div class="rept_dropbx"><span class="droptxt" data-msg="sel_course" style="font-size: 13px;font-weight: 700;">Select Course</span><span class="dropdwn"><select size="" name="" id="course-sel" multiple="multiple" class="muldropdwn"><option value="" class="seloption-no" data-msg="all_default"></option></select></span></div><div class="repbtn nopadadj2 shwpadadj" style="padding:0; margin-top: 19px; margin-right:10px; float:left; padding-top: 0px;padding-bottom: 7px;font-weight: bold; clear:none;"><a href="javascript:void(0)" id="show-reports" style="float:left; text-shadow: none;font-size:11px;padding: 1px;width: 90px;color: #fff;">Show Report</a></div> <div class="repbtn" id="exportdiv" style="padding:0; margin-top: 19px; margin-left:10px; float:left; padding-top: 0px;padding-bottom: 7px;font-weight: bold; clear:none;"><a href="'+((isDevice() && isPhoneGap())?'javascript:void(0)':'#')+'" data-msg="export"  style="float:left; text-shadow: none;font-size:11px;padding: 1px;width: 90px;color: #fff;"></a></div>  </div></div></div> <!-- Final div -->  \r\n' +
 			'<div style="margin-top: 10px; margin-bottom:10px; font-size: 14px; float:left;" id="total_record"></div><div class="reptablr_bx">  \r\n' +
             '<table width="100%" cellspacing="0" cellpadding="0" border="0" id="reportbycourse" style="border: 1px solid #76914d;border-collapse: separate;border-radius: 5px;"><thead>  \r\n' +
             '<tr class="rep_hdg">  \r\n' +

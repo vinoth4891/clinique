@@ -170,6 +170,7 @@ if ($usernew = $userform->get_data()) {
     $usernew->timemodified = time();
 
     if ($usernew->id == -1) {
+	        
         //TODO check out if it makes sense to create account with this auth plugin and what to do with the password
         unset($usernew->id);
         $usernew = file_postupdate_standard_editor($usernew, 'description', $editoroptions, null, 'user', 'profile', null);
@@ -182,7 +183,9 @@ if ($usernew = $userform->get_data()) {
         add_to_log($course->id, 'user', 'add', "view.php?id=$usernew->id&course=$course->id", '');
 
     } else {
-        $usernew = file_postupdate_standard_editor($usernew, 'description', $editoroptions, $usercontext, 'user', 'profile', 0);
+		
+		$userold = $DB->get_record('user', array('id'=>$usernew->id));
+	    $usernew = file_postupdate_standard_editor($usernew, 'description', $editoroptions, $usercontext, 'user', 'profile', 0);
         $DB->update_record('user', $usernew);
         // pass a true $userold here
         if (! $authplugin->user_update($user, $userform->get_data())) {
@@ -246,7 +249,11 @@ if ($usernew = $userform->get_data()) {
       // if($usernew->lang == COUNTER_MANAGER_ISO) {
 			   		// cohort_add_member(US_ENGLISH, $usernew->id);
 		// }
-		
+	if($usernew->lang != $userold->lang){
+		$cohortRemove = $DB->get_record("cohort", array('idnumber' => $userold->lang));
+		cohort_remove_member($cohortRemove->id, $usernew->id);
+	}	
+	
     // trigger events
     if ($usercreated) {
         events_trigger('user_created', $usernew);
@@ -375,4 +382,3 @@ $userform->display();
 
 /// and proper footer
 echo $OUTPUT->footer();
-
