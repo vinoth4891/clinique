@@ -183,7 +183,8 @@ fieldset input[placeholder], [placeholder], *[placeholder] {
 	#profile_inputholder fieldset select{width:396px; float:left; height: 33px; border:1px #acc0b8 solid; -webkit-border-radius: 5px; border-radius: 5px;	
 	-webkit-box-shadow: inset 1px 1px 10px 1px rgba(0, 0, 0, .1);
 	box-shadow: inset 1px 1px 10px 1px rgba(0, 0, 0, .1); padding:5px 8px; margin:0; color:#95999a;}		
-	.marinc2{margin-top:15px}	
+	.marinc2{margin-top:15px}
+		#profile_inputholder  .me-text-rt { width:100%;}	
 }
 
 @media handheld, only screen and (max-width: 768px) {
