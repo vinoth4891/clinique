@@ -1,4 +1,4 @@
-define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(template) {
+﻿define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(template) {
     Clazz.createPackage("com.components.widget.favorites.js");
     Clazz.com.components.widget.favorites.js.Favorites = Clazz.extend(Clazz.WidgetWithTemplate, {
         // template URL, used to indicate where to get the template
@@ -428,12 +428,6 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
                         jQuery(this).addClass('inputChecked');
                     }
                 }
-				// To check select All course check box is whether checked or not.
-				if (jQuery('.chkcase:checked').length === jQuery('.chkcase').length) {
-					jQuery('.selectAllcourse:last').attr('checked', true);
-				} else {
-					jQuery('.selectAllcourse:last').attr('checked', false);
-				}
             });
             jQuery('.ifram_cls_btn').die().live('click',function(){
 
@@ -752,30 +746,18 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
             jQuery(".commentCancelbtn").off().on('click', function(){
                 jQuery(".commentmodal,.commentmodal-backdrop").hide();
             });
-            jQuery('#save-notes-btn').die().live(iTouch, function(event) {
+            jQuery('#save-notes-btn').die().live('click',function(event) {
 				event.preventDefault();
-				// To add the active class while touch event started for devices.
-				if (iTouch == "touchstart") {
-					jQuery(this).addClass('active');
-				}
 				self.saveNotes("#note");
 			});
-            jQuery('#cancel-notes-btn').die().live(iTouch, function(event){
+            jQuery('#cancel-notes-btn').die().live('click', function(event){
                 event.preventDefault();
-				if (iTouch == "touchstart") {
-					jQuery(this).addClass('active');
-				}
                 if( self.serverComments != undefined ){
                  jQuery('#note').val(''+self.serverComments+'');
                 }else{
                     jQuery('#note').val('');
                 }
             });
-			// To remove the active class while touch event ended for devices.
-			jQuery("#save-notes-btn, #cancel-notes-btn").on("touchend", function() {
-				jQuery(this).removeClass('active');
-			});
-			
             jQuery(".AndroidVideo").die().live('click', function() {
                 cordova.exec(
                              function (args) {},
@@ -1157,7 +1139,7 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
         	}else{
         		if(isHeader){
         			if(!self.attemptTable){
-						if(self.attemptedcount >= 1 ){
+						if(self.attemptedcount > 1 ){
 							 // feedback implementation
 							if(self.quizdata.quizinfo[0].feedback.length >= 1){
 								if(self.quizdata.quizinfo[0].feedback[0].feedbacktext){
@@ -2331,26 +2313,6 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
 						videoContrl.pause();
 					}
 					videoContrl.play();
-					
-					// To hide ios keyboard while clicking play, pause and fullscreen icon.
-					function onVideoBeginsFullScreen () {
-						document.querySelector('textarea#note').blur();
-						$('textarea#note').blur();
-					}
-					videoContrl.ontouchstart = function () {
-						onVideoBeginsFullScreen();
-					};
-					$('#activityVideoFav, #activityVideoFav div, #activityVideoFav button').click(function (event) {
-						onVideoBeginsFullScreen(event);
-					});
-
-					if((navigator.userAgent.indexOf("Safari") > -1)) {
-						jQuery('#activityVideoFav')[0].play();
-						var videoContrlSafari = jQuery('#activityVideoFav')[0];
-						videoContrlSafari.ontouchstart = function () {
-							onVideoBeginsFullScreen();
-						};
-					}
 				}
                 jQuery(".commentNotes").show();
                 jQuery('#load_wrapper').hide();
@@ -3016,38 +2978,20 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
 						     // QUIZ full screen for Browser
 						if( !$('html').hasClass('ie8') && !$('html').hasClass('ie9')) {
 							 jQuery("#resourceContentFav-iframe").contents().find(".ui-btn-hidden").off().on('click', function(){
-                                jQuery("body").addClass("overlay-video-quiz");
-                                var height, closeOverlayIcon;
-
-                                if($('html').hasClass('ie8') || $('html').hasClass('ie9')){
-									height = jQuery("#resourceContentFav-iframe").find('body').height();
+                                
+								 if($('html').hasClass('ie8') || $('html').hasClass('ie9')){
+									var height = jQuery("#resourceContentFav-iframe").find('body').height();
 								}else{
-									height = jQuery("#resourceContentFav-iframe").contents().find('body').height();
+									var height = jQuery("#resourceContentFav-iframe").contents().find('body').height();
 								}
 								if(height){
 									jQuery("#resourceContentFav-iframe").css('height',height);
 								}
-
-                                setTimeout(function(){
-                                    if($('html').hasClass('ie8') || $('html').hasClass('ie9')){
-                                        closeOverlayIcon = jQuery("#resourceContentFav-iframe").find('body').hasClass("masked");
-                                    } else {
-                                        closeOverlayIcon = jQuery("#resourceContentFav-iframe").contents().find('body').hasClass("masked");
-                                    }
-                                    if (closeOverlayIcon) {
-                                        jQuery("body").removeClass("overlay-video-quiz");
-                                    }
-                                },800);
-
 								jQuery(window).scrollTop(0);
                             });
-							$("#resourceContentFav-iframe").contents().find("#okbutton, #cancelbutton, #finishattemptbutton").on('click', function() {
-								jQuery("body").removeClass("overlay-video-quiz");
-							});
 							 jQuery("#resourceContentFav-iframe").contents().find(".ui-link").off().on('click', function(){
 								 $(window).trigger('resize');
 								 jQuery("#load_wrapper, .overlaycontainer").show();
-                                jQuery("body").addClass("overlay-video-quiz");
                                  var quizreviewlength=setInterval(function(){
 								
 								if($('html').hasClass('ie8') || $('html').hasClass('ie9')){
@@ -3077,12 +3021,6 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
 									clearInterval(quizreviewlength);
 									jQuery("#load_wrapper, .overlaycontainer").hide();
 									jQuery(window).scrollTop(0);
-                                     setTimeout(function(){
-                                                if(!$('html').hasClass('ie8') && !$('html').hasClass('ie9')){
-                                                $('#resourceContentFav-iframe')[0].contentWindow.location.reload(true);
-                                                }
-                                     }, 1000);
-                                    
 								}
 								 },800); 
                             });
@@ -3097,17 +3035,27 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
 							
 							var quizlength=setInterval(function(){
 								jQuery("#load_wrapper, .overlaycontainer").show();
-								if($('html').hasClass('ie8') || $('html').hasClass('ie9')){
-										var height = jQuery("#resourceContentFav-iframe").find('.mymobilecontent').height();
+								    if($('html').hasClass('ie8') || $('html').hasClass('ie9')){
+										var height = '';
+										    if( jQuery("#resourceContentFav-iframe").find('.mymobilecontent').length ){
+											  height = jQuery("#resourceContentFav-iframe").find('.mymobilecontent').height();	
+											}else{
+											  height = jQuery("#resourceContentFav-iframe").find('#wrapper').height();
+											}
 										jQuery("#resourceContentFav-iframe").find('html').css('background','#fff');								
 										jQuery("#resourceContentFav-iframe").find('#page-mod-quiz-viewPAGE').css('background','#fff').css('background-image','none');
 									}else{
-										var height = jQuery("#resourceContentFav-iframe").contents().find('.mymobilecontent').height();
+										var height = '';
+										    if( jQuery("#resourceContentFav-iframe").contents().find('.mymobilecontent').length ){
+												height = jQuery("#resourceContentFav-iframe").contents().find('.mymobilecontent').height();	
+											}else{
+												height = jQuery("#resourceContentFav-iframe").contents().find('#wrapper').height();
+											}											
 										jQuery("#resourceContentFav-iframe").contents().find('html').css('background','#fff');
 										jQuery("#resourceContentFav-iframe").contents().find('#page-mod-quiz-viewPAGE').css('background','#fff').css('background-image','none');									
 										
 									}
-								if(height){
+								    if(height){
 										jQuery("#resourceContentFav-iframe").css('height',(height+100));
 										if($(window).height() < height)
 											jQuery('.quiz-main-container #displayContentFav').css('height',height);
@@ -3119,7 +3067,12 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
 									} else {
 										if( $('html').hasClass('ie8') || $('html').hasClass('ie9') ) {
 											
-											var height = jQuery("#resourceContentFav-iframe").contents().find('.mymobilecontent').height();
+											var height = '';
+											    if(  jQuery("#resourceContentFav-iframe").contents().find('.mymobilecontent').length ){
+													height = jQuery("#resourceContentFav-iframe").contents().find('.mymobilecontent').height();
+												}else{
+													height = jQuery("#resourceContentFav-iframe").contents().find('#wrapper').height()	
+												}												
 											jQuery("#resourceContentFav-iframe").css('height',height+100);
 											
 											if( $(window).height() < height ) {
@@ -3130,10 +3083,6 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
 											clearInterval(quizlength);
 											jQuery("#load_wrapper, .overlaycontainer").hide();
 										}
-                                                       if (height == 0) {
-                                                       clearInterval(quizlength);
-                                                       jQuery("#load_wrapper, .overlaycontainer").hide();
-                                                       }
 									}
 									
                             },800); 
@@ -3175,13 +3124,13 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
 								}
 							}
 						if($('html').hasClass('ie8') || $('html').hasClass('ie9')){
-							jQuery("#resourceContentFav-iframe").find('.content-primary').css('width','100%').css('margin-right','0');
+							jQuery("#resourceContentFav-iframe").find('.content-primary').css('width','100% ').css('margin-right','0');
 							jQuery("#resourceContentFav-iframe").find('#scorm_object').css('width','100%').css('margin-right','0');
 							jQuery("#resourceContentFav-iframe").find('#scorm_layout').css('width','100%').css('margin-right','0');
 							$(window).trigger('resize');
 							jQuery("#resourceContentFav-iframe").css('width','90%').css('margin-right','0px').css('margin-left','0px');
 						   }else{
-							jQuery("#resourceContentFav-iframe").contents().find('.content-primary').css('width','100%').css('margin-right','0');
+							jQuery("#resourceContentFav-iframe").contents().find('.content-primary').css('width','100% ').css('margin-right','0');
 							jQuery("#resourceContentFav-iframe").contents().find('#scorm_object').css('width','100%').css('margin-right','0');
 							jQuery("#resourceContentFav-iframe").contents().find('#scorm_layout').css('width','100%').css('margin-right','0');
 							$(window).trigger('resize');
@@ -3190,7 +3139,6 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
 						   jQuery("#load_wrapper, .overlaycontainer").show();	
 						setTimeout(function(){ 
 							  jQuery("#resourceContentFav-iframe").css('width','94%').css('margin-right','0px').css('margin-left','0px');
-                                   jQuery("body").removeClass("overlay-video-quiz");
 								$(window).trigger('resize');
 								jQuery("#load_wrapper, .overlaycontainer").hide();
 							},1000); 
@@ -3242,15 +3190,14 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
 								jQuery(".hme_hdrbx,div.row.menu").show();
 							}
 						});
-						jQuery("#courseContent-iframe").contents().find(".ui-btn-hidden").off().on('click', function(){
-							var loaderDisplay=setInterval(function (){
-								if( jQuery("#load_wrapper").css('display') == "block" ){
-									jQuery("#load_wrapper, .overlaycontainer").hide();
-									jQuery("body").removeClass("overlay-video-quiz");
-									clearInterval(loaderDisplay);
-								}
-							},1000);
-						});
+                        jQuery("#courseContent-iframe").contents().find(".ui-btn-hidden").off().on('click', function(){
+                           var loaderDisplay=setInterval(function (){
+                                                     if( jQuery("#load_wrapper").css('display') == "block" ){
+                                                         jQuery("#load_wrapper, .overlaycontainer").hide();
+                                                         clearInterval(loaderDisplay);
+                                                     }
+                                              },1000);
+                        });
 					}
 				}
 

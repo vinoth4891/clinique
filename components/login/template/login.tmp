@@ -47,7 +47,7 @@
                     <input id="email" data-placeholder="email" placeholder="Email ID" type="text" class="test" value="Email ID"/>
                 </form>
             </div>
-            <div class="enterbtn"><a href="javascript:void(0);" id="frg_psw_sub"><span data-msg="enter" class="reg-btgrn-lt signinIE9"></span></a></div>
+            <div class="enterbtn"><a href="#" id="frg_psw_sub"><span data-msg="enter" class="reg-btgrn-lt signinIE9"></span></a></div>
             <div class="success_msg" style="display:none"></div>
             <div class="OKbtn" style="display:none"><a href="#" data-msg="OK"></a></div>
             <div class="loaderbx hideclass" style="display:none">

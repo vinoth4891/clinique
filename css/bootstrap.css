@@ -217,7 +217,6 @@ a {
 }
 a:hover {
   color: #005580;
-  text-decoration: underline;
 }
 .img-rounded {
   -webkit-border-radius: 6px;
@@ -269,7 +268,9 @@ a:hover {
   width: 860px;
 }
 .span10 {
-  width: 780px;
+  /* width: 835px; */
+  padding-left: 19px;
+  width: 77%;
 }
 .span9 {
   width: 700px;
@@ -1494,7 +1495,6 @@ textarea[disabled],
 input[readonly],
 select[readonly],
 textarea[readonly] {
-  cursor: not-allowed;
   background-color: #eeeeee;
 }
 input[type="radio"][disabled],
@@ -4774,8 +4774,8 @@ a.thumbnail:hover {
   color: #333333;
   white-space: nowrap;
 }
-.dropdown-menu li > a:hover,
-.dropdown-menu li > a:focus,
+.dropdown-menu li1 > a:hover,
+.dropdown-menu li1 > a:focus,
 .dropdown-submenu:hover > a {
   text-decoration: none;
   color: #ffffff;
@@ -5065,7 +5065,7 @@ a.thumbnail:hover {
   color: #000000;
   text-decoration: none;
   cursor: pointer;
-  opacity: 0.4;
+  /*opacity: 0.4;*/
   filter: alpha(opacity=40);
 }
 button.close {
@@ -5625,7 +5625,7 @@ button.close {
 }
 @media (min-width: 1200px) {
   .row {
-    margin-left: -30px;
+    margin-left: -20px;
     *zoom: 1;
   }
   .row:before,
@@ -5640,7 +5640,7 @@ button.close {
   [class*="span"] {
     float: left;
     min-height: 1px;
-    margin-left: 30px;
+    margin-left: 143px;
   }
   .container,
   .navbar-static-top .container,
@@ -5655,7 +5655,7 @@ button.close {
     width: 1070px;
   }
   .span10 {
-    width: 970px;
+    /*width: 970px;*/
   }
   .span9 {
     width: 870px;
@@ -5718,7 +5718,7 @@ button.close {
     margin-left: 230px;
   }
   .offset1 {
-    margin-left: 130px;
+    margin-left: 178px;
   }
   .row-fluid {
     width: 100%;

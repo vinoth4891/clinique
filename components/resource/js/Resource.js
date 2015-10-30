@@ -146,30 +146,18 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
                 wstoken:userDetails.token
             };
             self.loadData(data);
-			jQuery('#save-notes-btn').die().live(iTouch, function(event) {
+			jQuery('#save-notes-btn').die().live('click',function(event) {
 				event.preventDefault();
-				// To add the active class while touch event started for devices.
-				if (iTouch == "touchstart") {
-					jQuery(this).addClass('active');
-				}
 				self.saveNotes("#note");
 			});
-            jQuery('#cancel-notes-btn').die().live(iTouch, function(event){
+            jQuery('#cancel-notes-btn').die().live('click', function(event){
                 event.preventDefault();
-				if (iTouch == "touchstart") {
-					jQuery(this).addClass('active');
-				}
                 if( self.serverComments != undefined ){
                  jQuery('#note').val(''+self.serverComments+'');
                 }else{
                     jQuery('#note').val('');
                 }
             });
-			// To remove the active class while touch event ended for devices.
-			jQuery("#save-notes-btn, #cancel-notes-btn").on("touchend", function() {
-				jQuery(this).removeClass('active');
-			});
-			
             jQuery(".readingmaterial").click(function(){
                 if(!jQuery(this).hasClass('dsbl')){
                     jQuery("ul.listitems").hide();
@@ -961,7 +949,7 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
         	}else{
         		if(isHeader){
         			if(!self.attemptTable){
-						if(self.attemptedcount >= 1 ){
+						if(self.attemptedcount > 1 ){
 							 // feedback implementation
 							if(self.quizdata.quizinfo[0].feedback.length >= 1){
 								if(self.quizdata.quizinfo[0].feedback[0].feedbacktext){
@@ -2307,25 +2295,9 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
 					} else {
 						videoContrl.pause();
 					}
-                                                                    
-					// To hide ios keyboard while clicking play, pause and fullscreen icon.
-					function onVideoBeginsFullScreen () {
-						document.querySelector('textarea#note').blur();
-						$('textarea#note').blur();
-					}
-					videoContrl.ontouchstart = function () {
-						onVideoBeginsFullScreen();
-					};
-					$('#activityVideo, #activityVideo div, #activityVideo button').click(function (event) {
-						onVideoBeginsFullScreen(event);
-					});
-
+					
                     if((navigator.userAgent.indexOf("Safari") > -1)) {
                         jQuery('#activityVideo')[0].play();
-						var videoContrlSafari = jQuery('#activityVideo')[0];
-						videoContrlSafari.ontouchstart = function () {
-							onVideoBeginsFullScreen();
-						};
                     }
 				}else{
 					if (pluginlist.indexOf("Windows Media Player")!=-1){
@@ -2809,9 +2781,6 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
 								}
 								jQuery(window).scrollTop(0);
                             });
-							$("#resourceContent-iframe").contents().find("#okbutton, #cancelbutton, #finishattemptbutton").on('click', function() {
-								jQuery("body").removeClass("overlay-video-quiz");
-							});
 							 jQuery("#resourceContent-iframe").contents().find(".ui-link").off().on('click', function(){
 								 $(window).trigger('resize');
 								  jQuery("#load_wrapper, .overlaycontainer").show();
@@ -2844,11 +2813,6 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
 									clearInterval(quizreviewlength);
 									 jQuery("#load_wrapper, .overlaycontainer").hide();
 									jQuery(window).scrollTop(0);
-                                                              setTimeout(function(){
-                                                                         if(!$('html').hasClass('ie8') && !$('html').hasClass('ie9')){
-                                                                         $('#resourceContent-iframe')[0].contentWindow.location.reload(true);
-                                                                         }
-                                                                         }, 1000);
 								}
 								 },800); 
 								
@@ -2864,11 +2828,21 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
 							var quizlength=setInterval(function(){
 								 jQuery("#load_wrapper, .overlaycontainer").show();
 								if($('html').hasClass('ie8') || $('html').hasClass('ie9')){
-									var height = jQuery("#resourceContent-iframe").find('.mymobilecontent').height();
+									var height = '';
+									    if( jQuery("#resourceContent-iframe").find('.mymobilecontent').length ){
+										  height = jQuery("#resourceContent-iframe").find('.mymobilecontent').height();
+										}else{
+										  height = jQuery("#resourceContent-iframe").find('#wrapper').height();
+										} 
 									jQuery("#resourceContent-iframe").find('html').css('background','#fff');								
 									jQuery("#resourceContent-iframe").find('#page-mod-quiz-viewPAGE').css('background','#fff').css('background-image','none');
 								}else{
-									var height = jQuery("#resourceContent-iframe").contents().find('.mymobilecontent').height();
+									var height = '';
+									    if( jQuery("#resourceContent-iframe").contents().find('.mymobilecontent').length ){
+										  height = jQuery("#resourceContent-iframe").contents().find('.mymobilecontent').height();
+										}else{
+										   height = jQuery("#resourceContent-iframe").contents().find('#wrapper').height();
+										}
 									jQuery("#resourceContent-iframe").contents().find('html').css('background','#fff');
 									jQuery("#resourceContent-iframe").contents().find('#page-mod-quiz-viewPAGE').css('background','#fff').css('background-image','none');									
 								}
@@ -2884,7 +2858,12 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
 								}else {
 									if( $('html').hasClass('ie8') || $('html').hasClass('ie9') ) {
 									
-										var height = jQuery("#resourceContent-iframe").contents().find('.mymobilecontent').height();
+										var height = '';
+										    if( jQuery("#resourceContent-iframe").contents().find('.mymobilecontent').length ){
+											  height = jQuery("#resourceContent-iframe").contents().find('.mymobilecontent').height();
+											}else{
+											  height = jQuery("#resourceContent-iframe").contents().find('#wrapper').height();
+											}
 										jQuery("#resourceContent-iframe").css('height',height+100);
 										
 										if( $(window).height() < height ) {
@@ -2895,10 +2874,6 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
 										clearInterval(quizlength);
 										jQuery("#load_wrapper, .overlaycontainer").hide();
 									}
-                                                       if (height == 0) {
-                                                       clearInterval(quizlength);
-                                                       jQuery("#load_wrapper, .overlaycontainer").hide();
-                                                       }
 								}
 								
                             },800); 
@@ -2990,15 +2965,14 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
 								jQuery(".hme_hdrbx,div.row.menu").show();
 							}
 						});
-						jQuery("#resourceContent-iframe").contents().find(".ui-btn-hidden").off().on('click', function(){
-							var loaderDisplay=setInterval(function (){
-								if( jQuery("#load_wrapper").css('display') == "block" ){
-									jQuery("#load_wrapper, .overlaycontainer").hide();
-									jQuery("body").removeClass("overlay-video-quiz");
-									clearInterval(loaderDisplay);
-								}
-							},1000);
-						});
+                        jQuery("#courseContent-iframe").contents().find(".ui-btn-hidden").off().on('click', function(){
+                           var loaderDisplay=setInterval(function (){
+                                                         if( jQuery("#load_wrapper").css('display') == "block" ){
+                                                             jQuery("#load_wrapper, .overlaycontainer").hide();
+                                                             clearInterval(loaderDisplay);
+                                                         }
+                                             },1000);
+                        });
 					}
 				}
             });

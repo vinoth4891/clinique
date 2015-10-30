@@ -8,12 +8,12 @@ html,body{margin:0; padding:0;}
 #register_holder fieldset{ width:100%; display:inline-block; margin-bottom:15px;}
 #register_holder fieldset label{min-width:267px;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box; /*padding-right:15px; */display:block; float:left; line-height:25px; cursor:default;color: #85A095;padding-top:3px; font-size:16px}
 #register_holder fieldset label span.mandatory{color:#fe0000}
-#register_holder > fieldset > span{color:red; float:left;font-size:12px; /* width:330px; padding-left:166px;*/}
-#register_holder fieldset input{width:55%; float:left; height: 32px; border:1px #acc0b8 solid; -webkit-border-radius: 5px; border-radius: 5px;	-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+#register_holder > fieldset > span{color:red; float:left; width:330px; font-size:12px; padding-left:166px;}
+#register_holder fieldset input{width:45%; float:left; height: 32px; border:1px #acc0b8 solid; -webkit-border-radius: 5px; border-radius: 5px;	-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
                                 -webkit-box-shadow: inset 1px 1px 10px 1px rgba(0, 0, 0, .1); box-shadow: inset 1px 1px 10px 1px rgba(0, 0, 0, .1); padding:0 0 0 10px; margin:0; color:#95999a;}
 
 #register_holder fieldset .registertxt{float:left}
-#register_holder fieldset select{width:55%; float:left; height: 33px; border:1px #acc0b8 solid; -webkit-border-radius: 5px; border-radius: 5px;	
+#register_holder fieldset select{width:45%; float:left; height: 33px; border:1px #acc0b8 solid; -webkit-border-radius: 5px; border-radius: 5px;	
                                  -webkit-box-shadow: inset 1px 1px 10px 1px rgba(0, 0, 0, .1);-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
                                  box-shadow: inset 1px 1px 10px 1px rgba(0, 0, 0, .1); padding:5px 8px; margin:0; color:#95999a;}	
 
@@ -138,28 +138,12 @@ html,body{margin:0; padding:0;}
 @media handheld, only screen and (max-width: 786px) {
 
     .registerbx {margin-left: 12.1%; height: 892px}
-	
-   
-}
 
-@media handheld, only screen and (min-width: 769px) {
- 
-	#register_holder > fieldset > span{
-        width:43%!important;
-    }
-}
-
-@media handheld, only screen and (max-width: 769px) {
- 
-	#register_holder > fieldset > span{
-        width:43%!important;
-    }
 }
 
 @media handheld, only screen and (max-width: 720px) {
 
     .registerbx {height: 100%}	
-	
 }
 
 @media handheld, only screen and (max-width: 640px) {
@@ -183,14 +167,13 @@ html,body{margin:0; padding:0;}
     #register_holder fieldset#reg_entstore_field input,
     #register_holder fieldset#reg_entretailer_field input{margin-top:10px !important}
 	.reg_grybtn a, .reg_grnbtn a{width: 136px;}
-	
 }
 
 @media handheld, only screen and (max-width: 480px) {
     .regmsg_popup {left: 23%; top: 66px}
     .regmsg_hldrbx {width: 100%}
     #register_holder > fieldset > span{
-        width:100% !important;
+        width:290px;
     }
 }
 
@@ -209,29 +192,4 @@ html,body{margin:0; padding:0;}
     .regmsg_popup {left: 11%}
 	select {-webkit-appearance: listbox; padding: 0px 5px !important}
 #regmsg_modal{margin-top: 30% !important}
-}
-.guideNotes{
-    clear: both;
-    padding-left:0;
-    font-size: 11px!important;
-    color: #85a095!important;
-display:inline-block;
-line-height:normal;	
-}
-.clearboth { clear:both; font-size:0; width:100%;}
-#register_holder .reg-text-rt { float:left; width:80%;}
-
-@media handheld, only screen and (max-width: 767px) {
-body #register_holder fieldset input, body #register_holder fieldset select { width:100%;}
- }
- 
- @media only screen and (min-device-width: 768px) and (max-device-width: 1024px){
- body #register_holder .reg-text-rt {float: left;
-    width: 50%;}
-body #register_holder fieldset input, body #register_holder fieldset select { width:100%;}
-  /* For landscape layouts only */
-}
-
-@media handheld, only screen and (min-width: 1025px) {
-body #register_holder .reg-text-rt {float: left;width: 70%;}
 }

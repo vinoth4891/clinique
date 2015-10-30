@@ -628,7 +628,7 @@ define(["framework/WidgetWithTemplate"] , function(template) {
                     if(res != undefined){
                         if(!res.error){
 							if(res.response == 'show_popup'){
-							  // translateErrormsg(jQuery('#registerCnt'), activeLang, 'popup_legal_cntReg');
+							  translateErrormsg(jQuery('#registerCnt'), activeLang, 'popup_legal_cntReg');
 							  jQuery("#regPop, .quizmask").show();
 							            var basePath = self.globalConfig.apiAddress.host.replace('admin','');
 										var privacyPolicyWeb = Clazz.config.apiAddress.privacyPolicyWeb;

@@ -617,9 +617,6 @@ define(["framework/WidgetWithTemplate","home/Home","changePwd/ChangePwd","abstra
                 jQuery('#email_error_msg').show();
                 jQuery('#email_error_msg').addClass('invalidbtn');
                 translateErrormsg(jQuery('#email_error_msg'),activeLang,'fp_invalid_email');
-                jQuery('#email_error_msg').show();
-                translateErrormsg(jQuery('#email_error_msg'),activeLang,'fp_invalid_email');
-                
             }else{
                 if(isDevice() && isPhoneGap() && !checkAppOnline() ) {
                    /* jQuery('.nonetconnection').slideDown(2000, function(){
@@ -791,7 +788,7 @@ define(["framework/WidgetWithTemplate","home/Home","changePwd/ChangePwd","abstra
                                     $.jStorage.set("loginSuccessData", JSON.stringify(res));
                                 }
 
-								// translateErrormsg(jQuery('.forgotbx_holder p'), activeLang, 'popup_legal_cnt');
+								translateErrormsg(jQuery('.forgotbx_holder p'), activeLang, 'popup_legal_cnt');
 								
 								jQuery("#load_wrapper").hide();
                                 jQuery(".legalpopupcnt").find("#popup_privacyPolicy").attr("href", "javascript:void(0)");
