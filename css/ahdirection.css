@@ -1,5 +1,5 @@
 /* CSS Document */
-.login-bx, #register_holder fieldset label, #register_holder fieldset input, .globalmenu2 ul, .course-accordion, .acc_tilebx ul, .rept_bx, .crswidg_drgans h1, .crswidg_drgoptns ul li a, .crswidj_txt h1, .crswidg_drgbtn ul li a, #profile_inputholder fieldset label, #forget_popup { direction:rtl; }
+.login-bx, #register_holder fieldset label, #register_holder fieldset input, .globalmenu2 ul, .course-accordion, .acc_tilebx ul, .rept_bx, .crswidg_drgans h1, .crswidg_drgoptns ul li a, .crswidj_txt h1, .crswidg_drgbtn ul li a, #profile_inputholder fieldset label, #forget_popup { direction:rtl; }, .guideNotes{ direction:rtl; }
 
 .legalpopupcnt { direction:rtl; text-align:right !important; }
 
