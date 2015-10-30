@@ -463,6 +463,15 @@ color:#7f7f7f; border:1px solid #aaaba9; border-radius:5px; -webkit-border-radiu
 	
 }
 
+
+#report_page .report-bg, #report_page .report_second_option { width:99.8%; float:left;}
+#report_page .report_second_option { padding:0; margin-bottom:20px;}
+#report_page .rept_dropbx, #report_page .rept_dropbx span.dropdwn select { width:99.5%;}
+#report_page .rept_dropbx {margin-right:20px;}
+#report_page .rept_dropbx span.dropdwn select { min-width:209px;}
+#report_page .reprt_srch_txt .btn-group { margin-left:5px;}
+
+
 @media handheld, only screen and (max-width:600px){
 	.rept_bx {margin-left: 1%; width: 98%}	
 	.rept_dropbx {width: 139px}
@@ -688,6 +697,6 @@ background: -ms-linear-gradient(top, rgba(129,162,62,1) 0%,rgba(152,185,85,1) 84
 background: linear-gradient(to bottom, rgba(129,162,62,1) 0%,rgba(152,185,85,1) 84%,rgba(154,188,88,1) 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#81a23e', endColorstr='#9abc58',GradientType=0 ); /* IE6-8 */
 }
-	
+ 
 
-
+ 
