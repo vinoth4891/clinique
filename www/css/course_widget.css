@@ -783,4 +783,9 @@ input:focus, textarea:focus {
     #globalmenuNavigation { display:none !important;}
 }
 }
- 
+ @media only screen and (min-device-width : 300px) and (max-device-width : 480px) and (orientation : portrait) {
+	body #sequence-page .course_ifram_cls_btn {
+		top: -16px;
+		right: 0;
+	} 
+}
