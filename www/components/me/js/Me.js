@@ -136,7 +136,7 @@ define(["framework/WidgetWithTemplate","home/Home","changePwd/ChangePwd"] , func
 				var minHt = $("#profile_view .profilebx").height()+50;
 				$("#profile_view").css({
 					"min-height": minHt,
-					"padding-bottom": "30px !important"
+					"padding-bottom": "30px"
 				});
 			}
             /***** Updating the Job Title ****/
