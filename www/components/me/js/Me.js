@@ -15,7 +15,7 @@ define(["framework/WidgetWithTemplate","home/Home","changePwd/ChangePwd"] , func
         },
         onResume: function() {
             jQuery(".prof_edit").hide();
-            this.loadPage();
+            // this.loadPage(); /* To resolve flicker twice. */
         },
         setContent : function() {
             var userDetails;
