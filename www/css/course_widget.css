@@ -760,6 +760,10 @@ and (orientation : portrait) {
 .pro_container .crswidg_img_small { text-align:left;}
  body .crswidg_img_small ul { width:auto;}
 }
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+.ifram_news_cls_btn {  margin-top: 4px; left: 2px; }
+.crswidg_drgans h1 { padding-top: 50px; }
+}
 
  @media only screen and (min-device-width : 300px) and (max-device-width : 480px) and (orientation : portrait) {
 	body #sequence-page .course_ifram_cls_btn {
@@ -767,3 +771,4 @@ and (orientation : portrait) {
 		right: 0;
 	} 
 }
+

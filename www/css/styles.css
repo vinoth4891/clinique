@@ -2734,4 +2734,6 @@ html body .pro_container .ui-draggable-dragging {
  .widget-maincontent-div { padding-bottom:50px;}
  #profile_view.pro_container, #profile_edit.pro_container { padding-bottom:80px !important; float: left;
      min-height: 600px;}
+#courseContent-iframe .qustn-head { width:100%; margin-left:0; margin-top: 20px;}
+ .bycourse-temp #exportdiv { float:right; clear:none !important;}
 }

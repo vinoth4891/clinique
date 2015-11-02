@@ -362,3 +362,6 @@ html body .profilebx .profilhdr .profilhdr_btnbx {top:185px !important;}
 }
 .overlay-video-quiz .overlaycontainer { width:100%; position:fixed !important; z-index:999 !important;}
 
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+.tablescroll { width: 70%; }
+}
