@@ -156,5 +156,16 @@
 	"yourfinalgradeis": "Su calificación final en este cuestionario es ",
 	"state": "Estado",
 	"reg-user-note"       : "Nombre de usuario puede solo contener caracteres alfanuméricos ( no símbolos o acentos). Debe ser todo en letra minúscula y no puede incluir espacios.",
-	"reg-region-note"     : "Por favor contacta con el equipo de Formación para obtener el código de acceso."
+	"reg-region-note"     : "Por favor contacta con el equipo de Formación para obtener el código de acceso.",
+	"reg-top-page"        : "",
+	"reg-user-firstname"  : "",
+	"reg-user-password"  : "",
+	"reg-user-select"  : "",
+	"reg-user-retailer"  : "",
+	"reg-user-ret-other"  : "",
+	"reg-user-store"  : "",
+	"reg-user-store-other"  : "",
+	"reg-user-job-cm": "",
+	"reg-user-job-ac": "",
+	"reg-user-job-cc": ""
 }

@@ -156,5 +156,16 @@
 	"yourfinalgradeis": "A sua nota final neste questionário é .",
 	"state": "Estado",
 	"reg-user-note"       : "O nome do usuário deve conter apenas caracteres alfanuméricos (sem símbolos ou acentos). O Usuário deve ser em letra minúscula e sem espaços.",
-	"reg-region-note"     : "Por favor, entre em contato com a Gerente de Educação para obter o seu código para Login."	
+	"reg-region-note"     : "Por favor, entre em contato com a Gerente de Educação para obter o seu código para Login.",
+	"reg-top-page"        : "",
+	"reg-user-firstname"  : "",
+	"reg-user-password"  : "",
+	"reg-user-select"  : "",
+	"reg-user-retailer"  : "",
+	"reg-user-ret-other"  : "",
+	"reg-user-store"  : "",
+	"reg-user-store-other"  : "",
+	"reg-user-job-cm": "",
+	"reg-user-job-ac": "",
+	"reg-user-job-cc": ""
 }

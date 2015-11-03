@@ -156,5 +156,16 @@
 	"yourfinalgradeis": "這個測驗您的最後得分是",
 	"state": "狀態",
 	"reg-user-note"       : "登入名稱只可包含數字(不包括任何符號)登入名稱必須是小楷字母，不含空白格.",
-	"reg-region-note"     : "請聯絡你的店舖主管或培訓主管取得登入密碼."	
+	"reg-region-note"     : "請聯絡你的店舖主管或培訓主管取得登入密碼.",
+	"reg-top-page"        : "",
+	"reg-user-firstname"  : "",
+	"reg-user-password"  : "",
+	"reg-user-select"  : "",
+	"reg-user-retailer"  : "",
+	"reg-user-ret-other"  : "",
+	"reg-user-store"  : "",
+	"reg-user-store-other"  : "",
+	"reg-user-job-cm": "",
+	"reg-user-job-ac": "",
+	"reg-user-job-cc": ""
 }

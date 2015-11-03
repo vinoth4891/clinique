@@ -156,5 +156,16 @@
 	"yourfinalgradeis": "Điểm số cuối cùng cho đề thi này của bạn là ",
 	"state": "trạng thái",
 	"reg-user-note"       : "Tên người sử dụng chỉ có thể chứa chữ và số (không chứa ký hiệu hay dấu). Tên người sử dụng phải được viết thường và không có khoảng cách.",
-	"reg-region-note"     : "Vui lòng liên hệ Trưởng Quầy hoặc Quản Lý Đào Tạo để có Mã Đăng Nhập."
+	"reg-region-note"     : "Vui lòng liên hệ Trưởng Quầy hoặc Quản Lý Đào Tạo để có Mã Đăng Nhập.",
+	"reg-top-page"        : "",
+	"reg-user-firstname"  : "",
+	"reg-user-password"  : "",
+	"reg-user-select"  : "",
+	"reg-user-retailer"  : "",
+	"reg-user-ret-other"  : "",
+	"reg-user-store"  : "",
+	"reg-user-store-other"  : "",
+	"reg-user-job-cm": "",
+	"reg-user-job-ac": "",
+	"reg-user-job-cc": ""
 }

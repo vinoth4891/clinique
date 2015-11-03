@@ -156,5 +156,16 @@
 	"yourfinalgradeis": "이번 퀴즈의 최종 점수는  입니다.",
 	"state": "상태",
 	"reg-user-note"       : "사용자 이름은 오직 영문자로만 이루어 져야 합니다. (기호이나  액센트는 사용 불가) 사용자 이름은 알파벳 소문자 이어야만 하며, 공백을 포함할 수 없습니다.",
-	"reg-region-note"     : "로그인 코드를 얻으려면, 매장 매니저 혹은 교육부로 연락하세요"
+	"reg-region-note"     : "로그인 코드를 얻으려면, 매장 매니저 혹은 교육부로 연락하세요",
+	"reg-top-page"        : "",
+	"reg-user-firstname"  : "",
+	"reg-user-password"  : "",
+	"reg-user-select"  : "",
+	"reg-user-retailer"  : "",
+	"reg-user-ret-other"  : "",
+	"reg-user-store"  : "",
+	"reg-user-store-other"  : "",
+	"reg-user-job-cm": "",
+	"reg-user-job-ac": "",
+	"reg-user-job-cc": ""
 }

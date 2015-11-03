@@ -156,5 +156,16 @@
 	"yourfinalgradeis": "Twoja końcowa ocena za ten quiz wynosi ",
 	"state": "Stan",
 	"reg-user-note"       : "Nazwa użytkownika powinna składać się tylko z małych liter, nie zawierać przerw i musi składać się tylko z znaków alfanumerycznych (prosimy nie używać polskich znakó)",
-	"reg-region-note"     : "Proszę skontaktuj się ze swoim Education Executive w celu otrzymania kodu login."	
+	"reg-region-note"     : "Proszę skontaktuj się ze swoim Education Executive w celu otrzymania kodu login.",
+	"reg-top-page"        : "",
+	"reg-user-firstname"  : "",
+	"reg-user-password"  : "",
+	"reg-user-select"  : "",
+	"reg-user-retailer"  : "",
+	"reg-user-ret-other"  : "",
+	"reg-user-store"  : "",
+	"reg-user-store-other"  : "",
+	"reg-user-job-cm": "",
+	"reg-user-job-ac": "",
+	"reg-user-job-cc": ""
 }

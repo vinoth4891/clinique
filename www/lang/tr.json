@@ -156,5 +156,16 @@
 	"yourfinalgradeis": "Bu sınav için final notunuz ",
 	"state": "Durum",
 	"reg-user-note"       : "Kullanıcı adı yalnızca küçük harflerden oluşmalı; herhangi bir sembol, türkçe karakter veya boşluk kullanılmamalıdır.",
-	"reg-region-note"     : "Şifrenizi almak için bağlı bulunduğunuz Satış ve Eğitim Yöneticisi ile iletişime geçin."
+	"reg-region-note"     : "Şifrenizi almak için bağlı bulunduğunuz Satış ve Eğitim Yöneticisi ile iletişime geçin.",
+	"reg-top-page"        : "",
+	"reg-user-firstname"  : "",
+	"reg-user-password"  : "",
+	"reg-user-select"  : "",
+	"reg-user-retailer"  : "",
+	"reg-user-ret-other"  : "",
+	"reg-user-store"  : "",
+	"reg-user-store-other"  : "",
+	"reg-user-job-cm": "",
+	"reg-user-job-ac": "",
+	"reg-user-job-cc": ""
 }

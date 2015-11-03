@@ -156,5 +156,16 @@
 	"yourfinalgradeis": "Végső pontja erre a tesztre ",
 	"state": "Állapot",
 	"reg-user-note"       : "A felhasználónév csak betűket tartalmazhat, írásjeleket és egyéb karaktereket nem. A felhasználónév összes betűje szóköz nélküli kisbetű.",
-	"reg-region-note"     : "Belépési kódot (login Code) az üzletvezető vagy a  Clinique képviselő ad."	
+	"reg-region-note"     : "Belépési kódot (login Code) az üzletvezető vagy a  Clinique képviselő ad.",
+	"reg-top-page"        : "",
+	"reg-user-firstname"  : "",
+	"reg-user-password"  : "",
+	"reg-user-select"  : "",
+	"reg-user-retailer"  : "",
+	"reg-user-ret-other"  : "",
+	"reg-user-store"  : "",
+	"reg-user-store-other"  : "",
+	"reg-user-job-cm": "",
+	"reg-user-job-ac": "",
+	"reg-user-job-cc": ""
 }

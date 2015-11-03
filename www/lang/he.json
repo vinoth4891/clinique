@@ -156,5 +156,16 @@
 	"yourfinalgradeis": "הציון הסופי שלך לחידון זה",
 	"state": "מצב",
 	"reg-user-note"       : "שם המשתמש יכול להכיל תווים או מספרים בלבד. שם המשתמש חייב להיות באותיות קטנות וללא רווחים",
-	"reg-region-note"     : "יש ליצור קשר עם מנהלת ההדרכה או מדריכת השטח לקבלת סיסמא לכניסה"
+	"reg-region-note"     : "יש ליצור קשר עם מנהלת ההדרכה או מדריכת השטח לקבלת סיסמא לכניסה",
+	"reg-top-page"        : "",
+	"reg-user-firstname"  : "",
+	"reg-user-password"  : "",
+	"reg-user-select"  : "",
+	"reg-user-retailer"  : "",
+	"reg-user-ret-other"  : "",
+	"reg-user-store"  : "",
+	"reg-user-store-other"  : "",
+	"reg-user-job-cm": "",
+	"reg-user-job-ac": "",
+	"reg-user-job-cc": ""
 }
