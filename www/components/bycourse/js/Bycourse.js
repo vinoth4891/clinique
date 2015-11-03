@@ -1103,7 +1103,7 @@ define(["framework/WidgetWithTemplate"], function (template) {
             }
         },
 		toTitleCase: function(str) {
-				return str.replace(/(?:^|[\s|/])\w/g, function(match) {
+				return str.replace(/(?:^|[\s|/|-])\w/g, function(match) {
 					return match.toUpperCase();
 				});
 		},
