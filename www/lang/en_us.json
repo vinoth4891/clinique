@@ -160,5 +160,16 @@
 	"yourfinalgradeis": "Your final grade for this quiz is .",
 	"state": "State",
 	"reg-user-note"       : "Username can only contain alphanumeric characters (no symbols or accents). Username must be all lower case and cannot include spaces.",
-	"reg-region-note"     : "Please contact your Counter Manager or Education Executive to obtain the Login Code."	
+	"reg-region-note"     : "Please contact your Counter Manager or Education Executive to obtain the Login Code.",
+	"reg-top-page"        : "",
+	"reg-user-firstname"  : "",
+	"reg-user-password"  : "",
+	"reg-user-select"  : "",
+	"reg-user-retailer"  : "",
+	"reg-user-ret-other"  : "",
+	"reg-user-store"  : "",
+	"reg-user-store-other"  : "",
+	"reg-user-job-cm": "",
+	"reg-user-job-ac": "",
+	"reg-user-job-cc": ""	
 }

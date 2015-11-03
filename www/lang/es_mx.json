@@ -157,5 +157,16 @@
 	"yourfinalgradeis": "Tu puntuación final en este quiz es .",
 	"state": "Estado",
 	"reg-user-note"       : "El usuario solo puede contener caracteres alfanuméricos (no símbolos o acentos.) El usuario debe estar todo en minúsculas y no puede incluir espacios.",
-	"reg-region-note"     : "Por favor contacta a tu Ejecutivo de Cuenta o Gerente de Educación para obtener el Código de Inicio."
+	"reg-region-note"     : "Por favor contacta a tu Ejecutivo de Cuenta o Gerente de Educación para obtener el Código de Inicio.",
+	"reg-top-page"        : "",
+	"reg-user-firstname"  : "",
+	"reg-user-password"  : "",
+	"reg-user-select"  : "",
+	"reg-user-retailer"  : "",
+	"reg-user-ret-other"  : "",
+	"reg-user-store"  : "",
+	"reg-user-store-other"  : "",
+	"reg-user-job-cm": "",
+	"reg-user-job-ac": "",
+	"reg-user-job-cc": ""
 }

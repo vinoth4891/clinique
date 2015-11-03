@@ -156,5 +156,16 @@
 	"yourfinalgradeis": "あなたの小テスト最終評点は  です。",
 	"state": "状態",
 	"reg-user-note"       : "登録情報はすべて、アルファベットまたは数字で入力してください（日本語とスペースは不可）。",
-	"reg-region-note"     : "口頭でお伝えします。不明な場合はコーナーチーフまたは教育部までお問い合わせください。"	
+	"reg-region-note"     : "口頭でお伝えします。不明な場合はコーナーチーフまたは教育部までお問い合わせください。",
+	"reg-top-page"        : "スマートフォン使用の場合、データ通信料が発生しない、無料Wi-Fiを使っての利用を推奨します",
+	"reg-user-firstname"  : "名」には、社員番号を入力してください",
+	"reg-user-password"  : "大文字・小文字を混ぜて8文字以上にしてください 例",
+	"reg-user-select"  : "を選択してください",
+	"reg-user-retailer"  : "該当するものを選択してください例)Takashimaya",
+	"reg-user-ret-other"  : "なければ「other」を選択して、その下方に表示されたテキストボックスにアルファベットで入力してください",
+	"reg-user-store"  : "該当するものを選択してください 例)TAKASHIMAYA YOKOHAMA CL",
+	"reg-user-store-other"  : "なければ「other」を選択して、その下方に表示されたテキストボックスにアルファベットで入力してください",
+	"reg-user-job-cm": "コーナーチーフ→「Counter Manager」",
+	"reg-user-job-ac": "認定セミナーに合格したコンサルタント→「Accredited Consultant」",
+	"reg-user-job-cc": "認定セミナー未受講のコンサルタント→「Consultant」"
 }

@@ -156,5 +156,16 @@
 	"yourfinalgradeis": "คะแนนที่ได้คือ ",
 	"state": "อยู่ในขั้นตอนการทดสอบ",
 	"reg-user-note"       : "การตั้ง Username ควรตั้งเป็นตัวอักษรภาษาอังกฤษ ตัวพิมพ์เล็กและตัวเลขเท่านั้น (ห้ามเว้นวรรคและห้ามใช้อักขระพิเศษ)",
-	"reg-region-note"     : "กรุณาติดต่อ Counter Manager หรือ ทีม Education เพื่อรับรหัสเข้าสู่ระบบ"
+	"reg-region-note"     : "กรุณาติดต่อ Counter Manager หรือ ทีม Education เพื่อรับรหัสเข้าสู่ระบบ",
+	"reg-top-page"        : "",
+	"reg-user-firstname"  : "",
+	"reg-user-password"  : "",
+	"reg-user-select"  : "",
+	"reg-user-retailer"  : "",
+	"reg-user-ret-other"  : "",
+	"reg-user-store"  : "",
+	"reg-user-store-other"  : "",
+	"reg-user-job-cm": "",
+	"reg-user-job-ac": "",
+	"reg-user-job-cc": ""
 }
