@@ -1649,8 +1649,9 @@ define(["framework/WidgetWithTemplate", "match/Match", "uncover/Uncover","abstra
                                                                                     if(Math.round(QuizGrade) == 100){
                                                                                     var todisplayGrade = finalGradeDisplay;
                                                                                     }
-                                                                                    todisplayGrade = Math.round(todisplayGrade);
-                                                                                    
+                                                                                    // todisplayGrade = Math.round(todisplayGrade);
+                                                                                    todisplayGrade = parseFloat(todisplayGrade).toFixed(2);
+																					
                                                                                     valueofcopyObj.sumgrades= Math.round(valueofcopyObj.sumgrades);
                                                                                     finalGradeArray.push(valueofcopyObj.sumgrades);
                                                                                     if(self.quizdata.quizinfo[0].feedback.length != 1){
@@ -1859,7 +1860,8 @@ define(["framework/WidgetWithTemplate", "match/Match", "uncover/Uncover","abstra
                     if(Math.round(QuizGrade) == 100){
 						var todisplayGrade = finalGradeDisplay;
                     }
-                    todisplayGrade = Math.round(todisplayGrade);
+                    // todisplayGrade = Math.round(todisplayGrade);
+                    todisplayGrade = parseFloat(todisplayGrade).toFixed(2);
 					
 					
 					
