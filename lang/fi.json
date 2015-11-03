@@ -156,5 +156,16 @@
 	"yourfinalgradeis": "Lopullinen arvosanasi tästä tentistä on ",
 	"state": "Tila",
 	"reg-user-note"       : "Käyttäjätunnus saa sisältää vain kirjaimia( ei numeroita eikä symboleja). Käyttäjätunnus täytyy olla pienillä kirjaimilla eikä saa sisältää välilyöntejä.",
-	"reg-region-note"     : "Olethan yhteydessä Clinique kouluttajaan sisäänkirjautumiskoodin putteissa."
+	"reg-region-note"     : "Olethan yhteydessä Clinique kouluttajaan sisäänkirjautumiskoodin putteissa.",
+	"reg-top-page"        : "",
+	"reg-user-firstname"  : "",
+	"reg-user-password"  : "",
+	"reg-user-select"  : "",
+	"reg-user-retailer"  : "",
+	"reg-user-ret-other"  : "",
+	"reg-user-store"  : "",
+	"reg-user-store-other"  : "",
+	"reg-user-job-cm": "",
+	"reg-user-job-ac": "",
+	"reg-user-job-cc": ""
 }

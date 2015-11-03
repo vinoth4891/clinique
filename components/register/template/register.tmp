@@ -1,5 +1,6 @@
 {{checkForBreadcrum}}
 <section>
+<span data-msg="reg-top-page"></span>
     <div class="registerbx">
         <form id="register_holder">					    
             <fieldset>
@@ -17,7 +18,9 @@
 				<span class="reg-text-lt"></span>
 				<div class="reg-text-rt">	
                 <input required id="reg_fname" type="text" name="name">
-				</div>
+				<div class="clearboth"></div>
+				<span data-msg="reg-user-firstname" class="guideNotes"></span>
+			</div>
                 <span id="regFname"></span>
             </fieldset>
             <fieldset>
@@ -43,7 +46,9 @@
 				<span class="reg-text-lt"></span>
 				<div class="reg-text-rt">	
                 <input required id="reg_pwd" type="password" name="name">
-				</div>
+				<div class="clearboth"></div>
+				<span data-msg="reg-user-password" class="guideNotes"></span>
+	 		</div>
                 <span id="regPwd"></span>
             </fieldset>
             <fieldset>
@@ -69,6 +74,8 @@
                 <select id="reg_region" name="name" required>
                     <option value="sel_one" data-msg="select_one"></option>
                 </select>
+				<div class="clearboth"></div>
+				<span data-msg="reg-user-select" class="guideNotes"></span>				
 				</div>
                 <span id="regRgn"></span>
             </fieldset>
@@ -79,6 +86,8 @@
                 <select id="reg_cntry" name="name" disabled required>
                     <option value="sel_one" data-msg="select_one"></option>
                 </select>
+				<div class="clearboth"></div>
+				<span data-msg="reg-user-select" class="guideNotes"></span>
 				</div>
                 <span id="regCntry"></span>
             </fieldset>
@@ -89,6 +98,9 @@
                 <select id="reg_retailer" name="name" disabled required>
                     <option value="sel_one" data-msg="select_one"></option>
                 </select>
+				<div class="clearboth"></div>
+				<span data-msg="reg-user-retailer" class="guideNotes"></span>
+				
 				</div>
                 <span id="regRtl"></span>
             </fieldset>
@@ -97,6 +109,8 @@
 				<span class="reg-text-lt"></span>
 				<div class="reg-text-rt">	
                 <input  id="reg_entretailer_other" type="text" name="name">
+				<div class="clearboth"></div>
+				<span data-msg="reg-user-ret-other" class="guideNotes"></span>
 				</div>
                 <span id="regEntRtl"></span>
             </fieldset>
@@ -107,6 +121,8 @@
                 <select id="reg_str" name="name" disabled required>
                     <option value="sel_one" data-msg="select_one"></option>
                 </select>
+				<div class="clearboth"></div>
+				<span data-msg="reg-user-store" class="guideNotes"></span>
 				</div>
                 <span id="regStor"></span>
             </fieldset>
@@ -115,6 +131,8 @@
 				<span class="reg-text-lt"></span>
 				<div class="reg-text-rt">	
                 <input  id="reg_entstore_other" type="text" name="name">
+				<div class="clearboth"></div>
+				<span data-msg="reg-user-store-other" class="guideNotes"></span>
 				</div>
                 <span id="regEntstore"></span>
             </fieldset>
@@ -125,6 +143,8 @@
                 <select id="reg_lang" name="name" >
                     <option value="en">English-US</option>
                 </select>
+				<div class="clearboth"></div>
+				<span data-msg="reg-user-select" class="guideNotes"></span>
 				</div>
                 <span id="regLang"></span>
             </fieldset>	
@@ -141,6 +161,12 @@
                     <option value="Advisory Consultant" label="Advisory Consultant">Advisory Consultant</option>
                     <option value="Generic Staff/Cast Member" label="Generic Staff/Cast Member">Generic Staff/Cast Member</option>
                 </select>
+				<div class="clearboth"></div>
+				<span data-msg="reg-user-job-cm" class="guideNotes"></span>
+				<div class="clearboth"></div>
+				<span data-msg="reg-user-job-ac" class="guideNotes"></span>
+				<div class="clearboth"></div>
+				<span data-msg="reg-user-job-cc" class="guideNotes"></span>
 				</div>
                 <span id="regJobtitl"></span>
             </fieldset>	

@@ -156,5 +156,16 @@
 	"yourfinalgradeis": "Nilai akhir Anda untuk kuis ini adalah ",
 	"state": "State",
 	"reg-user-note"       : "Username hanya berupa angka atau huruf (tanpa tanda baca). Username harus huruf kecil dan tidak ada spasi.",
-	"reg-region-note"     : "Untuk mendapatkan kata sandi Anda, hubungi team Education."	
+	"reg-region-note"     : "Untuk mendapatkan kata sandi Anda, hubungi team Education.",
+	"reg-top-page"        : "",
+	"reg-user-firstname"  : "",
+	"reg-user-password"  : "",
+	"reg-user-select"  : "",
+	"reg-user-retailer"  : "",
+	"reg-user-ret-other"  : "",
+	"reg-user-store"  : "",
+	"reg-user-store-other"  : "",
+	"reg-user-job-cm": "",
+	"reg-user-job-ac": "",
+	"reg-user-job-cc": ""
 }

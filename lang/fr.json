@@ -156,5 +156,16 @@
 	"yourfinalgradeis": "Votre note finale pour ce test est .",
 	"state": "État",
 	"reg-user-note"       : "Le nom d'utilisateur doit contenir uniquement des chiffres ou des lettres (aucun symbole ni accent). Le nom d'utilisateur doit être en minuscule et ne contenir aucun espace.",
-	"reg-region-note"     : "Merci de contacter le Service Formation Clinique pour obtenir le Code d'Accès."	
+	"reg-region-note"     : "Merci de contacter le Service Formation Clinique pour obtenir le Code d'Accès.",
+	"reg-top-page"        : "",
+	"reg-user-firstname"  : "",
+	"reg-user-password"  : "",
+	"reg-user-select"  : "",
+	"reg-user-retailer"  : "",
+	"reg-user-ret-other"  : "",
+	"reg-user-store"  : "",
+	"reg-user-store-other"  : "",
+	"reg-user-job-cm": "",
+	"reg-user-job-ac": "",
+	"reg-user-job-cc": ""
 }
