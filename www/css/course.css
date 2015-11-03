@@ -351,13 +351,12 @@ box-shadow: -3px 3px 5px 3px rgba(0, 0, 0, .2);}
 }
 
 @media handheld, only screen and (max-width: 550px) {
-	
-
 .courses2{margin-left:25px}
 .shelfholder2,.shelfholder3{display:none;}	
 .shelfholder{padding-top:40px;}
 .acc_contntbg{background:url("../images/accordian_hdng_shw_480.png") no-repeat center top;}
 .single_book,.shelfholder #single_book{display:none}
+.accordion-inner .acc_tilebx ul { width:100%;}
 }
 
 

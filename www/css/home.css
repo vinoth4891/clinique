@@ -471,7 +471,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#D2D2D4', end
 	.carouselbx_mob{display:none}
 	.lifter{display:none;}
 	.logout {margin-right: 0;}
-	
+	.homeRow-fluid .carouselbx_mob {margin-top: 10px;}
  }
 
 @media handheld, only screen and (max-width: 767px) {
@@ -975,7 +975,7 @@ div.row.menu{ top: 70% !important;
 and (min-device-width : 320px)
 and (max-device-width : 568px)
 and (orientation : portrait) {
-.widget-maincontent-div .homeRow-fluid { height: 450px;}
+.widget-maincontent-div .homeRow-fluid { height: 480px;}
 }
 
  /* Iphone 5s Portrait */
@@ -987,3 +987,5 @@ and (orientation : landscape) {
 }
 
 @media handheld, only screen and (max-width: 736px) { }
+
+ 

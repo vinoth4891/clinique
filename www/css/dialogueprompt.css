@@ -152,6 +152,9 @@
           filter: alpha(opacity=50);
           opacity: .5;
         }
+		body #commentModal  .commentmodal-dialog { margin: 50% auto; top: -60px; }
+		.commentSavebtn span, .commentCancelbtn span {padding: 8px 55px;
+		display: inline-block;}
     }
     @media handheld, only screen and (max-width: 360px) {
        .commentform-control {
@@ -167,3 +170,8 @@
           opacity: .5;
         }
     }
+@media handheld, only screen and (min-width: 550px) {
+    html body #commentModal  .commentmodal-dialog { margin: 50% auto; top:-150px; }
+    .commentSavebtn span, .commentCancelbtn span {padding: 8px 55px;
+        display: inline-block;}
+}

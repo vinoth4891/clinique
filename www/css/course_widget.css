@@ -390,6 +390,7 @@ div.commentICON{width: 40%;margin-top:0;margin-left: 40%;}
     div.favButtons{margin-bottom:10%;}
     .favTextNote{width:183%;}
     div.favCommentNotes{margin-top:0;}
+	#content-webview .quizdtlgrid th { text-align:center;}
 }
 
 @media handheld, only screen and (max-width:800px){
