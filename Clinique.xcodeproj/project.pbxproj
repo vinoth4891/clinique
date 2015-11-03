@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00D4FE7B1BD8F6CD009D2863 /* CDVMobileAccessibility.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D4FE7A1BD8F6CD009D2863 /* CDVMobileAccessibility.m */; settings = {ASSET_TAGS = (); }; };
+		00D4FE7D1BD8FA16009D2863 /* MediaAccessibility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00D4FE7C1BD8FA15009D2863 /* MediaAccessibility.framework */; };
 		1B0B18A61AB3F309007FAB96 /* Countries.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0B18A51AB3F309007FAB96 /* Countries.m */; };
 		1B0B18A91AB3F354007FAB96 /* Retailers.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0B18A81AB3F354007FAB96 /* Retailers.m */; };
 		1B0B18AC1AB3F36F007FAB96 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0B18AB1AB3F36F007FAB96 /* Store.m */; };
@@ -360,6 +362,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00D4FE791BD8F6CD009D2863 /* CDVMobileAccessibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDVMobileAccessibility.h; sourceTree = "<group>"; };
+		00D4FE7A1BD8F6CD009D2863 /* CDVMobileAccessibility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDVMobileAccessibility.m; sourceTree = "<group>"; };
+		00D4FE7C1BD8FA15009D2863 /* MediaAccessibility.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaAccessibility.framework; path = System/Library/Frameworks/MediaAccessibility.framework; sourceTree = SDKROOT; };
 		1B0B18A41AB3F309007FAB96 /* Countries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Countries.h; sourceTree = "<group>"; };
 		1B0B18A51AB3F309007FAB96 /* Countries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Countries.m; sourceTree = "<group>"; };
 		1B0B18A71AB3F354007FAB96 /* Retailers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Retailers.h; sourceTree = "<group>"; };
@@ -717,6 +722,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00D4FE7D1BD8FA16009D2863 /* MediaAccessibility.framework in Frameworks */,
 				1B3437421AB29F9E0019EC28 /* libxml2.2.dylib in Frameworks */,
 				1B34373D1AB29CC00019EC28 /* libxml2.dylib in Frameworks */,
 				1B18A3AC1AB1656200919C93 /* JavaScriptCore.framework in Frameworks */,
@@ -947,6 +953,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				00D4FE7C1BD8FA15009D2863 /* MediaAccessibility.framework */,
 				1B3437411AB29F9E0019EC28 /* libxml2.2.dylib */,
 				1B34373C1AB29CC00019EC28 /* libxml2.dylib */,
 				1B18A3AB1AB1656200919C93 /* JavaScriptCore.framework */,
@@ -1015,6 +1022,8 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				00D4FE791BD8F6CD009D2863 /* CDVMobileAccessibility.h */,
+				00D4FE7A1BD8F6CD009D2863 /* CDVMobileAccessibility.m */,
 				5109E731197E40CB00058DD6 /* PDFViewerPlugin.h */,
 				5109E732197E40CB00058DD6 /* PDFViewerPlugin.m */,
 				ECB8691A1A930F51007E25A6 /* LoginPlugin.h */,
@@ -1617,6 +1626,7 @@
 				51DD330219825BD20065C915 /* CompositeFont.m in Sources */,
 				5109E71F197E393000058DD6 /* ReaderThumbFetch.m in Sources */,
 				1B359BFC1AAE8E070039DC7C /* FMResultSet.m in Sources */,
+				00D4FE7B1BD8F6CD009D2863 /* CDVMobileAccessibility.m in Sources */,
 				1B359BFB1AAE8E070039DC7C /* FMDatabaseQueue.m in Sources */,
 				5109E723197E393000058DD6 /* ReaderThumbsView.m in Sources */,
 				51DD330A19825BD20065C915 /* RenderingStateStack.m in Sources */,

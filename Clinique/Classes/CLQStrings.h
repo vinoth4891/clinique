@@ -15,7 +15,7 @@
 //Service urls http://172.16.17.42/cliniquedev Cloud http://54.225.106.255/clinique
 
 #define HosetName @"http://172.16.17.42/clinique"
-#define kIsForBlueOcean 0  //set  1  for enable blue ocean, 0 for disable blue ocean
+#define kIsForBlueOcean 1  //set  1  for enable blue ocean, 0 for disable blue ocean
 
 
 #define kServiceUrl             HosetName@"/admin/v2/clinique_webservice/services.php"

@@ -37,11 +37,14 @@
      NSLog(@"*****ASAMService UnLockDevice Called *****");
     if ([UIDevice currentDevice].systemVersion.floatValue >= 7.0) {
         UIAccessibilityRequestGuidedAccessSession(NO, ^(BOOL didSucceed) {
+            UIAccessibilityRequestGuidedAccessSession(NO, ^(BOOL didSucceed) {
             NSLog(@"UnlockDevice :%hhd",didSucceed);
              NSLog(@"*****ASAMService UnlockDevice Response :%hhd *****",didSucceed);
             _deviceSupportsSingleMode = UIAccessibilityIsGuidedAccessEnabled();
+            NSLog(@"BALAN:%d",_deviceSupportsSingleMode);
              NSLog(@"*****_deviceSupportsSingleMode Unlock device :%hhd *****",_deviceSupportsSingleMode);
             completion(YES);
+            });
         });
     }
 }
