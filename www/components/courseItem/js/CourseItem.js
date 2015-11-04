@@ -1195,13 +1195,13 @@ define(["framework/WidgetWithTemplate", "match/Match", "uncover/Uncover","abstra
 					
 							var questionId = data.quizlist[self.currentQuiz].questions[self.index-1].id;
 							if(multichoice == 'multichoice' && singleType == 0){
-								quizquestions += "<div style='clear:both;'><span class='selectlbl questionId' data-id ="+questionId+" data-msg='selectmulti'></span>:</div>"
+								quizquestions += "<div style='clear:both; text-align:left;'><span class='selectlbl questionId' data-id ="+questionId+" data-msg='selectmulti'></span>:</div>"
 							}else if(multichoice == 'multichoice' && singleType == 1){
-								quizquestions += "<div style='clear:both;'><span class='selectlbl questionId' data-id ="+questionId+" data-msg='selectone'></span>:</div>"
+								quizquestions += "<div style='clear:both; text-align:left;'><span class='selectlbl questionId' data-id ="+questionId+" data-msg='selectone'></span>:</div>"
 							}else if(multichoice == 'truefalse' ){
-								quizquestions += "<div style='clear:both;'><span class='selectlbl questionId' data-id ="+questionId+" data-msg='selectone'></span>:</div>"
+								quizquestions += "<div style='clear:both; text-align:left;'><span class='selectlbl questionId' data-id ="+questionId+" data-msg='selectone'></span>:</div>"
 							}else if(multichoice == 'match' ){
-								quizquestions += "<div style='clear:both;'><span class='selectlbl questionId' data-id ="+questionId+" ></span></div>"
+								quizquestions += "<div style='clear:both; text-align:left;'><span class='selectlbl questionId' data-id ="+questionId+" ></span></div>"
 							}
 						
 							if(multichoice == "match"){
@@ -1501,11 +1501,11 @@ define(["framework/WidgetWithTemplate", "match/Match", "uncover/Uncover","abstra
 						
 							
 						if(type == "multichoice" && singleType == 0){
-							quizquestions += "<div style='clear:both;'><span class='selectlbl' data-msg='selectmulti'></span> :</div><div class='options options"+(self.index-1)+"'><div class='overlayed overlayheight"+(self.index-1)+"'></div>"
+							quizquestions += "<div style='clear:both; text-align:left;'><span class='selectlbl' data-msg='selectmulti'></span> :</div><div class='options options"+(self.index-1)+"'><div class='overlayed overlayheight"+(self.index-1)+"'></div>"
 						}else if(type == "multichoice" && singleType == 1){
-							quizquestions += "<div style='clear:both;'><span class='selectlbl' data-msg='selectone'></span> :</div><div class='options options"+(self.index-1)+"'><div class='overlayed overlayheight"+(self.index-1)+"'></div>"
+							quizquestions += "<div style='clear:both; text-align:left;'><span class='selectlbl' data-msg='selectone'></span> :</div><div class='options options"+(self.index-1)+"'><div class='overlayed overlayheight"+(self.index-1)+"'></div>"
 						}else{
-							quizquestions += "<div style='clear:both;'><span class='selectlbl' data-msg='selectone'></span> :</div><div class='options options"+(self.index-1)+"'><div class='overlayed overlayheight"+(self.index-1)+"'></div>"
+							quizquestions += "<div style='clear:both; text-align:left;'><span class='selectlbl' data-msg='selectone'></span> :</div><div class='options options"+(self.index-1)+"'><div class='overlayed overlayheight"+(self.index-1)+"'></div>"
 						}
 						
 						var secParent=true,answerText='';
