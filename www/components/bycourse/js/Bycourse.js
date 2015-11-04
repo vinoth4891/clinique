@@ -2079,21 +2079,10 @@ define(["framework/WidgetWithTemplate"], function (template) {
             return element;
         },
         webandIpadDOMElement: function(){
-          var element = '<div class="row pro_container bycourse-temp">  \r\n' +
+         var element = '<div class="row pro_container bycourse-temp" id="report_page">  \r\n' +
             ''+this.reportBreadCrumnp()+'  \r\n' +
-            '<div class="clearfix">'+'<div class="span12 report-bg">  \r\n' +
-            '<div style="padding-left: 12px;padding-top: 12px;"><input type="hidden" id="sortoption">  \r\n' +
-            '<div class="span12 rept_bx">  \r\n' +
-            '<input type="hidden" id="sortoption">  \r\n' +
-            '<div class="rept_dropbx dropaddmar">  \r\n' +
-            '<span class="droptxt" data-msg="sel_region" style="font-size: 13px;font-weight: 700;"></span><span class="dropdwn"><select size="" name="" id="region-sel" multiple="multiple" class="muldropdwn"><option value="" class="seloption-no" data-msg="all_default"></option></select></span></div>  \r\n' +
-            '<div class="rept_dropbx dropaddmar">  \r\n' +
-            '<span class="droptxt" data-msg="sel_country" style="font-size: 13px;font-weight: 700;"></span><span class="dropdwn">  \r\n' +
-            '<select size="" name="" id="country-sel" class="muldropdwn" multiple="multiple">  \r\n' +
-            '<option value="" class="seloption-no" data-msg="all_default"></option>  \r\n' +
-            '</select></span></div>  \r\n' +
-            '<div class="rept_dropbx dropaddmar"><span class="droptxt" data-msg="sel_retailer" style="font-size: 13px;font-weight: 700;"></span><span class="dropdwn"><select size="" name="" id="retailer-sel" multiple="multiple" class="muldropdwn"><option value="" class="seloption-no" data-msg="all_default"></option></select></span></div><div class="rept_dropbx"><span class="droptxt" data-msg="sel_store" style="font-size: 13px;font-weight: 700;"></span><span class="dropdwn"><select size="" name="" id="store-sel" multiple="multiple" class="muldropdwn"><option value="" class="seloption-no" data-msg="all_default"></option></select></span></div><div class="rept_dropbx"><span class="droptxt" data-msg="sel_course" style="font-size: 13px;font-weight: 700;">Select Course</span><span class="dropdwn"><select size="" name="" id="course-sel" multiple="multiple" class="muldropdwn"><option value="" class="seloption-no" data-msg="all_default"></option></select></span></div></div><div class="repbtn nopadadj2 shwpadadj" style="padding: 1% 4% 1% 1%;padding-top: 0px;padding-bottom: 7px;font-weight: bold;"><a href="javascript:void(0)" id="show-reports" style="text-shadow: none;font-size:11px;padding: 1px;width: 90px;color: #fff;">Show Report</a></div></div></div> <!-- Final div -->  \r\n' +
-            '<div class="span12 report_second_option" ><div class="reprt_srch_txt"><select multiple="multiple" placeholder="Search By" id="SelectBoxBoost">'+
+            '<div class="clearfix">'+
+			 '<div class="span12 report_second_option" ><div class="reprt_srch_txt"><select multiple="multiple" placeholder="Search By" id="SelectBoxBoost">'+
 			'<option value="country">Country</option>'+
 			'<option value="fullname">Course Name</option>  \r\n' +
 			'<option value="email">Email</option>  \r\n' +
@@ -2105,10 +2094,22 @@ define(["framework/WidgetWithTemplate"], function (template) {
 			'<option value="username">User Name</option>  \r\n' + 
             '</select> </div> \r\n' +
             '<div class="reprt_srch_txt" style="margin-bottom: 0;"><form onSubmit="return false;">'+
-            '<input style="min-width: 160px; width: 90%;" class="random_report_search test report_search"  type="search" name="search" onsearch="formSearch();" placeholder="Search" disabled/></form></div> \r\n' +
+            '<input style="min-width: 160px; width: 90%; margin-bottom:5px;" class="random_report_search test report_search"  type="search" name="search" onsearch="formSearch();" placeholder="Search" disabled/></form></div> \r\n' +
             '<div class="repbtn nopadadj2 shwpadadj reprt_srch_txt" >  \r\n' +
             '<input type="button" id="reports_search" style="text-shadow: none;font-size: 11px;font-weight: bold;padding: 4px;width: 84px;color: #fff; border-radius: 5px; cursor: not-allowed; border: #719a34 solid 1px; border-radius: 5px; background: -webkit-linear-gradient(top, rgba(129,162,62,1) 0%,rgba(152,185,85,1) 84%,rgba(154,188,88,1) 100%)" data-msg value="Search" disabled/></div></div>'+'</div>'+
-			'<div style="margin-top: 5px;font-size: 14px;" id="total_record"></div><div class="reptablr_bx">  \r\n' +
+			'<div class="span12 report-bg">  \r\n' +
+            '<div style="padding-left: 12px;padding-top: 12px;"><input type="hidden" id="sortoption">  \r\n' +
+            '<div class="span12 rept_bx">  \r\n' +
+            '<input type="hidden" id="sortoption">  \r\n' +
+            '<div class="rept_dropbx dropaddmar">  \r\n' +
+            '<span class="droptxt" data-msg="sel_region" style="font-size: 13px;font-weight: 700;"></span><span class="dropdwn"><select size="" name="" id="region-sel" multiple="multiple" class="muldropdwn"><option value="" class="seloption-no" data-msg="all_default"></option></select></span></div>  \r\n' +
+            '<div class="rept_dropbx dropaddmar">  \r\n' +
+            '<span class="droptxt" data-msg="sel_country" style="font-size: 13px;font-weight: 700;"></span><span class="dropdwn">  \r\n' +
+            '<select size="" name="" id="country-sel" class="muldropdwn" multiple="multiple">  \r\n' +
+            '<option value="" class="seloption-no" data-msg="all_default"></option>  \r\n' +
+            '</select></span></div>  \r\n' +
+            '<div class="rept_dropbx dropaddmar"><span class="droptxt" data-msg="sel_retailer" style="font-size: 13px;font-weight: 700;"></span><span class="dropdwn"><select size="" name="" id="retailer-sel" multiple="multiple" class="muldropdwn"><option value="" class="seloption-no" data-msg="all_default"></option></select></span></div><div class="rept_dropbx"><span class="droptxt" data-msg="sel_store" style="font-size: 13px;font-weight: 700;"></span><span class="dropdwn"><select size="" name="" id="store-sel" multiple="multiple" class="muldropdwn"><option value="" class="seloption-no" data-msg="all_default"></option></select></span></div><div class="rept_dropbx"><span class="droptxt" data-msg="sel_course" style="font-size: 13px;font-weight: 700;">Select Course</span><span class="dropdwn"><select size="" name="" id="course-sel" multiple="multiple" class="muldropdwn"><option value="" class="seloption-no" data-msg="all_default"></option></select></span></div><div class="repbtn" id="exportdiv" style="padding:0; margin-top: 10px; margin-right:18px; float:right; padding-top: 0px;padding-bottom: 7px;font-weight: bold; clear:none;"><a href="'+((isDevice() && isPhoneGap())?'javascript:void(0)':'#')+'" data-msg="export"  style="float:left; text-shadow: none;font-size:11px;padding: 1px;width: 90px;color: #fff;"></a></div> <div class="repbtn nopadadj2 shwpadadj" style="padding:0; margin-top: 10px; margin-right:10px; float:right; padding-top: 0px;padding-bottom: 7px;font-weight: bold; clear:none;"><a href="javascript:void(0)" id="show-reports" style="float:left; text-shadow: none;font-size:11px;padding: 1px;width: 90px;color: #fff;">Show Report</a></div>   </div></div></div> <!-- Final div -->  \r\n' +
+			'<div style="margin-top: 10px; margin-bottom:10px; font-size: 14px; float:left;" id="total_record"></div><div class="reptablr_bx" style="clear:both;">  \r\n' +
             '<table width="100%" cellspacing="0" cellpadding="0" border="0" id="reportbycourse" style="border: 1px solid #76914d;border-collapse: separate;border-radius: 5px;"><thead>  \r\n' +
             '<tr class="rep_hdg">  \r\n' +
             '<th class="chkbx"><input type="checkbox" class="selectAllcourse"><label for="selectAll"></label></th>  \r\n' +
@@ -2120,7 +2121,7 @@ define(["framework/WidgetWithTemplate"], function (template) {
             '<th class="rep_pnts"><span data-msg="total_points"></span><a href="javascript:void(0);"><img src="../images/rep_dwn_arw.png" sortby="ASC"></a></th>  \r\n' +
             '</tr></thead><tbody></tbody></table></div><div style="margin-bottom : 10px;" class="span12 rept_bx">  \r\n' +
             '<div class="paginationbx"><!--<ul><li class="arwsymbl"><a href="#">&nbsp;</a></li><li class="activepg"><a href="#">1</a></li>  \r\n' +
-            '<li><a href="#">2</a></li><li><a href="#">3</a></li><li><a href="#">4</a></li><li><a href="#">5</a></li><li class="arwsymbl"><a href="#">&nbsp;</a></li></ul>--></div><div class="repbtn" id="exportdiv"><a href="'+((isDevice() && isPhoneGap())?'javascript:void(0)':'#')+'" data-msg="export" style="color:#fff;"></a></div></div>  \r\n' +
+            '<li><a href="#">2</a></li><li><a href="#">3</a></li><li><a href="#">4</a></li><li><a href="#">5</a></li><li class="arwsymbl"><a href="#">&nbsp;</a></li></ul>--></div></div>  \r\n' +
             '<div class="row lifter2"></div></div>';
                                                                     
            return element;
