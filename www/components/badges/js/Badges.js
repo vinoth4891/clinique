@@ -432,7 +432,7 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function (tem
             $("div.bag_drg_lftbx, div.bag_drg_rgtbx").on(iTouch, function () {
                 var clickedElem = $(this);
                 if(!clickedElem.hasClass('dsbl')){
-                    clickedElem.hide();
+                    // clickedElem.hide(); /* To avoid arrow disappears while clicking */
                     var bagHolderleftsign = '-';
                     var leftElem = $("div.bag_drg_lftbx"), rightElem = $("div.bag_drg_rgtbx");
                     if (clickedElem.hasClass('bag_drg_lftbx')) {
@@ -453,7 +453,7 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function (tem
                     
                     setTimeout(function () {
                         // Animation complete.
-                        clickedElem.show();
+                        // clickedElem.show(); /* To avoid arrow disappears while clicking */
                         var leftMove = parseInt($("div.bag_drg_icons").css('left').replace('px', ''));
 
                         if (leftMove < 0){
