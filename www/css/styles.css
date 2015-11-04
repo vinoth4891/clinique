@@ -2416,7 +2416,6 @@ background: -o-linear-gradient(top, rgb(210,210,212) 0%,rgb(210,210,212) 2%,rgb(
 background: -ms-linear-gradient(top, rgb(210,210,212) 0%,rgb(210,210,212) 2%,rgb(210,210,212) 8%,rgb(210,210,212) 33%,rgb(210,210,212) 48%,rgb(210,210,212) 50%,rgb(210,210,212) 72%,rgb(210,210,212) 100%); /* IE10+ */
 background: linear-gradient(to bottom, rgb(210,210,212) 0%,rgb(210,210,212) 2%,rgb(210,210,212) 8%,rgb(210,210,212) 33%,rgb(210,210,212) 48%,rgb(210,210,212) 50%,rgb(210,210,212) 72%,rgb(210,210,212) 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#D2D2D4', endColorstr='#D2D2D4',GradientType=0 ); /* IE6-8 */
-
 }
 body .footNavigation { width:100%; margin-left:0px; text-align:center;}
 body #viewFind { display:block !importnat;}
@@ -2716,11 +2715,12 @@ html body .resource_wrap { padding-bottom:8% !important;}
 .overlay-video-quiz .overlaycontainer { width:100%; position:fixed !important; z-index:999 !important;}
 
 .homeSwiper-wrapper * {-webkit-transform: translate3d(0, 0, 0);}
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {    
-html body .pro_container .ui-draggable-dragging {
-        width: 195px !important;
-    }
-}
+	@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {    
+		html body .pro_container .ui-draggable-dragging 
+			{
+				width: 195px !important;
+			}
+	}
 
 @media handheld, only screen and (max-width:1024px){
     /*Other Buttons hover Start (Touch Devices)*/
