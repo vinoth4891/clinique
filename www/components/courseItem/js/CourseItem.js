@@ -176,12 +176,14 @@ define(["framework/WidgetWithTemplate", "match/Match", "uncover/Uncover","abstra
 						   var inHeight = $(collapseId + '.in').outerHeight();
 						   minHeight += inHeight;
 						   jQuery(".widget-maincontent-div > .courseicon + .pro_container").css("min-height",minHeight);
-						},1000);
+						},300);
 					} else {
 						jQuery(".widget-maincontent-div > .courseicon + .pro_container").css("min-height",minHeight);
 					}
 				}
-				accordionHeight();
+				setTimeout(function(){
+					accordionHeight();
+				}, 1000);
 			}
             jQuery('.homepagenav').on('click', function() {
                 jQuery("#footer-menu li").removeClass('selected');
