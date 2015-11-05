@@ -471,6 +471,16 @@ color:#7f7f7f; border:1px solid #aaaba9; border-radius:5px; -webkit-border-radiu
 #report_page .rept_dropbx span.dropdwn select { min-width:209px;}
 #report_page .reprt_srch_txt .btn-group { margin-left:5px;}
 
+@media handheld, only screen and (max-width: 767px){
+	#report_page .report_second_option .reprt_srch_txt  { width:30%;}
+	#report_page .report_second_option .reprt_srch_txt  .div.btn-group, #report_page .report_second_option .btn-group,
+	#report_page .report_second_option .multiselect,  #report_page .report-bg .rept_dropbx  { width:100% !important;}
+	#report_page .report-bg, #report_page .report_second_option, #report_page .reptablr_bx { margin-left:1% !important; width:97% !important;}
+	#report_page .report-bg { height:auto !important;}
+	#report_page span.dropdwn select { line-height:20px;}
+	#report_page #total_record, #report_page .paginationbx { padding-left:1%;} 
+}
+
 
 @media handheld, only screen and (max-width:600px){
 	.rept_bx {margin-left: 1%; width: 98%}	
