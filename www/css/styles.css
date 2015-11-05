@@ -2383,8 +2383,8 @@ body .qustn-head { width:95%;}
 and (min-width : 300px) 
 and (max-width : 767px) 
 and (orientation : portrait){  
- html body .pro_container .crswidg_drgbtn .ui-draggable-dragging  {width:95px !important; padding:0 20px !important;}
-  html body  .crswidg_drgbtn ul li.ui-draggable a,   html body  .pro_container > li.ui-draggable a { height:20px;}
+ html body .pro_container  .ui-draggable-dragging  {width:90px !important; padding:0 20px !important;}
+  html body   .pro_container ul li.ui-draggable a,   html body  .pro_container > li.ui-draggable a { height:20px;}
 }
 @media only screen 
 and (min-width : 300px) 
