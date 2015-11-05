@@ -2444,8 +2444,8 @@ body #displayContent  { height:auto !important;}
 body  .commentNotes div.Buttons { width:58% !important;}
 body .commentNotes .commentICON  img{ max-height:100px;}
 /* PDF Comment Textarea */
- html body .pro_container .ui-draggable-dragging  {width:195px !important; margin-right:0 !important; text-align:center;}
- html body .pro_container .ui-draggable-dragging  a { width:100% !important; display:block;}
+ html body .pro_container .ui-draggable-dragging  {width:195px !important; height:auto; margin-right:0 !important; text-align:center; padding:14px;}
+ html body .pro_container .ui-draggable-dragging  a { width:100% !important; display:block; height:auto;}
  .hideSection .web_nav_adj{ display:none;}
  .popup {width: 375px; margin-left:-187px;}
 body.course-quiz-main-container { overflow:hidden; position:fixed;}
