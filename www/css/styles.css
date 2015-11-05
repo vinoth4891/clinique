@@ -2378,6 +2378,14 @@ body .qustn-head { width:95%;}
     body .ifram_cls_btn, body .ifram_news_cls_btn, body .course_ifram_cls_btn {margin-top:0px;}
 	.crswidg_drgans .ifram_news_cls_btn  {right: 0px; top: 10px;}
 }
+
+@media only screen 
+and (min-width : 300px) 
+and (max-width : 767px) 
+and (orientation : portrait){  
+ html body .pro_container .crswidg_drgbtn .ui-draggable-dragging  {width:95px !important; padding:0 20px !important;}
+  html body  .crswidg_drgbtn ul li.ui-draggable a,   html body  .pro_container > li.ui-draggable a { height:20px;}
+}
 @media only screen 
 and (min-width : 300px) 
 and (max-width : 1023px) 

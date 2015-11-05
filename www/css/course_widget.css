@@ -638,6 +638,7 @@ body > li.ui-draggable.sequence-item img{ width:80px; height:85px;}
 .crswidj_txt h1, .crswidj_txt h1#quesname_activity3{ font-size: 17px;}
  div.favCommentNotes{ display:none !important;}
  body .commentNotes{ display:none !important;}
+ 
 }
 
 @media handheld, only screen and (max-width:385px){
