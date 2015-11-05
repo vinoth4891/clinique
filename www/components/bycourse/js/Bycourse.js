@@ -20,7 +20,8 @@ define(["framework/WidgetWithTemplate"], function (template) {
             self.getRegionData();
             Handlebars.registerHelper('checkForSpecificDiv', function () {
               if( navigator.platform == "iPhone Simulator" || navigator.platform == "iPhone"){
-                var domElement = self.mobileDeviceDOMElement();
+               // var domElement = self.mobileDeviceDOMElement();
+				 var domElement = self.webandIpadDOMElement();
               } else {
                 var domElement = self.webandIpadDOMElement();
               }
