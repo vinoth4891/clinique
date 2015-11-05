@@ -2447,14 +2447,15 @@ body #displayContent  { height:auto !important;}
 body  .commentNotes div.Buttons { width:58% !important;}
 body .commentNotes .commentICON  img{ max-height:100px;}
 /* PDF Comment Textarea */
- html body .pro_container .ui-draggable-dragging  {width:95px !important; margin-right:0 !important;}
+ html body .pro_container .ui-draggable-dragging  {width:95px !important; height:auto; margin-right:0 !important; padding:14px;}
+ html body .pro_container .ui-draggable-dragging a { height:auto;}
  .hideSection .web_nav_adj{ display:none;}
  .popup {width: 375px; margin-left:-187px;}
 body.course-quiz-main-container { overflow:hidden; position:fixed;}
   
  
- body .quiz-container .btncommon { width:94%;} body .quiz-container .headlabel { width:98%;} body .quiz-container .paracont{ width:96%;} body 
-.qustn-head { width:97%; margin-left:1%;}
+ body .quiz-container .btncommon { width:94%;} body .quiz-container .headlabel { width:98%;} body .quiz-container .paracont{ width:96%;} 
+ body .qustn-head { width:97%; margin-left:1%;}
 body .quiz-container .quizdtlgrid{ margin-top:20px;} 
  body .prog_dta_hdg { padding-top:10px;}
 body .qustn-head { width:95%;}
