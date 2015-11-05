@@ -113,6 +113,14 @@ switch ($action) {
         if ($result === false) {
             throw new enrol_ajax_exception('errorenrolcohortusers');
         }
+		
+		if($cohortid == 2) {
+          $result_cm = enrol_cohort_get_instances($manager->get_course()->id,35);
+          if(empty($result_cm)) {
+            $result_cm_count = enrol_cohort_enrol_all_users($manager, 35, $roleid);
+			$result += $result_cm_count;
+          }
+        }
 
         $outcome->success = true;
         $outcome->response->users = $result;
