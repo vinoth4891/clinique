@@ -480,7 +480,12 @@ function loadLanguages(lang) {
 
 function translatePage(lang) {
     jQuery('[data-msg]').map(function() {
-        jQuery(this).text(getString(lang, jQuery(this).attr('data-msg')));
+        var dataMsg = jQuery(this).attr('data-msg');
+		if ( dataMsg === 'popup_legal_cntReg' || dataMsg === 'popup_legal_cnt' || dataMsg.indexOf("reg-") >= 0) {
+			jQuery(this).html(getString(lang, jQuery(this).attr('data-msg')));
+		} else {
+		    jQuery(this).text(getString(lang, jQuery(this).attr('data-msg')));
+		}
     });
 
     jQuery('[data-placeholder]').map(function() {
