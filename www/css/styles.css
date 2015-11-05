@@ -2551,7 +2551,7 @@ width:97%;
 	.quiz-container .quizdtlgrid th, .quiz-container .quizdtlgrid td { padding:5px; border-right:1px solid #ccc; border-bottom:1px solid #ccc; font-size:12px;}
 	.quiz-container .quizdtlgrid tr:nth-child(even) td {background-color:#eee;}
 	.quiz-container .quizdtlgrid tr:nth-child(odd) td  {background-color:#fafafa;}
-	.quiz-container .paracont { width:97%; padding:10px; font-size:14px; clear:both;}
+	.quiz-container .paracont { width:97%; padding:10px; font-size:14px; clear:both; text-align:left;}
 	.quiz-container .options { position:relative; opacity:0.55;}
 	.quiz-container  .options .overlayed { width:100%;  position:absolute; height:201px;  z-index: 2; left:0px; top:0px;}
 
