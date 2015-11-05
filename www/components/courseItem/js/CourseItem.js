@@ -66,6 +66,13 @@ define(["framework/WidgetWithTemplate", "match/Match", "uncover/Uncover","abstra
             }
             Clazz.navigationController.push(self);
         },
+		addDecimal: function(val) {
+			val = val.toString();
+			if (!val.includes(",")) {
+				val = parseFloat(val).toFixed(2);
+			}
+			return val;
+		},
         getWidget:function(response, courseID, modID, widgetName){
         	var widgetDetails='';
         	var selCourseId='';
@@ -1350,9 +1357,9 @@ define(["framework/WidgetWithTemplate", "match/Match", "uncover/Uncover","abstra
 
 				var layout = data.quizinfo[0].layouts.split(',');
 
-				jQuery.each(layout,function(index,value){
+				jQuery.each(layout, function(index,value){
 
-					if(layout[self.layoutindex] != 0 && layout[self.layoutindex] != undefined){
+					if (layout[self.layoutindex] != 0 && layout[self.layoutindex] != undefined) {
 
 		                if(index !=0){
 		                	self.index++;
@@ -1366,7 +1373,7 @@ define(["framework/WidgetWithTemplate", "match/Match", "uncover/Uncover","abstra
 						var userAnswer = data.quizlist[self.currentQuiz].questions[self.index-1].userAnswer;
 						var answer = data.quizlist[self.currentQuiz].questions[self.index-1].answers;
 						
-						var mark = Math.round(data.quizlist[self.currentQuiz].questions[self.index-1].mark);
+						var mark = self.addDecimal(data.quizlist[self.currentQuiz].questions[self.index-1].mark);
 						var userMark = data.quizlist[self.currentQuiz].questions[self.index-1].userMark;
 						var choices = data.quizlist[self.currentQuiz].questions[self.index-1].choices;
 						var type = data.quizlist[self.currentQuiz].questions[self.index-1].type;
@@ -1376,19 +1383,27 @@ define(["framework/WidgetWithTemplate", "match/Match", "uncover/Uncover","abstra
 		                	if(val.userMark != null && val.userMark != undefined)
 		                		totalMark = parseInt(totalMark) + parseInt(val.userMark);
 		                });
+						
+						 totalMark = self.addDecimal(totalMark);
+						 if (userMark != undefined) {
+							 userMark = self.addDecimal(userMark);
+						 }
 						 
 						 var QuizGrade = data.quizinfo[0].grade;
-						 QuizGrade = Math.round(QuizGrade);
+						 QuizGrade = self.addDecimal(QuizGrade);
+						 
                          var Quizsumgrades = data.quizinfo[0].sumgrades;
-						 Quizsumgrades = Math.round(Quizsumgrades);
+						 Quizsumgrades = self.addDecimal(Quizsumgrades);
 						 
 						 var marksValue = (totalMark/Quizsumgrades*100);
-						
+						 marksValue = self.addDecimal(marksValue);
+						 
 						 var finalGradeDisplay = (marksValue*QuizGrade/100);
-                         finalGradeDisplay = Math.round(finalGradeDisplay);
+                         finalGradeDisplay = self.addDecimal(finalGradeDisplay);
 							
 		                userGrade = ((totalMark/totalGrade)*100);
-						userGrade = Math.round(userGrade);
+						userGrade = self.addDecimal(userGrade);
+						
 	                if(self.index == 1){
 						if(data.quizlist[self.currentQuiz].attempts[0].startedOn)
 							var startedOn = data.quizlist[self.currentQuiz].attempts[0].startedOn;
@@ -1430,13 +1445,13 @@ define(["framework/WidgetWithTemplate", "match/Match", "uncover/Uncover","abstra
                         "<tr><td><span data-msg='completedon'></span></td><td>"+completedOn+"</td></tr>" +
                         "<tr><td><span data-msg='attemptduration'></span></td><td></td></tr>";
                         if(Quizsumgrades != QuizGrade){
-							quizquestions += "<tr><td><span data-msg='marks'></span></td><td>&nbsp;"+Math.round(totalMark)+" / "+Quizsumgrades+"</td></tr>";
+							quizquestions += "<tr><td><span data-msg='marks'></span></td><td>&nbsp;"+totalMark+" / "+Quizsumgrades+"</td></tr>";
                         }
                         if(QuizGrade == 100){
-							quizquestions += "<tr><td><span data-msg='grade'></span></td><td>&nbsp;"+Math.round(marksValue)+"&nbsp;<span data-msg='outofpercent'></span>&nbsp;"+QuizGrade+" </td></tr>";
+							quizquestions += "<tr><td><span data-msg='grade'></span></td><td>&nbsp;"+marksValue+"&nbsp;<span data-msg='outofpercent'></span>&nbsp;"+QuizGrade+" </td></tr>";
                         }
-                        if(Quizsumgrades == QuizGrade){
-							quizquestions += "<tr><td><span data-msg='grade'></span></td><td>&nbsp;"+finalGradeDisplay+"&nbsp;<span data-msg='outofpercent'></span>&nbsp;"+QuizGrade+" ("+Math.round(marksValue)+"%) </td></tr>";
+                        if(Quizsumgrades == QuizGrade && QuizGrade != 100){
+							quizquestions += "<tr><td><span data-msg='grade'></span></td><td>&nbsp;"+finalGradeDisplay+"&nbsp;<span data-msg='outofpercent'></span>&nbsp;"+QuizGrade+" ("+marksValue+"%) </td></tr>";
                         }
 						 if(nofeedback)
 								quizquestions += "</table>";
@@ -1477,7 +1492,7 @@ define(["framework/WidgetWithTemplate", "match/Match", "uncover/Uncover","abstra
 						if(mark == 0){
 							quizquestions += "<div class='qustn-head'><span  class='f_left'><span data-msg='question'></span> "+(self.index)+"</span><span class='f_right'><span data-msg='mark'></span> 0 <span data-msg='outof'></span> "+mark+"</span></div>";
 						}
-						 quizquestions += "<div class='qustn-head'><span  class='f_left'><span data-msg='question'></span> "+(self.index)+"</span><span class='f_right'><span data-msg='mark'></span> "+Math.round(userMark)+" <span data-msg='outof'></span> "+mark+"</span></div>";
+						 quizquestions += "<div class='qustn-head'><span  class='f_left'><span data-msg='question'></span> "+(self.index)+"</span><span class='f_right'><span data-msg='mark'></span> "+userMark+" <span data-msg='outof'></span> "+mark+"</span></div>";
 					}
 
 					// Video type question
@@ -1619,66 +1634,67 @@ define(["framework/WidgetWithTemplate", "match/Match", "uncover/Uncover","abstra
 					quizquestions = "<div><div class='nextquiz btncommon review' data-msg='next'></div></div>";
 				jQuery(quizquestions).appendTo(jQuery("#courseContent-iframe"));
 			}
-			else{
+			else {
 		     /* First Page */
 				var FirstPageElements = "<div class='headlabel'> <h2>"+self.quizdata.quizinfo[0].name+"</h2> </div>",attemptNew = '';statusTable ='',isHeader = true,next = true,inprogress = true,overallGrade = 0;
 				//jQuery(FirstPageElements).appendTo(jQuery("#courseContent-iframe"));
 				var firstPageFlag = true, finalGradeArray = [];
                 self.displayIndex = 1;
-                                                                        var alreadyattemptedData ='';
-                                                                        if(self.quizdata.alreadyattempted.length ){
-                                                                        
-                                                                        jQuery.each(self.quizdata.alreadyattempted,function(indexofcopyObj,valueofcopyObj){
-                                                                                    if(!valueofcopyObj.isDisplay){
-                                                                                    
-                                                                                    var QuizGrade = self.quizdata.quizinfo[0].grade;
-                                                                                    var Quizsumgrades = self.quizdata.quizinfo[0].sumgrades;
-                                                                                    var userMark = valueofcopyObj.sumgrades;
-                                                                                    
-                                                                                    var marksValue = (userMark/Quizsumgrades*100);
-                                                                                    
-                                                                                    var finalGradeDisplay = (marksValue*QuizGrade/100);
-                                                                                    finalGradeDisplay = Math.round(finalGradeDisplay);
-                                                                                    
-                                                                                    // grade and sum grade not equal
-                                                                                    if(Quizsumgrades != QuizGrade){
-                                                                                    var todisplayGrade = finalGradeDisplay
-                                                                                    }
-                                                                                    // grade and sum grade equal
-                                                                                    if(Quizsumgrades == QuizGrade){
-                                                                                    var todisplayGrade = userMark;
-                                                                                    }
-                                                                                    if(Math.round(QuizGrade) == 100){
-                                                                                    var todisplayGrade = finalGradeDisplay;
-                                                                                    }
-                                                                                    // todisplayGrade = Math.round(todisplayGrade);
-                                                                                    todisplayGrade = parseFloat(todisplayGrade).toFixed(2);
-																					
-                                                                                    valueofcopyObj.sumgrades= Math.round(valueofcopyObj.sumgrades);
-                                                                                    finalGradeArray.push(valueofcopyObj.sumgrades);
-                                                                                    if(self.quizdata.quizinfo[0].feedback.length != 1){
-                                                                                    jQuery.each(self.quizdata.quizinfo[0].feedback,function(feedbackIndex, feedbackValue){
-                                                                                                if(feedbackValue.feedbacktext){
-                                                                                                if((valueofcopyObj.sumgrades >= feedbackValue.mingrade) && (valueofcopyObj.sumgrades <  feedbackValue.maxgrade))
-                                                                                                alreadyattemptedData += "<tr><td>"+(self.displayIndex++)+"</td><td><span data-msg='statefinished'></span></td><td>"+todisplayGrade+"</td><td><div class='start-review' data-index="+valueofcopyObj.attempt+"><span data-msg='review'></span></div></td><td>"+(feedbackValue.feedbacktext)+"</td></tr>";
-                                                                                                }else{
-                                                                                                alreadyattemptedData += "<tr><td>"+(self.displayIndex++)+"</td><td><span data-msg='statefinished'></span></td><td>"+todisplayGrade+"</td><td><div class='start-review' data-index="+valueofcopyObj.attempt+"><span data-msg='review'></span></div></td></tr>";       
-                                                                                                }
-                                                                                                
-                                                                                                });
-                                                                                    }else{
-                                                                                    if(self.quizdata.quizinfo[0].feedback[0].feedbacktext){
-                                                                                    if((valueofcopyObj.sumgrades >= self.quizdata.quizinfo[0].feedback[0].mingrade) && (valueofcopyObj.sumgrades <  self.quizdata.quizinfo[0].feedback[0].maxgrade))
-                                                                                    alreadyattemptedData += "<tr><td>"+(self.displayIndex++)+"</td><td><span data-msg='statefinished'></span></td><td>"+todisplayGrade+"</td><td><div class='start-review' data-index="+valueofcopyObj.attempt+"><span data-msg='review'></span></div></td><td>"+self.quizdata.quizinfo[0].feedback[0].feedbacktext+"</td></tr>";
-                                                                                    else
-                                                                                    alreadyattemptedData += "<tr><td>"+(self.displayIndex++)+"</td><td><span data-msg='statefinished'></span></td><td>"+todisplayGrade+"</td><td><div  class='start-review' data-index="+valueofcopyObj.attempt+"><span data-msg='review'></span></div></td><td></td></tr>";
-                                                                                    }else{
-                                                                                    alreadyattemptedData += "<tr><td>"+(self.displayIndex++)+"</td><td><span data-msg='statefinished'></span></td><td>"+todisplayGrade+"</td><td><div  class='start-review' data-index="+valueofcopyObj.attempt+"><span data-msg='review'></span></div></td></tr>";
-                                                                                    }
-                                                                                    }
-                                                                                    }
-                                                                                    });
-                                                                        }
+				var alreadyattemptedData ='';
+				if(self.quizdata.alreadyattempted.length ){
+				
+					jQuery.each(self.quizdata.alreadyattempted,function(indexofcopyObj,valueofcopyObj){
+						if(!valueofcopyObj.isDisplay){
+						
+							var QuizGrade = self.quizdata.quizinfo[0].grade;
+							var Quizsumgrades = self.quizdata.quizinfo[0].sumgrades;
+							var userMark = valueofcopyObj.sumgrades;
+							
+							var marksValue = (userMark/Quizsumgrades*100);
+							
+							var finalGradeDisplay = (marksValue*QuizGrade/100);
+							finalGradeDisplay = Math.round(finalGradeDisplay);
+							
+							// grade and sum grade not equal
+							if(Quizsumgrades != QuizGrade){
+								var todisplayGrade = finalGradeDisplay
+							}
+							// grade and sum grade equal
+							if(Quizsumgrades == QuizGrade){
+								var todisplayGrade = userMark;
+							}
+							if(Math.round(QuizGrade) == 100){
+								var todisplayGrade = finalGradeDisplay;
+							}
+							// todisplayGrade = Math.round(todisplayGrade);
+							todisplayGrade = self.addDecimal(todisplayGrade);
+							
+							valueofcopyObj.sumgrades= Math.round(valueofcopyObj.sumgrades);
+							finalGradeArray.push(valueofcopyObj.sumgrades);
+							if(self.quizdata.quizinfo[0].feedback.length != 1){
+								
+								jQuery.each(self.quizdata.quizinfo[0].feedback,function(feedbackIndex, feedbackValue){
+									if(feedbackValue.feedbacktext){
+									if((valueofcopyObj.sumgrades >= feedbackValue.mingrade) && (valueofcopyObj.sumgrades <  feedbackValue.maxgrade))
+									alreadyattemptedData += "<tr><td>"+(self.displayIndex++)+"</td><td><span data-msg='statefinished'></span></td><td>"+todisplayGrade+"</td><td><div class='start-review' data-index="+valueofcopyObj.attempt+"><span data-msg='review'></span></div></td><td>"+(feedbackValue.feedbacktext)+"</td></tr>";
+									}else{
+									alreadyattemptedData += "<tr><td>"+(self.displayIndex++)+"</td><td><span data-msg='statefinished'></span></td><td>"+todisplayGrade+"</td><td><div class='start-review' data-index="+valueofcopyObj.attempt+"><span data-msg='review'></span></div></td></tr>";       
+									}
+									
+								});
+							} else {
+								if(self.quizdata.quizinfo[0].feedback[0].feedbacktext){
+									if((valueofcopyObj.sumgrades >= self.quizdata.quizinfo[0].feedback[0].mingrade) && (valueofcopyObj.sumgrades <  self.quizdata.quizinfo[0].feedback[0].maxgrade))
+										alreadyattemptedData += "<tr><td>"+(self.displayIndex++)+"</td><td><span data-msg='statefinished'></span></td><td>"+todisplayGrade+"</td><td><div class='start-review' data-index="+valueofcopyObj.attempt+"><span data-msg='review'></span></div></td><td>"+self.quizdata.quizinfo[0].feedback[0].feedbacktext+"</td></tr>";
+									else
+										alreadyattemptedData += "<tr><td>"+(self.displayIndex++)+"</td><td><span data-msg='statefinished'></span></td><td>"+todisplayGrade+"</td><td><div  class='start-review' data-index="+valueofcopyObj.attempt+"><span data-msg='review'></span></div></td><td></td></tr>";
+								} else {
+									alreadyattemptedData += "<tr><td>"+(self.displayIndex++)+"</td><td><span data-msg='statefinished'></span></td><td>"+todisplayGrade+"</td><td><div  class='start-review' data-index="+valueofcopyObj.attempt+"><span data-msg='review'></span></div></td></tr>";
+								}
+							}
+						}
+					});
+				}
 			    jQuery.each(self.quizdata.quizlist, function(index,val){
 			    	if(firstPageFlag){
 						// finalGradeArray.push(val.userMark);
@@ -1839,7 +1855,7 @@ define(["framework/WidgetWithTemplate", "match/Match", "uncover/Uncover","abstra
                     		 totalMark = parseInt(totalMark) + parseInt(val.userMark);
                      });
                      userGrade = ((totalMark/totalGrade)*100);
-					 userGrade = Math.round(userGrade);
+					 userGrade = self.addDecimal(userGrade);
 					 data.attempts[0].sumgrades = userGrade;
 					  // feedback implementation
 					var QuizGrade = self.quizdata.quizinfo[0].grade;
@@ -1863,7 +1879,7 @@ define(["framework/WidgetWithTemplate", "match/Match", "uncover/Uncover","abstra
 						var todisplayGrade = finalGradeDisplay;
                     }
                     // todisplayGrade = Math.round(todisplayGrade);
-                    todisplayGrade = parseFloat(todisplayGrade).toFixed(2);
+                    todisplayGrade = self.addDecimal(todisplayGrade);
 					
 					
 					
@@ -1977,7 +1993,7 @@ define(["framework/WidgetWithTemplate", "match/Match", "uncover/Uncover","abstra
 			 }
         },
         mutilchoicemark:function(QuizData){
-        	var answerMark = 0,l=0,mark = 0,userAnswerCount = 0,fraction = 0;
+        	var self = this, answerMark = 0,l=0,mark = 0,userAnswerCount = 0,fraction = 0;
     		if(QuizData.type){
     			mark = QuizData.mark;
     			userAnswerCount = QuizData.answers.length;
@@ -1991,13 +2007,13 @@ define(["framework/WidgetWithTemplate", "match/Match", "uncover/Uncover","abstra
 			} 
     	
 	        if(l == userAnswerCount){
-	        	QuizData.userMark = Math.round(mark);
-				mark = Math.round(mark);
+	        	QuizData.userMark = self.addDecimal(mark);
+				mark = self.addDecimal(mark);
 	        	return mark;
 	        }else{
 	        	var ratio = (fraction*mark)
-	        	QuizData.userMark = (fraction*mark)
-				ratio = Math.round(ratio);
+	        	QuizData.userMark = self.addDecimal(ratio);
+				ratio = self.addDecimal(ratio);
 	        	return ratio;
 	        	
 	        }

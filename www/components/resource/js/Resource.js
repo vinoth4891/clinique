@@ -48,6 +48,13 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
             });
             renderFunction(this.data, whereToRender);
         },
+		addDecimal: function(val) {
+			val = val.toString();
+			if (!val.includes(",")) {
+				val = parseFloat(val).toFixed(2);
+			}
+			return val;
+		},
         getQuizWidget:function(response, courseID, modID){
             var quizWidgetDetails='';
             var attempts=[];
@@ -906,7 +913,7 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
 							totalMark = parseInt(totalMark) + parseInt(val.userMark);
                      });
                      userGrade = ((totalMark/totalGrade)*100);
-					 userGrade = Math.round(userGrade);
+					 userGrade = self.addDecimal(userGrade);
 					 data.attempts[0].sumgrades = userGrade;
 					 // feedback implementation 
 					 var QuizGrade = self.quizdata.quizinfo[0].grade;
@@ -929,7 +936,8 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
                     if(Math.round(QuizGrade) == 100){
 						var todisplayGrade = finalGradeDisplay;
                     }
-                    todisplayGrade = Math.round(todisplayGrade);
+                    // todisplayGrade = Math.round(todisplayGrade);
+					todisplayGrade = self.addDecimal(todisplayGrade);
 					
 					if(self.quizdata.quizinfo[0].feedback.length != 1){
 						jQuery.each(self.quizdata.quizinfo[0].feedback,function(feedbackIndex, feedbackValue){
@@ -1041,7 +1049,7 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
 			 }
         },
         mutilchoicemark:function(QuizData){
-        	var answerMark = 0,l=0,mark = 0,userAnswerCount = 0,fraction = 0;
+        	var self = this, answerMark = 0,l=0,mark = 0,userAnswerCount = 0,fraction = 0;
     		if(QuizData.type){
     			mark = QuizData.mark;
     			userAnswerCount = QuizData.answers.length;
@@ -1055,13 +1063,13 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
 			} 
     	
 	        if(l == userAnswerCount){
-	        	QuizData.userMark = mark;
-				mark = Math.round(mark);
+	        	QuizData.userMark = self.addDecimal(mark);
+				mark = self.addDecimal(mark);
 	        	return mark;
 	        }else{
 	        	var ratio = (fraction*mark);
-	        	QuizData.userMark = (fraction*mark);
-				ratio = Math.round(ratio);
+	        	QuizData.userMark = self.addDecimal(ratio);
+				ratio = self.addDecimal(ratio);
 	        	return ratio;
 	        	
 	        }
@@ -1461,7 +1469,8 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
 		                var quizquestions = '',totalGrade = self.totalGrade(data.quizlist[self.currentQuiz].questions), userGrade = self.userGrade(data.quizlist[self.currentQuiz].questions);
 						var userAnswer = data.quizlist[self.currentQuiz].questions[self.index-1].userAnswer;
 						var answer = data.quizlist[self.currentQuiz].questions[self.index-1].answers;
-						var mark = Math.round(data.quizlist[self.currentQuiz].questions[self.index-1].mark);
+						
+						var mark = self.addDecimal(data.quizlist[self.currentQuiz].questions[self.index-1].mark);
 						var choices = data.quizlist[self.currentQuiz].questions[self.index-1].choices;
 						var userMark = data.quizlist[self.currentQuiz].questions[self.index-1].userMark;
 						var type = data.quizlist[self.currentQuiz].questions[self.index-1].type;
@@ -1471,19 +1480,27 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
 							if(val.userMark != null && val.userMark != undefined)
 								totalMark = parseInt(totalMark) + parseInt(val.userMark);
 		                });
+
+						totalMark = self.addDecimal(totalMark);
+						if (userMark != undefined) {
+							userMark = self.addDecimal(userMark);
+						}
 						
 						 var QuizGrade = data.quizinfo[0].grade;
-						 QuizGrade = Math.round(QuizGrade);
+						 QuizGrade = self.addDecimal(QuizGrade);
+						 
                          var Quizsumgrades = data.quizinfo[0].sumgrades;
-						 Quizsumgrades = Math.round(Quizsumgrades);
+						 Quizsumgrades = self.addDecimal(Quizsumgrades);
 						 
 						 var marksValue = (totalMark/Quizsumgrades*100);
+						 marksValue = self.addDecimal(marksValue);
 						
 						 var finalGradeDisplay = (marksValue*QuizGrade/100);
-                         finalGradeDisplay = Math.round(finalGradeDisplay);
+                         finalGradeDisplay = self.addDecimal(finalGradeDisplay);
 						 
 		                userGrade = ((totalMark/totalGrade)*100);
-	                    userGrade = Math.round(userGrade);
+	                    userGrade = self.addDecimal(userGrade);
+						
 	                if(self.index == 1){
 						if(data.quizlist[self.currentQuiz].attempts[0].startedOn)
 							var startedOn = data.quizlist[self.currentQuiz].attempts[0].startedOn;
@@ -1524,13 +1541,13 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
                         "<tr><td><span data-msg='completedon'></span></td><td>"+completedOn+"</td></tr>" +
                         "<tr><td><span data-msg='attemptduration'></span></td><td></td></tr>";
                         if(Quizsumgrades != QuizGrade){
-							quizquestions += "<tr><td><span data-msg='marks'></span></td><td>&nbsp;"+Math.round(totalMark)+" / "+Quizsumgrades+"</td></tr>";
+							quizquestions += "<tr><td><span data-msg='marks'></span></td><td>&nbsp;"+totalMark+" / "+Quizsumgrades+"</td></tr>";
                         }
                         if(QuizGrade == 100){
-							quizquestions += "<tr><td><span data-msg='grade'></span></td><td>&nbsp;"+Math.round(marksValue)+"&nbsp;<span data-msg='outofpercent'></span>&nbsp;"+QuizGrade+" </td></tr>";
+							quizquestions += "<tr><td><span data-msg='grade'></span></td><td>&nbsp;"+marksValue+"&nbsp;<span data-msg='outofpercent'></span>&nbsp;"+QuizGrade+" </td></tr>";
                         }
-                        if(Quizsumgrades == QuizGrade){
-							quizquestions += "<tr><td><span data-msg='grade'></span></td><td>&nbsp;"+finalGradeDisplay+"&nbsp;<span data-msg='outofpercent'></span>&nbsp;"+QuizGrade+" ("+Math.round(marksValue)+"%) </td></tr>";
+                        if(Quizsumgrades == QuizGrade && QuizGrade != 100){
+							quizquestions += "<tr><td><span data-msg='grade'></span></td><td>&nbsp;"+finalGradeDisplay+"&nbsp;<span data-msg='outofpercent'></span>&nbsp;"+QuizGrade+" ("+marksValue+"%) </td></tr>";
                         }
 						 if(nofeedback)
 								quizquestions += "</table>";
@@ -1565,7 +1582,7 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
 						if(mark == 0){
 							quizquestions += "<div class='qustn-head'><span  class='f_left'><span data-msg='question'></span> "+(self.index)+"</span><span class='f_right'><span data-msg='mark'></span> 0 <span data-msg='outof'></span> "+mark+"</span></div>";
 						}
-						 quizquestions += "<div class='qustn-head'><span  class='f_left'><span data-msg='question'></span> "+(self.index)+"</span><span class='f_right'><span data-msg='mark'></span> "+Math.round(userMark)+" <span data-msg='outof'></span> "+mark+"</span></div>";
+						 quizquestions += "<div class='qustn-head'><span  class='f_left'><span data-msg='question'></span> "+(self.index)+"</span><span class='f_right'><span data-msg='mark'></span> "+userMark+" <span data-msg='outof'></span> "+mark+"</span></div>";
 					}
 
 					// Video type question
@@ -1738,7 +1755,8 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
 										if(Math.round(QuizGrade) == 100){
 										var todisplayGrade = finalGradeDisplay;
 										}
-										todisplayGrade = Math.round(todisplayGrade);
+										// todisplayGrade = Math.round(todisplayGrade);
+										todisplayGrade = self.addDecimal(todisplayGrade);
 										
 										valueofcopyObj.sumgrades= Math.round(valueofcopyObj.sumgrades);
 										finalGradeArray.push(valueofcopyObj.sumgrades);
@@ -1866,7 +1884,8 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
                                 if(Math.round(QuizGrade) == 100){
                                 var todisplayGrade = finalGradeDisplay;
                                 }
-                                todisplayGrade = Math.round(todisplayGrade);
+                                // todisplayGrade = Math.round(todisplayGrade);
+								todisplayGrade = self.addDecimal(todisplayGrade);
 								
 							valueofcopyObj.sumgrades= Math.round(valueofcopyObj.sumgrades);
 							finalGradeArray.push(valueofcopyObj.sumgrades);
