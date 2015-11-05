@@ -363,7 +363,7 @@ box-shadow: -3px 3px 5px 3px rgba(0, 0, 0, .2);}
 
 @media handheld, only screen and (max-width: 480px) {
 	
-.acc_tilebx { width: 77.6%;}
+.acc_tilebx { width:177px;}
 .courses2{margin-left:25px}
 .shelfholder2,.shelfholder3{display:none;}	
 .shelfholder{padding-top:40px;}
