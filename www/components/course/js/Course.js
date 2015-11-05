@@ -210,14 +210,18 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage","courseItem/Cou
                       }
                     
                      jQuery(".previewImage").attr('src',''+previewURL+'');
-                     if (!($.browser.msie && parseInt($.browser.version, 10) === 7)) {
+                    if (!($.browser.msie && parseInt($.browser.version, 10) === 7)) {
                         window.localStorage.setItem("selCourseId", selCourseId);
                     } else {
                         $.jStorage.set("selCourseId", selCourseId);
                     }
-                	 self.show(coursePrefix);
-                     jQuery("#footer-menu li").removeClass('selected');
-                     jQuery(".footer_course").addClass('selected');
+                	self.show(coursePrefix);
+                    jQuery("#footer-menu li").removeClass('selected');
+                    jQuery(".footer_course").addClass('selected');
+					
+					if(isiPhone()){
+						jQuery(".widget-maincontent-div > .pro_container > #mob_book_shelf").removeAttr("style");
+					}
 				});
             }
             else{
@@ -321,9 +325,27 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage","courseItem/Cou
                 jQuery('.errorCode-pop').show();
             }
             self.loadData(data,self.enrollUsers);
+			
+			if(isiPhone()){
+				function courseHeight() {
+					var listLength = $(".shelfholder_mb_lt, .shelfholder_mb_rt").length;
+					var listHeight = $(".shelfholder_mb_lt, .shelfholder_mb_rt").outerHeight();
+					var minHeight = listLength * listHeight;
+					setTimeout(function(){
+					   jQuery(".widget-maincontent-div > .pro_container > #mob_book_shelf").css("min-height",minHeight);
+					},100);
+				}
+				setTimeout(function(){
+					courseHeight();
+				}, 1000);
+			}
+			
             jQuery("#mob_book_shelf").not(".course_topic li").unbind();
             jQuery("#mob_book_shelf").not(".course_topic li").bind('click', function(){
                hideFooter("course");
+				if(isiPhone()){
+					jQuery(".widget-maincontent-div > .pro_container > #mob_book_shelf").removeAttr("style");
+				}
             });
             jQuery('li.course-hme-page').on('click',function(){
                 jQuery("#footer-menu li").removeClass('selected');

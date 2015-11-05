@@ -1,8 +1,8 @@
 {
      "apiAddress":{
-       "host":"http://172.16.17.42/clinique/admin",
-        "service":"http://172.16.17.42/clinique/admin/v2/clinique_webservice/services.php",
-        "restservice":"http://172.16.17.42/clinique/admin/webservice/rest/server.php",
+       "host":"http://01847-stg.photoninfotech.com/clinique/admin",
+        "service":"http://01847-stg.photoninfotech.com/clinique/admin/v2/clinique_webservice/services.php",
+        "restservice":"http://01847-stg.photoninfotech.com/clinique/admin/webservice/rest/server.php",
         "port":"8034",
 		"privacyPolicyWeb":"Clinique_Education_Privacy_Policy_WEBSITE",
 		"termsConditionWeb":"Clinique_Education_Terms_And_Conditions_WEBSITE",
