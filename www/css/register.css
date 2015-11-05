@@ -201,6 +201,8 @@ html,body{margin:0; padding:0;}
     color: #85a095!important;
 display:inline-block;
 line-height:normal;	
+width:45%;
+padding-top:5px;
 }
 .clearboth { clear:both; font-size:0; width:100%;}
 #register_holder .reg-text-rt { float:left; width:80%;}
