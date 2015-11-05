@@ -167,6 +167,7 @@ html,body{margin:0; padding:0;}
     #register_holder fieldset#reg_entstore_field input,
     #register_holder fieldset#reg_entretailer_field input{margin-top:10px !important}
 	.reg_grybtn a, .reg_grnbtn a{width: 136px;}
+		body span.guideNotes { width:100%;}
 }
 
 @media handheld, only screen and (max-width: 480px) {
