@@ -156,16 +156,5 @@
 	"yourfinalgradeis": "تصنيفك النهائي عن هذا الامتحان هو ",
 	"state": "الدولة",
 	"reg-user-note"       : "اسم المستخدم يجب أن يتألف من حروف وأرقام فقط لا رموز او شعارات). كما أنه يجب أن يكتب بالحروف الصغيرة وبدون أي فراغات بينها.",
-	"reg-region-note"     : "الرجاء الاتصال بمدير الكاونتر أو تنفيذي التدريب والتعليم للمطالبة بالرمز الخاص بتسجيل الدخول.",
-	"reg-top-page"        : "",
-	"reg-user-firstname"  : "",
-	"reg-user-password"  : "",
-	"reg-user-select"  : "",
-	"reg-user-retailer"  : "",
-	"reg-user-ret-other"  : "",
-	"reg-user-store"  : "",
-	"reg-user-store-other"  : "",
-	"reg-user-job-cm": "",
-	"reg-user-job-ac": "",
-	"reg-user-job-cc": ""
+	"reg-region-note"     : "الرجاء الاتصال بمدير الكاونتر أو تنفيذي التدريب والتعليم للمطالبة بالرمز الخاص بتسجيل الدخول."	
 }

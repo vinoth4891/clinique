@@ -156,16 +156,5 @@
 	"yourfinalgradeis": "Ваша итоговая оценка за этот тест ",
 	"state": "Состояние",
 	"reg-user-note"       : "Имя пользователя должно содержать только прописные буквы латинского алфавита и цифры (без пробелов и спец.символов). ",
-	"reg-region-note"     : "Пожалуйста, свяжитесь с менеджером проектов, чтобы получить код логина.",
-	"reg-top-page"        : "",
-	"reg-user-firstname"  : "",
-	"reg-user-password"  : "",
-	"reg-user-select"  : "",
-	"reg-user-retailer"  : "",
-	"reg-user-ret-other"  : "",
-	"reg-user-store"  : "",
-	"reg-user-store-other"  : "",
-	"reg-user-job-cm": "",
-	"reg-user-job-ac": "",
-	"reg-user-job-cc": ""	
+	"reg-region-note"     : "Пожалуйста, свяжитесь с менеджером проектов, чтобы получить код логина."	
 }

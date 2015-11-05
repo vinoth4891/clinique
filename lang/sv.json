@@ -156,16 +156,5 @@
 	"yourfinalgradeis": "Ditt slutgiltiga betyg för detta test är .",
 	"state": "Status",
 	"reg-user-note"       : "Användarnamnet kan bara innehålla bokstäver och inte bokstäverna å, ä eller ö. Heller inga symboler eller accenter. Användarnamnet måste med små bokstäver och kan inte innehålla mellanslag.",
-	"reg-region-note"     : "Vänligen kontakta din Counter Manager, Säljrepresentant eller Utbildningsansvarige för att få tillgång till loginkoden",
-	"reg-top-page"        : "",
-	"reg-user-firstname"  : "",
-	"reg-user-password"  : "",
-	"reg-user-select"  : "",
-	"reg-user-retailer"  : "",
-	"reg-user-ret-other"  : "",
-	"reg-user-store"  : "",
-	"reg-user-store-other"  : "",
-	"reg-user-job-cm": "",
-	"reg-user-job-ac": "",
-	"reg-user-job-cc": ""
+	"reg-region-note"     : "Vänligen kontakta din Counter Manager, Säljrepresentant eller Utbildningsansvarige för att få tillgång till loginkoden"
 }

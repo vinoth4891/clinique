@@ -156,16 +156,5 @@
 	"yourfinalgradeis": "Votre note finale pour ce test est .",
 	"state": "État",
 	"reg-user-note"       : "Le nom d'utilisateur peut contenir uniquement des caractères alphanumériques (pas de symboles ni d'accents). Le nom d'utilisateur doit être en minuscules et sans espace.",
-	"reg-region-note"     : "Veuillez communiquer avec votre chef comptoir ou votre responsable principale de la formation pour obtenir le code d'ouverture de session.",
-	"reg-top-page"        : "",
-	"reg-user-firstname"  : "",
-	"reg-user-password"  : "",
-	"reg-user-select"  : "",
-	"reg-user-retailer"  : "",
-	"reg-user-ret-other"  : "",
-	"reg-user-store"  : "",
-	"reg-user-store-other"  : "",
-	"reg-user-job-cm": "",
-	"reg-user-job-ac": "",
-	"reg-user-job-cc": ""	
+	"reg-region-note"     : "Veuillez communiquer avec votre chef comptoir ou votre responsable principale de la formation pour obtenir le code d'ouverture de session."	
 }

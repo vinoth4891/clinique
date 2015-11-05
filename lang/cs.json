@@ -157,16 +157,5 @@
 	"yourfinalgradeis": "Vaše konečná známka za tento test je ",
 	"state": "Stav",
 	"reg-user-note"       : "Uživatelské jméno může obsahovat pouze písmena nebo čísla (žádné symboly nebo apostrofy). Uživatelské jméno musí obsahovat pouze malá písmena a být bez mezer.",
-	"reg-region-note"     : "Pro získání přihlašovacího kódu kontaktujte prosím školitele Clinique.",
-	"reg-top-page"        : "",
-	"reg-user-firstname"  : "",
-	"reg-user-password"  : "",
-	"reg-user-select"  : "",
-	"reg-user-retailer"  : "",
-	"reg-user-ret-other"  : "",
-	"reg-user-store"  : "",
-	"reg-user-store-other"  : "",
-	"reg-user-job-cm": "",
-	"reg-user-job-ac": "",
-	"reg-user-job-cc": ""
+	"reg-region-note"     : "Pro získání přihlašovacího kódu kontaktujte prosím školitele Clinique."
 }

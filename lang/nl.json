@@ -156,16 +156,5 @@
 	"yourfinalgradeis": "Je eindcijfer voor deze test is ",
 	"state": "Status",
 	"reg-user-note"       : "De gebruikersnaam mag enkel alfanumerieke karakters bevatten (geen symbolen of accenten). De gebruikersnaam mag geen hoofdletters en spaties bevatten.",
-	"reg-region-note"     : "Contacteer je Clinique verantwoordelijke om een login code te verkrijgen.",
-	"reg-top-page"        : "",
-	"reg-user-firstname"  : "",
-	"reg-user-password"  : "",
-	"reg-user-select"  : "",
-	"reg-user-retailer"  : "",
-	"reg-user-ret-other"  : "",
-	"reg-user-store"  : "",
-	"reg-user-store-other"  : "",
-	"reg-user-job-cm": "",
-	"reg-user-job-ac": "",
-	"reg-user-job-cc": ""
+	"reg-region-note"     : "Contacteer je Clinique verantwoordelijke om een login code te verkrijgen."	
 }

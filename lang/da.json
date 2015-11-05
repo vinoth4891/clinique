@@ -156,16 +156,5 @@
 	"yourfinalgradeis": "Den endelige vurdering af denne quiz er ",
 	"state": "Status",
 	"reg-user-note"       : "Brugenavn skal kun indholde bogstaver men ikke æ, ø eller å. Heller ikke  symboler eller accenter. Brugernavenet skal være med små bogskaver og uden mellemrum.",
-	"reg-region-note"     : "Kontakt venligst din Counter Manager, SEE eller uddannelsesansvarlig for at få adgang til loginkoden.",
-	"reg-top-page"        : "",
-	"reg-user-firstname"  : "",
-	"reg-user-password"  : "",
-	"reg-user-select"  : "",
-	"reg-user-retailer"  : "",
-	"reg-user-ret-other"  : "",
-	"reg-user-store"  : "",
-	"reg-user-store-other"  : "",
-	"reg-user-job-cm": "",
-	"reg-user-job-ac": "",
-	"reg-user-job-cc": ""
+	"reg-region-note"     : "Kontakt venligst din Counter Manager, SEE eller uddannelsesansvarlig for at få adgang til loginkoden."	
 }

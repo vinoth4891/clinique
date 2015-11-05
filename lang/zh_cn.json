@@ -156,16 +156,5 @@
 	"yourfinalgradeis": "这个测验您的最后得分是 ",
 	"state": "状态",
 	"reg-user-note"       : "用户名只能由字母和数字字符组成(不能包含标点符号)。请在小写字母键盘状态下输入，不能有空格。",
-	"reg-region-note"     : "请联系你的柜长或培训主管，以便获得您的登入密码。",
-	"reg-top-page"        : "",
-	"reg-user-firstname"  : "",
-	"reg-user-password"  : "",
-	"reg-user-select"  : "",
-	"reg-user-retailer"  : "",
-	"reg-user-ret-other"  : "",
-	"reg-user-store"  : "",
-	"reg-user-store-other"  : "",
-	"reg-user-job-cm": "",
-	"reg-user-job-ac": "",
-	"reg-user-job-cc": ""
+	"reg-region-note"     : "请联系你的柜长或培训主管，以便获得您的登入密码。"	
 }

@@ -157,16 +157,5 @@
 	"yourfinalgradeis": "Ο τελικός σας βαθμός γι' αυτό το κουίζ είναι ",
 	"state": "κατάσταση",
 	"reg-user-note"       : "Το όνομα χρήστη θα πρέπει να περιέχει μόνο αλφαριθμητικούς χαρακτήρες(όχι σύμβολα ή τόνους).Το όνομα χρήστη θα πρέπει να περιέχει μόνο  μικρά γράμματα και να μην περιέχει κενά.",
-    "reg-region-note"     : "Σας παρακαλώ επικοινωνήστε με τον δικό σας Counter Manager ή την Υπεύθυνη Εκπαίδευσης για την απόκτηση του κώδικα εισόδου σας.",
-	"reg-top-page"        : "",
-	"reg-user-firstname"  : "",
-	"reg-user-password"  : "",
-	"reg-user-select"  : "",
-	"reg-user-retailer"  : "",
-	"reg-user-ret-other"  : "",
-	"reg-user-store"  : "",
-	"reg-user-store-other"  : "",
-	"reg-user-job-cm": "",
-	"reg-user-job-ac": "",
-	"reg-user-job-cc": ""	
+    "reg-region-note"     : "Σας παρακαλώ επικοινωνήστε με τον δικό σας Counter Manager ή την Υπεύθυνη Εκπαίδευσης για την απόκτηση του κώδικα εισόδου σας."	
 }

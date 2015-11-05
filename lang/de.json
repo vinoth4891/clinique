@@ -156,16 +156,5 @@
 	"yourfinalgradeis": "Ihre Gesamtbewertung für diesen Test ",
 	"state": "Status",
 	"reg-user-note"       : "Der Nutzername darf nur aus Buchstaben des Alphabets bestehen (keine Symbole oder Sonderzeichen).Der Nutzername muss kleingeschrieben werden und ohne Leerzeichen.",
-	"reg-region-note"     : "Bitte kontaktieren Sie Ihren Counter Manager oder die Trainingsabteilung, um Ihre Login-Daten zu erhalten.",
-	"reg-top-page"        : "",
-	"reg-user-firstname"  : "",
-	"reg-user-password"  : "",
-	"reg-user-select"  : "",
-	"reg-user-retailer"  : "",
-	"reg-user-ret-other"  : "",
-	"reg-user-store"  : "",
-	"reg-user-store-other"  : "",
-	"reg-user-job-cm": "",
-	"reg-user-job-ac": "",
-	"reg-user-job-cc": ""
+	"reg-region-note"     : "Bitte kontaktieren Sie Ihren Counter Manager oder die Trainingsabteilung, um Ihre Login-Daten zu erhalten."	
 }
