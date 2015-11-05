@@ -405,6 +405,12 @@ function isiOS() {
     }
 }
 
+function isiPhone() {
+    if (/iPhone/i.test(navigator.userAgent)) {
+        return true;
+    }
+}
+
 function isiPad(){
     return (navigator.platform.indexOf("iPad") != -1);
 }
