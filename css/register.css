@@ -9,11 +9,11 @@ html,body{margin:0; padding:0;}
 #register_holder fieldset label{min-width:267px;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box; /*padding-right:15px; */display:block; float:left; line-height:25px; cursor:default;color: #85A095;padding-top:3px; font-size:16px}
 #register_holder fieldset label span.mandatory{color:#fe0000}
 #register_holder > fieldset > span{color:red; float:left; width:330px; font-size:12px; padding-left:166px;}
-#register_holder fieldset input{width:45%; float:left; height: 32px; border:1px #acc0b8 solid; -webkit-border-radius: 5px; border-radius: 5px;	-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+#register_holder fieldset input{width:55%; float:left; height: 32px; border:1px #acc0b8 solid; -webkit-border-radius: 5px; border-radius: 5px;	-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
                                 -webkit-box-shadow: inset 1px 1px 10px 1px rgba(0, 0, 0, .1); box-shadow: inset 1px 1px 10px 1px rgba(0, 0, 0, .1); padding:0 0 0 10px; margin:0; color:#95999a;}
 
 #register_holder fieldset .registertxt{float:left}
-#register_holder fieldset select{width:45%; float:left; height: 33px; border:1px #acc0b8 solid; -webkit-border-radius: 5px; border-radius: 5px;	
+#register_holder fieldset select{width:55%; float:left; height: 33px; border:1px #acc0b8 solid; -webkit-border-radius: 5px; border-radius: 5px;	
                                  -webkit-box-shadow: inset 1px 1px 10px 1px rgba(0, 0, 0, .1);-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
                                  box-shadow: inset 1px 1px 10px 1px rgba(0, 0, 0, .1); padding:5px 8px; margin:0; color:#95999a;}	
 
@@ -202,8 +202,9 @@ html,body{margin:0; padding:0;}
 display:inline-block;
 line-height:normal;
 padding-top:5px;
-width:45%;	
+width:55%;	
 }
+#register_holder .japan_guiding { font-size:13px !important;}
 .clearboth { clear:both; font-size:0; width:100%;}
 #register_holder .reg-text-rt { float:left; width:80%;}
 
