@@ -157,8 +157,8 @@ body .enterbtn-alg{padding-bottom:4% !important;}
 
 /*Register page*/
 .registerbx fieldset{ position:relative; width:100% !IMPORTANT; padding-bottom:0px;}
-.registerbx fieldset .reg-text-lt{  background: url(../images/reg-text-lt.png) no-repeat left top; float:left; top:0px; display:block; height:40px; outline:0px; width:15px !important; padding:0 !important; max-width:530px;}
-.registerbx fieldset .reg-text-rt{  background: url(../images/reg-text-rt.png) no-repeat right top; float:left; top:0px; display:block; height:40px !important; outline:0px; width:44% !IMPORTANT; max-width:600px;}
+.registerbx fieldset .reg-text-lt{  background: url(../images/reg-text-lt.png) no-repeat left top; float:left; top:0px; display:block; min-height:40px; outline:0px; width:15px !important; padding:0 !important; max-width:530px;}
+.registerbx fieldset .reg-text-rt{  background: url(../images/reg-text-rt.png) no-repeat right top; float:left; top:0px; display:block; min-height:40px !important; outline:0px; width:44% !IMPORTANT; max-width:600px;}
 .registerbx fieldset .reg-text-rt input{ border:0 !IMPORTANT;  float:left; display:inline; width:99% !IMPORTANT; background:none; padding:11px 0 !important; height:auto !important;}
 .registerbx fieldset .reg-text-rt select{ border:0 !IMPORTANT;  float:left; display:inline; width:99% !important; background:none; padding:0 !important; *height:auto !important; *margin-top:8px !important; height:auto !important; box-shadow:none; margin-left:-4px !important; margin-top:12px !important; box-shadow:none !important;}
 #register_holder FIELDSET INPUT.error_red{border:0 !imporant; margin:0;}
@@ -692,7 +692,7 @@ body #displayContentFav video,.ie7-css #displayContentFav video{background:#fff;
   .ie7-css .registerbx FIELDSET .reg-text-rt select {width:490px !important;}
   .ie8-spec body .registerbx FIELDSET .reg-text-rt { width:44% !important;}
   .ie8-spec body .registerbx FIELDSET .reg-text-rt select {width:99% !important;}
-  
+  .ie8-spec BODY .registerbx FIELDSET .reg-text-rt span.guideNotes, .ie7-css .registerbx FIELDSET .reg-text-rt  span.guideNotes{ width:100%;}
 
   body #forget_popup .formbx2 { position:relative; top:0; margin-bottom:0;}
   body #forget_popup .forgotbx_holder { padding-bottom:0;}

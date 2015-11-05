@@ -200,7 +200,9 @@ html,body{margin:0; padding:0;}
     font-size: 11px!important;
     color: #85a095!important;
 display:inline-block;
-line-height:normal;	
+line-height:normal;
+padding-top:5px;
+width:45%;	
 }
 .clearboth { clear:both; font-size:0; width:100%;}
 #register_holder .reg-text-rt { float:left; width:80%;}
@@ -214,8 +216,11 @@ body #register_holder fieldset input, body #register_holder fieldset select { wi
     width: 50%;}
 body #register_holder fieldset input, body #register_holder fieldset select { width:100%;}
   /* For landscape layouts only */
+  body .guideNotes { width:100%;}
 }
 
 @media handheld, only screen and (min-width: 1025px) {
 body #register_holder .reg-text-rt {float: left;width: 70%;}
 }
+
+.ie7-css .clearboth { height:0;}
