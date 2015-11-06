@@ -157,7 +157,7 @@ filter: dropshadow(color=#ffffff, offx=0, offy=1);}
 .acc_fav{width:25px; height:21px; position:absolute; background:url(../images/acc_fav_icon.png) no-repeat; right:5px; top:5px;}
 .acc_ntfav{width:25px; height:21px; position:absolute; background:url(../images/acc_ntfav_icon.png) no-repeat; right:5px; top:5px;}
 .acc_tilebx ul{margin:0; padding:0;}
-.acc_tilebx ul li{list-style:none; float:left; width:138px; display:inline-block; margin: 0 22px 26px; position:relative; text-align:center; min-height:213px}
+.acc_tilebx ul li{list-style:none; float:left; width:138px; display:inline-block; margin: 0 22px 26px; position:relative; text-align:center; min-height:243px}
 .acc_tilebx ul li:last-child{margin-right:0;}
 .acc_tilebx ul li a{text-decoration:none; width:140px; height:201px; /*float:left*/}
 .acc_tilebx ul li a.fav_icon{text-decoration:none; width:auto; height:auto;}
