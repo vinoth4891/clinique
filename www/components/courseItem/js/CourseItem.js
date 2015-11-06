@@ -1285,11 +1285,15 @@ define(["framework/WidgetWithTemplate", "match/Match", "uncover/Uncover","abstra
 	                if(self.index == 1){
 						if(data.quizlist[self.currentQuiz].attempts[0].startedOn)
 							var startedOn = data.quizlist[self.currentQuiz].attempts[0].startedOn;
+						else if(data.quizlist[self.currentQuiz].attempts[0].startedon)
+							var startedOn = data.quizlist[self.currentQuiz].attempts[0].startedon;
 						else
 							var startedOn = '-';	
 						
 						if(data.quizlist[self.currentQuiz].attempts[0].completedOn)
 							var completedOn = data.quizlist[self.currentQuiz].attempts[0].completedOn;
+						else if(data.quizlist[self.currentQuiz].attempts[0].completedon)
+							var completedOn = data.quizlist[self.currentQuiz].attempts[0].completedon;
 						else
 							var completedOn = '-';	
 						
