@@ -227,5 +227,7 @@ body #register_holder fieldset input, body #register_holder fieldset select { wi
   /* For landscape layouts only */
 }
 
-.guideNotes { width:100% !important;}
-
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) 
+and (orientation : landscape) {
+body span.guideNotes { width:100% !important;}
+}
