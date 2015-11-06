@@ -85,6 +85,15 @@
     echo $OUTPUT->box_start('quizinfo');
     if ($game->attempts != 1) {
         //echo get_string('gradingmethod', 'quiz', game_get_grading_option_name($game->grademethod));
+		if($game->attempts == 0){
+		$attmpts = get_string('allinone', 'quiz');
+		}else{
+		 $attmpts = $game->attempts;
+		}
+		echo '<div style="text-align:center;" class="gameattemptcounts">';
+		echo  get_string('attemptsallowed', 'quiz') .':'. $attmpts;
+	    echo "</div>";
+		
     }
     echo $OUTPUT->box_end();
 

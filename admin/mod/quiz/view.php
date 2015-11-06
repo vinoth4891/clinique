@@ -178,8 +178,13 @@ $viewobj->popupoptions = $accessmanager->get_popup_options();
 // Display information about this quiz.
 $viewobj->infomessages = $viewobj->accessmanager->describe_rules();
 if ($quiz->attempts != 1) {
-    /*$viewobj->infomessages[] = get_string('gradingmethod', 'quiz',
-            quiz_get_grading_option_name($quiz->grademethod));*/
+	 if($quiz->attempts == 0){
+		$attmpts = get_string('allinone', 'quiz');
+	 }else{
+		 $attmpts = $quiz->attempts;
+	 }
+    $viewobj->infomessages[] = get_string('attemptsallowed', 'quiz') .':'. $attmpts;
+	
 }
 
 // Determine wheter a start attempt button should be displayed.
