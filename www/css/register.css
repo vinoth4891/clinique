@@ -196,6 +196,10 @@ html,body{margin:0; padding:0;}
 #regmsg_modal{margin-top: 30% !important}
 }
 
+@media only and (max-width: 767px) and (orientation: landscape)  {
+    .acc_tilebx { width:352px !important;}
+}
+
 .guideNotes{
     clear: both;
     padding-left:0;
@@ -224,3 +228,4 @@ body #register_holder fieldset input, body #register_holder fieldset select { wi
 }
 
 .guideNotes { width:100% !important;}
+
