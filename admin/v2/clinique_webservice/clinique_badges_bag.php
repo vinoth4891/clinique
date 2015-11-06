@@ -26,7 +26,7 @@ class BadgeDisplay {
             if (!empty($bid)) {
                 $bval = $DB->get_field('badge', 'badge_value', array('id' => $bid));
             }
-            if (!empty($uid) && !empty($bid) && !empty($bval) && $user_score > $bval) {
+            if (!empty($uid) && !empty($bid) && !empty($bval) && $user_score >= $bval) {
                 $DB->insert_record('badge_user', $params);
             }
             $badges = @array_merge(array("badges" => $badgedetails, "userbadges" => $users_badges));
