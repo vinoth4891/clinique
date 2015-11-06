@@ -202,6 +202,7 @@ and (orientation : portrait) {
 #register_holder fieldset label { margin-right:20px;}
 }
 
+
 .guideNotes{
     clear: both;
     padding-left:0;
@@ -229,3 +230,5 @@ body #register_holder fieldset input, body #register_holder fieldset select { wi
 
 
 .guideNotes { width:100% !important;}
+
+ 
