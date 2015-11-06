@@ -201,7 +201,10 @@ and (orientation : portrait) {
 #register_holder span.reg-text-lt { width:auto;}
 #register_holder fieldset label { margin-right:20px;}
 }
-
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) 
+and (orientation : landscape) {
+body span.guideNotes { width:100% !important;}
+}
 
 .guideNotes{
     clear: both;
@@ -229,6 +232,5 @@ body #register_holder fieldset input, body #register_holder fieldset select { wi
 }
 
 
-.guideNotes { width:100% !important;}
 
  
