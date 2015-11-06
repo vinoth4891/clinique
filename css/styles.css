@@ -2374,6 +2374,8 @@ body .quiz-container .quizdtlgrid{ margin-top:20px;}
 body .quiz-container .headlabel h2, body .prog_dta_hdg { padding-top:10px;}
 body .qustn-head { width:95%;}
 #showlistFav  .fav_btnstrip ul { margin:0 0 87px 0;}
+ html body .pro_container  .ui-draggable-dragging  {width:61px !important; padding:0 10px !important;}
+  html body .pro_container  .ui-draggable-dragging a { padding:0;}
 }
 @media only screen 
 and (min-width : 300px) 
