@@ -226,3 +226,6 @@ body #register_holder fieldset input, body #register_holder fieldset select { wi
 body #register_holder fieldset input, body #register_holder fieldset select { width:100%;}
   /* For landscape layouts only */
 }
+
+
+.guideNotes { width:100% !important;}
