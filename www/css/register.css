@@ -139,7 +139,7 @@ html,body{margin:0; padding:0;}
 @media handheld, only screen and (max-width: 786px) {
 
     .registerbx {margin-left: 12.1%; height: 892px}
-
+.guideNotes { width:100% !important;}
 }
 
 @media handheld, only screen and (max-width: 720px) {
