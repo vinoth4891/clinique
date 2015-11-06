@@ -74,7 +74,7 @@
                     <option value="sel_one" data-msg="select_one"></option>
                 </select>
 				<div class="clearboth"></div>
-				<span data-msg="reg-user-select" class="guideNotes"></span>				
+				<span data-msg="reg-user-select-region" class="guideNotes"></span>				
 				</div>
                 <span id="regRgn"></span>
             </fieldset>
@@ -86,7 +86,7 @@
                     <option value="sel_one" data-msg="select_one"></option>
                 </select>
 				<div class="clearboth"></div>
-				<span data-msg="reg-user-select" class="guideNotes"></span>
+				<span data-msg="reg-user-select-country" class="guideNotes"></span>
 				</div>
                 <span id="regCntry"></span>
             </fieldset>
@@ -143,7 +143,7 @@
                     <option value="en">English-US</option>
                 </select>
 				<div class="clearboth"></div>
-				<span data-msg="reg-user-select" class="guideNotes"></span>
+				<span data-msg="reg-user-select-language" class="guideNotes"></span>
 				</div>
                 <span id="regLang"></span>
             </fieldset>	
