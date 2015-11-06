@@ -36,10 +36,13 @@ class QuizInfo {
             $questionArrayval['quizinfo'] = $quiz_info;
             //$questionArrayval['quizlist']['grade'] = $grades;
             if (empty($attempts)) {
+				$timenow = time();
                 $attempts[] = array(
                     "attempt" => "",
                     "preview" => "",
                     "state" => "",
+					"startedOn" => $timenow,
+					"completedOn" => $timenow,
                     "sumgrades" => null
                 );
                 $questionArrayval['quizlist'][]['attempts'] = $attempts;
@@ -176,7 +179,7 @@ class QuizInfo {
     // Query to fetch Quiz attempts from Quiz ID and User ID
     private static function quiz_user_attempts_array($id, $uid) {
         global $CFG, $DB;
-        $data = $DB->get_records_sql("SELECT id AS rowid,attempt,preview,state,sumgrades FROM mdl_quiz_attempts q WHERE quiz=" . $id . " AND state= 'finished' AND q.userid=" . $uid);
+        $data = $DB->get_records_sql("SELECT id AS rowid,attempt,preview,state,sumgrades,timestart AS startedOn,timefinish AS completedOn FROM mdl_quiz_attempts q WHERE quiz=" . $id . " AND state= 'finished' AND q.userid=" . $uid);
         return array_values($data);
     }
 
