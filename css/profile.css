@@ -119,7 +119,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e48153', end
 .tablescroll
 {
 	float:left;
-	width:53%;
+	width:64%;
 	margin-left: 153px\9;
 }
 .photoholder{margin-left:0; width:242px; min-height:522px; background:url(../images/profile_divider.png) no-repeat right bottom; float:left;}
@@ -355,3 +355,6 @@ div#edit_profile.profile_grnbtn.rgt.disable,div#chngpaswd.profile_grnbtn.rgt.dis
 
 .profilebx .profilhdr { position:relative;}
 html body .profilebx .profilhdr .profilhdr_btnbx {top:185px !important;}
+
+
+ 

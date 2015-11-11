@@ -747,3 +747,11 @@ body > li.ui-draggable.sequence-item img{ width:80px; height:80px;}
  
 .hidden-img-wrapper {position:relative;}
 .hidden-img-wrapper .course_ifram_cls_btn {position: absolute; top: -52px;}
+
+@media only screen
+and (min-width : 768px)
+and (max-width : 1024px){
+input:focus, textarea:focus {
+    #globalmenuNavigation { display:none !important;}
+}
+}
