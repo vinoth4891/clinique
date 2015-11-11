@@ -475,7 +475,7 @@ div.favCommentNotes{margin-top:5%; margin-bottom:5%;}
 height:inherit;
 }
 
-.pro_container > li{ height: 80px; overflow: hidden; }
+.pro_container > li{ height: auto; overflow: hidden; }
 
 .crswidg_img_small ul li{ width:120px; height:110px; margin-right:0.9%; font-size:13px;line-height: 17px; }
 .crswidg_img_small ul li div { width:120px; height:110px; text-align:center; vertical-align:middle;}
