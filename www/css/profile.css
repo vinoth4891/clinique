@@ -362,4 +362,10 @@ html body .profilebx .profilhdr .profilhdr_btnbx {top:185px !important;}
     display: block !important;
 }
 .overlay-video-quiz .overlaycontainer { width:100%; position:fixed !important; z-index:999 !important;}
-
+ 
+ @media only screen 
+and (min-width : 768px) 
+and (max-width : 1024px) 
+and (orientation : portrait) {
+fieldset#reg_entretailer_field   label , fieldset#reg_entstore_field  label{ display:none;}
+}
