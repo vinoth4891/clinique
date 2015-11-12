@@ -160,8 +160,10 @@
                             </fieldset>
                             <fieldset id="reg_entstore_field" style="display:none">
                                 <label>&nbsp;</label>
-								
+							    <div class="me-text-rt">
+								<span class="me-text-lt"></span>
                                 <input  id="reg_entstore_other" type="text" class="editprofile" name="name" placeholder="" maxlength="20">
+							    </div>
                                 <span id="regEntstore"></span>
                             </fieldset>
                             <fieldset>
