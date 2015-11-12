@@ -2313,6 +2313,26 @@
 						videoContrl.pause();
 					}
 					videoContrl.play();
+					
+					// To hide ios keyboard while clicking play, pause and fullscreen icon.
+					function onVideoBeginsFullScreen () {
+						document.querySelector('textarea#note').blur();
+						$('textarea#note').blur();
+					}
+					videoContrl.ontouchstart = function () {
+						onVideoBeginsFullScreen();
+					};
+					$('#activityVideoFav, #activityVideoFav div, #activityVideoFav button').click(function (event) {
+						onVideoBeginsFullScreen(event);
+					});
+
+					if((navigator.userAgent.indexOf("Safari") > -1)) {
+						jQuery('#activityVideoFav')[0].play();
+						var videoContrlSafari = jQuery('#activityVideoFav')[0];
+						videoContrlSafari.ontouchstart = function () {
+							onVideoBeginsFullScreen();
+						};
+					}
 				}
                 jQuery(".commentNotes").show();
                 jQuery('#load_wrapper').hide();

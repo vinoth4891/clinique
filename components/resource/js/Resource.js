@@ -2295,9 +2295,25 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
 					} else {
 						videoContrl.pause();
 					}
-					
+                                                                    
+					// To hide ios keyboard while clicking play, pause and fullscreen icon.
+					function onVideoBeginsFullScreen () {
+						document.querySelector('textarea#note').blur();
+						$('textarea#note').blur();
+					}
+					videoContrl.ontouchstart = function () {
+						onVideoBeginsFullScreen();
+					};
+					$('#activityVideo, #activityVideo div, #activityVideo button').click(function (event) {
+						onVideoBeginsFullScreen(event);
+					});
+
                     if((navigator.userAgent.indexOf("Safari") > -1)) {
                         jQuery('#activityVideo')[0].play();
+						var videoContrlSafari = jQuery('#activityVideo')[0];
+						videoContrlSafari.ontouchstart = function () {
+							onVideoBeginsFullScreen();
+						};
                     }
 				}else{
 					if (pluginlist.indexOf("Windows Media Player")!=-1){
