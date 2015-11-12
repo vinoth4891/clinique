@@ -357,4 +357,4 @@ div#edit_profile.profile_grnbtn.rgt.disable,div#chngpaswd.profile_grnbtn.rgt.dis
 html body .profilebx .profilhdr .profilhdr_btnbx {top:185px !important;}
 
 
- 
+ #profile_edit #profile_inputholder fieldset { display:block;}
