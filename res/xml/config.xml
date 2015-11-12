@@ -52,14 +52,14 @@
     <plugin name="SplashScreen" value="org.apache.cordova.SplashScreen"/>
     <plugin name="Echo" value="org.apache.cordova.Echo" />
     <plugin name="ZipPlugin" value="com.phonegap.plugin.ExtractZipFile.ExtractZipFilePlugin" />
-    <plugin name="Pdfview" value="com.photon.phresco.hybrid.activity.Pdfview" />
-    <plugin name="FileOpener" value="com.photon.phresco.hybrid.activity.FileOpener" />
-    <plugin name="FileOpenerOnline" value="com.photon.phresco.hybrid.activity.FileOpenerOnline" />
-    <plugin name="LoginPlugin" value="com.photon.phresco.hybrid.activity.LoginPlugin" />
-    <plugin name="OfflineSyncPlugin" value="com.photon.phresco.hybrid.activity.OfflineSyncPlugin" />
-    <plugin name="OfflineServicePlugin" value="com.photon.phresco.hybrid.activity.OfflineServicePlugin" />
-    <plugin name="CheckOnline" value="com.photon.phresco.hybrid.activity.CheckOnline" />
-    <plugin name="SQLitePlugin" value="com.photon.phresco.hybrid.activity.SQLitePlugin" />
+    <plugin name="Pdfview" value="com.clinique.phresco.hybrid.activity.Pdfview" />
+    <plugin name="FileOpener" value="com.clinique.phresco.hybrid.activity.FileOpener" />
+    <plugin name="FileOpenerOnline" value="com.clinique.phresco.hybrid.activity.FileOpenerOnline" />
+    <plugin name="LoginPlugin" value="com.clinique.phresco.hybrid.activity.LoginPlugin" />
+    <plugin name="OfflineSyncPlugin" value="com.clinique.phresco.hybrid.activity.OfflineSyncPlugin" />
+    <plugin name="OfflineServicePlugin" value="com.clinique.phresco.hybrid.activity.OfflineServicePlugin" />
+    <plugin name="CheckOnline" value="com.clinique.phresco.hybrid.activity.CheckOnline" />
+    <plugin name="SQLitePlugin" value="com.clinique.phresco.hybrid.activity.SQLitePlugin" />
     
 </plugins>
 </cordova>
