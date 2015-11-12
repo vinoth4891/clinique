@@ -1,0 +1,29 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<style name="alert_window_width">
+		<item name="android:layout_width">150sp</item>
+		<item name="android:layout_height">150sp</item>
+	</style>
+
+	<style name="alert_txt_size">
+		<item name="android:textSize">12sp</item>
+	</style>
+
+	<style name="alert_btn_txt_size">
+		<item name="android:textSize">11sp</item>
+	</style>
+
+	<style name="grd_view_cnt">
+		<item name="android:numColumns">2</item>
+	</style>
+
+	<style name="inflater_grd">
+		<item name="android:layout_width">90sp</item>
+		<item name="android:layout_height">115sp</item>
+	</style>
+
+	<style name="srch_txt_size">
+		<item name="android:textSize">12sp</item>
+	</style>
+
+</resources>

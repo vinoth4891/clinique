@@ -1,0 +1,431 @@
+@charset "utf-8";
+/* CSS Document */
+/*-------------------------- Players Progress Bar Starts ----------------------------------- */
+li { list-style: none; }
+.plyr_span{margin:15px 0 30px 10px; width:auto;}
+.plyrshdnk a{color:#27cebe;}
+.plyrs_pg_title{float:left; color:#000000; font-size:18px; font-family:Helvetica, "Arial Narrow", Arial; padding-top:6px}
+
+.plyr_selectbx{padding-left:42px; float:left;}
+.plyr_selectbx select{width:396px; height:32px; border:1px solid #27cebe; font-size:16px;background-color: #F8F8F8;}
+
+.plyrstble{width:100%}
+.plyrstble ul{margin:0; padding:0}
+.plyrstble li{float:left; width:100%; display:inline-block; padding-bottom:17px;}
+.plyrstble li:first-child{border-bottom:1px solid #d5d5d5; margin-bottom:29px; padding-bottom:14px;}
+.plyrstble li span{margin:0; padding:0}
+
+.plyrstble li span.usrdetails{
+    margin-top: 18px;
+	margin-left:10px;
+}
+
+.plyrstble li span.progrssbr{
+    margin-top: 18px;
+}
+
+.plyrstble li span.scores {
+    margin-top: 8px;
+}
+
+.plyrstble li span.totlpts {
+    margin-top: 8px;
+}
+.pointsWrap{width: 336px; float:right;}
+.threeCol{width: 33.33% !important;text-align: center;float:left;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;padding: 0 3px; word-wrap: break-word}
+
+
+/*.plyr_dta_hdg{float:right; width:37%; margin-top:30px;}
+.plyr_dta_hdg li{float:left; padding:30px 0 30px 44px; color:#000; font-size:18px; display:inline}  */  /*------------ Modified --------------*/
+.plyr_dta_hdg{ clear: both;float: right;}
+.plyr_dta_hdg span {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+color: #000000;display: inline-block;font-size: 18px;padding: 6px 0;text-align: center;word-wrap: break-word; width: /*110px*/116px}
+.usrdetails{width:12.2%; background:url("../images/plyrs_usricon.png") no-repeat; height:53px; float:left}
+.otherusr{background:url("../images/plyrs_usricon_othrs.png") no-repeat;}
+.usrdetails p{font-size:18px; font-family:Helvetica, "Arial Narrow", Arial; color:#000; margin:6px 0 0 40px; padding-top:5px}
+
+#progrss_hldr{width:47%; float:left;}
+.progrssbr{width:100%; border-radius:25px; -webkit-border-radius:25px; background:#e5e5e5; height:47px; -webkit-box-shadow:0 7px 8px -1px #9b9b9b inset; box-shadow:0 7px 8px -1px #9b9b9b inset; border-bottom:1px solid #404040; -moz-box-shadow:0 7px 8px -1px #9b9b9b inset;}
+
+.prg_grn{
+
+width:0;
+-webkit-border-radius: 25px 25px 25px 25px; border-radius: 25px 25px 25px 25px; float:left; height:47px;
+-webkit-box-shadow:0 7px 8px -1px #569a93 inset; box-shadow:0 7px 8px -1px #569a93 inset; -moz-box-shadow:0 7px 8px -1px #569a93 inset;
+background: rgb(111,222,212); /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzZmZGVkNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzM2QxYzIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top, rgba(111,222,212,1) 0%, rgba(51,209,194,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(111,222,212,1)), color-stop(100%,rgba(51,209,194,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(111,222,212,1) 0%,rgba(51,209,194,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(111,222,212,1) 0%,rgba(51,209,194,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(111,222,212,1) 0%,rgba(51,209,194,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(111,222,212,1) 0%,rgba(51,209,194,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6fded4', endColorstr='#33d1c2',GradientType=0 ); /* IE6-8 */
+position:relative;
+}
+
+.prg_grn2{
+background: rgb(132,233,223); /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzg0ZTlkZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMmQzYzQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top, rgba(132,233,223,1) 0%, rgba(50,211,196,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(132,233,223,1)), color-stop(100%,rgba(50,211,196,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(132,233,223,1) 0%,rgba(50,211,196,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(132,233,223,1) 0%,rgba(50,211,196,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(132,233,223,1) 0%,rgba(50,211,196,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(132,233,223,1) 0%,rgba(50,211,196,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#84e9df', endColorstr='#32d3c4',GradientType=0 ); /* IE6-8 */; width:94%;
+-webkit-border-radius: 25px 0px 0px 25px; border-radius: 25px 0px 0px 25px; float:left; height:47px;
+-webkit-box-shadow: inset 0px 10px 12px 5px rgba(155, 155, 155, .3); box-shadow: inset 0px 10px 12px 5px rgba(155, 155, 155, .3);
+position:relative;
+}
+
+.prg_grn3{
+background: rgb(132,233,223); /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzg0ZTlkZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMmQzYzQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top, rgba(132,233,223,1) 0%, rgba(50,211,196,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(132,233,223,1)), color-stop(100%,rgba(50,211,196,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(132,233,223,1) 0%,rgba(50,211,196,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(132,233,223,1) 0%,rgba(50,211,196,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(132,233,223,1) 0%,rgba(50,211,196,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(132,233,223,1) 0%,rgba(50,211,196,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#84e9df', endColorstr='#32d3c4',GradientType=0 ); /* IE6-8 */; width:76%;
+-webkit-border-radius: 25px 0px 0px 25px; border-radius: 25px 0px 0px 25px; float:left; height:47px;
+-webkit-box-shadow: inset 0px 10px 12px 5px rgba(155, 155, 155, .3); box-shadow: inset 0px 10px 12px 5px rgba(155, 155, 155, .3);
+position:relative;
+}
+
+.prg_grn4{
+background: rgb(132,233,223); /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzg0ZTlkZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMmQzYzQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top, rgba(132,233,223,1) 0%, rgba(50,211,196,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(132,233,223,1)), color-stop(100%,rgba(50,211,196,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(132,233,223,1) 0%,rgba(50,211,196,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(132,233,223,1) 0%,rgba(50,211,196,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(132,233,223,1) 0%,rgba(50,211,196,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(132,233,223,1) 0%,rgba(50,211,196,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#84e9df', endColorstr='#32d3c4',GradientType=0 ); /* IE6-8 */; width:67%;
+-webkit-border-radius: 25px 0px 0px 25px; border-radius: 25px 0px 0px 25px; float:left; height:47px;
+-webkit-box-shadow: inset 0px 10px 12px 5px rgba(155, 155, 155, .3); box-shadow: inset 0px 10px 12px 5px rgba(155, 155, 155, .3);
+position:relative;
+}
+
+.prg_grn5{
+background: rgb(132,233,223); /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzg0ZTlkZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMmQzYzQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top, rgba(132,233,223,1) 0%, rgba(50,211,196,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(132,233,223,1)), color-stop(100%,rgba(50,211,196,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(132,233,223,1) 0%,rgba(50,211,196,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(132,233,223,1) 0%,rgba(50,211,196,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(132,233,223,1) 0%,rgba(50,211,196,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(132,233,223,1) 0%,rgba(50,211,196,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#84e9df', endColorstr='#32d3c4',GradientType=0 ); /* IE6-8 */; width:65%;
+-webkit-border-radius: 25px 0px 0px 25px; border-radius: 25px 0px 0px 25px; float:left; height:47px;
+-webkit-box-shadow: inset 0px 10px 12px 5px rgba(155, 155, 155, .3); box-shadow: inset 0px 10px 12px 5px rgba(155, 155, 155, .3);
+position:relative;
+}
+
+.prg-3d{position:absolute; width:7px; height:47px; right:0; top:0; background:url("../images/plyrs_3dbar.png")no-repeat; display: none;}
+.prg-3d2{position:absolute; width:128px; height:25px; left:5px; top:5px; background:url("../images/plyrs_3d2.png") no-repeat;}
+
+.scores{/*width:8%; text-align:center; */color:#27cebe;/* float:left; */}
+.scores p{margin-top:/*6px*/13px; /*margin-left:42px;*/ font-size:18px; padding-top:5px}
+
+.totlpts{width:14%; text-align:center; color:#000; float:left }
+.totlpts p{margin-top:/*6px*/13px; /*margin-left:45px;*/ font-size:20px; padding-top:5px}
+.badges{width:74px; height:74px;/*59px; height:59px;*/ display:inline-block; text-align: center; margin-top:-2px;cursor: deafult;}
+.gold{background:url("../images/plyrs_gold_bdge.png") no-repeat}
+.bronze{background:url("../images/plyrs_brnz_bdge.png") no-repeat}
+#badge_hldr{width:59px; float:right; padding-right:10px;}
+.scorehdg{display:none}
+
+/*-------------------------- Players Progress Bar Ends ----------------------------------- */
+
+/*------------------------------------------------ Players Badge Starts --------------------------------------------------- */
+
+.badgeholder{padding:0; margin:0; width:100%; postion:relative; padding-top:36px}
+.bdgebx_hldr{margin:auto; width:/*86%*/90%; background:#fff; /*float:left;*/ overflow:hidden;}
+.bdgebx_hldr ul{margin:0; padding:0; width:3000px; position: relative;left:0;
+ transition-property: left; transition-duration: 1s; transition-timing-function: easeInBack;
+ -webkit-transition-property: left; -webkit-transition-duration: 1s; -webkit-transition-timing-function: easeInBack;
+ -moz-transition-property: left; -moz-transition-duration: 1s; -moz-transition-timing-function: easeInBack;
+ -o-transition-property: left; -o-transition-duration: 1s; -o-transition-timing-function: easeInBack;}
+.bdgebx_hldr ul li{float:left; display:inline-block; list-style:none; width:90px; padding-right:/*59px*/12px; position:relative}
+/*.bdgebx_hldr ul li:last-child{padding-right:0}*/
+.bdgebx_hldr ul li a {width:90px}
+.bdgebx_hldr ul li a span{display:block}
+.bdgebx_hldr ul li a span.bdge_icon{height:90px; display:block}
+.bdgebx_hldr ul li a span.bdge_txt{font-size:18px; color:#000; text-align:center}
+.bdgebx_hldr ul li a span.shdw{background:url(../images/plyrs_bdge_shdw.png) no-repeat; display:block; width:90px; height:16px;}
+
+/* ----------------- for locked badges ---------------------------------------------*/
+.bdgebx_hldr ul li span{display:block}
+.bdgebx_hldr ul li span.bdge_icon{height:90px; display:block}
+.bdgebx_hldr ul li span.bdge_txt{font-size:18px; color:#000; text-align:center}
+.bdgebx_hldr ul li span.shdw{background:url(../images/plyrs_bdge_shdw.png) no-repeat; display:block; width:90px; height:16px;}
+.bdgebx_hldr ul li span.lock{background:url(../images/plyrs_lock.png) no-repeat; width:17px; height:18px; position:absolute; bottom:39px; right:26px}
+
+/* ----------------- for locked badges ends ---------------------------------------------*/
+
+.bdge_bx{margin:auto; width:100%; height:130px}
+.bdgecorebx{float:left; width:95.7%}
+.bdge_arw_lft{float:left; width:/*35px*/2.1%; padding:/*41px 12px 0 10px;*/31px 0 0 0;}
+.bdge_arw_lft a{display:block; height:29px; background:url("../images/plyrs_bdge_arwlft.png") no-repeat; outline: 0;}
+.bdge_arw_rgt{float:right; width:/*35px*/2.1%; padding:/*41px 12px 0 0*/31px 0 0 0}
+.bdge_arw_rgt a{display:block; height:29px; background:url("../images/plyrs_bdge_arwrgt.png") no-repeat; outline: 0;}
+
+
+.bag_tble{margin:42px auto 0 auto; width:/*91.1%*/100%; height:450px; position:relative}
+.bag_tble h1{font-size:18px; font-family:Helvetica, "Arial Narrow", Arial; /*padding-left:5%*/}
+.drag-msg{float: left; left: 204px; position: relative; top: 516px; z-index: 100;}
+.drgtxt_bx{width:100%; /*height:37px; margin:28% auto 0 auto;*/ background:rgb(255,255,255); background:rgba(255,255,255,.5); text-align:center; font-size:14.5px; font-family:Helvetica, "Arial Narrow", Arial; line-height:22px; position:absolute; bottom:19%; padding:5px 0}
+
+
+.bag_drg_bx{margin: auto; width: /*76%*/100%;}
+.bag_drg_lftbx{float:left; width:/*19px*/2.1%; margin-top:/*145px*/180px}
+.bag_drg_lftbx a{background:url("../images/plyrs_bdge_arwlft.png") no-repeat; display:block; height:29px;}
+.dsblRht { background:url("../images/plyrs_bdge_arwrgt_disable.png") no-repeat !important; }
+.bag_drg_rgtbx{float:right; width:/*19px*/2.1%; margin-top:/*145px*/180px}
+.bag_drg_rgtbx a{background:url("../images/plyrs_bdge_arwrgt.png") no-repeat; display:block; height:29px;}
+.enblLft { background:url("../images/plyrs_bdge_arwlft_enable.png") no-repeat !important; }
+
+.bag_drg_icons_holder {/*float: left; margin-left: 14%; */ height: 451px; overflow: hidden;width: 490px; position:relative; margin:auto}
+/*.bag_drg_icons{float:left; width:436px; height:307px; padding:8% 0 0 27%;}*/
+.bag_drg_icons {height: 330px; padding: 0; width: 436px; 
+                transition-property: left; transition-duration: 1s; 
+                transition-timing-function: easeInBack;
+                -webkit-transition-property: left; -webkit-transition-duration: 1s; 
+                -webkit-transition-timing-function: easeInBack;
+                -moz-transition-property: left; -moz-transition-duration: 1s; 
+                -moz-transition-timing-function: easeInBack;
+                -o-transition-property: left; -o-transition-duration: 1s; 
+                -o-transition-timing-function: easeInBack;}
+.bag_drg_icons ul {background: url("../images/plyrs_bg.png") no-repeat scroll center 32px transparent; 
+    float: left;
+    height: 390px;
+    left: 0;
+    margin: 0;
+    padding: 144px 0 0;
+    position: relative;
+    width: 490px;}
+.bag_drg_icons ul li{display: inline;
+    float: left;
+    height: 84px;
+    list-style: none outside none;
+    padding: 0 0 14px 23px;
+    width: 90px;}
+.bag_drg_icons ul li a{float: left;
+    height: 90px;
+    text-decoration: none;
+    width: 90px;}
+.bag_drg_icons ul li span.bdge_txt {display: none;}
+
+/*------------------------------------------------ Players Badge Ends --------------------------------------------------- */
+ @media handheld, only screen and (max-width: 1920px) and (max-height: 1040px) {
+  .pointsWrap {float: right;width: 363px;}
+  .plyr_dta_hdg {clear: both;float: right;margin-right: 0;}
+ }
+  @media handheld, only screen and (max-width: 1680px) and (max-height: 1050px) {
+  .pointsWrap {float: right;margin-right: 0;}
+  .plyr_dta_hdg {clear: both;float: right;margin-right: 0;}
+ }
+ @media handheld, only screen and (max-width: 1600px) and (max-height: 900px) {
+  .pointsWrap {float: right;margin-right: 0;width: 363px;}
+  .plyr_dta_hdg {float: right;margin-right: 0;width: 358px;}
+ }
+ @media handheld, only screen and (max-width: 1366px) and (max-height: 768px) {
+  .pointsWrap {float: right;margin-right: 0;width: 388px;}
+  .plyr_dta_hdg {clear: both;float: right;margin-right: 0;}
+  }
+  @media handheld, only screen and (max-width: 1280px) and (max-height: 1024px) {
+  .pointsWrap {float: right;margin-right: 0;width: 392px;}
+  .plyr_dta_hdg {clear: both;float: right;margin-right: 0}
+ }
+ @media handheld, only screen and (max-width: 1280px) and (max-height: 800px) {
+  .pointsWrap {float: right;margin-right: 0;width: 392px;}
+  .plyr_dta_hdg {clear: both;float: right;margin-right: 0;}
+  body #progrss_hldr { width:40%;}
+  #playersdiv .plyr_dta_hdg, .plyrstble .pointsWrap {margin-right:-2% !important;}
+ }
+ 
+ @media handheld, only screen and (max-width: 1024px) {
+ .plyr_dta_hdg{float: right;margin-right:0;}  
+ .plyr_dta_hdg li{padding:30px 0 30px 17px}
+ .plyr_span{margin:15px 0 30px 10px; width:637px;}
+ .totlpts{width:14%}
+ .pointsWrap {float: right;margin-right: 0px;width: 387px}
+ .plyr_dta_hdg li{padding:30px 0 30px 50px}
+ 
+ #badge_hldr{padding-right:15px;}
+ .bdgebx_hldr ul li{padding-right:0.4%}
+ .bdgebx_hldr ul li span.lock {right: 16px}
+ /*.drgtxt_bx{height:auto; margin:33.1% auto 0 auto}*/ 
+ .bdgebx_hldr{width:/*89%*/ 93%}
+
+/*.bdge_arw_lft {padding: 41px 2px 0 10px}*/
+ }
+ 
+ @media handheld, only screen and (max-width: 800px) {
+.pointsWrap{width: 300px; float:right}
+.plyr_dta_hdg span{width: 100px}
+.scores {width: 11%}                                
+#progrss_hldr {width: 47%}                            
+.plyr_dta_hdg li{padding:30px 0 30px 25px}
+.plyr_dta_hdg {/*width: 39%*/}
+
+/* ---------------  modified --------------------*/
+                   
+.bdgebx_hldr ul li {padding-right: /*2.5%*/0.5%}
+ .bag_drg_bx {width: 100%} 
+ /*.bag_drg_icons_holder {margin-left: 12%}
+ .drgtxt_bx{height:auto; width:73.6%; margin:46% auto 0 auto}*/
+ .bag_drg_icons {padding:0}   
+ .bdgebx_hldr{width:94%}
+ .bdge_arw_lft , .bdge_arw_rgt, .bag_drg_lftbx, .bag_drg_rgtbx{width: 2.4%} 
+ .bdgecorebx {width: 95.2%}
+ 
+ /* ---------------  modified --------------------*/
+ 
+ }
+ 
+ @media handheld, only screen and (max-width: 768px) {
+ .pointsWrap{width: 100%; float:left}
+ .totlpts{width:12%}
+ .plyr_dta_hdg li{padding:30px 0 30px 5px; font-size:16px; font-weight:bold}
+ .scorehdg{display:block; font-size:18px; color:#000; padding:0px 2px; min-height: 40px}
+ #badge_hldr{float:right; padding-right:0; width:67px} 
+ .badges{/*padding-top:10px*/}
+ .plyr_dta_hdg{display:none}
+ .plyrstble li {padding-bottom:0}
+ .usrdetails{width:100%; display:block}
+ #progrss_hldr{width:100%; display:block}
+ .scores{width:30%; /*text-align:left;*/ color:#27cebe; float:left; }
+ .totlpts{width:40%; text-align:center; color:#000; float:left }
+ .scores p{margin-left:4px}
+ .totlpts p{margin-left:0px}
+
+ .usrdetails p{margin:6px 0 0 50px;}
+ 
+ .bdgebx_hldr ul { float:left;}
+ .bdgebx_hldr ul li {padding-right: /*2.5%*/0.5%;}
+ 
+.bdgebx_hldr ul li span.lock {right: 25px}
+ .bag_drg_bx {width: 100%} 
+ /*.bag_drg_icons_holder {margin-left: 12%}*/
+ .drgtxt_bx{/*height:auto; width:73.6%; margin:46% auto 0 auto*/ left:3px; bottom:19%}
+ .bag_drg_icons {padding:0}  
+ .bdgebx_hldr{width:/*85%*/89%}
+ .bdge_arw_lft , .bdge_arw_rgt, .bag_drg_lftbx, .bag_drg_rgtbx{width: 2.7%} 
+ .bdgecorebx {width: 94.6%}
+ }
+ 
+ @media handheld, only screen and (max-width: 720px){ 
+    .drgtxt_bx {height: auto; bottom:19%; left:0}
+	.bdgebx_hldr{width:95%}
+}
+
+.bdgebx_hldr-mob-landscape{width:83% !important;}
+ 
+ @media handheld, only screen and (max-width: 640px){
+
+.bag_drg_icons ul {background: url("../images/plyrs_bg_mob.png") no-repeat scroll center 42px transparent; height: 236px; margin: 0; /*padding-top:11%; width: 281px*/ padding: 102px 0 23px 16px; width: 249px;} 
+.bag_drg_icons_holder {height:280px; /*margin-left: 21%;*/ overflow: hidden; width: 265px}
+.bag_drg_icons ul li {height: 59px; padding: 0; width:58px /*63px*/}
+.bag_drg_icons ul li a img {padding-left: 5%; width: 60%}
+.bdgebx_hldr {width: 87%}
+.plyr_span{width:599px;}
+.drgtxt_bx {height: auto; bottom:18%; left:0; line-height:20px}
+.bag_drg_rgtbx, .bag_drg_lftbx{margin-top:125px}
+}
+ 
+ @media handheld, only screen and (max-width: 600px){ 
+ .pointsWrap{width: 100%; float:left}
+ .bag_tble{margin:42px auto 0 auto; width:/*91.1%*/100%; height:241px;}
+ 
+ .bag_drg_icons ul {background: url("../images/plyrs_bg_mob.png") no-repeat scroll center 42px transparent; height:236px; margin: 0; padding:103px 23px 0 13px; /*width:264px*/ width:140px}  
+ 
+.bag_drg_icons_holder {/*float: left; margin-left: 21%; */ height:280px; overflow: hidden; width: 260px}
+.bag_drg_icons ul li {height: 59px; padding: 0; width: /*63px*/58px}
+.bag_drg_icons ul li a img {padding-left: 5%; width: 60%}
+.bdgebx_hldr {width: /*87%*/93%}
+.drgtxt_bx {height: auto; bottom:18%; left:0; line-height:20px}
+.bdgecorebx {width: 93.8%}
+.bdge_arw_lft , .bdge_arw_rgt, .bag_drg_lftbx, .bag_drg_rgtbx{width: 3.1%} 
+ }
+ 
+ @media handheld, only screen and (max-width: 568px){
+	.pointsWrap{width: 100%; float:left}
+	.bdgebx_hldr {width:78% /*83%*/}
+	.plyr_span{width:557px;}
+	.bdge_arw_lft , .bdge_arw_rgt, .bag_drg_lftbx, .bag_drg_rgtbx{width: 3%} 
+ .bdgecorebx {width: 94%}
+ .bag_drg_icons ul {width: 233px}
+ 
+ }
+
+ 
+ @media handheld, only screen and (max-width: 550px){
+	
+ .bdgebx_hldr {width: 81%;}
+ .bag_drg_icons ul {/*width: 265px; padding-left:0*/  padding: 102px 23px 0 13px; width: 232px}
+ .plyr_span{width:538px;}
+ .bdgecorebx {width: 93%}
+ .bdge_arw_lft , .bdge_arw_rgt, .bag_drg_lftbx, .bag_drg_rgtbx{width: 3.5%} 
+ 
+ }
+ 
+ @media handheld, only screen and (max-width: 480px){
+ .pointsWrap{width: 100%; float:left}
+ .plyr_span{margin:0; width:auto;}
+ .plyr_selectbx select{width:200px}
+ .plyr_selectbx{padding-left:20px}
+ 
+ .drgtxt_bx {height: auto; bottom:19%}
+ .bdgebx_hldr {width: 94%}
+ .bdgebx_hldr ul li {padding-right: 0.8%}
+ .bag_drg_icons_holder {/*margin-left: 16%;*/  width: 262px}
+ .bdge_arw_lft , .bdge_arw_rgt, .bag_drg_lftbx, .bag_drg_rgtbx{width: 4%} 
+ .bdgecorebx {width: 92%}
+ 
+ }
+ 
+
+  @media handheld, only screen and (max-width: 385px){
+ .bdgebx_hldr {width: /*75%*/69%}
+ .bdgebx_hldr ul li {padding-right: 0.8%}
+ /*.bag_drg_icons_holder {margin-left: 7%}*/
+ .bdge_arw_lft , .bdge_arw_rgt, .bag_drg_lftbx, .bag_drg_rgtbx{width: 5%} 
+ .bdgecorebx {width: 90%}
+ .bdgebx_hldr {width: 89%}
+ }
+
+
+  @media handheld, only screen and (max-width: 360px){
+ /*.bag_drg_icons_holder {margin-left: 4%}*/
+ .bdgebx_hldr {width: 93%}
+ }
+ 
+  @media handheld, only screen and (max-width: 320px){
+  .pointsWrap{width: 100%; float:left}
+ .plyr_selectbx select{width:180px}
+ .bag_drg_icons {padding:0}  
+ .bag_drg_rgtbx {/*margin-right:-9px;*/ margin-top:126px;}
+ .bdgebx_hldr {width: /*65%*/73%}
+ .bag_drg_icons ul {/*height: 230px; margin: 0; padding:94px 0; width: 263px*/  height: 230px; margin: 0; padding: 102px 22px; width: 222px; }
+ .bag_drg_icons ul li {width: /*62px;*/55px; padding:0; height:59px}
+ .bag_drg_icons_holder {height: 280px; /*margin-left: 0;*/ overflow: hidden; width: 260px}
+ .bag_drg_lftbx {float: left; /*margin-left: -17px;*/ margin-top: 126px} 
+ .bdgecorebx {width: 88%}
+ .bdge_arw_lft , .bdge_arw_rgt, .bag_drg_lftbx, .bag_drg_rgtbx{width: 6%} 
+}
+
+.bdge_bx .bdge_arw_rgt, .bdge_bx .bdge_arw_lft { position:relative; z-index:1; background:#fff; height:200px;}
+
+
+#playersdiv .plyr_dta_hdg , .plyrstble .pointsWrap { margin-right:5%;}
+
+#player-course-drpdwn {font-family: Helvetica, "Arial Narrow", Arial;}

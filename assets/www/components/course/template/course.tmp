@@ -1,0 +1,7 @@
+<div class="row pro_container">
+    <!---------------------------------------Breadcrum menu Starts---------------------------------------->        
+    {{checkForBreadcrum}}
+    <!---------------------------------------Breadcrum menu Ends----------------------------------------> 
+    {{checkForCourseDom}}
+    <input type="hidden" id="course-page">
+    <div class="row lifter2"></div>	

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="app_name">Clinique</string>
+	<string name="no_media_warning">Storage Media not present</string>
+	<string name="no_media_hint">Sharing the storage media with a PC can make it inaccessible</string>
+	<string name="open_failed">Unable to open document</string>
+	<string name="search_backwards">Search backwards</string>
+	<string name="search_forwards">Search forwards</string>
+	<string name="search_document">Search document</string>
+	<string name="picker_title">Pdf Writer &amp; Reader</string>
+	<string name="outline_title">Table of Contents</string>
+	<string name="enter_password">Enter Password</string>
+	<string name="link_control">Link highlighting and enabling</string>
+	<string name="gen_pdf">Generate pdf</string>
+	<string name="view_pdf">View pdf</string>
+	<string name="title_activity_main">MainActivity</string>
+	<string name="progress_title">Generateing pdf...</string>
+	<string name="base_url">http://clinique-dev.photoninfotech.com/trunk/admin/clinique_webservice/services.php</string>
+	<string name="downloading_complete">Downlaoding Dokončeno</string>
+	<string name="loading">Loading</string>
+	<string name="done">Hotovo</string>
+	<string name="save">Save</string>
+	<string name="ok">Uložit</string>
+	<string name="cancel">Zrušit</string>
+	<string name="search">Hledat</string>
+	<string name="notes_help_txt">*Všechny poznámky se uloží pod oblíbených</string>
+	<string name="enter_pg_no">Enter Page Number</string>
+	<string name="chk_internet_conec">Zadejte číslo stránky</string>
+	<string name="text_not_found">Vyhledávací klíč nebyl nalezen.</string>
+	<string name="no_further_occurences_found">Nebyly nalezeny žádné další výskytů</string>
+	<string name="searching_">Vyhledávání...</string>
+	<string name="valid_page_no">Zadejte prosím platné číslo stránky</string>
+	<string name="no_bookmark_avail">Žádné záložky k dispozici</string>
+	<string name="pg_no">Stránka ne</string>
+	<string name="alert_pg_no">Zadejte stránka číslo</string>
+	<string name="no_sdcard">Ne Paměťová karta Nalezené stáhnout soubor</string>
+	<string name="pdfMSG">Doporučujeme nainstalovat \"Office Suite\" nebo \"Adobe reader\" pro otevření souboru.</string>
+	<string name="csvMSG">Doporučujeme nainstalovat  \"Office Suite\" nebo \"WPS Office\" pro otevření souboru.</string>
+
+</resources>

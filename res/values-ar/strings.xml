@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="app_name">Clinique</string>
+	<string name="no_media_warning">Storage Media not present</string>
+	<string name="no_media_hint">Sharing the storage media with a PC can make it inaccessible</string>
+	<string name="open_failed">Unable to open document</string>
+	<string name="search_backwards">Search backwards</string>
+	<string name="search_forwards">Search forwards</string>
+	<string name="search_document">Search document</string>
+	<string name="picker_title">Pdf Writer &amp; Reader</string>
+	<string name="outline_title">Table of Contents</string>
+	<string name="enter_password">Enter Password</string>
+	<string name="link_control">Link highlighting and enabling</string>
+	<string name="gen_pdf">Generate pdf</string>
+	<string name="view_pdf">View pdf</string>
+	<string name="title_activity_main">MainActivity</string>
+	<string name="progress_title">Generateing pdf...</string>
+	<string name="base_url">http://clinique-dev.photoninfotech.com/trunk/admin/clinique_webservice/services.php</string>
+	<string name="downloading_complete">Downlaoding Completed</string>
+	<string name="loading">تحميل</string>
+	<string name="done">القيام به</string>
+	<string name="save">حفظ</string>
+	<string name="ok">طيب</string>
+	<string name="search">البحث</string>
+	<string name="cancel">إلغاء</string>
+	<string name="notes_help_txt">*سيتم حفظ كل الملاحظات تحت المفضلة</string>
+	<string name="enter_pg_no">أدخل رقم الصفحة</string>
+	<string name="chk_internet_conec">الرجاء التحقق من اتصال الإنترنت الخاص بك.</string>
+	<string name="text_not_found">لم يتم العثور على مفتاح البحث.</string>
+	<string name="no_further_occurences_found">أي امور أخرى وجدت</string>
+	<string name="searching_">البحث...</string>
+	<string name="valid_page_no">من فضلك ادخل رقم الصفحة صالحة</string>
+	<string name="no_bookmark_avail">لا الإشارات المرجعية المتوفرة</string>
+	<string name="pg_no">الصفحة لا</string>
+	<string name="alert_pg_no">دخول الصفحة لا</string>
+	<string name="no_sdcard">لا بطاقة الذاكرة التي تم العثور عليها لتحميل الملف</string>
+	<string name="pdfMSG">نوصي لتثبيت \"Office Suite\" أو \"WPS Office\" لفتح الملف. </string>
+	<string name="csvMSG">نوصي لتثبيت \"Office Suite\" أو \"Adobe reader\" لفتح الملف.</string>
+
+</resources>

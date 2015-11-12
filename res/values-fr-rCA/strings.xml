@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="app_name">Clinique</string>
+	<string name="no_media_warning">Storage Media not present</string>
+	<string name="no_media_hint">Sharing the storage media with a PC can make it inaccessible</string>
+	<string name="open_failed">Unable to open document</string>
+	<string name="search_backwards">Search backwards</string>
+	<string name="search_forwards">Search forwards</string>
+	<string name="search_document">Search document</string>
+	<string name="picker_title">Pdf Writer &amp; Reader</string>
+	<string name="outline_title">Table of Contents</string>
+	<string name="enter_password">Enter Password</string>
+	<string name="link_control">Link highlighting and enabling</string>
+	<string name="gen_pdf">Generate pdf</string>
+	<string name="view_pdf">View pdf</string>
+	<string name="title_activity_main">MainActivity</string>
+	<string name="progress_title">Generateing pdf...</string>
+	<string name="base_url">http://clinique-dev.photoninfotech.com/trunk/admin/clinique_webservice/services.php</string>
+	<string name="downloading_complete">Downloading Completed</string>
+	<string name="loading">Chargement en cours</string>
+	<string name="done">Terminé</string>
+	<string name="save">Enregistrer</string>
+	<string name="ok">Ok</string>
+	<string name="search">Recherche</string>
+	<string name="cancel">Annuler</string>
+	<string name="notes_help_txt">*Toutes les notes seront sauvegardées sous Favoris </string>
+	<string name="enter_pg_no">Entrez le numéro de la page</string>
+	<string name="chk_internet_conec">S\'il vous plaît vérifier votre connexion Internet.</string>
+	<string name="text_not_found">Recherche clé introuvable.</string>
+	<string name="no_further_occurences_found">Pas d\'autres occurrences foundLoading</string>
+	<string name="searching_">Recherche...</string>
+	<string name="valid_page_no">S\'il vous plaît entrez le numéro de page valide</string>
+	<string name="no_bookmark_avail">Pas de signets disponibles</string>
+	<string name="pg_no">Cette page ne</string>
+	<string name="alert_pg_no">Accéder à la Page ne</string>
+	<string name="no_sdcard">Pas de carte mémoire Trouvé à télécharger le fichier</string>
+	<string name="pdfMSG">Nous recommandons d\'installer \"Office Suite\" ou \"Adobe reader\" pour l\'ouverture du fichier.</string>
+	<string name="csvMSG">Nous recommandons d\'installer \"Office Suite\" ou \"WPS Office\" pour l\'ouverture du fichier.</string>
+
+</resources>

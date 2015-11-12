@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="app_name">Clinique</string>
+	<string name="no_media_warning">Storage Media not present</string>
+	<string name="no_media_hint">Sharing the storage media with a PC can make it inaccessible</string>
+	<string name="open_failed">Unable to open document</string>
+	<string name="search_backwards">Search backwards</string>
+	<string name="search_forwards">Search forwards</string>
+	<string name="search_document">Search document</string>
+	<string name="picker_title">Pdf Writer &amp; Reader</string>
+	<string name="outline_title">Table of Contents</string>
+	<string name="enter_password">Enter Password</string>
+	<string name="link_control">Link highlighting and enabling</string>
+	<string name="gen_pdf">Generate pdf</string>
+	<string name="view_pdf">View pdf</string>
+	<string name="title_activity_main">MainActivity</string>
+	<string name="progress_title">Generateing pdf...</string>
+	<string name="base_url">http://clinique-dev.photoninfotech.com/trunk/admin/clinique_webservice/services.php</string>
+	<string name="downloading_complete">A letöltés Befejezett</string>
+	<string name="loading">Loading</string>
+	<string name="done">Kész</string>
+	<string name="save">Save</string>
+	<string name="ok">Ok</string>
+	<string name="cancel">Mégsem</string>
+	<string name="search">Keresés</string>
+	<string name="notes_help_txt">*Minden jegyzetet eltárolt kedvencek</string>
+	<string name="enter_pg_no">Adja meg az oldalszámot</string>
+	<string name="chk_internet_conec">Kérjük, ellenőrizze az internetkapcsolatot. </string>
+	<string name="text_not_found">A keresési kulcs nem található.</string>
+	<string name="no_further_occurences_found">További előfordulásai található</string>
+	<string name="searching_">Keresés...</string>
+	<string name="valid_page_no">Adjon meg egy érvényes oldalszámot</string>
+	<string name="no_bookmark_avail">No Könyvjelzők Elérhető</string>
+	<string name="pg_no">oldal nincs</string>
+	<string name="alert_pg_no">Adja meg a lap nem</string>
+	<string name="no_sdcard">No Memory Card találtam, hogy töltse le a fájlt</string>
+	<string name="pdfMSG">Javasoljuk, hogy telepítse \"Office Suite\" vagy \"Adobe reader\" fájl megnyitásakor. </string>
+	<string name="csvMSG">Javasoljuk, hogy telepítse \"Office Suite\" vagy  \"WPS Office\" a fájl megnyitásakor. </string>
+
+</resources>
