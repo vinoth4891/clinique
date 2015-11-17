@@ -1,7 +1,7 @@
 package CustomView;
 
  
-import com.photon.phresco.hybrid.R;
+import com.cliniqueoffline.phresco.hybrid.R;
 
 import android.content.Context;
 import android.util.AttributeSet;

@@ -36,8 +36,8 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.photon.phresco.hybrid.R;
-import com.photon.phresco.hybrid.activity.MainActivity;
+import com.cliniqueoffline.phresco.hybrid.R;
+import com.cliniqueoffline.phresco.hybrid.activity.MainActivity;
 
 public class Utilities {
 

@@ -1,7 +1,7 @@
 
 package com.JSONparser;
 
-import com.photon.phresco.hybrid.activity.MainActivity;
+import com.cliniqueoffline.phresco.hybrid.activity.MainActivity;
 
 public class Variable {
 	public static String	SERVICES_URL			= "http://01847-stg.photoninfotech.com/clinique/admin/v2/clinique_webservice/services.php";
