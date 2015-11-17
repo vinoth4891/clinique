@@ -30,6 +30,8 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function (tem
         postRender: function (element) {
         },
         onResume: function () {
+			var self = this;
+			self.arrowClick = 0;
             /* Resetting the sliders to Initial Stage */
             jQuery("div.bdgebx_hldr ul, div.bag_drg_icons").css('left',0);
             jQuery("div.bdge_arw_lft > a, div.bag_drg_lftbx > a").removeClass('enblLft').addClass('dsbl');
@@ -377,6 +379,7 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function (tem
                     }
                 }
                 if (allowAnimation) {
+					clickedArrow1.css("pointer-events", "none");
                     var  timeoutValOne = 0;
                     if ($.browser.msie && (parseInt($.browser.version, 10) === 7 || parseInt($.browser.version, 10) === 8 || parseInt($.browser.version, 10) === 9 || parseInt($.browser.version, 10) === 10 || parseInt($.browser.version, 10) === 11)) {
                         jQuery("div.bdgebx_hldr > ul").animate({
@@ -392,6 +395,7 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function (tem
                     
                     setTimeout(function () {
                         // Animation complete.
+						clickedArrow1.css("pointer-events", "auto");
                         var leftMove = $("div.bdgebx_hldr > ul").css('left').replace('px','');
                         var leftMovePosi = (leftMove < 0)?(leftMove*-1):leftMove;
                         if(leftMove >= 0){
@@ -433,6 +437,7 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function (tem
                 var clickedElem = $(this);
                 if(!clickedElem.hasClass('dsbl')){
                     // clickedElem.hide(); /* To avoid arrow disappears while clicking */
+					clickedElem.css("pointer-events", "none");
                     var bagHolderleftsign = '-';
                     var leftElem = $("div.bag_drg_lftbx"), rightElem = $("div.bag_drg_rgtbx");
                     if (clickedElem.hasClass('bag_drg_lftbx')) {
@@ -454,6 +459,7 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function (tem
                     setTimeout(function () {
                         // Animation complete.
                         // clickedElem.show(); /* To avoid arrow disappears while clicking */
+						clickedElem.css("pointer-events", "auto");
                         var leftMove = parseInt($("div.bag_drg_icons").css('left').replace('px', ''));
 
                         if (leftMove < 0){
