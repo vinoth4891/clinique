@@ -12,7 +12,7 @@
 @interface PDFService : NSObject
 
 //#define ServiceDomain   @"http://clinique-dev.photoninfotech.com/trunk/admin/clinique_webservice" // dev url
-#define ServiceDomain  @"http://172.16.17.42/clinique/admin/v2/clinique_webservice" // Qa url
+#define ServiceDomain  @"http://01847-stg.photoninfotech.com/clinique/admin/v2/clinique_webservice" // Qa url
 
 #define ServiceAddComment             ServiceDomain @"pdf-parser"
 #define ServiceGetPdf             ServiceDomain @"/services.php?"

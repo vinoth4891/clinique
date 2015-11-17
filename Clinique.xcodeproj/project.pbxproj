@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00D4FE7B1BD8F6CD009D2863 /* CDVMobileAccessibility.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D4FE7A1BD8F6CD009D2863 /* CDVMobileAccessibility.m */; settings = {ASSET_TAGS = (); }; };
+		005F7AF01BF60E8000475F9B /* ELCUIApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 005F7AEF1BF60E8000475F9B /* ELCUIApplication.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		00D4FE7D1BD8FA16009D2863 /* MediaAccessibility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00D4FE7C1BD8FA15009D2863 /* MediaAccessibility.framework */; };
 		1B0B18A61AB3F309007FAB96 /* Countries.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0B18A51AB3F309007FAB96 /* Countries.m */; };
 		1B0B18A91AB3F354007FAB96 /* Retailers.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0B18A81AB3F354007FAB96 /* Retailers.m */; };
@@ -362,8 +362,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00D4FE791BD8F6CD009D2863 /* CDVMobileAccessibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDVMobileAccessibility.h; sourceTree = "<group>"; };
-		00D4FE7A1BD8F6CD009D2863 /* CDVMobileAccessibility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDVMobileAccessibility.m; sourceTree = "<group>"; };
+		005F7AEE1BF60E8000475F9B /* ELCUIApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCUIApplication.h; sourceTree = "<group>"; };
+		005F7AEF1BF60E8000475F9B /* ELCUIApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCUIApplication.m; sourceTree = "<group>"; };
 		00D4FE7C1BD8FA15009D2863 /* MediaAccessibility.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaAccessibility.framework; path = System/Library/Frameworks/MediaAccessibility.framework; sourceTree = SDKROOT; };
 		1B0B18A41AB3F309007FAB96 /* Countries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Countries.h; sourceTree = "<group>"; };
 		1B0B18A51AB3F309007FAB96 /* Countries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Countries.m; sourceTree = "<group>"; };
@@ -785,9 +785,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		005F7AED1BF60E7400475F9B /* IdleTimer */ = {
+			isa = PBXGroup;
+			children = (
+				005F7AEE1BF60E8000475F9B /* ELCUIApplication.h */,
+				005F7AEF1BF60E8000475F9B /* ELCUIApplication.m */,
+			);
+			name = IdleTimer;
+			sourceTree = "<group>";
+		};
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				005F7AED1BF60E7400475F9B /* IdleTimer */,
 				1B775FDA1B1EEA0D00523BF3 /* ASAMService.h */,
 				1B775FDB1B1EEA0D00523BF3 /* ASAMService.m */,
 				2DDF61DE1AE4A5EA00C82DC3 /* CLQAlertView.h */,
@@ -1022,8 +1032,6 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
-				00D4FE791BD8F6CD009D2863 /* CDVMobileAccessibility.h */,
-				00D4FE7A1BD8F6CD009D2863 /* CDVMobileAccessibility.m */,
 				5109E731197E40CB00058DD6 /* PDFViewerPlugin.h */,
 				5109E732197E40CB00058DD6 /* PDFViewerPlugin.m */,
 				ECB8691A1A930F51007E25A6 /* LoginPlugin.h */,
@@ -1590,6 +1598,7 @@
 				51DD330B19825BD20065C915 /* Scanner.m in Sources */,
 				5109E6F5197E393000058DD6 /* CGPDFDocument.m in Sources */,
 				51DD330919825BD20065C915 /* RenderingState.m in Sources */,
+				005F7AF01BF60E8000475F9B /* ELCUIApplication.m in Sources */,
 				ECB8691C1A930F51007E25A6 /* LoginPlugin.m in Sources */,
 				5109E72B197E393000058DD6 /* PDFService.m in Sources */,
 				1B19CAF41AB7D0E600851CB3 /* Badges.m in Sources */,
@@ -1626,7 +1635,6 @@
 				51DD330219825BD20065C915 /* CompositeFont.m in Sources */,
 				5109E71F197E393000058DD6 /* ReaderThumbFetch.m in Sources */,
 				1B359BFC1AAE8E070039DC7C /* FMResultSet.m in Sources */,
-				00D4FE7B1BD8F6CD009D2863 /* CDVMobileAccessibility.m in Sources */,
 				1B359BFB1AAE8E070039DC7C /* FMDatabaseQueue.m in Sources */,
 				5109E723197E393000058DD6 /* ReaderThumbsView.m in Sources */,
 				51DD330A19825BD20065C915 /* RenderingStateStack.m in Sources */,

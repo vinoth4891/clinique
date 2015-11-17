@@ -33,6 +33,7 @@
 #import "CLQDataBaseManager.h"
 #import "CLQServiceManager.h"
 #import "ReachabilityManager.h"
+#import "ELCUIApplication.h"
 #import "Asset.h"
 #import "Module.h"
 #import "Course.h"
@@ -108,6 +109,10 @@ self.viewController.useSplashScreen = YES;
     return YES;
 }
 
+- (void) applicationDidTimeout:(NSNotification *) notif {
+    [self showTimeOutAlert];
+}
+
 -(void)unlockDevice:(NSTimer *)timer{
     [[ASAMService sharedInstance] unlockDeviceWithCompletiopn:^(BOOL isCompleted){
         
@@ -177,6 +182,10 @@ self.viewController.useSplashScreen = YES;
    
 }
 
+-(void)applicationWillResignActive:(UIApplication *)application{
+     [[NSNotificationCenter defaultCenter]removeObserver:self name:kApplicationDidTimeoutNotification object:nil];
+}
+
 -(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
      NSLog(@"Source application:%@  url :%@  Annotation :%@",sourceApplication,url.scheme,annotation);
     [self enableSingleModeApp];
@@ -193,10 +202,13 @@ self.viewController.useSplashScreen = YES;
             self.isAppQuitFromBlueOcean = NO;
             if(![CLQDataBaseManager dataBaseManager].isSyncInprogress){
                 [CLQDataBaseManager dataBaseManager].isIdle =  YES;
-                if(![self.idleTimer isValid]){
-                    self.idleTimer = [NSTimer scheduledTimerWithTimeInterval:kBlueOceanTimeOut target:self
-                                                                    selector:@selector(showTimeOutAlert:) userInfo:nil repeats:YES];
-                }
+//                if(![self.idleTimer isValid]){
+//                    self.idleTimer = [NSTimer scheduledTimerWithTimeInterval:kBlueOceanTimeOut target:self
+//                                                                    selector:@selector(showTimeOutAlert:) userInfo:nil repeats:YES];
+//                }
+                [[NSNotificationCenter defaultCenter]removeObserver:self name:kApplicationDidTimeoutNotification object:nil];
+                [[ELCUIApplication application]resetIdleTimer];
+                [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidTimeout:) name:kApplicationDidTimeoutNotification object:nil];
             }
             [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
             
@@ -254,36 +266,30 @@ self.viewController.useSplashScreen = YES;
             [self.alertTimer invalidate];
         
         if(isIdleTimerStopped){
-            if([self.idleTimer isValid])
-                [self.idleTimer invalidate];
+            [[NSNotificationCenter defaultCenter]removeObserver:self name:kApplicationDidTimeoutNotification object:nil];
             if(self.alert != nil){
                 [self.alert removeFromSuperview];
                 self.alert = nil;
             }
         }
         else{
-            if(![self.idleTimer isValid]){
                 if(self.alert != nil){
                     [self.alert removeFromSuperview];
                     self.alert = nil;
                 }
-                   self.idleTimer = [NSTimer scheduledTimerWithTimeInterval:kBlueOceanTimeOut target:self
-                                                                selector:@selector(showTimeOutAlert:) userInfo:nil repeats:YES];
-            }
+            [[ELCUIApplication application]resetIdleTimer];
+            [[NSNotificationCenter defaultCenter]removeObserver:self name:kApplicationDidTimeoutNotification object:nil];
+            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidTimeout:) name:kApplicationDidTimeoutNotification object:nil];
         }
     }
 }
 
 
--(void)showTimeOutAlert:(NSTimer *)timer
+-(void)showTimeOutAlert
 {
     if(self.isFromBlueOcean && UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad){
-        if([self.idleTimer isValid]){
-            
+        
             if([CLQDataBaseManager dataBaseManager].isIdle){
-                [self.idleTimer invalidate];
-                if([timer isValid])
-                    [timer invalidate];
                 self.alertTimer =  [NSTimer scheduledTimerWithTimeInterval:kBlueOceanCloseTimeOut target:self
                                                                   selector:@selector(quitFromApp:) userInfo:nil repeats:NO];
                 
@@ -308,7 +314,6 @@ self.viewController.useSplashScreen = YES;
                 }
             }
           
-        }
     }
 }
 

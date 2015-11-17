@@ -14,7 +14,7 @@
 // Dev
 //Service urls http://172.16.17.42/cliniquedev Cloud http://54.225.106.255/clinique
 
-#define HosetName @"http://172.16.17.42/clinique"
+#define HosetName @"http://01847-stg.photoninfotech.com/clinique"
 #define kIsForBlueOcean 1  //set  1  for enable blue ocean, 0 for disable blue ocean
 
 
