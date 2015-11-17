@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="app_name">Clinique</string>
+	<string name="no_media_warning">Storage Media not present</string>
+	<string name="no_media_hint">Sharing the storage media with a PC can make it inaccessible</string>
+	<string name="open_failed">Unable to open document</string>
+	<string name="search_backwards">Search backwards</string>
+	<string name="search_forwards">Search forwards</string>
+	<string name="search_document">Search document</string>
+	<string name="picker_title">Pdf Writer &amp; Reader</string>
+	<string name="outline_title">Table of Contents</string>
+	<string name="enter_password">Enter Password</string>
+	<string name="link_control">Link highlighting and enabling</string>
+	<string name="gen_pdf">Generate pdf</string>
+	<string name="view_pdf">View pdf</string>
+	<string name="title_activity_main">MainActivity</string>
+	<string name="progress_title">Generateing pdf...</string>
+	<string name="base_url">http://clinique-dev.photoninfotech.com/trunk/admin/clinique_webservice/services.php</string>
+	<string name="downloading_complete">Downloading Completed</string>
+	<string name="searching_">搜索...</string>
+	<string name="loading">加载中</string>
+	<string name="done">做</string>
+	<string name="save">保存</string>
+	<string name="ok">没关系</string>
+	<string name="cancel">取消</string>
+	<string name="search">搜索</string>
+	<string name="notes_help_txt">*所有票据将收藏下保存</string>
+	<string name="enter_pg_no">输入页码</string>
+	<string name="chk_internet_conec">请检查您的互联网连接。</string>
+	<string name="text_not_found">搜索键没有找到。</string>
+	<string name="no_further_occurences_found">没有发现进一步的出现次数</string>
+	<string name="valid_page_no">请输入有效的页码</string>
+	<string name="no_bookmark_avail">没有可用的书签</string>
+	<string name="pg_no">页次</string>
+	<string name="alert_pg_no">进入页面没有</string>
+	<string name="no_sdcard">无存储卡找到要下载的文件</string>
+	<string name="pdfMSG">我们建议安装\"Office Suite\"或\"Adobe reader\"来打开文件。</string>
+	<string name="csvMSG">我们建议安装\"Office Suite\"或\"WPS Office\"来打开文件。</string>
+
+</resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="app_name">Clinique</string>
+	<string name="no_media_warning">Storage Media not present</string>
+	<string name="no_media_hint">Sharing the storage media with a PC can make it inaccessible</string>
+	<string name="open_failed">Unable to open document</string>
+	<string name="search_backwards">Search backwards</string>
+	<string name="search_forwards">Search forwards</string>
+	<string name="search_document">Search document</string>
+	<string name="picker_title">Pdf Writer &amp; Reader</string>
+	<string name="outline_title">Table of Contents</string>
+	<string name="enter_password">Enter Password</string>
+	<string name="link_control">Link highlighting and enabling</string>
+	<string name="gen_pdf">Generate pdf</string>
+	<string name="view_pdf">View pdf</string>
+	<string name="title_activity_main">MainActivity</string>
+	<string name="progress_title">Generateing pdf...</string>
+	<string name="base_url">http://clinique-dev.photoninfotech.com/trunk/admin/clinique_webservice/services.php</string>
+	<string name="downloading_complete">Tải đã hoàn thành</string>
+	<string name="loading">Đang tải</string>
+	<string name="done">Xong</string>
+	<string name="save">Lưu</string>
+	<string name="ok">Ok</string>
+	<string name="cancel">Hủy bỏ</string>
+	<string name="search">Tìm kiếm</string>
+	<string name="notes_help_txt">*Tất cả ghi chú sẽ được lưu dưới ưa thích</string>
+	<string name="enter_pg_no">Nhập Trang Số</string>
+	<string name="chk_internet_conec">Vui lòng kiểm tra kết nối internet của bạn. </string>
+	<string name="text_not_found">Khóa tìm kiếm không tìm thấy.</string>
+	<string name="no_further_occurences_found">Không có lần xuất hiện tiếp tục tìm thấy</string>
+	<string name="searching_">Tìm kiếm...</string>
+	<string name="valid_page_no">Vui lòng nhập số trang hợp lệ</string>
+	<string name="no_bookmark_avail">Không có sẵn Bookmarks</string>
+	<string name="pg_no">trang không</string>
+	<string name="alert_pg_no">Nhập trang không</string>
+	<string name="no_sdcard">Không có thẻ nhớ Found để tải về các tập tin</string>
+	<string name="pdfMSG">Chúng tôi khuyên bạn nên cài đặt \"Office Suite\" hay  \"Adobe reader\" để mở tập tin.</string>
+	<string name="csvMSG">Chúng tôi khuyên bạn nên cài đặt \"Office Suite\" hay \"WPS Office\" để mở tập tin. </string>
+
+</resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="app_name">Clinique</string>
+	<string name="no_media_warning">Storage Media not present</string>
+	<string name="no_media_hint">Sharing the storage media with a PC can make it inaccessible</string>
+	<string name="open_failed">Unable to open document</string>
+	<string name="search_backwards">Search backwards</string>
+	<string name="search_forwards">Search forwards</string>
+	<string name="search_document">Search document</string>
+	<string name="picker_title">Pdf Writer &amp; Reader</string>
+	<string name="outline_title">Table of Contents</string>
+	<string name="enter_password">Enter Password</string>
+	<string name="link_control">Link highlighting and enabling</string>
+	<string name="gen_pdf">Generate pdf</string>
+	<string name="view_pdf">View pdf</string>
+	<string name="title_activity_main">MainActivity</string>
+	<string name="progress_title">Generateing pdf...</string>
+	<string name="base_url">http://clinique-dev.photoninfotech.com/trunk/admin/clinique_webservice/services.php</string>
+	<string name="downloading_complete">Tamamlanan indirmek,</string>
+	<string name="loading">Yükleme</string>
+	<string name="done">Bitti</string>
+	<string name="save">Kaydet</string>
+	<string name="ok">Tamam</string>
+	<string name="cancel">İptal</string>
+	<string name="search">Arama</string>
+	<string name="notes_help_txt">*Tüm notlar Sık altına kaydedilir</string>
+	<string name="enter_pg_no">Sayfa Numarasını Girin</string>
+	<string name="chk_internet_conec">Lütfen internet bağlantınızı kontrol edin. </string>
+	<string name="text_not_found">Arama anahtar bulunamadı.</string>
+	<string name="no_further_occurences_found">Daha başka oluşumları bulunamadı</string>
+	<string name="searching_">Arama...</string>
+	<string name="valid_page_no">Geçerli sayfa numarasını giriniz</string>
+	<string name="no_bookmark_avail">Mevcut Hayır Bookmarks</string>
+	<string name="pg_no">sayfa yok</string>
+	<string name="alert_pg_no">Sayfa No girin</string>
+	<string name="no_sdcard">Hayır Bellek Kartı dosyasını indirmek için Bulunan</string>
+	<string name="pdfMSG">Biz dosyayı açmak için  \"Office Suite\" veya \"Adobe reader\" yüklemek için tavsiye. </string>
+	<string name="csvMSG">Biz dosyayı açmak için \"Office Suite\" veya \"WPS Office\" yüklemek için tavsiye.</string>
+
+</resources>

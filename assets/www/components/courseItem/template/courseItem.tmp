@@ -1,0 +1,45 @@
+<span class="courseicon"></span>
+<div class="row pro_container">
+
+	{{checkForBreadcrum}}	
+	{{checkForSpecificDiv}}
+	<div class="iframewrap_crs">
+	<section id="content-webview"></section>
+    <div class="spacer20"></div>
+    <div class="ui-grid-a commentNotes">
+        <div class="ui-block-a img" style="width:15%;"> <div class="commentICON"><img src="../images/comment_icon.png"></div></div>
+        <div class="ui-block-b textAREA"> <textarea cols="50" rows="5" name="note" id="note" class="textNote"></textarea></div>
+        <div class="ui-block-a comment"><span class="commentNotifi" data-msg="notes_msg"></span></div>
+        <div class="ui-block-b Buttons">
+            <a id="save-notes-btn" data-msg="save-label"></a>
+            <a id="cancel-notes-btn" style="margin-left: 1%;" data-msg="cancel-but"></a>
+        </div>
+    </div>
+                
+
+	 <!--<section class="commentNotes">
+      <div id="comment-area">
+           <br>
+            <div class="span2 comment_Notes">
+				<img src="../images/comment_icon.png" style="margin-top: -8px;">
+			</div>
+			<div class="span6 textArea">
+				<textarea cols="50" rows="5" name="note" id="note" class="textNote"></textarea>
+			</div>
+           	<div class="span2 comment-post">
+				<div class="msg_align"> <span data-msg="notes_msg"></span></div>
+			</div>
+			<div class="clearfix"></div>
+		</div></br>
+		<div class="alignment">
+				<a id="save-notes-btn" data-msg="save-label">Save</a>
+				<a id="cancel-notes-btn" data-msg="cancel-but" >Cancel</a>
+		</div>
+		<div class="clear"></div>
+    </section> -->
+    
+	</div>
+	<input type="hidden" id="course-item-page">
+</div>
+<div class="lifter2"></div>
+ 

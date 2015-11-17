@@ -1,0 +1,13 @@
+<div class="row pro_container">
+    {{checkForBreadcrum}}
+    <div class="helpcont">
+	       <div class="row prorowadj">
+                <a class="comingsoon_bg" href="mailto:DDeLEHelp@Clinique.com"></a>
+                <!-- <div class="comingsoon_bg">
+                    <div class="comingsoon_txtcontentbox" style="display: none;"></div>
+                </div> -->
+            </div></div>
+    <div class="row-fluid"><div class="lifter"></div></div>
+    <input type="hidden" id="help-page">
+</div>  
+<div class="row lifter2"></div>	

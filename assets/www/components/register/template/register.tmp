@@ -1,0 +1,188 @@
+{{checkForBreadcrum}}
+<section>
+    <div class="registerbx">
+        <form id="register_holder">					    
+            <fieldset>
+                <label><span data-msg="userName-label"></span><span class="mandatory">*</span></label>
+				<span class="reg-text-lt"></span>
+				<div class="reg-text-rt">	
+                <input required  id="reg_uname" type="text" name="name" required>
+				<div class="clearboth"></div>
+				<span data-msg="reg-user-note" class="guideNotes"></span>
+			</div>
+				<span id="regUname"></span>
+            </fieldset>
+            <fieldset>
+                <label><span data-msg="firstName-label"></span><span class="mandatory">*</span></label>
+				<span class="reg-text-lt"></span>
+				<div class="reg-text-rt">	
+                <input required id="reg_fname" type="text" name="name">
+				<div class="clearboth"></div>
+				<span data-msg="reg-user-firstname" class="guideNotes"></span>
+			</div>
+                <span id="regFname"></span>
+            </fieldset>
+            <fieldset>
+                <label><span data-msg="lastName-label"></span><span class="mandatory">*</span></label>
+				<span class="reg-text-lt"></span>
+				<div class="reg-text-rt">	
+                <input required id="reg_lname" type="text" name="name">
+				</div>
+                <span id="regLname"></span>
+            </fieldset>
+            <fieldset>
+                <label><span data-msg="reg-login-code"></span><span class="mandatory">*</span></label>
+				<span class="reg-text-lt"></span>
+				<div class="reg-text-rt">	
+                <input required id="reg_regionKey" type="text" name="name">
+				<div class="clearboth"></div>
+				<span  data-msg="reg-region-note" class="guideNotes"></span>
+				</div>
+                <span id="regRgnKey"></span>
+            </fieldset>
+            <fieldset>
+                <label><span data-msg="new_password"></span><span class="mandatory">*</span></label>
+				<span class="reg-text-lt"></span>
+				<div class="reg-text-rt">	
+                <input required id="reg_pwd" type="password" name="name">
+				<div class="clearboth"></div>
+				<span data-msg="reg-user-password" class="guideNotes"></span>
+	 		</div>
+                <span id="regPwd"></span>
+            </fieldset>
+            <fieldset>
+                <label><span data-msg="cnew_password"></span><span class="mandatory">*</span></label>
+				<span class="reg-text-lt"></span>
+				<div class="reg-text-rt">	
+                <input required id="reg_cnfpwd" type="password" name="name">
+				</div>
+                <span id="regCnfpwd"></span>
+            </fieldset>
+            <fieldset>
+                <label><span data-msg="emailID-label"></span><span class="mandatory">*</span></label>
+				<span class="reg-text-lt"></span>
+				<div class="reg-text-rt">	
+                <input required id="reg_mail" type="text" name="name">
+				</div>
+                <span id="regMail"></span>
+            </fieldset>
+            <fieldset class="bord-hidden">
+                <label><span data-msg="region-label"></span><span class="mandatory">*</span></label>
+				<span class="reg-text-lt"></span>
+				<div class="reg-text-rt">	
+                <select id="reg_region" name="name" required>
+                    <option value="sel_one" data-msg="select_one"></option>
+                </select>
+				<div class="clearboth"></div>
+				<span data-msg="reg-user-select-region" class="guideNotes"></span>				
+				</div>
+                <span id="regRgn"></span>
+            </fieldset>
+            <fieldset class="bord-hidden">
+                <label><span data-msg="country-label"></span><span class="mandatory">*</span></label>
+				<span class="reg-text-lt"></span>
+				<div class="reg-text-rt disabled">	
+                <select id="reg_cntry" name="name" disabled required>
+                    <option value="sel_one" data-msg="select_one"></option>
+                </select>
+				<div class="clearboth"></div>
+				<span data-msg="reg-user-select-country" class="guideNotes"></span>
+				</div>
+                <span id="regCntry"></span>
+            </fieldset>
+            <fieldset class="bord-hidden">
+                <label><span data-msg="retailer-label"></span><span class="mandatory">*</span></label>
+				<span class="reg-text-lt"></span>
+				<div class="reg-text-rt disabled">	
+                <select id="reg_retailer" name="name" disabled required>
+                    <option value="sel_one" data-msg="select_one"></option>
+                </select>
+				<div class="clearboth"></div>
+				<span data-msg="reg-user-retailer" class="guideNotes"></span>
+				
+				</div>
+                <span id="regRtl"></span>
+            </fieldset>
+            <fieldset id="reg_entretailer_field" style="display:none">
+                <label><span data-msg="enter-retailer-label"></span>&nbsp;</label>
+				<span class="reg-text-lt"></span>
+				<div class="reg-text-rt">	
+                <input  id="reg_entretailer_other" type="text" name="name">
+				<div class="clearboth"></div>
+				<span data-msg="reg-user-ret-other" class="guideNotes"></span>
+				</div>
+                <span id="regEntRtl"></span>
+            </fieldset>
+            <fieldset class="bord-hidden">
+                <label><span data-msg="store-label"></span><span class="mandatory">*</span></label>
+				<span class="reg-text-lt"></span>
+				<div class="reg-text-rt disabled">	
+                <select id="reg_str" name="name" disabled required>
+                    <option value="sel_one" data-msg="select_one"></option>
+                </select>
+				<div class="clearboth"></div>
+				<span data-msg="reg-user-store" class="guideNotes"></span>
+				</div>
+                <span id="regStor"></span>
+            </fieldset>
+            <fieldset id="reg_entstore_field" style="display:none">
+                <label>&nbsp;</label>
+				<span class="reg-text-lt"></span>
+				<div class="reg-text-rt">	
+                <input  id="reg_entstore_other" type="text" name="name">
+				<div class="clearboth"></div>
+				<span data-msg="reg-user-store-other" class="guideNotes"></span>
+				</div>
+                <span id="regEntstore"></span>
+            </fieldset>
+            <fieldset class="bord-hidden">
+                <label><span data-msg="language-label"></span><span class="mandatory">*</span></label>
+				<span class="reg-text-lt"></span>
+				<div class="reg-text-rt">	
+                <select id="reg_lang" name="name" >
+                    <option value="en">English-US</option>
+                </select>
+				<div class="clearboth"></div>
+				<span data-msg="reg-user-select-language" class="guideNotes"></span>
+				</div>
+                <span id="regLang"></span>
+            </fieldset>	
+            <fieldset class="bord-hidden">
+                <label><span data-msg="job-title-label"></span><span class="mandatory">*</span></label>
+				<span class="reg-text-lt"></span>
+				<div class="reg-text-rt">	
+                <select id="reg_job" name="name" >
+                    <option value="Clinique Executive (by approval)" label="Clinique Executive (by approval)">Clinique Executive (by approval)</option>
+                    <option value="Counter Manager" label="Counter Manager">Counter Manager</option>
+                    <option value="Consultant" label="Consultant">Consultant</option>
+                    <option value="Accredited Consultant" label="Accredited Consultant">Accredited Consultant</option>
+                    <option value="Clinical Consultant" label="Clinical Consultant">Clinical Consultant</option>
+                    <option value="Advisory Consultant" label="Advisory Consultant">Advisory Consultant</option>
+                    <option value="Generic Staff/Cast Member" label="Generic Staff/Cast Member">Generic Staff/Cast Member</option>
+                </select>
+				<div class="clearboth"></div>
+				<span data-msg="reg-user-job-cm" class="guideNotes"></span>
+				<div class="clearboth"></div>
+				<span data-msg="reg-user-job-ac" class="guideNotes"></span>
+				<div class="clearboth"></div>
+				<span data-msg="reg-user-job-cc" class="guideNotes"></span>
+				</div>
+                <span id="regJobtitl"></span>
+            </fieldset>	
+            <fieldset>
+                <div class="reg_btnbx"><label></label></div>
+                <div id="Reg_submit" class="reg_grnbtn lft mar_adj_reg"><a href="javascript:void(0)"><img src="../images/lgn_arw4.png"></a></div>
+                <div class="Reg_cancel reg_grybtn lft"><a href="javascript:void(0)" data-msg="cancel-but"></a></div>
+            </fieldset>
+            <fieldset>
+                <label></label>
+                <div class=""></div>
+            </fieldset>
+        </form>
+    </div>
+</section>
+<footer class="footerbx register_Footer">
+	<a data-msg="privacy_policy" href="#" target="_blank" class="privacyPolicy">PRIVACY POLICY</a> | 
+	<a data-msg="terms_conditions" href="#" target="_blank" class="termsConditions">TERMS &amp; CONDITIONS</a>
+</footer>
+<div class="register-lifter"></div>

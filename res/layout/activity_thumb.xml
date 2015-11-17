@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/gray_bg"
+	android:orientation="vertical"
+	tools:context="com.example.pdfviewer.Thumb" >
+
+	<RelativeLayout
+		android:id="@+id/topBar"
+		android:layout_width="match_parent"
+		android:layout_height="40sp"
+		android:background="@drawable/top_bar"
+		android:padding="5sp" >
+
+		<Button
+			android:id="@+id/btnDone"
+			style="?android:attr/buttonStyleSmall"
+			android:layout_width="45sp"
+			android:layout_height="wrap_content"
+			android:background="@drawable/done" />
+
+		<Button
+			android:id="@+id/btnBookmarkPages"
+			style="?android:attr/buttonStyleSmall"
+			android:layout_width="35sp"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:background="@drawable/bookmark_bg" />
+
+		<Button
+			android:id="@+id/btnAllPages"
+			style="?android:attr/buttonStyleSmall"
+			android:layout_width="35sp"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="5sp"
+			android:layout_toLeftOf="@+id/btnBookmarkPages"
+			android:background="@drawable/thumbnail_bg" />
+	</RelativeLayout>
+
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent" >
+
+		<GridView
+			android:id="@+id/grdThumb"
+			style="@style/grd_view_cnt"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_gravity="center"
+			android:gravity="center" >
+		</GridView>
+
+		<GridView
+			android:id="@+id/grdThumbBookmark"
+			style="@style/grd_view_cnt"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_gravity="center"
+			android:gravity="center" >
+		</GridView>
+
+		<TextView
+			android:id="@+id/lblNoBmrk"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:gravity="center"
+			android:text="@string/no_bookmark_avail"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:textColor="@color/black" />
+	</FrameLayout>
+
+</LinearLayout>
