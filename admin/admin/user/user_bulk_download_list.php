@@ -1,3 +1,4 @@
+
 <?php
 /**
 * script for downloading of user lists
@@ -111,11 +112,12 @@ function user_download_ods($fields,$extrafields=array()) {
    $users = array();
    foreach (array_chunk($idstoload, 10000,true) as $user_id) {
    $userids = implode(",", $user_id);
-   $users[] = $DB->get_records_sql("SELECT mu.*,
+   $users[] = $DB->get_records_sql("SELECT mu.id,mu.username,mu.email,mu.firstname,mu.lastname,mu.idnumber,mu.institution,mu.department,mu.phone1,mu.phone2,mu.city,mu.url,mu.icq,mu.skype,mu.aim,mu.yahoo,mu.msn,c.country_name AS country,
                                 $extrafield_sql
                                 FROM mdl_user AS mu
                                 LEFT JOIN mdl_user_info_data AS muid ON mu.id = muid.userid
                                 LEFT JOIN mdl_user_info_field AS muif ON muif.id = muid.fieldid
+								LEFT JOIN mdl_country c ON binary c.country_code = mu.country
                                 WHERE mu.id IN ($userids) GROUP BY mu.id");
    }
 	$row = 1;
@@ -168,11 +170,12 @@ function user_download_xls($fields,$extrafields=array()) {
    $users = array();
    foreach (array_chunk($idstoload, 10000,true) as $user_id) {
    $userids = implode(",", $user_id);
-   $users[] = $DB->get_records_sql("SELECT mu.*,
+   $users[] = $DB->get_records_sql("SELECT mu.id,mu.username,mu.email,mu.firstname,mu.lastname,mu.idnumber,mu.institution,mu.department,mu.phone1,mu.phone2,mu.city,mu.url,mu.icq,mu.skype,mu.aim,mu.yahoo,mu.msn,c.country_name AS country,
                                 $extrafield_sql
                                 FROM mdl_user AS mu
                                 LEFT JOIN mdl_user_info_data AS muid ON mu.id = muid.userid
                                 LEFT JOIN mdl_user_info_field AS muif ON muif.id = muid.fieldid
+								LEFT JOIN mdl_country c ON binary c.country_code = mu.country
                                 WHERE mu.id IN ($userids) GROUP BY mu.id");
    }
 	$row = 1;
@@ -217,11 +220,12 @@ function user_download_csv($fields,$extrafields=array()) {
    $users = array();
    foreach (array_chunk($idstoload, 10000,true) as $user_id) {
    $userids = implode(",", $user_id);
-   $users[] = $DB->get_records_sql("SELECT mu.*,
+   $users[] = $DB->get_records_sql("SELECT mu.id,mu.username,mu.email,mu.firstname,mu.lastname,mu.idnumber,mu.institution,mu.department,mu.phone1,mu.phone2,mu.city,mu.url,mu.icq,mu.skype,mu.aim,mu.yahoo,mu.msn,c.country_name AS country,
                                 $extrafield_sql
                                 FROM mdl_user AS mu
                                 LEFT JOIN mdl_user_info_data AS muid ON mu.id = muid.userid
                                 LEFT JOIN mdl_user_info_field AS muif ON muif.id = muid.fieldid
+								LEFT JOIN mdl_country c ON binary c.country_code = mu.country
                                 WHERE mu.id IN ($userids) GROUP BY mu.id");
    }
 

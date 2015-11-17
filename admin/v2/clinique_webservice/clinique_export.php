@@ -104,7 +104,7 @@ class ProgressPercent
 				$store = explode(",", $store);
 				$course = explode(",", $course);				
 				if ($type == 'user' || $type == 'course') {
-					if (in_array("sel_all", $region) || in_array("null", $country)) {
+					if (in_array("sel_all", $region) || in_array("null", $region)) {
 						$regionstr = '';
 					} else {
 						$regionstr = implode('~', $region);
