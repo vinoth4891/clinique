@@ -106,6 +106,7 @@ define(["framework/WidgetWithTemplate"], function (template) {
 			if(isDevice() && isPhoneGap() && !checkAppOnline() ) {
 				jQuery('.errorCode-pop .prog-summarys').attr('data-msg','ERR10011');
 				updateLanguage();
+				jQuery('body').removeClass('report-details-show');
 				jQuery('.errorCode-pop').show();
 			}
 		
@@ -120,6 +121,7 @@ define(["framework/WidgetWithTemplate"], function (template) {
 				if(isDevice() && isPhoneGap() && !checkAppOnline() ) {
 					jQuery('.errorCode-pop .prog-summarys').attr('data-msg','ERR10011');
 					updateLanguage();
+					jQuery('body').removeClass('report-details-show');
 					jQuery('.errorCode-pop').show();
 				}
                 var serviceUrl = self.globalConfig.apiAddress.service, store, retailer, region, country, sortby;
@@ -260,6 +262,7 @@ define(["framework/WidgetWithTemplate"], function (template) {
 				if(isDevice() && isPhoneGap() && !checkAppOnline() ) {
 					jQuery('.errorCode-pop .prog-summarys').attr('data-msg','ERR10011');
 					updateLanguage();
+					jQuery('body').removeClass('report-details-show');
 					jQuery('.errorCode-pop').show();
 				}
                 self.searchReports(data);
@@ -313,6 +316,7 @@ define(["framework/WidgetWithTemplate"], function (template) {
 				if(isDevice() && isPhoneGap() && !checkAppOnline() ) {
 					jQuery('.errorCode-pop .prog-summarys').attr('data-msg','ERR10011');
 					updateLanguage();
+					jQuery('body').removeClass('report-details-show');
 					jQuery('.errorCode-pop').show();
 				}
                 self.searchReports(data);
@@ -428,6 +432,7 @@ define(["framework/WidgetWithTemplate"], function (template) {
 				if(isDevice() && isPhoneGap() && !checkAppOnline() ) {
 					jQuery('.errorCode-pop .prog-summarys').attr('data-msg','ERR10011');
 					updateLanguage();
+					jQuery('body').removeClass('report-details-show');
 					jQuery('.errorCode-pop').show();
 				}
                 self.searchReports(data);
@@ -520,6 +525,7 @@ define(["framework/WidgetWithTemplate"], function (template) {
 				if(isDevice() && isPhoneGap() && !checkAppOnline() ) {
 					jQuery('.errorCode-pop .prog-summarys').attr('data-msg','ERR10011');
 					updateLanguage();
+					jQuery('body').removeClass('report-details-show');
 					jQuery('.errorCode-pop').show();
 				}
                 self.searchReports(data);
@@ -603,6 +609,7 @@ define(["framework/WidgetWithTemplate"], function (template) {
 				if(isDevice() && isPhoneGap() && !checkAppOnline() ) {
 					jQuery('.errorCode-pop .prog-summarys').attr('data-msg','ERR10011');
 					updateLanguage();
+					jQuery('body').removeClass('report-details-show');
 					jQuery('.errorCode-pop').show();
 				}
                 self.searchReports(data);
@@ -686,6 +693,7 @@ define(["framework/WidgetWithTemplate"], function (template) {
 				if(isDevice() && isPhoneGap() && !checkAppOnline() ) {
 					jQuery('.errorCode-pop .prog-summarys').attr('data-msg','ERR10011');
 					updateLanguage();
+					jQuery('body').removeClass('report-details-show');
 					jQuery('.errorCode-pop').show();
 				}
                 self.searchReports(data);
@@ -769,6 +777,7 @@ define(["framework/WidgetWithTemplate"], function (template) {
 				if(isDevice() && isPhoneGap() && !checkAppOnline() ) {
 					jQuery('.errorCode-pop .prog-summarys').attr('data-msg','ERR10011');
 					updateLanguage();
+					jQuery('body').removeClass('report-details-show');
 					jQuery('.errorCode-pop').show();
 				}
                 self.searchReports(data);
@@ -926,6 +935,7 @@ define(["framework/WidgetWithTemplate"], function (template) {
 				if(isDevice() && isPhoneGap() && !checkAppOnline() ) {
 					jQuery('.errorCode-pop .prog-summarys').attr('data-msg','ERR10011');
 					updateLanguage();
+					jQuery('body').removeClass('report-details-show');
 					jQuery('.errorCode-pop').show();
 				}
                 self.paginationReports(data, page, lastval, prev);
@@ -1769,6 +1779,7 @@ define(["framework/WidgetWithTemplate"], function (template) {
 				
 				jQuery('.errorCode-pop .prog-summarys').attr('data-msg','ERR10011');
 				updateLanguage();
+				jQuery('body').removeClass('report-details-show');
 				jQuery('.errorCode-pop').show();
             }
         },

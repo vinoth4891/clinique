@@ -499,7 +499,7 @@ define(["framework/WidgetWithTemplate","home/Home","changePwd/ChangePwd","abstra
             	jQuery('.errorCode-pop').removeClass("programmsgdsp");
             	jQuery(".errorCode-pop,.overlaylightbox,.commentmodal-backdrop").hide();
             	jQuery('.errorCode-pop .prog-summarys').attr('data-msg','');
-                jQuery('body').removeClass("scrollHidden");
+                jQuery('body').removeClass("scrollHidden report-details-show");
             });
             
             jQuery(".enoughspace-pop .ok").off("click").on("click", function () {
