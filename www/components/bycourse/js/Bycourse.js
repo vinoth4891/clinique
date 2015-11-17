@@ -1961,7 +1961,8 @@ define(["framework/WidgetWithTemplate"], function (template) {
         },
         checkMobileDevice: function(){
             if( navigator.platform == "iPhone Simulator" || navigator.platform == "iPhone"){
-              return true;
+			  // No need check iPhone devices
+              return false;
             }else{
               return false;
             }
