@@ -969,3 +969,15 @@ div.row.menu{ top: 70% !important;
 
  .globalmenu ul li a span.commenticon{ background: url(../images/note_gray.png) no-repeat; width: 44px; height: 44px; display: inline-block; background-size: 80% 80%; }
 
+@media only screen  and (min-device-width: 768px) and (max-device-width: 1024px) 
+ {
+ .hideSection .float_footer {
+top: auto !important;
+bottom: 0;
+height: 92px;
+width: 100%;
+z-index: 999;
+}
+
+.hideSection .float_footer .navbar-fixed-bottom { top:0 !important; position:relative !important;}
+ }
