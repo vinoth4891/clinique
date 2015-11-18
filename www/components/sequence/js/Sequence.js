@@ -402,6 +402,9 @@ define(["framework/WidgetWithTemplate","courseItem/CourseItem","course/Course","
 			else
 			jQuery(".next_activity, .previous_activity").css("display", "none");
 			var language, iTouch = 'click';
+			if(isAndroid()){
+             iTouch = 'touchstart';
+            }
             if (!($.browser.msie && parseInt($.browser.version, 10) === 7)) {
                 language = window.localStorage.getItem("language");
             } else {
