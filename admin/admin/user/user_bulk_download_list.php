@@ -1,4 +1,3 @@
-
 <?php
 /**
 * script for downloading of user lists
@@ -42,6 +41,7 @@ if ($format) {
                     'lastname'  => 'lastname',
                     'idnumber'  => 'idnumber',
                     'institution' => 'institution',
+                    'department' => 'department',
                     'phone1'    => 'phone1',
                     'phone2'    => 'phone2',
                     'city'      => 'city',
@@ -51,15 +51,14 @@ if ($format) {
                     'aim'       => 'aim',
                     'yahoo'     => 'yahoo',
                     'msn'       => 'msn',
-                    'country'   => 'country'
-					);
+                    'country'   => 'country');
 
     if ($extrafields = $DB->get_records('user_info_field')) {
         foreach ($extrafields as $n=>$v){
             $fields['profile_field_'.$v->shortname] = 'profile_field_'.$v->shortname;
         }
     }
-	
+
     switch ($format) {
         case 'csv' : user_download_csv($fields,$extrafields);
         case 'ods' : user_download_ods($fields,$extrafields);
@@ -71,16 +70,17 @@ if ($format) {
 
 echo $OUTPUT->header();
 echo $OUTPUT->heading(get_string('download', 'admin'));
+
 echo $OUTPUT->box_start();
-
-	echo '<ul>';
-	echo '<li><a href="user_bulk_download_list.php?format=csv">'.get_string('downloadtext').'</a></li>';
-	echo '<li><a href="user_bulk_download_list.php?format=ods">'.get_string('downloadods').'</a></li>';
-	echo '<li><a href="user_bulk_download_list.php?format=xls">'.get_string('downloadexcel').'</a></li>';
-	echo '</ul>';
-
+echo '<ul>';
+echo '<li><a href="user_bulk_download.php?format=csv">'.get_string('downloadtext').'</a></li>';
+echo '<li><a href="user_bulk_download.php?format=ods">'.get_string('downloadods').'</a></li>';
+echo '<li><a href="user_bulk_download.php?format=xls">'.get_string('downloadexcel').'</a></li>';
+echo '</ul>';
 echo $OUTPUT->box_end();
+
 echo $OUTPUT->continue_button($return);
+
 echo $OUTPUT->footer();
 
 function user_download_ods($fields,$extrafields=array()) {
