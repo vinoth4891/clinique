@@ -373,6 +373,13 @@ define(["framework/WidgetWithTemplate", "match/Match", "uncover/Uncover","abstra
 				jQuery(this).removeClass('active');
 			});
 
+			 jQuery("#note").on("focus", function(){
+                jQuery("div.row.menu").hide();
+            });
+            jQuery("#note").on("blur",function(){
+                jQuery("div.row.menu").show();
+            });
+			
             jQuery("#note").on("focus", function(){
                 jQuery("div.row.menu").hide();
             });
