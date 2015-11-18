@@ -299,6 +299,7 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
                         type = jQuery(this).attr("type");
                         noOfpages = jQuery(this).attr("pageno");
                         fileHeading = "video";
+						console.log("FileName "+jQuery(this).data('filename'));
                         fileName = (isNaN(jQuery(this).data('filename')) ? jQuery(this).data('filename').replace(/\s+/g, '_'):jQuery(this).data('filename'));
                          if( isDevice() && isPhoneGap() ){
                           srcURL = jQuery(this).attr("url");
@@ -381,7 +382,10 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
                                       self.loadScorminWeb(self);
                            });
                        }else{
-                         self.loadquizinWeb(srcURL, quizTitle, dataType);
+						 type = jQuery(this).attr("type");
+						 quizTitle = type.split('.')[0];
+						 filetype = 'scorm';
+                         self.loadquizinWeb(srcURL, quizTitle, filetype);
                        }
                     return false;
                     case "puzzle":
@@ -2138,7 +2142,7 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
                             }
                         }else{
                             kellyItems = jQuery.trim(modules[k].name.substr(0,3));
-                            // console.log("mod Name="+modules[k].modname);
+                            console.log("mod Name="+JSON.stringify(modules[k]));
                             if( modules[k].modname == "scorm" ){
                                 if( isDevice() && isPhoneGap() ){
                                     var _fileName = modules[k].name,
@@ -2152,7 +2156,7 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
 									}
 									var videoli = '<li data-file="'+_fileName+'" class="videosli resourcelist" type="'+modules[k].name+'" url="'+_fileUrl+'" data-modid="'+modules[k].id+'" data-quiz_CourseId="'+quiz_CourseId+'"><a href="javascript:void(0);"><span class="res_quiz_icon">'+_fileName+'</span></a></li>';
                                 } else {
-									var videoli = '<li data-file="video" class="videosli resourcelist" type="'+modules[k].name+'" url="'+_fileUrl+'" data-modid="'+modules[k].id+'"><a href="javascript:void(0);"><span class="res_quiz_icon">'+modules[k].name+'</span></a></li>';
+									var videoli = '<li data-file="scorm" data-filename="'+modules[k].name+'" class="videosli resourcelist" type="'+modules[k].name+'" url="'+modules[k].url+'" data-modid="'+modules[k].id+'"><a href="javascript:void(0);"><span class="res_quiz_icon">'+modules[k].name+'</span></a></li>';
 								}
                                 
                                 jQuery('#videolist').append(videoli);
