@@ -978,3 +978,6 @@ height: 92px;
 width: 100%;
 z-index: 999;
 }
+
+.hideSection .float_footer .navbar-fixed-bottom { top:0 !important; position:relative !important;}
+ }
