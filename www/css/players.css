@@ -333,10 +333,10 @@ position:relative;
  @media handheld, only screen and (max-width: 640px){
 
 .bag_drg_icons ul {background: url("../images/plyrs_bg_mob.png") no-repeat scroll center 42px transparent; height: 236px; margin: 0; /*padding-top:11%; width: 281px*/ padding: 102px 0 23px 16px; width: 249px;} 
-.bag_drg_icons_holder {height:280px; /*margin-left: 21%;*/ overflow: hidden; width: 265px}
+.bag_drg_icons_holder {height:280px; /*margin-left: 21%;*/ overflow: hidden; width: 262px}
 .bag_drg_icons ul li {height: 59px; padding: 0; width:58px /*63px*/}
 .bag_drg_icons ul li a img {padding-left: 5%; width: 60%}
-.bdgebx_hldr {width: 87%}
+.bdgebx_hldr {width: 92%; padding-left:20px;}
 .plyr_span{width:599px;}
 .drgtxt_bx {height: auto; bottom:18%; left:0; line-height:20px}
 .bag_drg_rgtbx, .bag_drg_lftbx{margin-top:125px}
