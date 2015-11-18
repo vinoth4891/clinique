@@ -986,7 +986,7 @@ and (orientation : landscape) {
 .widget-maincontent-div .homeRow-fluid { height: 520px;}
 }
 
- @media only screen  and (min-device-width: 768px) and (max-device-width: 1024px) 
+@media only screen  and (min-device-width: 768px) and (max-device-width: 1024px) 
  {
  .hideSection .float_footer {
 top: auto !important;
@@ -995,3 +995,6 @@ height: 92px;
 width: 100%;
 z-index: 999;
 }
+
+.hideSection .float_footer .navbar-fixed-bottom { top:0 !important; position:relative !important;}
+ }
