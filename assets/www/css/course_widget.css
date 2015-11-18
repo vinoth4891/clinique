@@ -491,7 +491,7 @@ body > li.ui-draggable.sequence-item img{ width:120px; height:110px;}
 
 @media handheld, only screen and (max-width:640px){
 
-.crswidg_img ul li{width:149px; margin-right: 0.2%; height:257px}
+.crswidg_img ul li{width:149px; margin-right:1%; height:257px; float:left;}
 .crswidg_lblbx {height:45px}
 .crswidg_drgbtn ul li a, .pro_container > li a {width:/*111px*/100%;}
 .crswidg_qustns ul li {width: 207px}
