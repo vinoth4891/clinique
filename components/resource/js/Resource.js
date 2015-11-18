@@ -2944,13 +2944,13 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
 								}
 							}
 						if($('html').hasClass('ie8') || $('html').hasClass('ie9')){
-							jQuery("#resourceContent-iframe").find('.content-primary').css('width','100% ').css('margin-right','0');
+							jQuery("#resourceContent-iframe").find('.content-primary').css('width','100% ').css('margin-right','0').css('margin-top','40px');
 							jQuery("#resourceContent-iframe").find('#scorm_object').css('width','100%').css('margin-right','0');
 							jQuery("#resourceContent-iframe").find('#scorm_layout').css('width','100%').css('margin-right','0');
 							$(window).trigger('resize');
 							jQuery("#resourceContent-iframe").css('width','90%').css('margin-right','0px').css('margin-left','0px');
 						   }else{
-							jQuery("#resourceContent-iframe").contents().find('.content-primary').css('width','100% ').css('margin-right','0');
+							jQuery("#resourceContent-iframe").contents().find('.content-primary').css('width','100% ').css('margin-right','0').css('margin-top','40px');
 							jQuery("#resourceContent-iframe").contents().find('#scorm_object').css('width','100%').css('margin-right','0');
 							jQuery("#resourceContent-iframe").contents().find('#scorm_layout').css('width','100%').css('margin-right','0');
 							$(window).trigger('resize');

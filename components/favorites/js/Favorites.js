@@ -3144,13 +3144,13 @@
 								}
 							}
 						if($('html').hasClass('ie8') || $('html').hasClass('ie9')){
-							jQuery("#resourceContentFav-iframe").find('.content-primary').css('width','100% ').css('margin-right','0');
+							jQuery("#resourceContentFav-iframe").find('.content-primary').css('width','100% ').css('margin-right','0').css('margin-top','40px');
 							jQuery("#resourceContentFav-iframe").find('#scorm_object').css('width','100%').css('margin-right','0');
 							jQuery("#resourceContentFav-iframe").find('#scorm_layout').css('width','100%').css('margin-right','0');
 							$(window).trigger('resize');
 							jQuery("#resourceContentFav-iframe").css('width','90%').css('margin-right','0px').css('margin-left','0px');
 						   }else{
-							jQuery("#resourceContentFav-iframe").contents().find('.content-primary').css('width','100% ').css('margin-right','0');
+							jQuery("#resourceContentFav-iframe").contents().find('.content-primary').css('width','100% ').css('margin-right','0').css('margin-top','40px');
 							jQuery("#resourceContentFav-iframe").contents().find('#scorm_object').css('width','100%').css('margin-right','0');
 							jQuery("#resourceContentFav-iframe").contents().find('#scorm_layout').css('width','100%').css('margin-right','0');
 							$(window).trigger('resize');
