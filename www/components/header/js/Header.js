@@ -79,6 +79,7 @@ define(["framework/WidgetWithTemplate","home/Home"] , function(template) {
                 var hash = window.location.hash;
                 if(hash !== '#home'){
                     if(!jQuery("#carousel").length && !jQuery(".homeSwiper-container").length ){
+						videoContrlFun();
                         self.homeWidget = new Clazz.com.components.widget.home.js.Home();
                         self.homeWidget.loadPage(self.UserDetails);
                     }else{
@@ -294,6 +295,7 @@ define(["framework/WidgetWithTemplate","home/Home"] , function(template) {
                 dataType:'json',
                 crossDomain: true,
                 success:function(){
+					videoContrlFun();
                     if(navigator.app === undefined) {
                          if (!($.browser.msie && parseInt($.browser.version, 10) === 7)) {
                             window.localStorage.setItem("avoidSplash", 1);
@@ -312,6 +314,7 @@ define(["framework/WidgetWithTemplate","home/Home"] , function(template) {
                     }
                 },
                 error:function(){
+					videoContrlFun();
                    if(navigator.app === undefined){
                         window.location.reload();
                     } else {

@@ -3951,7 +3951,7 @@ define(["framework/WidgetWithTemplate", "match/Match", "uncover/Uncover","abstra
 
 					if((navigator.userAgent.indexOf("Safari") > -1)) {
 						jQuery('#activityVideo')[0].play();
-						var videoContrlSafari = jQuery('#activityVideo')[0];
+						videoContrlSafari = jQuery('#activityVideo')[0];
 						videoContrlSafari.ontouchstart = function () {
 							onVideoBeginsFullScreen();
 						};

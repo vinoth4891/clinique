@@ -2336,12 +2336,12 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
 						onVideoBeginsFullScreen();
 					};
 					$('#activityVideo, #activityVideo div, #activityVideo button').click(function (event) {
-						onVideoBeginsFullScreen(event);
+						onVideoBeginsFullScreen();
 					});
 
                     if((navigator.userAgent.indexOf("Safari") > -1)) {
                         jQuery('#activityVideo')[0].play();
-						var videoContrlSafari = jQuery('#activityVideo')[0];
+						videoContrlSafari = jQuery('#activityVideo')[0];
 						videoContrlSafari.ontouchstart = function () {
 							onVideoBeginsFullScreen();
 						};

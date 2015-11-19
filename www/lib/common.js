@@ -43,7 +43,7 @@ var progressStartFLAG=false;
 var manualSyncStart=false;
 var showNewsSlide = false;
 var forgetPass_Word=false;
-var videoContrl;
+var videoContrl, videoContrlSafari;
 var config='', ie11, win7;
 
 function init() {
@@ -1086,6 +1086,9 @@ function jsonEscape(str)  {
 function videoContrlFun() {
 	if ( videoContrl != undefined ) {
 		videoContrl.pause();
+	}
+	if ( videoContrlSafari != undefined ) {
+		videoContrlSafari.pause();
 	}
 }
 
