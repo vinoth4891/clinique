@@ -2133,7 +2133,7 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
 	            var activeLang = (language!==undefined && language!==null)?language:defaultLang;
 	            initLanguages();
 	            loadLanguages(activeLang);
-             jQuery("#displayContentFav").niceScroll();
+             //jQuery("#displayContentFav").niceScroll();
 		},
         removeSlashBreadcrumb: function(){
             jQuery("#favbred li" ).each(function () {
