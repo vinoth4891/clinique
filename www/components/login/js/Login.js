@@ -212,7 +212,7 @@ define(["framework/WidgetWithTemplate","home/Home","changePwd/ChangePwd","abstra
                         reader.readEntries(function(entries) {
                             for (i = 0; i < entries.length; i++) {  /*get existing file in the clinique folder*/
                                 if (entries[i].name === fileName) {  /*check if already exist.*/
-                                    policyItemsData.downloadFilePath = entries[i].fullPath;
+                                    policyItemsData.downloadFilePath = entries[i].toURL();
                                     self.loadFileinWeb(self, policyItemsData); /*if yes load into device.*/
                                     isExists = true;
                                     break;
@@ -240,7 +240,7 @@ define(["framework/WidgetWithTemplate","home/Home","changePwd/ChangePwd","abstra
                         create: true,
                         exclusive: false
                     }, function gotFileEntry(fileEntry) {
-                        var filePath = fileEntry.fullPath + "/" + fileName;
+                        var filePath = fileEntry.toURL() + "/" + fileName;
                         var fileTransfer = new FileTransfer();
                         var options = new FileUploadOptions();
                         options.chunkedMode = false;
@@ -249,7 +249,7 @@ define(["framework/WidgetWithTemplate","home/Home","changePwd/ChangePwd","abstra
                             jQuery("#load_wrapper, .overlaycontainer").show();
                         };
                         fileTransfer.download(downloadFileURL, filePath, function(fileDir) {
-                            policyItemsData.downloadFilePath = fileDir.fullPath;
+                            policyItemsData.downloadFilePath = fileDir.toURL();
                             self.loadFileinWeb(self, policyItemsData); /*load downloaded file into iframe/ video*/
                         }, function(error) {                            
                         });

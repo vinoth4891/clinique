@@ -1699,7 +1699,7 @@ define(["framework/WidgetWithTemplate"], function (template) {
                         create: true,
                         exclusive: false
                     }, function gotFileEntry(fileEntry) {
-                        var filePath = fileEntry.fullPath + "/" + fileName;
+                        var filePath = fileEntry.toURL() + "/" + fileName;
                         var fileTransfer = new FileTransfer();
                         var options = new FileUploadOptions();
                         options.chunkedMode = false;
@@ -1749,7 +1749,7 @@ define(["framework/WidgetWithTemplate"], function (template) {
                         reader.readEntries(function(entries) {
                             for (i = 0; i < entries.length; i++) {  /*get existing file in the clinique folder*/
                                 if (entries[i].name === fileName) {  /*check if already exist.*/
-                                    courseItemData.fileURL = entries[i].fullPath;
+                                    courseItemData.fileURL = entries[i].toURL();
                                     self.loadFileinWeb(courseItemData); /*if yes load into device.*/
                                     isExists = true;
                                     break;

@@ -1881,7 +1881,7 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
                         reader.readEntries(function(entries) {
                             for (i = 0; i < entries.length; i++) {  /*get existing file in the clinique folder*/
                                 if (entries[i].name === fileName) { /*check if already exist.*/
-                                    courseItemData.fileURL = entries[i].fullPath;
+                                    courseItemData.fileURL = entries[i].toURL();
                                     self.loadFileinWeb(self, courseItemData); /*if yes load into device.*/
                                     isExists = true;
                                     break;
@@ -1910,7 +1910,7 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
                         create: true,
                         exclusive: false
                     }, function gotFileEntry(fileEntry) {
-                        var filePath = fileEntry.fullPath + "/" + fileName;
+                        var filePath = fileEntry.toURL() + "/" + fileName;
                         var fileTransfer = new FileTransfer();
                         var options = new FileUploadOptions();
                         options.chunkedMode = false;
@@ -1919,7 +1919,7 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
 						   jQuery("#load_wrapper, .overlaycontainer").show();
 						};
                         fileTransfer.download(downloadFileURL, filePath, function(fileDir) {
-                            courseItemData.fileURL = fileDir.fullPath;
+                            courseItemData.fileURL = fileDir.toURL();
                             self.loadFileinWeb(self, courseItemData); /*load downloaded file into iframe/ video*/
                         }, function(error) {
                             //console.log("**********download error source " + error.source);

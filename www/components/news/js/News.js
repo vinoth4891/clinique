@@ -352,7 +352,7 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
                         reader.readEntries(function(entries) {
                             for (i = 0; i < entries.length; i++) {  /*get existing file in the clinique folder*/
                                 if (entries[i].name === fileName) {   /*check if already exist.*/
-                                    newsItemData.fileURL = entries[i].fullPath;
+                                    newsItemData.fileURL = entries[i].toURL();
                                     self.loadFileiniframe(newsItemData); /*if yes load into device.*/
                                     isExists = true;
                                     break;
@@ -380,7 +380,7 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
                         create: true,
                         exclusive: false
                     }, function gotFileEntry(fileEntry) {
-                        var filePath = fileEntry.fullPath + "/" + fileName;
+                        var filePath = fileEntry.toURL() + "/" + fileName;
                         var fileTransfer = new FileTransfer();
                         var options = new FileUploadOptions();
                         options.chunkedMode = false;
@@ -389,7 +389,7 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
 						    jQuery("#load_wrapper, .overlaycontainer").show();
 						};
                         fileTransfer.download(downloadFileURL, filePath, function(fileDir) {
-                            newsItemData.fileURL = fileDir.fullPath;
+                            newsItemData.fileURL = fileDir.toURL();
                             self.loadFileiniframe(newsItemData); /*load downloaded file into iframe/ video*/
                         }, function(error) {
                             //console.log("**********download error source " + error.source);
