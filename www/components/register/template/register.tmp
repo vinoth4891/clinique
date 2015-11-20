@@ -1,4 +1,5 @@
 {{checkForBreadcrum}}
+<span data-msg="reg-top-page" class="top-page-text"></span>
 <section>
     <div class="registerbx">
         <form id="register_holder">					    
@@ -8,7 +9,7 @@
 				<div class="reg-text-rt">	
                 <input required  id="reg_uname" type="text" name="name" required>
 				<div class="clearboth"></div>
-				<span data-msg="reg-user-note" class="guideNotes"></span>
+				<span style="display:none" data-msg="reg-user-note" class="guideNotes"></span>
 			</div>
 				<span id="regUname"></span>
             </fieldset>
@@ -163,9 +164,6 @@
 				<div class="clearboth"></div>
 				<span data-msg="reg-user-job-cm" class="guideNotes"></span>
 				<div class="clearboth"></div>
-				<span data-msg="reg-user-job-ac" class="guideNotes"></span>
-				<div class="clearboth"></div>
-				<span data-msg="reg-user-job-cc" class="guideNotes"></span>
 				</div>
                 <span id="regJobtitl"></span>
             </fieldset>	
