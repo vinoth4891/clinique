@@ -789,3 +789,5 @@ input:focus, textarea:focus {
 		right: 0;
 	} 
 }
+
+@media only screen and (min-width : 768px) {.crswidg_img ul li { height:285px; float:left;}}
