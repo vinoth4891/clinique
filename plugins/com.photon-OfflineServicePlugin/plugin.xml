@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="com.photon-OfflineServicePlugin" version="0.0.1">
+    <name>OfflineServicePlugin</name>
+    <description>A Cordova plugin that handles offline service</description>
+    <engines>
+        <engine name="cordova" version=">=3.9.1" />
+    </engines>
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="OfflineServicePlugin">
+                <param name="ios-package" value="OfflineServicePlugin" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/OfflineServicePlugin.h" />
+        <source-file src="src/ios/OfflineServicePlugin.m" />
+    </platform>
+</plugin>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="com.photon-pdfViewer" version="0.0.1">
+    <name>PdfViewer</name>
+    <description>A Cordova plugin that displays any pdf</description>
+    <engines>
+        <engine name="cordova" version=">=3.9.1" />
+    </engines>
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="PDFViewerPlugin">
+                <param name="ios-package" value="PDFViewerPlugin" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/PDFViewerPlugin.h" />
+        <source-file src="src/ios/PDFViewerPlugin.m" />
+    </platform>
+</plugin>

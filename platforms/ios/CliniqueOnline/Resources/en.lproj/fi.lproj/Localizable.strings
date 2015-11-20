@@ -1,0 +1,49 @@
+/*
+ Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements.  See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License.  You may obtain a copy of the License at
+ 
+ http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied.  See the License for the
+ specific language governing permissions and limitations
+ under the License.
+ */
+
+// accessibility label for recording button
+"toggle audio recording" = "toggle audio recording";
+// notification spoken by VoiceOver when timed recording finishes
+"timed recording complete" = "timed recording complete";
+// accessibility hint for display of recorded elapsed time
+"recorded time in minutes and seconds" = "recorded time in minutes and seconds";
+
+
+"Please check your internet connection." = "Tarkista Internet-yhteys";
+"Network problem" = "verkko-ongelma";
+"Enter page number" = "Anna sivunumero";
+"Enter Page" = "Enter page";
+
+"Go To Page" = "Mene sivulle";
+"Ok" = "Ok";
+"Cancel" = "Peruuta";
+"Done" = "Done";
+"Close" = "sulje ";
+"Delete" = "Poista";
+"Save" = "Tallenna";
+"All notes will be saved under Favourites" = "Kaikki merkinnät tallennetaan alla suosikit ";
+"of" = "tehty";
+"Search key not found" = "Etsi avain ei löytynyt";
+
+"Enter Page No" = "Anna Page Ei ";
+"Page no" = "sivu ei ";
+"Search Key Word Not Found" = "Hakusana-ei löytynyt";
+
+"We recommend to install \"iBook\" or \"Acrobat reader\" for opening file." = "Suosittelemme asentamaan \"iBook\" tai\"Acrobat reader\" tiedostoa avattaessa.  ";
+"We recommend to install \"iSpreadsheet\" or \"Microsoft Excel\" for opening file."= "Suosittelemme asentamaan \"iSpreadsheet\" tai \"Microsoft Excel\"  avaamiseen tiedoston.";

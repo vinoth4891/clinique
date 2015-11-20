@@ -1,0 +1,90 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "com.photon-Echo": {
+            "PACKAGE_NAME": "com.photon.teamoutingapp"
+        },
+        "com.photon-ElearningPlugin": {
+            "PACKAGE_NAME": "com.photon.teamoutingapp"
+        },
+        "com.photon-Login": {
+            "PACKAGE_NAME": "com.photon.teamoutingapp"
+        },
+        "com.photon-OfflineServicePlugin": {
+            "PACKAGE_NAME": "com.photon.teamoutingapp"
+        },
+        "com.photon-OfflineSyncPlugin": {
+            "PACKAGE_NAME": "com.photon.teamoutingapp"
+        },
+        "com.photon-SQLitePlugin": {
+            "PACKAGE_NAME": "com.photon.teamoutingapp"
+        },
+        "com.photon-pdfViewer": {
+            "PACKAGE_NAME": "com.photon.teamoutingapp"
+        },
+        "cordova-plugin-battery-status": {
+            "PACKAGE_NAME": "com.photon.teamoutingapp"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.photon.teamoutingapp"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.photon.teamoutingapp"
+        },
+        "cordova-plugin-contacts": {
+            "PACKAGE_NAME": "com.photon.teamoutingapp"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.photon.teamoutingapp"
+        },
+        "cordova-plugin-device-motion": {
+            "PACKAGE_NAME": "com.photon.teamoutingapp"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "com.photon.teamoutingapp"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.photon.teamoutingapp"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.photon.teamoutingapp"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.photon.teamoutingapp"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.photon.teamoutingapp"
+        },
+        "cordova-plugin-globalization": {
+            "PACKAGE_NAME": "com.photon.teamoutingapp"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.photon.teamoutingapp"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "com.photon.teamoutingapp"
+        },
+        "cordova-plugin-media-capture": {
+            "PACKAGE_NAME": "com.photon.teamoutingapp"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.photon.teamoutingapp"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.photon.teamoutingapp"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "com.photon.teamoutingapp"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.photon.teamoutingapp"
+        }
+    },
+    "dependent_plugins": {}
+}

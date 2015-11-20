@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="com.photon-Echo" version="0.0.1">
+    <name>ElearningPlugin</name>
+    <description>A Cordova plugin that links echo</description>
+    <engines>
+        <engine name="cordova" version=">=3.9.1" />
+    </engines>
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="EchoPlugin">
+                <param name="ios-package" value="EchoPlugin" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/CDVEcho.h" />
+        <source-file src="src/ios/CDVEcho.m" />
+    </platform>
+</plugin>

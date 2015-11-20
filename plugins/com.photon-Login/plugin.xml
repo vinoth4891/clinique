@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="com.photon-Login" version="0.0.1">
+    <name>LoginPlugin</name>
+    <description>A Cordova plugin to handle Login</description>
+    <author>Clinique</author>
+    <license>Apache 2.0 License</license>
+    <engines>
+        <engine name="cordova" version=">=3.9.1" />
+    </engines>
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="LoginPlugin">
+                <param name="ios-package" value="LoginPlugin" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/LoginPlugin.h" />
+        <source-file src="src/ios/LoginPlugin.m" />
+        <framework src="OpenAL.framework" />
+        <framework src="UIKit.framework" />
+        <framework src="Foundation.framework" />
+        <framework src="CFNetwork.framework" />
+        <framework src="MediaPlayer.framework" />
+        <framework src="QuartzCore.framework" />
+        <framework src="CoreMedia.framework" />
+    </platform>
+</plugin>
+
