@@ -61,6 +61,7 @@ define(["framework/WidgetWithTemplate","home/Home"] , function(template) {
             }
                                                                 
             jQuery("#homebackbtn").die().live("click", function () {
+				videoContrlFun();
                 cordova.exec(function(winParam) {},
                 function(error) {},"ElearningPlugin","backToBlueOcean",[]);
              });
@@ -90,6 +91,7 @@ define(["framework/WidgetWithTemplate","home/Home"] , function(template) {
             });
             self.manualSync_Tapped=false;
             jQuery(".manualSync").off().on('click',function(){
+				videoContrlFun();
                 if( checkAppOnline() &&  !self.manualSync_Tapped ){
                      self.manualSync_Tapped=true;
                      var data={"uid":userDetails.id};
