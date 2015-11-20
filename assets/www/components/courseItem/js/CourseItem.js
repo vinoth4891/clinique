@@ -373,6 +373,13 @@ define(["framework/WidgetWithTemplate", "match/Match", "uncover/Uncover","abstra
 				jQuery(this).removeClass('active');
 			});
 
+			 jQuery("#note").on("focus", function(){
+                jQuery("div.row.menu").hide();
+            });
+            jQuery("#note").on("blur",function(){
+                jQuery("div.row.menu").show();
+            });
+			
             jQuery("#note").on("focus", function(){
                 jQuery("div.row.menu").hide();
             });
@@ -4232,7 +4239,7 @@ define(["framework/WidgetWithTemplate", "match/Match", "uncover/Uncover","abstra
                                                                 if(parent.find("video").find("source")[0].src != undefined){
                                                                     var URL =  parent.find("video").find("source")[0].src
                                                                             parent.empty();
-                                                                            parent.append("<img class='video_quiz' src='http://01847-stg.photoninfotech.com/clinique/images/android_landscape.png' width='340px' height='200px' data-url="+URL+"></img>");
+                                                                            parent.append("<img class='video_quiz' src='http://172.16.17.42/cliniquedev/images/android_landscape.png' width='340px' height='200px' data-url="+URL+"></img>");
                                                                 }
 
                                                                 parent.find(".video_quiz").on("click",function(){

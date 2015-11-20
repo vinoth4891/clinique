@@ -2735,6 +2735,9 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
 							jQuery(this).attr('scrolling','no');
 						   
 						    jQuery("#load_wrapper, .overlaycontainer").show();
+							if (isAndroid()) {
+								jQuery("#resourceContent-iframe").contents().find("#page-mod-quiz-viewPAGE").css("margin-top", "40px");
+							}
 						     // QUIZ full screen for Browser
 							 jQuery("#resourceContent-iframe").contents().find(".ui-btn-hidden").off().on('click', function(){
                                 
