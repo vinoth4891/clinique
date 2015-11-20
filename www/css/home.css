@@ -981,3 +981,7 @@ z-index: 999;
 
 .hideSection .float_footer .navbar-fixed-bottom { top:0 !important; position:relative !important;}
  }
+ 
+ @media handheld, only screen and (max-width: 469px) and (min-width:414px) and (orientation: portrait){ 
+ html .popup { margin-left:-185px;}
+ }

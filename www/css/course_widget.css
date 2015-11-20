@@ -420,7 +420,7 @@ body > li.ui-draggable.sequence-item img{ width:135px; height:115px;}
 /* iPhone and Android Landscape -- iPad Portrait */
 @media handheld, only screen and (max-width:768px){
 
-.crswidg_img ul li{margin-right:0.9%}
+.crswidg_img ul li{margin-right:0.9%; height:230px; float:left;}
 .crswidg_drgbtn{width:84%}
 .crswidg_drgbtn ul li{margin-right:2.4%}
 .crswidg_overlyhldr {width:90%; margin:13px;}
@@ -530,7 +530,7 @@ body > li.ui-draggable.sequence-item img{ width:110px; height:100px;}
 .crswidg_drgans h1{font-size:19px}
 .crswidg_drgoptns ul li a{font-size:15px; font-weight:bold}
 .crswidg_img ul li{width:131px; height:222px; margin-right:1.5%}
-.crswidg_drgbtn ul li a, .pro_container > li a {height:77px; width: /*110px*/100%}
+.crswidg_drgbtn ul li a, .pro_container > li a {height:auto; width: /*110px*/100%}
 .crswidg_drgbtn ul li{margin-right:1.9%}
 .crswidg_drgbtn {width: 91%}
 .crswidg_lblbx p {font-size: 12px; line-height: 14px}
@@ -619,7 +619,7 @@ body > li.ui-draggable.sequence-item img{ width:90px; height:90px;}
 @media handheld, only screen and (max-width:480px){
 
 .crswidg_qustns ul li {width: 147px; /*margin-right:0.84%*/}
-.crswidg_img ul li {width: 107px; margin-right:0.8%; height:187px}
+.crswidg_img ul li {width: 23%; margin-right:0.8%; height:187px}
 .crswidg_drgbtn {width: 91%}
 .crswidg_drgbtn ul li a, .pro_container > li a {width: /*85px*/100%}
 .crswidg_qustns ul li.nodisp{ width:147px; }
@@ -768,7 +768,7 @@ and (orientation : portrait) {
 @media screen and (max-width:440px) {
     .widget-maincontent-div  .crswidg_img ul li
     {
-        height: 90px;
+        height: 148px;
         padding-bottom:36px;
     }
 }

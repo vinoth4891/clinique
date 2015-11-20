@@ -416,6 +416,7 @@ box-shadow: -3px 3px 5px 3px rgba(0, 0, 0, .2);}
 
  
  
-@media only and (max-width: 767px) and (orientation: landscape)  {
+@media handheld, only screen and (max-width: 767px) and (orientation: landscape)  {
     .acc_tilebx { width:352px !important;}
+	.acc_tilebx ul { width: 100%;}
 }
