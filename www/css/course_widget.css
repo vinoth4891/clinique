@@ -789,3 +789,4 @@ and (orientation : portrait) {
         padding-bottom:36px;
     }
 }
+@media only screen and (min-width : 768px) {.crswidg_img ul li { height:285px; float:left;}}
