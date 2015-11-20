@@ -1011,7 +1011,7 @@ div.footerbx{
 	
 }
 
-  @media handheld, only screen and (max-width: 720px) {
+  @media handheld, only screen and (max-width: 767px) {
      
     .login-bx { width:100%;}  
     /* .footerbx{width: 100%;border-top:none;position: relative;bottom: 69px;background: #fff;}*/
@@ -1350,7 +1350,7 @@ body .quiz-container .btncommon { width:88% !important;}
     .register_Footer{margin-top:35%;}
 }
 
- @media handheld, only screen and (max-width: 720px) { 
+ @media handheld, only screen and (max-width: 767px) { 
  
  .body {background:#FFF url(../images/login_bg_720.png) no-repeat left bottom fixed}
  .loginholder {padding: 30px 0 40px} 
@@ -2681,13 +2681,13 @@ body .float_footer .navbar-fixed-bottom {top: 835px !important;}
  body.crosswordwrap  { position:relative; overflow:scroll;}
 #mob_book_shelf { padding-bottom:300px;}
 
-@media only screen and (min-width : 375px) and (max-width : 667px) and (orientation : landscape){ 
+@media only screen and (min-width : 375px) and (max-width : 677px) and (orientation : landscape){ 
 .hme_hdrbx .onlineStatus { width:33px; height:auto; margin-top: 7px;}
 body #loginPop { margin-top:-120px;}
  body .login-popup { margin-left:-197px !important;}
 }
 
-@media only screen and (min-width : 375px) and (max-width : 667px) and (orientation : portrait){ 
+@media only screen and (min-width : 375px) and (max-width : 677px) and (orientation : portrait){ 
  body .login-popup { margin-left:-165px !important;}
 }
 
