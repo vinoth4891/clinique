@@ -231,3 +231,8 @@ body #register_holder fieldset input, body #register_holder fieldset select { wi
 and (orientation : landscape) {
 body span.guideNotes { width:100% !important;}
 }
+
+.top-page-text {padding-left: 11%;  display: block;  padding-bottom: 20px; color:#85a095;}
+@media handheld, only screen and (max-width: 767px) {
+#container .top-page-text {padding-left: 1.5%;}
+ }
