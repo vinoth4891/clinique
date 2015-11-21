@@ -193,3 +193,8 @@ html,body{margin:0; padding:0;}
 	select {-webkit-appearance: listbox; padding: 0px 5px !important}
 #regmsg_modal{margin-top: 30% !important}
 }
+
+.top-page-text {padding-left: 11%;  display: block;  padding-bottom: 20px; color:#85a095;}
+@media handheld, only screen and (max-width: 767px) {
+#container .top-page-text {padding-left: 1.5%;}
+ }
