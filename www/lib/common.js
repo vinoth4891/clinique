@@ -221,6 +221,7 @@ function sendProgress(json){
                             }
 							progressStartFLAG.homeWidget.loadPage();
                             jQuery('.errorCode-pop .prog-summarys').attr('data-msg','downloadcomplete');
+							jQuery('.errorCode-pop .prog-summarys').addClass('download');
                             updateLanguage();
                             jQuery('.errorCode-pop,.overlaylightbox').show();
                         }else if( (json.TOTAL_FILES == json.CURRENT_FILE_NO) && manualSyncStart){
