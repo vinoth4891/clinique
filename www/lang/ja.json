@@ -160,7 +160,7 @@
 	"reg-top-page"        : "<span class='japan_guiding'>登録情報はすべて、アルファベットまたは数字で入力してください（日本語とスペースは不可）。<br />スマートフォン使用の場合、データ通信料が発生しない、無料Wi-Fiを使っての利用を推奨します。</span>",
 	"reg-user-firstname"  : "<span class='japan_guiding'>「名」には、社員番号を入力してください。</span>",
 	"reg-user-password"  : "<span class='japan_guiding'>大文字・小文字を混ぜて8文字以上にしてください。 例)Clinique</span>",
-	"reg-user-select-region"  : "<span class='japan_guiding'>Asia Pacific」を選択してください。</span>",
+	"reg-user-select-region"  : "<span class='japan_guiding'>「Asia Pacific」を選択してください。</span>",
 	"reg-user-select-country"  : "<span class='japan_guiding'>「Japan」を選択してください。</span>",
 	"reg-user-select-language"  : "<span class='japan_guiding'>「日本語」を選択してください。</span>",
 	"reg-user-retailer"  : "<span class='japan_guiding'>該当するものを選択してください例)。Takashimaya<br/>なければ「Other」を選択して、その下方に表示されたテキストボックスにアルファベットで入力してください。</span>",
