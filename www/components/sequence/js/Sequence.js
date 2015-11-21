@@ -521,7 +521,7 @@ define(["framework/WidgetWithTemplate","courseItem/CourseItem","course/Course","
             });
 			
 			$( window ).resize(function() {  
-			    if(!$('html').hasClass('ie8')){
+			    if(!$('html').hasClass('ie8') && $("#quesname_activity3").length > 0){
 				var divheight = $("#quesname_activity3").height(); 
 				var lineheight = $("#quesname_activity3").css('line-height').replace("px","");
 				var count = Math.round(divheight/parseInt(lineheight));
