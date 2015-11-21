@@ -9,7 +9,7 @@
 				<div class="reg-text-rt">	
                 <input required  id="reg_uname" type="text" name="name" required>
 				<div class="clearboth"></div>
-				<span style="display:none" data-msg="reg-user-note" class="guideNotes"></span>
+				<span data-msg="reg-user-note" class="guideNotes"></span>
 			</div>
 				<span id="regUname"></span>
             </fieldset>
