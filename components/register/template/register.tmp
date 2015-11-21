@@ -1,4 +1,5 @@
 {{checkForBreadcrum}}
+<span data-msg="reg-top-page" class="top-page-text"></span>
 <section>
     <div class="registerbx">
         <form id="register_holder">					    
