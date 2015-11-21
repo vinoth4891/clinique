@@ -298,7 +298,7 @@ define(["framework/WidgetWithTemplate","courseItem/CourseItem","course/Course","
 						self.reloadCurrPage();
 					}
                 });
-                if(isiOS()){
+                if(isiOS() || isAndroid() ){
                     iTouch = 'touchstart';
                 }
                 $("div.quizmask").on(iTouch, function (){
@@ -400,6 +400,9 @@ define(["framework/WidgetWithTemplate","courseItem/CourseItem","course/Course","
 			else
 			jQuery(".next_activity, .previous_activity").css("display", "none");
 			var language, iTouch = 'click';
+			if(isAndroid()){
+				iTouch = 'touchstart';
+			}
             if (!($.browser.msie && parseInt($.browser.version, 10) === 7)) {
                 language = window.localStorage.getItem("language");
             } else {
@@ -501,7 +504,11 @@ define(["framework/WidgetWithTemplate","courseItem/CourseItem","course/Course","
                 emptyMedia();
             });
             jQuery('div.prorowadj > div.close').on(iTouch, function() {
-                jQuery('.topicspagenav').click();
+                if (isAndroid()) {
+					jQuery('.topicspagenav').trigger("touchstart");
+				} else {
+					jQuery('.topicspagenav').click();
+				}
             });
 			jQuery('section.crswidg_img_small ul li .coverimg').on(iTouch, function() {
 				var _this = jQuery(this);
@@ -512,7 +519,7 @@ define(["framework/WidgetWithTemplate","courseItem/CourseItem","course/Course","
             });
 			
 			$( window ).resize(function() {  
-			    if(!$('html').hasClass('ie8')){
+			    if(!$('html').hasClass('ie8') && $("#quesname_activity3").length > 0){
 				var divheight = $("#quesname_activity3").height(); 
 				var lineheight = $("#quesname_activity3").css('line-height').replace("px","");
 				var count = Math.round(divheight/parseInt(lineheight));
