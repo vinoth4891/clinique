@@ -824,8 +824,8 @@ define(["framework/WidgetWithTemplate","courseItem/CourseItem","course/Course","
 			
 			/* Start's Text Alignment based on number of lines */
 			
-			/* $( window ).resize(function() {
-				if(!$('html').hasClass('ie8') && !$('html').hasClass('ie9')){
+			$( window ).resize(function() {
+				if(!$('html').hasClass('ie8') && !$('html').hasClass('ie9') && $("#quesname_activity2").length > 0){
 					var divheight = $("#quesname_activity2").height(); 
 					var lineheight = $("#quesname_activity2").css('line-height').replace("px","");
 					var count = Math.round(divheight/parseInt(lineheight));
@@ -835,7 +835,7 @@ define(["framework/WidgetWithTemplate","courseItem/CourseItem","course/Course","
 						$("#quesname_activity2").addClass("righttalign");     
 					}				
 				}
-			}); */
+			});
 			/* End of Text Alignment based on number of lines */
         }
     });
