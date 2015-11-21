@@ -226,3 +226,8 @@ body #register_holder .reg-text-rt {float: left;width: 70%;}
 }
 
 .ie7-css .clearboth { height:0;}
+
+.top-page-text {padding-left: 11%;  display: block;  padding-bottom: 20px; color:#85a095;}
+@media handheld, only screen and (max-width: 767px) {
+#container .top-page-text {padding-left: 1.5%;}
+ }
