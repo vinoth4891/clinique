@@ -746,7 +746,7 @@ body > li.ui-draggable.sequence-item img{ width:80px; height:80px;}
 
 .crswidg_drgbxtble_container .crswidg_drgbxtble_container_inner  .crswidg_drgbxtble_small{ width:100%; }
 
- body .pro_container .ui-draggable-dragging  {width:300px !important;}
+ html body .pro_container .ui-draggable-dragging  {width:300px !important;}
  
  BODY .crswidg_drgbxtble_container .crswidg_drgbxtble_container_inner .crswidg_drgbxtble_small td { padding:0 30px;}
  
