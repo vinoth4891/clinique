@@ -487,6 +487,12 @@ function loadLanguages(lang) {
 function translatePage(lang) {
     jQuery('[data-msg]').map(function() {
         var dataMsg = jQuery(this).attr('data-msg');
+		// To display center
+		if ( dataMsg === "downloadcomplete" ) {
+			jQuery(this).addClass("download");
+		} else {
+			jQuery(this).removeClass("download");
+		}
 		if ( dataMsg === 'popup_legal_cntReg' || dataMsg === 'popup_legal_cnt' || dataMsg.indexOf("reg-") >= 0) {
 			jQuery(this).html(getString(lang, dataMsg));
 		} else {
