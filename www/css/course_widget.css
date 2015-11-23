@@ -486,7 +486,7 @@ height:inherit;
 body > li.ui-draggable.sequence-item { width:120px; height:110px;font-size:13px;line-height: 17px;  }
 body > li.ui-draggable.sequence-item a { font-size:13px; line-height: 17px;}
 body > li.ui-draggable.sequence-item img{ width:120px; height:110px;}
-
+html body  .widget-maincontent-div  .row.pro_container .ui-draggable-dragging  {width:195px !important;}
 }
 
 @media handheld, only screen and (max-width:640px){
@@ -638,6 +638,7 @@ body > li.ui-draggable.sequence-item img{ width:80px; height:85px;}
  div.favCommentNotes{ display:none !important;}
  body .commentNotes{ display:none !important;}
  html body .crswidg_drgbxtble_container .crswidg_drgbxtble_container_inner .crswidg_drgbxtble_small td { padding:0 5px; font-size:12px;}
+ html body  .widget-maincontent-div div.row.pro_container .ui-draggable-dragging  {width:95px !important;}
 }
 
 @media handheld, only screen and (max-width:385px){
