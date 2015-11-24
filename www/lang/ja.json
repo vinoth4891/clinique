@@ -165,7 +165,7 @@
 	"reg-user-select-language"  : "<span class='japan_guiding'>「日本語」を選択してください。</span>",
 	"reg-user-retailer"  : "<span class='japan_guiding'>該当するものを選択してください。例) Takashimaya<br/>なければ「Other」を選択して、その下方に表示されたテキストボックスにアルファベットで入力してください。</span>",
 	"reg-user-ret-other"  : "<span class='japan_guiding'>なければ「other」を選択して、その下方に表示されたテキストボックスにアルファベットで入力してください</span>",
-	"reg-user-store"  : "<span class='japan_guiding'>該当するものを選択してください。例) Takashimaya Yokoham Cl<br/>なければ「Other」を選択して、その下方に表示されたテキストボックスにアルファベットで入力してください。</span>",
+	"reg-user-store"  : "<span class='japan_guiding'>該当するものを選択してください。例)Takashimaya Yokoham Cl<br/>なければ「Other」を選択して、その下方に表示されたテキストボックスにアルファベットで入力してください。</span>",
 	"reg-user-store-other"  : "<span class='japan_guiding'>なければ「other」を選択して、その下方に表示されたテキストボックスにアルファベットで入力してください</span>",
 	"reg-user-job-cm": "<span class='japan_guiding'>該当するものを選択してください。<br/>コーナーチーフ→「Counter Manager」<br/>認定セミナーに合格したコンサルタント→「Accredited Consultant」<br/>認定セミナー未受講のコンサルタント→「Consultant」</span>",
 	"reg-user-job-ac": "<span class='japan_guiding'></span>",

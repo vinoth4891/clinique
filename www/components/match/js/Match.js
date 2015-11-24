@@ -837,6 +837,7 @@ define(["framework/WidgetWithTemplate","courseItem/CourseItem","course/Course","
 				}
 			});
 			/* End of Text Alignment based on number of lines */
+ 			 $("html, body").animate({scrollTop: 0});
         }
     });
     return Clazz.com.components.widget.match.js.Match;
