@@ -4012,7 +4012,10 @@ define(["framework/WidgetWithTemplate", "match/Match", "uncover/Uncover","abstra
                             
 						    // QUIZ full screen for Browser
 							jQuery("#courseContent-iframe").contents().find(".ui-btn-hidden").off().on('click', function(){
-                                jQuery("body").addClass("overlay-video-quiz");
+                                var length = jQuery("#courseContent-iframe").contents().find(".ui-btn-hidden").length;
+                                if (length == 1) {
+                                   jQuery("body").addClass("overlay-video-quiz");
+                                }
                                 var height, closeOverlayIcon;
 
 								 if($('html').hasClass('ie8') || $('html').hasClass('ie9')){

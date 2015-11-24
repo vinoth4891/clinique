@@ -2958,7 +2958,10 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
 						     // QUIZ full screen for Browser
 						if( !$('html').hasClass('ie8') && !$('html').hasClass('ie9')) {
 							 jQuery("#resourceContentFav-iframe").contents().find(".ui-btn-hidden").off().on('click', function(){
-                                jQuery("body").addClass("overlay-video-quiz");
+                                var length = jQuery("#resourceContentFav-iframe").contents().find(".ui-btn-hidden").length;
+								if (length == 1) {
+									jQuery("body").addClass("overlay-video-quiz");
+								}
                                 var height, closeOverlayIcon;
 
                                 if($('html').hasClass('ie8') || $('html').hasClass('ie9')){
