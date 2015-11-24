@@ -746,13 +746,16 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
             jQuery(".footer_comment").die().live('click', function() {
                 self.loadResourceComment();
                 jQuery(".commentmodal,.commentmodal-backdrop").show();
+				jQuery(this).addClass('selected');
             });
             jQuery(".commentSavebtn").off().on('click', function(){
                 self.saveNotes(".commentform-control");
                 jQuery(".commentmodal,.commentmodal-backdrop").hide();
+				jQuery(".footer_comment").removeClass('selected');
             });
             jQuery(".commentCancelbtn").off().on('click', function(){
                 jQuery(".commentmodal,.commentmodal-backdrop").hide();
+				jQuery(".footer_comment").removeClass('selected');
             });
             jQuery('#save-notes-btn').die().live(iTouch, function(event) {
 				event.preventDefault();

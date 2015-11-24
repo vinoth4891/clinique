@@ -219,15 +219,18 @@ define(["framework/WidgetWithTemplate", "match/Match", "uncover/Uncover","abstra
             jQuery(".footer_comment").die().live('click', function() {
                 currentCtrl.loadResourceComment();
                 jQuery(".commentmodal,.commentmodal-backdrop").show();
+				jQuery(this).addClass('selected');
             });
             jQuery(".commentSavebtn").off().on('click', function(){
                 currentCtrl.saveNotes(".commentform-control");
                 jQuery(".commentmodal,.commentmodal-backdrop").hide();
                 jQuery(".commentform-control").blur();
+				jQuery(".footer_comment").removeClass('selected');
             });
             jQuery(".commentCancelbtn").off().on('click', function(){
                 jQuery(".commentmodal,.commentmodal-backdrop").hide();
                 jQuery(".commentform-control").blur();
+				jQuery(".footer_comment").removeClass('selected');
             });
 
             jQuery(".footer_home").die().live('click', function() {
