@@ -554,13 +554,16 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
             jQuery(".footer_comment").die().live('click', function() {
              self.loadResourceComment();
              jQuery(".commentmodal,.commentmodal-backdrop").show();
+			 jQuery(this).addClass('selected');
             });
             jQuery(".commentSavebtn").off().on('click', function(){
                 self.saveNotes(".commentform-control");
                 jQuery(".commentmodal,.commentmodal-backdrop").hide();
+				jQuery(".footer_comment").removeClass('selected');
             });
             jQuery(".commentCancelbtn").off().on('click', function(){
               jQuery(".commentmodal,.commentmodal-backdrop").hide();
+			  jQuery(".footer_comment").removeClass('selected');
             });
             self.removeSlashBreadcrumb();
             if(screen.width == 1024 && screen.height == 768 && !(/iPad/i.test(navigator.userAgent))){
