@@ -3696,7 +3696,7 @@ define(["framework/WidgetWithTemplate", "match/Match", "uncover/Uncover","abstra
             }
                                                                         
             jQuery("html, body").animate({ scrollTop: 0 }, "slow");
-            jQuery("#load_wrapper").show();
+            // jQuery("#load_wrapper").show(); /** no need to show loader while tabbing cc video **/
             var breadcrumb_four = '';
 			var prefix = jQuery.trim(courseItemData.fileName.substr(0,3));
 			if(prefix =='CC:')
