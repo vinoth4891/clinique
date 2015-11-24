@@ -786,7 +786,7 @@ and (orientation : portrait) {
 @media screen and (max-width:440px) {
     .widget-maincontent-div  .crswidg_img ul li
     {
-        height: 148px;
+        height: 109px;
         padding-bottom:36px;
     }
 }
