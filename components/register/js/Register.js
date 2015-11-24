@@ -276,6 +276,7 @@ define(["framework/WidgetWithTemplate"] , function(template) {
                 //jQuery( "body" ).scrollTop(100);
             });
             initLanguages();
+			jQuery("#remove_user").parent().hide();
         },
         checkIfFileExists: function(self, policyItemsData) {  /*fun for whether selected file already downloaded or not*/
             if (isDevice() && isPhoneGap()) {
