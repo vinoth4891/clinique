@@ -2919,6 +2919,7 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
             jQuery("#displayContentFav").css({
                 position : 'relative'
             });
+			jQuery("#displayContentFav").addClass('quiz-container');
             jQuery(".iframewrap_crs_fav").prepend('<div class="ifram_cls_btn close"><span><img src="../images/closebtn.png"></span></div>');
                 if (!($.browser.msie && parseInt($.browser.version, 10) === 7)) {
                  window.localStorage.pdfurl = srcURL;

@@ -2592,7 +2592,7 @@ video { margin-top:20px;}
 .quiz-main-container .course_ifram_cls_btn  { right:56px !important;} 
 body .widget-maincontent-div { margin-top:1% !important;}
 body.quiz-main-container .widget-maincontent-div {  margin-top: 0% !important;}
-#showlistFav  .fav_btnstrip ul { margin:0 0 87px 0; float:left;}
+#showlistFav  .fav_btnstrip ul { margin:0 0 87px 0; float:left; width:100%;}
 }
  .iframewrap_crs, .iframewrap_crs_fav, .iframewrap_crs_res, .iframewrap_crs_news { clear:both;}
  iframe { border:0px;}
