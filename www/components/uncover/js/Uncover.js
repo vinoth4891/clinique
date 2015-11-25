@@ -136,7 +136,7 @@ define(["framework/WidgetWithTemplate","courseItem/CourseItem","course/Course","
         	}else if( isDevice() ){
         		self.unCoverSuccess(self.UserDetails);
         	}
-            if(isiOS()){
+            if(isiOS() || isAndroid()){
                 iTouch = 'touchstart';
             }
             $("div.quizmask").on(iTouch, function (){
@@ -161,7 +161,7 @@ define(["framework/WidgetWithTemplate","courseItem/CourseItem","course/Course","
                     'background-repeat':'no-repeat',
                     'background-size':'100% 100%'
                 });
-                if(isiOS()){
+                if(isiOS() || isAndroid()){
                     iTouch = 'touchstart';
                 }
 				jQuery('.hidden-img').hide();
@@ -266,7 +266,7 @@ define(["framework/WidgetWithTemplate","courseItem/CourseItem","course/Course","
                     jQuery("div.row.menu").addClass('setBehind');
                     $("body > div.congrats_tina").show();
 
-                    if(isiOS()){
+                    if(isiOS() || isAndroid()){
                         iTouch = 'touchstart';
                     }
                     $("div.congrats_tina .sucessbtn, div.congrats_tina .cls_btn").off().on(iTouch, function (){
@@ -274,7 +274,11 @@ define(["framework/WidgetWithTemplate","courseItem/CourseItem","course/Course","
                         $("div.quizmask").hide();
                         jQuery("div.row.menu").removeClass('setBehind');
                         $("div.congrats_tina, div.correct_tina").hide();
-                        jQuery('.topicpagenav').click();
+                        if (isAndroid()) {
+							jQuery('.topicpagenav').trigger("touchstart");
+						} else {
+							jQuery('.topicpagenav').click();
+						}
                     });
                 }
             }, 300);
@@ -308,7 +312,7 @@ define(["framework/WidgetWithTemplate","courseItem/CourseItem","course/Course","
                 self.gotoMainQuestion();
             },3000);
             /* Closing the Popups */
-            if(isiOS()){
+            if(isiOS() || isAndroid()){
                 iTouch = 'touchstart';
             }
             $("body > div.correct_tina .cls_btn").on(iTouch, function (){
@@ -332,6 +336,9 @@ define(["framework/WidgetWithTemplate","courseItem/CourseItem","course/Course","
             jQuery("#header-menu li").removeClass('selected');
             jQuery(".header_course").addClass('selected');
             var language, iTouch = 'click';
+			if(isAndroid()){
+				iTouch = 'touchstart';
+            }
             if (!($.browser.msie && parseInt($.browser.version, 10) === 7)) {
                 language = window.localStorage.getItem("language");
             } else {
