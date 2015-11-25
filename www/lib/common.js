@@ -1103,7 +1103,7 @@ function videoContrlFun() {
 /* Restricting Footer Mobile Menu in web */
 jQuery(window).resize(function (){
     $('.scormPage #container .pro_container #content-webview').css('height',$(window).height());
-	$('.quiz-main-container #content-webview').css('height',$(window).height()-45);
+	$('.quiz-main-container #content-webview, .quiz-main-container #displayContentFav').css('height',$(window).height()-45);
     if( (navigator.platform == "iPhone" || navigator.platform == "iPhone Simulator") && ( isDevice() ) ){
       jQuery("#mob_book_shelf").css('padding-bottom','0');
     }

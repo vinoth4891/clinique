@@ -1465,8 +1465,14 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
 
            jQuery("#displayContentFav").empty().show();
             jQuery("#displayContentFav").css({ position : 'relative' });
-            jQuery(".iframewrap_crs_fav").prepend('<div class="ifram_cls_btn close"><span><img src="../images/closebtn.png"></span></div>');
-            jQuery("#displayContentFav").addClass('quiz-container');
+			if ( jQuery(".iframewrap_crs_fav").children().length ) {
+				if ( jQuery(".iframewrap_crs_fav").children().attr('class') == undefined ) {
+					jQuery(".iframewrap_crs_fav").prepend('<div class="ifram_cls_btn close"><span><img src="../images/closebtn.png"></span></div>');
+				}
+			}
+			jQuery("<div id='resourceContentFav-iframe' style='height:auto;'></div>").appendTo(jQuery("#displayContentFav"));
+            
+			jQuery("#displayContentFav").addClass('quiz-container');
             jQuery("#displayContentFav").show();
             $('body').addClass("quiz-main-container fav-quiz-main-container");
             $('.quiz-main-container #displayContentFav').css('height',$(window).height()-45);
@@ -1582,7 +1588,7 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
 
                                 });
 
-                                 jQuery(quizquestions).appendTo(jQuery("#displayContentFav"));
+                                 jQuery(quizquestions).appendTo(jQuery("#resourceContentFav-iframe"));
                                if(multichoice == "match"){
                                      jQuery('.select').not('.done').each(function(index,value){
                                             var selectBoxId = $(this).attr('id');
@@ -1622,7 +1628,7 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
 
 				});
 				quizquestions = "<div class='btnwrap'><div type='button' class='nextquiz btncommon' data-msg='next'></div></div>";
-				jQuery(quizquestions).appendTo(jQuery("#displayContentFav"));
+				jQuery(quizquestions).appendTo(jQuery("#resourceContentFav-iframe"));
 
 			}
 			else if(self.summary){
@@ -1640,7 +1646,7 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
 					 });
 					quizsummary += "</table><div> <div data-msg='returnattempt' class='return-attempt btncommon'></div> </div>" +
 					 		"<div><div data-msg='submitallandfinish' class='submit-attempt btncommon'></div> </div>";
-					jQuery(quizsummary).appendTo(jQuery("#displayContentFav"));
+					jQuery(quizsummary).appendTo(jQuery("#resourceContentFav-iframe"));
 				}
 
 			}
@@ -1879,7 +1885,7 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
 
 
                        // jQuery(".quiz-table").append('<tr data-region="'+val.region+'" title="'+val.region+'" value="'+val.region+'">'+self.toTitleCase(val.region.toLowerCase())+'</option>');
-					jQuery(quizquestions).appendTo(jQuery("#displayContentFav"));
+					jQuery(quizquestions).appendTo(jQuery("#resourceContentFav-iframe"));
 
 						
 						if(type == "match"){
@@ -1917,12 +1923,12 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
 					quizquestions = "<div><div class='finish-review btncommon' data-msg='finishreview' ></div></div>";
 				else
 					quizquestions = "<div><div class='nextquiz btncommon review' data-msg='next'></div></div>";
-				jQuery(quizquestions).appendTo(jQuery("#displayContentFav"));
+				jQuery(quizquestions).appendTo(jQuery("#resourceContentFav-iframe"));
 			}
 			else{
 		     /* First Page */
 				var FirstPageElements = "<div class='headlabel'> <h2>"+self.quizdata.quizinfo[0].name+"</h2> </div>",attemptNew = '';statusTable ='',isHeader = true,next = true,inprogress = true,overallGrade = 0;
-				//jQuery(FirstPageElements).appendTo(jQuery("#displayContentFav"));
+				//jQuery(FirstPageElements).appendTo(jQuery("#resourceContentFav-iframe"));
 				var firstPageFlag = true,  finalGradeArray = [];
 				 self.displayIndex = 1;
 				 var alreadyattemptedData ='';
@@ -2050,7 +2056,7 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
 			    	jQuery(FirstPageElements).appendTo(jQuery(".quiz-container"));
 			    }*/
 				
-			    jQuery(FirstPageElements).appendTo(jQuery("#displayContentFav"));
+			    jQuery(FirstPageElements).appendTo(jQuery("#resourceContentFav-iframe"));
 			    var data = jQuery(".already").html();
 			    jQuery(".already").html(" ");
 				// feedback implementation 
@@ -2112,15 +2118,15 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
 				
 			    if(next && inprogress){
 			    	  FirstPageElements = "<div class='paracont'><span data-msg='yourfinalgradeis'></span> "+Math.max.apply(Math,finalGradeArray)+"</div><div class='paracont'> <span data-msg='nomoreattempts'></span></div>";
-			    	 jQuery(FirstPageElements).appendTo(jQuery("#courseContent-iframe"));
+			    	 jQuery(FirstPageElements).appendTo(jQuery("#resourceContentFav-iframe"));
 			    }
 			
 			    if(inprogress){
-			    	jQuery(attemptNew).appendTo(jQuery("#displayContentFav"));
+			    	jQuery(attemptNew).appendTo(jQuery("#resourceContentFav-iframe"));
 			    }
 			    else{
 			    	FirstPageElements = "<div class='reattempt-quiz btncommon' data-index ='"+(self.currentQuiz)+"' data-msg='reattemptquiz'></div></div>";
-			    	jQuery(FirstPageElements).appendTo(jQuery("#displayContentFav"));
+			    	jQuery(FirstPageElements).appendTo(jQuery("#resourceContentFav-iframe"));
 			    }
 			    
 			                                             
@@ -2137,6 +2143,14 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
 	            initLanguages();
 	            loadLanguages(activeLang);
              //jQuery("#displayContentFav").niceScroll();
+			 $(window).trigger('resize');
+			if( isiOS() || isAndroid() ){
+				jQuery(window).on("orientationchange",function(){
+					if ( $('body').hasClass('fav-quiz-main-container') ) {
+						$(window).trigger('resize');
+					}
+				});
+			}
 		},
         removeSlashBreadcrumb: function(){
             jQuery("#favbred li" ).each(function () {
