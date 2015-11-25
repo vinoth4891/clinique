@@ -2583,8 +2583,8 @@ body #container .animate-wrap {left: 50%; margin-bottom: 0 !important; margin-le
 
 video { margin-top:20px;}
 
- 
-.quiz-main-container #content-webview iframe {
+/* Remove the niceScroll and added webkit scroll for touch */ 
+.quiz-main-container #content-webview iframe, .quiz-main-container #displayContentFav {
 -webkit-overflow-scrolling:touch !important;
 -webkit-transform: translateZ(0);} 
 
