@@ -1821,7 +1821,7 @@ define(["framework/WidgetWithTemplate", "match/Match", "uncover/Uncover","abstra
 	            var activeLang = (language!==undefined && language!==null)?language:defaultLang;
 	            initLanguages();
 	            loadLanguages(activeLang);
-                jQuery("#content-webview").niceScroll();
+                // jQuery("#content-webview").niceScroll();
 		
 										
 		},
