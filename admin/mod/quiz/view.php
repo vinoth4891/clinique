@@ -183,7 +183,7 @@ if ($quiz->attempts != 1) {
 	 }else{
 		 $attmpts = $quiz->attempts;
 	 }
-    $viewobj->infomessages[] = get_string('attemptsallowed', 'quiz') .':'. $attmpts;
+  //  $viewobj->infomessages[] = get_string('attemptsallowed', 'quiz') .':'. $attmpts;
 	
 }
 
