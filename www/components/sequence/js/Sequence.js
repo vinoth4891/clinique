@@ -279,7 +279,11 @@ define(["framework/WidgetWithTemplate","courseItem/CourseItem","course/Course","
 					if(viewtype == 1)  {
 						jQuery(".course_ifram_cls_btn").trigger('click');
 					} else {
-						jQuery('.topicspagenav').click();
+						if (isAndroid()) {
+							jQuery('.topicspagenav').trigger("touchstart");
+						} else {
+							jQuery('.topicspagenav').click();
+						}
 					}
                 });
                 $("body > div.sequence_correct_tina .cls_btn").die('click').live('click', function (){
