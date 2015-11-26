@@ -1180,7 +1180,7 @@ define(["framework/WidgetWithTemplate", "match/Match", "uncover/Uncover","abstra
 	                	self.index++;
 
 	                self.layoutindex ++;
-                    data.quizlist[self.currentQuiz].questions[self.index-1].mark = Math.round(data.quizlist[self.currentQuiz].questions[self.index-1].mark);
+                    data.quizlist[self.currentQuiz].questions[self.index-1].mark = self.addDecimal(data.quizlist[self.currentQuiz].questions[self.index-1].mark);
 	                var singleType = data.quizlist[self.currentQuiz].questions[self.index-1].istruefalse;
 					var multichoice = data.quizlist[self.currentQuiz].questions[self.index-1].type;
 					if(data.quizlist[self.currentQuiz].questions.length){
