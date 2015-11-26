@@ -63,6 +63,7 @@ public class OfflineSyncPlugin extends Plugin {
 					Utilities.buildErrorResponse(e.getErrorCode(),
 							e.getMessage()));
 		} catch (Exception e) {
+			e.printStackTrace();
 			if(action.equals("ManualSync")){
 				activity.sendJavascript("progressFailiure("
 						+ Utilities.buildErrorResponse(ErrorConstants.ERR_10001,

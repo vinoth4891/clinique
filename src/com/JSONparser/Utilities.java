@@ -157,7 +157,7 @@ public class Utilities {
 		json.put("error", false);
 		json.put("msg", "done");
 		try {
-			if (!"".equals(data)) {
+			if (data!=null && !"".equals(data)) {
 				json.put("response", new JSONObject(data));
 			}
 		} catch (JSONException e) {
