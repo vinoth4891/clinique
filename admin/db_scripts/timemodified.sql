@@ -1,1 +1,0 @@
-ALTER TABLE `mdl_user_resource_comments` ADD `timemodified` TIMESTAMP NULL AFTER `timecreated`;
