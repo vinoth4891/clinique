@@ -1831,9 +1831,9 @@ define(["framework/WidgetWithTemplate", "match/Match", "uncover/Uncover","abstra
         		if(isHeader){
 					
 					if(self.noOfAttempts == 0){
-						FirstPageElements +="<div class='paracont'><span data-msg='attemptsallowed'></span>: <span data-msg='allinone'></span></div><div class='paracont' data-msg='summaryofattempts'></div>";
+						FirstPageElements +="<div class='paracont' style='text-align:center;'><span data-msg='attemptsallowed'></span>: <span data-msg='allinone'></span></div><div class='paracont' data-msg='summaryofattempts'></div>";
 					}else{
-						FirstPageElements +="<div class='paracont'><span data-msg='attemptsallowed'></span>: "+self.noOfAttempts+"</div><div class='paracont' data-msg='summaryofattempts'></div>";
+						FirstPageElements +="<div class='paracont' style='text-align:center;'><span data-msg='attemptsallowed'></span>: "+self.noOfAttempts+"</div><div class='paracont' data-msg='summaryofattempts'></div>";
                     }
 					// feedback implementation 
 					if(self.quizdata.quizinfo[0].feedback.length >= 1){

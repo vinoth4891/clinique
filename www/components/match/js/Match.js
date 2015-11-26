@@ -274,7 +274,7 @@ define(["framework/WidgetWithTemplate","courseItem/CourseItem","course/Course","
                         }, 15000);
                     }
                 });
-                if(isiOS()){
+                if(isiOS() || isAndroid()){
                     iTouch = 'touchstart';
                 }
                 $("div.quizmask").on(iTouch, function (){
@@ -294,7 +294,11 @@ define(["framework/WidgetWithTemplate","courseItem/CourseItem","course/Course","
 					if(viewtype == 1)  {
 						jQuery(".course_ifram_cls_btn").trigger('click');
 					} else {
-						jQuery('.topicspagenav').click();
+						if (isAndroid()) {
+							jQuery('.topicspagenav').trigger("touchstart");
+						} else {
+							jQuery('.topicspagenav').click();
+						}
 					}
                 });
             } else
@@ -573,7 +577,7 @@ define(["framework/WidgetWithTemplate","courseItem/CourseItem","course/Course","
                         }, 15000);
                     }
                 }); */
-                if(isiOS()){
+                if(isiOS() || isAndroid()){
                     iTouch = 'touchstart';
                 }
                 $("div.quizmask").on(iTouch, function (){
@@ -593,7 +597,11 @@ define(["framework/WidgetWithTemplate","courseItem/CourseItem","course/Course","
 					if(viewtype == 1)  {
 						jQuery(".course_ifram_cls_btn").trigger('click');
 					} else {
-						jQuery('.topicspagenav').click();
+						if (isAndroid()) {
+							jQuery('.topicspagenav').trigger("touchstart");
+						} else {
+							jQuery('.topicspagenav').click();
+						}
 					}
                 });
 			}
@@ -710,6 +718,9 @@ define(["framework/WidgetWithTemplate","courseItem/CourseItem","course/Course","
             jQuery("#header-menu li").removeClass('selected');
             jQuery(".header_course").addClass('selected');
             var language, iTouch = 'click';
+			if(isAndroid()){
+				iTouch = 'touchstart';
+			}
             if (!($.browser.msie && parseInt($.browser.version, 10) === 7)) {
                     language = window.localStorage.getItem("language");
                 } else {
@@ -819,7 +830,11 @@ define(["framework/WidgetWithTemplate","courseItem/CourseItem","course/Course","
               emptyMedia();
             });
             jQuery('div.prorowadj > div.close').on(iTouch, function() {
-                jQuery('.topicspagenav').click();
+                if (isAndroid()) {
+					jQuery('.topicspagenav').trigger("touchstart");
+				} else {
+					jQuery('.topicspagenav').click();
+				}
             });
 			
 			/* Start's Text Alignment based on number of lines */
