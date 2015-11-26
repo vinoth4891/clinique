@@ -1,0 +1,345 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"WebIntent\"><param name=\"android-package\" value=\"com.borismus.webintent.WebIntent\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"CheckOnline\"><param name=\"android-package\" value=\"com.clinique.phresco.hybrid.CheckOnline\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"CliniqueDBStore\"><param name=\"android-package\" value=\"com.clinique.phresco.hybrid.CliniqueDBStore\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"FileOpener\"><param name=\"android-package\" value=\"com.clinique.phresco.hybrid.FileOpener\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"FileOpenerOnline\"><param name=\"android-package\" value=\"com.clinique.phresco.hybrid.FileOpenerOnline\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"LoginPlugin\"><param name=\"android-package\" value=\"com.clinique.phresco.hybrid.LoginPlugin\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"OfflineServicePlugin\"><param name=\"android-package\" value=\"com.clinique.phresco.hybrid.OfflineServicePlugin\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"OfflineStore\"><param name=\"android-package\" value=\"com.clinique.phresco.hybrid.OfflineStore\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"OfflineSyncPlugin\"><param name=\"android-package\" value=\"com.clinique.phresco.hybrid.OfflineSyncPlugin\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Pdfview\"><param name=\"android-package\" value=\"com.clinique.phresco.hybrid.Pdfview\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Reciever\"><param name=\"android-package\" value=\"com.clinique.phresco.hybrid.Reciever\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SQLitePlugin\"><param name=\"android-package\" value=\"com.clinique.phresco.hybrid.SQLitePlugin\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"AppPreferences\"><param name=\"android-package\" value=\"me.apla.cordova.AppPreferences\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"AppUpdate\"><param name=\"android-package\" value=\"com.xuexiq.appupdate.CheckAppUpdate\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Battery\"><param name=\"android-package\" value=\"org.apache.cordova.batterystatus.BatteryListener\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Camera\"><param name=\"android-package\" value=\"org.apache.cordova.camera.CameraLauncher\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Contacts\"><param name=\"android-package\" value=\"org.apache.cordova.contacts.ContactManager\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Accelerometer\"><param name=\"android-package\" value=\"org.apache.cordova.devicemotion.AccelListener\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Compass\"><param name=\"android-package\" value=\"org.apache.cordova.deviceorientation.CompassListener\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Notification\"><param name=\"android-package\" value=\"org.apache.cordova.dialogs.Notification\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"File\"><param name=\"android-package\" value=\"org.apache.cordova.file.FileUtils\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"FileTransfer\"><param name=\"android-package\" value=\"org.apache.cordova.filetransfer.FileTransfer\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Magnetometer\"><param name=\"android-package\" value=\"org.apache.cordova.magnetometer.Magnetometer\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Media\"><param name=\"android-package\" value=\"org.apache.cordova.media.AudioHandler\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Capture\"><param name=\"android-package\" value=\"org.apache.cordova.mediacapture.Capture\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"NetworkStatus\"><param name=\"android-package\" value=\"org.apache.cordova.networkinformation.NetworkManager\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"networkinterface\"><param name=\"android-package\" value=\"com.albahra.plugin.networkinterface.networkinterface\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Vibration\"><param name=\"android-package\" value=\"org.apache.cordova.vibration.Vibration\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        }
+                    ],
+                    "/widget": [
+                        {
+                            "xml": "<feature name=\"Zip\"><param name=\"android-package\" value=\"org.apache.cordova.Zip\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/manifest/application": [
+                        {
+                            "xml": "<activity android:name=\"me.apla.cordova.AppPreferencesActivity\" />",
+                            "count": 1
+                        }
+                    ],
+                    "/*": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+                            "count": 6
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.READ_CONTACTS\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WRITE_CONTACTS\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\" />",
+                            "count": 3
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\" />",
+                            "count": 3
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.RECORD_AUDIO\" />",
+                            "count": 2
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.RECORD_VIDEO\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\" />",
+                            "count": 1
+                        }
+                    ],
+                    "/manifest": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.VIBRATE\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<preference name=\"AndroidPersistentFileLocation\" value=\"Internal\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "com.borismus.webintent": {
+            "PACKAGE_NAME": "com.clinique.phresco.hybrid"
+        },
+        "com.photon-CheckOnline": {
+            "PACKAGE_NAME": "com.clinique.phresco.hybrid"
+        },
+        "com.photon-CliniqueDBStore": {
+            "PACKAGE_NAME": "com.clinique.phresco.hybrid"
+        },
+        "com.photon-ElearningPlugin": {
+            "PACKAGE_NAME": "com.clinique.phresco.hybrid"
+        },
+        "com.photon-FileOpener": {
+            "PACKAGE_NAME": "com.clinique.phresco.hybrid"
+        },
+        "com.photon-FileOpenerOnline": {
+            "PACKAGE_NAME": "com.clinique.phresco.hybrid"
+        },
+        "com.photon-Login": {
+            "PACKAGE_NAME": "com.clinique.phresco.hybrid"
+        },
+        "com.photon-OfflineServicePlugin": {
+            "PACKAGE_NAME": "com.clinique.phresco.hybrid"
+        },
+        "com.photon-OfflineStore": {
+            "PACKAGE_NAME": "com.clinique.phresco.hybrid"
+        },
+        "com.photon-OfflineSyncPlugin": {
+            "PACKAGE_NAME": "com.clinique.phresco.hybrid"
+        },
+        "com.photon-pdfViewer": {
+            "PACKAGE_NAME": "com.clinique.phresco.hybrid"
+        },
+        "com.photon-Reciever": {
+            "PACKAGE_NAME": "com.clinique.phresco.hybrid"
+        },
+        "com.photon-SQLitePlugin": {
+            "PACKAGE_NAME": "com.clinique.phresco.hybrid"
+        },
+        "cordova-plugin-app-preferences": {
+            "PACKAGE_NAME": "com.clinique.phresco.hybrid"
+        },
+        "cordova-plugin-app-update": {
+            "PACKAGE_NAME": "com.clinique.phresco.hybrid"
+        },
+        "cordova-plugin-battery-status": {
+            "PACKAGE_NAME": "com.clinique.phresco.hybrid"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.clinique.phresco.hybrid"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.clinique.phresco.hybrid"
+        },
+        "cordova-plugin-contacts": {
+            "PACKAGE_NAME": "com.clinique.phresco.hybrid"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.clinique.phresco.hybrid"
+        },
+        "cordova-plugin-device-motion": {
+            "PACKAGE_NAME": "com.clinique.phresco.hybrid"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "com.clinique.phresco.hybrid"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.clinique.phresco.hybrid"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.clinique.phresco.hybrid"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.clinique.phresco.hybrid"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.clinique.phresco.hybrid"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.clinique.phresco.hybrid"
+        },
+        "cordova-plugin-magnetometer": {
+            "PACKAGE_NAME": "com.clinique.phresco.hybrid"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "com.clinique.phresco.hybrid"
+        },
+        "cordova-plugin-media-capture": {
+            "PACKAGE_NAME": "com.clinique.phresco.hybrid"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.clinique.phresco.hybrid"
+        },
+        "cordova-plugin-networkinterface": {
+            "PACKAGE_NAME": "com.clinique.phresco.hybrid"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.clinique.phresco.hybrid"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "com.clinique.phresco.hybrid"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.clinique.phresco.hybrid"
+        },
+        "cordova-plugin-zip": {
+            "PACKAGE_NAME": "com.clinique.phresco.hybrid"
+        }
+    },
+    "dependent_plugins": {}
+}

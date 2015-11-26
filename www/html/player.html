@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+    <head>
+        <title>Scorm Player</title>
+        
+        <script src="../lib/scormplayer/lib/sscompat.js" type="text/javascript"></script>
+        <script src="../lib/scormplayer/lib/sscorlib.js" type="text/javascript"></script>
+        <script src="../lib/scormplayer/lib/ssfx.Core.js" type="text/javascript"></script>
+
+        <script type="text/javascript" src="../lib/scormplayer/lib/API_BASE.js"></script>
+        <script type="text/javascript" src="../lib/scormplayer/lib/API.js"></script>
+        <script type="text/javascript" src="../lib/scormplayer/lib/API_1484_11.js"></script>
+
+        <script type="text/javascript" src="../lib/scormplayer/lib/Controls.js"></script>
+        <script type="text/javascript" src="../lib/scormplayer/lib/LocalStorage.js"></script>
+        <script type="text/javascript" src="../lib/scormplayer/lib/Player.js"></script>
+        
+
+        <style type="text/css">
+
+            * { margin: 0px; }
+            html, body, iframe { height:100%; }
+            html, body { overflow-y:hidden; font-family:Helvetica, "Helvetica Neue", Arial; font-size:12px; }
+            iframe { display:block; width:100%; /*margin-top: -10%;*/ }
+
+            html, body, iframe , a, img, table, tbody, tr, td, table td, table th {
+                border : 0px none;
+                padding: 0px; 
+            }
+
+            a:link { color: #0000FF; }
+            a:visited { color: #0000FF; }
+            a:hover { color: #000080; }
+            a:active { color: #0000FF; }	
+            #navigationContainer, #debuggerContainer, #treeContainer{
+                display: none;
+            }
+        </style>
+    </head>
+    <body onload="InitPlayer()">
+
+        <script type="text/javascript">
+            function InitPlayer() {
+                PlayerConfiguration.Debug = false;
+                PlayerConfiguration.StorageSupport = true;
+
+                PlayerConfiguration.TreeMinusIcon = "Img/minus.gif";
+                PlayerConfiguration.TreePlusIcon = "Img/plus.gif";
+                PlayerConfiguration.TreeLeafIcon = "Img/leaf.gif";
+                PlayerConfiguration.TreeActiveIcon = "Img/select.gif";
+
+                var manifestXML = window.localStorage.getItem("scormURL");
+                Run.ManifestByURL(manifestXML, true);
+            }
+        </script>
+
+        <table width="100%" height="100%" border="1" cellspacing="0" cellpadding="0"> 
+
+            <tr>
+            <td height="100%" valign="top">
+                <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr>          
+                    <td width="100%" height="100%" valign="top"><div id="placeholder_contentIFrame" style="width:100%;height:100%;"></div></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+    </table>
+
+</body>
+</html>

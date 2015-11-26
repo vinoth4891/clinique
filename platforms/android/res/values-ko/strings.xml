@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="app_name">Clinique</string>
+	<string name="no_media_warning">Storage Media not present</string>
+	<string name="no_media_hint">Sharing the storage media with a PC can make it inaccessible</string>
+	<string name="open_failed">Unable to open document</string>
+	<string name="search_backwards">Search backwards</string>
+	<string name="search_forwards">Search forwards</string>
+	<string name="search_document">Search document</string>
+	<string name="picker_title">Pdf Writer &amp; Reader</string>
+	<string name="outline_title">Table of Contents</string>
+	<string name="enter_password">Enter Password</string>
+	<string name="link_control">Link highlighting and enabling</string>
+	<string name="gen_pdf">Generate pdf</string>
+	<string name="view_pdf">View pdf</string>
+	<string name="title_activity_main">MainActivity</string>
+	<string name="progress_title">Generateing pdf...</string>
+	<string name="base_url">http://clinique-dev.photoninfotech.com/trunk/admin/clinique_webservice/services.php</string>
+	<string name="downloading_complete">완료 다운로드</string>
+	<string name="loading">로드</string>
+	<string name="done">완료</string>
+	<string name="save">저장</string>
+	<string name="ok">확인</string>
+	<string name="cancel">취소</string>
+	<string name="search">검색</string>
+	<string name="notes_help_txt">*모든 노트는 즐겨 찾기 아래에 저장됩니다</string>
+	<string name="enter_pg_no">페이지 번호를 입력</string>
+	<string name="chk_internet_conec">인터넷 연결을 확인하시기 바랍니다. </string>
+	<string name="text_not_found">검색 키를 찾을 수 없습니다.</string>
+	<string name="no_further_occurences_found">더 이상 발행 수를 찾을 수 없습니다</string>
+	<string name="searching_">검색...</string>
+	<string name="valid_page_no">유효한 페이지 번호를 입력하세요</string>
+	<string name="no_bookmark_avail">사용할 수있는 즐겨 찾기가 없습니다</string>
+	<string name="pg_no">페이지 없음</string>
+	<string name="alert_pg_no">페이지 없음을 입력</string>
+	<string name="no_sdcard">메모리 카드는 파일을 다운로드 찾을 수 없습니다</string>
+	<string name="pdfMSG">우리는 파일을 여는  \"Office Suite\" 또는 \"Adobe reader\"를 설치하는 것이 좋습니다. </string>
+	<string name="csvMSG">우리는 파일을 여는 \"Office Suite\" 또는 \"WPS Office\"를 설치하는 것이 좋습니다. </string>
+
+</resources>

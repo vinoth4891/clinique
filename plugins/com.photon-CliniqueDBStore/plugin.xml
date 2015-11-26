@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="com.photon-CliniqueDBStore" version="0.0.1">
+    <name>CliniqueDBStore</name>
+    <description>A Cordova plugin to handle CliniqueDBStore</description>
+    <author>Clinique</author>
+    <license>Apache 2.0 License</license>
+    <engines>
+        <engine name="cordova" version=">=3.5.1" />
+    </engines>
+	<platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="CliniqueDBStore" >
+                <param name="android-package" value="com.clinique.phresco.hybrid.CliniqueDBStore"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/CliniqueDBStore.java" target-dir="src/com/clinique/phresco/hybrid" />
+    </platform>
+</plugin>
+

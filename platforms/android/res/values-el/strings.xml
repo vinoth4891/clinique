@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="app_name">Clinique</string>
+	<string name="no_media_warning">Storage Media not present</string>
+	<string name="no_media_hint">Sharing the storage media with a PC can make it inaccessible</string>
+	<string name="open_failed">Unable to open document</string>
+	<string name="search_backwards">Search backwards</string>
+	<string name="search_forwards">Search forwards</string>
+	<string name="search_document">Search document</string>
+	<string name="picker_title">Pdf Writer &amp; Reader</string>
+	<string name="outline_title">Table of Contents</string>
+	<string name="enter_password">Enter Password</string>
+	<string name="link_control">Link highlighting and enabling</string>
+	<string name="gen_pdf">Generate pdf</string>
+	<string name="view_pdf">View pdf</string>
+	<string name="title_activity_main">MainActivity</string>
+	<string name="progress_title">Generateing pdf...</string>
+	<string name="base_url">http://clinique-dev.photoninfotech.com/trunk/admin/clinique_webservice/services.php</string>
+	<string name="downloading_complete">Κατεβάζοντας Ολοκληρώθηκε</string>
+	<string name="loading">Φόρτωση</string>
+	<string name="done">Done</string>
+	<string name="save">Αποθήκευση</string>
+	<string name="ok">Ok</string>
+	<string name="cancel">Ακύρωση</string>
+	<string name="search">Αναζήτηση</string>
+	<string name="notes_help_txt">*Όλες οι σημειώσεις θα αποθηκευτεί κάτω από τα Αγαπημένα</string>
+	<string name="enter_pg_no">Εισάγετε τον αριθμό σελίδας</string>
+	<string name="chk_internet_conec">Παρακαλώ ελέγξτε την σύνδεση διαδικτύου σας. </string>
+	<string name="text_not_found">Κλειδί αναζήτησης δεν βρέθηκε.</string>
+	<string name="no_further_occurences_found">Δεν βρέθηκαν περαιτέρω περιστατικά</string>
+	<string name="searching_">Αναζήτηση...</string>
+	<string name="valid_page_no">Παρακαλώ εισάγετε ένα έγκυρο αριθμό σελίδας</string>
+	<string name="no_bookmark_avail">Δεν υπάρχουν διαθέσιμες Bookmarks</string>
+	<string name="pg_no">Η σελίδα δεν υπάρχει</string>
+	<string name="alert_pg_no">Εισάγετε τη σελίδα δεν</string>
+	<string name="no_sdcard">Δεν υπάρχει κάρτα μνήμης Βρέθηκε να κατεβάσετε το αρχείο</string>
+	<string name="pdfMSG">Σας συνιστούμε να εγκαταστήσετε το  \"Office Suite\" ή το \"Adobe reader\" για το άνοιγμα του αρχείου.</string>
+	<string name="csvMSG">Σας συνιστούμε να εγκαταστήσετε το \"Office Suite\" ή το \"WPS Office\" για το άνοιγμα του αρχείου.</string>
+
+</resources>

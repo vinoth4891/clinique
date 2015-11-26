@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="com.photon-ElearningPlugin" version="0.0.1">
+    <name>ElearningPlugin</name>
+    <description>A Cordova plugin that helps for Elearning</description>
+    <engines>
+        <engine name="cordova" version=">=3.5.1" />
+    </engines>
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="ElearningPlugin">
+                <param name="ios-package" value="ElearningPlugin" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/ElearningPlugin.h" />
+        <source-file src="src/ios/ElearningPlugin.m" />
+    </platform>
+</plugin>
