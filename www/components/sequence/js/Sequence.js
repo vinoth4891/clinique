@@ -320,7 +320,11 @@ define(["framework/WidgetWithTemplate","courseItem/CourseItem","course/Course","
 					if(viewtype == 1)  {
 						jQuery(".course_ifram_cls_btn").trigger('click');
 					} else {
-						jQuery('.topicspagenav').click();
+						if (isAndroid()) {
+							jQuery('.topicspagenav').trigger("touchstart");
+						} else {
+							jQuery('.topicspagenav').click();
+						}
 					}
                 });
             }
@@ -403,8 +407,8 @@ define(["framework/WidgetWithTemplate","courseItem/CourseItem","course/Course","
 			jQuery(".next_activity, .previous_activity").css("display", "none");
 			var language, iTouch = 'click';
 			if(isAndroid()){
-             iTouch = 'touchstart';
-            }
+				iTouch = 'touchstart';
+			}
             if (!($.browser.msie && parseInt($.browser.version, 10) === 7)) {
                 language = window.localStorage.getItem("language");
             } else {
