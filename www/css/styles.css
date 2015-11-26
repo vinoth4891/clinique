@@ -2743,3 +2743,4 @@ html body .resource_wrap { padding-bottom:8% !important;}
  #profile_view.pro_container, #profile_edit.pro_container { padding-bottom:80px !important; float: left;
      min-height: 600px;}
 }
+body .resource_wrap div.iframewrap_crs_res {margin-top: 35px;}
