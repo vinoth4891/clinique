@@ -17,6 +17,7 @@
 			android:layout_height="0dp"
 			android:layout_weight="1"
 			android:background="@drawable/rounded_rectangle_top_white"
+			android:textColor="@android:color/black"
 			android:gravity="top|left"
 			android:imeOptions="actionDone"
 			android:inputType="textMultiLine|text|textNoSuggestions"
