@@ -1476,6 +1476,7 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
             jQuery("#displayContentFav").show();
             $('body').addClass("quiz-main-container fav-quiz-main-container");
             $('.quiz-main-container #displayContentFav').css('height',$(window).height()-45);
+			$('.fav-quiz-main-container #displayContentFav').parent().parent().css('height',$(window).height()-45);
             jQuery("#load_wrapper").hide();
             /* Question and anwser displays */
 			if(self.index != 0 && self.review == false){

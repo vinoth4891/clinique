@@ -22,6 +22,9 @@ define(["framework/WidgetWithTemplate","header/Header","footer/Footer","course/C
             this.courseWidget = new Clazz.com.components.widget.course.js.Course();
         },onResume: function (){
             headFootCtrl();
+			if( navigator.platform == "iPhone Simulator" || navigator.platform == "iPhone" || isAndroid()){
+				$('.widget-maincontent-div').css("padding-bottom", "100px");
+			}
         },
 		setContent : function() {
             var userDetails;
@@ -83,6 +86,9 @@ define(["framework/WidgetWithTemplate","header/Header","footer/Footer","course/C
         bindUI : function(){
             headFootCtrl();
             initiateEventListener();
+			if( navigator.platform == "iPhone Simulator" || navigator.platform == "iPhone" || isAndroid()){
+				$('.widget-maincontent-div').css("padding-bottom", "100px");
+			}
             if(jQuery('.ie7-footer-specific').hasClass('reportsfooter')) {
                jQuery('.ie7-footer-specific').removeClass('reportsfooter');
             }

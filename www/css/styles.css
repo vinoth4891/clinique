@@ -2462,6 +2462,9 @@ body .quiz-container .quizdtlgrid{ margin-top:20px;}
 body .qustn-head { width:95%;}
 body .ifram_cls_btn, body .ifram_news_cls_btn, body .course_ifram_cls_btn {margin-top:0px;}
 .crswidg_drgans .ifram_news_cls_btn  {right: 0px; top: 10px;}
+body.fav-quiz-main-container #displayContentFav { margin-top:55px;}
+body.fav-quiz-main-container div#displayContentFav.quiz-container { float:left;}
+body.quiz-main-container #container #content-webview{ padding-top:0; margin-top: 65px;}
  } 
 
 .animate-wrap { vertical-align:middle;}
