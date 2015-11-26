@@ -1270,6 +1270,7 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
             
             jQuery("#displayContent").empty().show();
             jQuery("#displayContent").css({ position : 'relative' });
+			jQuery(".iframewrap_crs_res").find('.ifram_cls_btn').remove();
             jQuery(".iframewrap_crs_res").prepend('<div class="ifram_cls_btn close"><span><img src="../images/closebtn.png"></span></div>');
             jQuery("#displayContent").addClass('quiz-container');
             jQuery("#displayContent").show();

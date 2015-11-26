@@ -1465,11 +1465,8 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"] , function(tem
 
            jQuery("#displayContentFav").empty().show();
             jQuery("#displayContentFav").css({ position : 'relative' });
-			if ( jQuery(".iframewrap_crs_fav").children().length ) {
-				if ( jQuery(".iframewrap_crs_fav").children().attr('class') == undefined ) {
-					jQuery(".iframewrap_crs_fav").prepend('<div class="ifram_cls_btn close"><span><img src="../images/closebtn.png"></span></div>');
-				}
-			}
+			jQuery(".iframewrap_crs_fav").find('.ifram_cls_btn').remove();
+			jQuery(".iframewrap_crs_fav").prepend('<div class="ifram_cls_btn close"><span><img src="../images/closebtn.png"></span></div>');
 			jQuery("<div id='resourceContentFav-iframe' style='height:auto;'></div>").appendTo(jQuery("#displayContentFav"));
             
 			jQuery("#displayContentFav").addClass('quiz-container');
