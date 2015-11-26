@@ -3103,7 +3103,7 @@ define(["framework/WidgetWithTemplate","abstract/offlineStorage"], function(temp
             var data = {
                 action: "insert_replace_course_resource_comment",
                 coursemoduleid: self.modID,
-                type : self.fileType,
+                type : 'pdf',
                 token : userDetails.token,
 				comment : jQuery('' +textBoxID+ '').val()
             };
