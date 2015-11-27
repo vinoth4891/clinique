@@ -394,7 +394,7 @@ box-shadow: -3px 3px 5px 3px rgba(0, 0, 0, .2);}
 .acc_contntbg{background:url("../images/accordian_hdng_shw_320.png") no-repeat center top;}
 .acc_topic{	font-size:20px;}
 .single_book,.shelfholder #single_book{display:none}
-
+ body  .pro_container .acc_holder { padding-bottom: 60px;}
 }
 @media handheld, only screen and (max-width: 320px) {
 	

@@ -747,7 +747,7 @@ display: block; height: 42px; left:12px; position: absolute; top: 57px; width: 6
      }
     .footNavigation{ width:6%; margin-top: 0%; margin-left: 45%; z-index: 1000; display:block !important }
     .footerNavswipeUP{ margin-top:-20%; }
-  		 
+    .widget-maincontent-div{ margin-top: 47px;} 
  }
 
   @media handheld, only screen and (max-width: 385px) {
@@ -811,6 +811,7 @@ display: block; height: 42px; left:12px; position: absolute; top: 57px; width: 6
     .footNavigation{ width:15%; height: 100%; margin-top: 15%; margin-left: 40%; z-index: 1000; display:block !important}
     .footerNavswipeUP{ margin-top:-7%; }
 	.homeRow-fluid{ overflow:hidden; height: 610px; margin-top: 0%;}
+	 body .widget-maincontent-div { margin-top:10px;}
  }
 
   /* Samsung S5 portrait */
