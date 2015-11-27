@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
 
 import com.photon.phresco.hybrid.R;
@@ -15,6 +16,8 @@ android.view.View.OnClickListener {
 
 	private WebView webView;
 	private Button btnClose;
+	
+	
 
 	/*@Override
 	public void onConfigurationChanged(Configuration newConfig) {
@@ -43,6 +46,8 @@ android.view.View.OnClickListener {
 		webSettings.setSupportZoom(true);
 		//webSettings.setDefaultZoom(WebSettings.ZoomDensity.FAR);
 		webSettings.setDatabaseEnabled(true);
+		//webSettings.setMediaPlaybackRequiresUserGesture(false);
+		webView.setWebViewClient(new MyWebViewClient());
 		webSettings.setDatabasePath("/data/data/"
 				+ webView.getContext().getPackageName() + "/databases/");
 		
@@ -62,6 +67,14 @@ android.view.View.OnClickListener {
 			webView.restoreState(savedInstanceState);
 		}
 
+	}
+	
+	private class MyWebViewClient extends WebViewClient {
+	    @Override
+	    public boolean shouldOverrideUrlLoading(WebView view, String url) {
+	    view.loadUrl(url);
+	    return true;
+	    }
 	}
 
 	@Override
