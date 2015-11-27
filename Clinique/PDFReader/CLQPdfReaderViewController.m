@@ -1235,8 +1235,8 @@ PDFReaderContentViewDelegate, ThumbsViewControllerDelegate,CLQAddcommentsViewDel
 
 - (void)dismissThumbsViewController:(ThumbsViewController *)viewController{
 	[self updateToolbarBookmarkIcon]; // Update bookmark icon
-    
-	[self dismissViewControllerAnimated:YES completion:NULL]; // Dismiss
+    [viewController dismissViewControllerAnimated:YES completion:NULL];
+    //[self dismissViewControllerAnimated:YES completion:NULL]; // Dismiss
 }
 
 - (void)thumbsViewController:(ThumbsViewController *)viewController gotoPage:(NSInteger)page{

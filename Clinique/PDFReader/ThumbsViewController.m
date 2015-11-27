@@ -94,7 +94,7 @@
 
 	self.view.backgroundColor = [UIColor grayColor]; // Neutral gray
 
-	CGRect scrollViewRect = self.view.bounds; UIView *fakeStatusBar = nil;
+	CGRect scrollViewRect = [UIScreen mainScreen].bounds; UIView *fakeStatusBar = nil;
 
 	if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) // iOS 7+
 	{
@@ -154,13 +154,15 @@
     [self.noBookMarkLabel setTextAlignment:NSTextAlignmentCenter];
     [self.view addSubview:self.noBookMarkLabel];
     self.noBookMarkLabel.center = self.view.center;
+    self.noBookMarkLabel.frame = CGRectMake((self.view.frame.size.width/2)-(self.noBookMarkLabel.frame.size.width/2), (self.view.frame.size.height/2)-(self.noBookMarkLabel.frame.size.height/2),  self.noBookMarkLabel.frame .size.width,  self.noBookMarkLabel.frame.size.height);
+    NSLog(@"label frame : %@", NSStringFromCGRect( self.noBookMarkLabel.frame ));
     [self setNoBookMarkLabelOrienattion];
    
   
 }
 -(void)setNoBookMarkLabelOrienattion{
      CGRect rect = [UIScreen mainScreen].bounds;
-    UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+    /* UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
     if(UIInterfaceOrientationIsLandscape(orientation)){
         rect.size.width = [UIScreen mainScreen].bounds.size.height;
         rect.size.height = [UIScreen mainScreen].bounds.size.width;
@@ -170,8 +172,10 @@
         rect.size.width = [UIScreen mainScreen].bounds.size.width;
         rect.size.height = [UIScreen mainScreen].bounds.size.height;
         
-    }
-    self.noBookMarkLabel.center = CGPointMake(rect.size.width/2, rect.size.height/2);
+    }*/
+    rect = [UIScreen mainScreen].bounds;
+    // self.noBookMarkLabel.center = CGPointMake(rect.size.width/2, rect.size.height/2);
+    self.noBookMarkLabel.frame = CGRectMake((rect.size.width/2)-(self.noBookMarkLabel.frame.size.width/2), (rect.size.height/2)-(self.noBookMarkLabel.frame.size.height/2),  self.noBookMarkLabel.frame .size.width,  self.noBookMarkLabel.frame.size.height);
     NSLog(@"frame ; %@",NSStringFromCGRect(self.noBookMarkLabel.frame) );
 }
 - (void)viewWillAppear:(BOOL)animated
@@ -184,6 +188,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
 	[super viewDidAppear:animated];
+    [self setNoBookMarkLabelOrienattion];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
