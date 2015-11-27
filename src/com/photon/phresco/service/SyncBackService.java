@@ -553,7 +553,13 @@ public class SyncBackService {
 							ErrorConstants.ERR10008);
 				}
 			} else {
-				activity.sendJavascript("noContent_HideProgres();");
+				JSONObject progressBarJson = new JSONObject();
+				progressBarJson.put("TOTAL_FILES", 1);
+				progressBarJson.put("CURRENT_FILE_NO", 1);
+
+				activity.sendJavascript("sendProgress("
+						+ progressBarJson.toString() + ");");
+				//activity.sendJavascript("noContent_HideProgres();");
 			}
 		} catch (CliniqueException e) {
 			e.printStackTrace();
