@@ -59,7 +59,8 @@ public class MuPDFCore {
 
 	public int countPages() {
 		if (numPages < 0) {
-			numPages = countPagesSynchronized();
+			//numPages = countPagesSynchronized();
+			numPages = -1;
 		}
 
 		return numPages;
