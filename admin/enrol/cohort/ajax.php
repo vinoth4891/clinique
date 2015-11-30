@@ -91,9 +91,9 @@ switch ($action) {
         $enrol = enrol_get_plugin('cohort');
         $enrol->add_instance($manager->get_course(), array('customint1' => $cohortid, 'roleid' => $roleid));
 		if($cohortid == 2) {
-          $result_cm = enrol_cohort_get_instances($manager->get_course()->id,35);
+          $result_cm = enrol_cohort_get_instances($manager->get_course()->id,33);
           if(empty($result_cm)) {
-            $enrol->add_instance($manager->get_course(), array('customint1' => 35, 'roleid' => $roleid));
+            $enrol->add_instance($manager->get_course(), array('customint1' => 33, 'roleid' => $roleid));
           }
         }
         enrol_cohort_sync($manager->get_course()->id);
@@ -115,9 +115,9 @@ switch ($action) {
         }
 		
 		if($cohortid == 2) {
-          $result_cm = enrol_cohort_get_instances($manager->get_course()->id,35);
+          $result_cm = enrol_cohort_get_instances($manager->get_course()->id,33);
           if(empty($result_cm)) {
-            $result_cm_count = enrol_cohort_enrol_all_users($manager, 35, $roleid);
+            $result_cm_count = enrol_cohort_enrol_all_users($manager, 33, $roleid);
 			$result += $result_cm_count;
           }
         }
