@@ -2610,8 +2610,8 @@ body.quiz-main-container .widget-maincontent-div {  margin-top: 0% !important;}
  
 .chooseanr.radio  { background-image: url("../images/radio-nrl.png") !important; background-repeat: no-repeat !important; background-position: 15px center !important;}
 .radio.active { background-image: url("../images/radio-sct.png") !important; background-repeat: no-repeat !important; background-position: 15px center !important;}
-.chooseanr.correct{ background-color:green;}
-.chooseanr.wrong{ background-color:red;}
+.options .chooseanr.correct{ background-color:green; background-image: url("../images/quiz-rvw-crt.png") !important;}
+.options .chooseanr.wrong{ background-color:red; background-image: url("../images/quiz-rvw-wng.png") !important;}
 
 
  @media screen and (max-width:630px){
