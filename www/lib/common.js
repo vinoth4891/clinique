@@ -100,6 +100,7 @@ function init() {
 
 function initiateEventListener(){
 	if( isPhoneGap() && isAndroid() ){
+		window.addEventListener('touchstart',  updateInternetStatus, false);
     	window.addEventListener('offline',  updateOfflineStatus, false);
     	window.addEventListener('online', updateOnlineStatus, false);
     }
