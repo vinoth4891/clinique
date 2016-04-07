@@ -1,0 +1,48 @@
+/*
+ Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements.  See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License.  You may obtain a copy of the License at
+ 
+ http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied.  See the License for the
+ specific language governing permissions and limitations
+ under the License.
+ */
+
+// accessibility label for recording button
+"toggle audio recording" = "toggle audio recording";
+// notification spoken by VoiceOver when timed recording finishes
+"timed recording complete" = "timed recording complete";
+// accessibility hint for display of recorded elapsed time
+"recorded time in minutes and seconds" = "recorded time in minutes and seconds";
+
+"Please check your internet connection." = "请检查您的互联网连接。";
+"Network problem" = "网络问题";
+"Enter page number" = "输入页码";
+"Enter Page" = "进入页面";
+
+"Go To Page" = "转到页";
+"Ok" = "没关系";
+"Cancel" = "取消";
+"Done" = "做";
+"Close" = "关闭 ";
+"Delete" = "删除";
+"Save" = "保存";
+"All notes will be saved under Favourites" = "所有票据将收藏下保存 ";
+"of" = "的";
+"Search key not found" = "搜索键没有发现";
+
+"Enter Page No" = "输入页码 ";
+"Page no" = "页次";
+"Search Key Word Not Found" = "未找到搜索关键字";
+
+"We recommend to install \"iBook\" or \"Acrobat reader\" for opening file." = "我们建议安装\"iBook\"或\"Acrobat reader\"来打开文件。";
+"We recommend to install \"iSpreadsheet\" or \"Microsoft Excel\" for opening file."= "我们建议安装\"iSpreadsheet\"或\"Microsoft Excel\"来打开文件。";
